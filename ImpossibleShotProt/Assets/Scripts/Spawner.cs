@@ -12,7 +12,10 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void Awake() {
 		timePerWave = GameManager.Instance.TimePerEnemy;
-		Invoke("SpawnWave", timePerWave);
+		if (prefab.tag == "Enemy")
+			Invoke("SpawnWave", timePerWave);
+		else
+			Invoke("SpawnObs", timePerWave);
 	}
 
 	private void Update()
@@ -23,7 +26,18 @@ public class Spawner : MonoBehaviour {
 	void SpawnWave()
 	{
 		Vector3 spawnPosition = new Vector3(Random.Range(spawnMinValues.x, spawnMaxValues.x), Random.Range(spawnMinValues.y, spawnMaxValues.y), transform.position.z);
-		Instantiate(prefab, spawnPosition, Quaternion.identity);
+		prefab = EnemyFactory.Instance.Request();
+		prefab.transform.position = spawnPosition;
+		prefab.GetComponent<EnemyScript>().Active = true;
 		Invoke("SpawnWave", timePerWave);
+	}
+
+	void SpawnObs()
+	{
+		Vector3 spawnPosition = new Vector3(Random.Range(spawnMinValues.x, spawnMaxValues.x), Random.Range(spawnMinValues.y, spawnMaxValues.y), transform.position.z);
+		prefab = ObstacleFactory.Instance.Request();
+		prefab.transform.position = spawnPosition;
+		prefab.GetComponent<ObstacleScript>().Active = true;
+		Invoke("SpawnObs", timePerWave);
 	}
 }

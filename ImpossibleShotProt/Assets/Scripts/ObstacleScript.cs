@@ -19,7 +19,7 @@ public class ObstacleScript : MonoBehaviour {
 	void Update () {
 		if (active){
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
-			if (transform.position.z > -100){
+			if (transform.position.z < -100){
 				oF.Return (gameObject);
 			}
 		}
