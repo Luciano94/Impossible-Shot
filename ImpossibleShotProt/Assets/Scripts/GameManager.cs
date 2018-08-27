@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -42,6 +43,16 @@ public class GameManager : MonoBehaviour {
 		{
 			return terrainSpeed;
 		}
+	}
+
+	public void Aceleration()
+	{
+		terrainSpeed += speedPerEnemy;
+	}
+
+	public void Death()
+	{
+		SceneManager.LoadScene(0);
 	}
 
 	private void Awake()

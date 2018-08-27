@@ -16,6 +16,13 @@ public class EnemyScript : MonoBehaviour {
 		eF = EnemyFactory.Instance;
 	}
 
+	private void OnTriggerEnter(Collider other)
+	{
+		Debug.Log("Colisione wachin");
+		gM.Aceleration();
+		eF.Return(gameObject);
+	}
+
 	void Update () {
 		if (active){
 			transform.Translate (Vector3.back * speed * Time.deltaTime);

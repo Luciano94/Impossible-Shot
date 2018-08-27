@@ -16,6 +16,12 @@ public class ObstacleScript : MonoBehaviour {
 		oF = ObstacleFactory.Instance;
 	}
 
+	private void OnTriggerEnter(Collider other)
+	{
+		Debug.Log("Colisione wachin");
+		gM.Death();
+	}
+
 	void Update () {
 		if (active){
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
