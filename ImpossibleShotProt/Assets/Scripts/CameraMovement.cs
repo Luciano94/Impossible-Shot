@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
+	/*
 	[SerializeField] Transform Bullet;
 	[SerializeField] float Speed;
 	[SerializeField] float DifferenceWindow;
@@ -53,5 +54,29 @@ public class CameraMovement : MonoBehaviour {
 		}
 		//FinalMovement
 		transform.Translate(direc);
+	}
+	*/
+	[SerializeField] Transform Bullet;
+	[SerializeField] Transform Up;
+	[SerializeField] Transform Left;
+	[SerializeField] Transform Right;
+
+	private Vector3 NormalVector;
+	private Quaternion NormalRotation;
+	void Start(){
+		NormalVector = transform.position - Bullet.position;
+		NormalRotation = transform.rotation;
+	}
+
+	void LateUpdate (){
+		Vector3 pos = Bullet.position + NormalVector;
+		if(pos.x > Right.position.x ){ pos.x = Right.position.x;}
+		if(pos.x < Left.position.x){ pos.x = Left.position.x;}
+		if(pos.y > Up.position.y){pos.y = Up.position.y;}
+		transform.position = pos;
+		transform.LookAt (Bullet);
+		Quaternion rot = transform.rotation;
+		rot.x = NormalRotation.x;
+		transform.rotation = rot;
 	}
 }
