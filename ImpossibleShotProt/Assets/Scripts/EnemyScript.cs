@@ -18,13 +18,13 @@ public class EnemyScript : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Colisione wachin");
 		gM.Aceleration();
 		eF.Return(gameObject);
 	}
 
 	void Update () {
 		if (active){
+			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
 			if (transform.position.z < -100){
 				eF.Return (gameObject);

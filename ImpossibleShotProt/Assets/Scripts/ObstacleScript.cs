@@ -18,12 +18,12 @@ public class ObstacleScript : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Colisione wachin");
 		gM.Death();
 	}
 
 	void Update () {
 		if (active){
+			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
 			if (transform.position.z < -100){
 				oF.Return (gameObject);
