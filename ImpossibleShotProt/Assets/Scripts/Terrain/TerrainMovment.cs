@@ -10,14 +10,22 @@ public class TerrainMovment : MonoBehaviour {
 	private void Update()
 	{
 		speed = GameManager.Instance.TerrainSpeed;
-		if(transform.position.z > -100)
-		{
+		Reset();
+	}
+
+	private void LateUpdate() {
+		Movment();
+	}
+
+	private void Movment(){
+		if (transform.position.z > -100) {
 			transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
-		}else{
-			if (transform.position.z != back.position.z)
-			{
-				transform.position = back.TransformDirection(back.position);
-			}
+		}
+	}
+
+	private void Reset() {
+		if (transform.position.z < -100) {
+			transform.position = back.TransformDirection(back.position);
 		}
 	}
 }

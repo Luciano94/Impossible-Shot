@@ -6,7 +6,6 @@ public class ObsCollision : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Entre wachin");
 		GameManager.Instance.Death();
 	}
 }

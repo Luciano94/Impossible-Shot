@@ -21,7 +21,7 @@ public class ObstacleScript : MonoBehaviour {
 		gM.Death();
 	}
 
-	void Update () {
+	void LateUpdate () {
 		if (active){
 			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);

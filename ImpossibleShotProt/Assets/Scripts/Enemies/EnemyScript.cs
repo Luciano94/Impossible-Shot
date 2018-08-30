@@ -22,7 +22,7 @@ public class EnemyScript : MonoBehaviour {
 		eF.Return(gameObject);
 	}
 
-	void Update () {
+	void LateUpdate () {
 		if (active){
 			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
