@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private float enemyTimePerLevel = 1;   //tiempo que se resta en el spawner en cada nivel
 	[SerializeField] private float speedPerEnemy = 0.5f;	//aumento de velocidad por enemigo eliminado
 	private float timeCurrentLevel;							//tiempo que transcurrio en el nivel actual
-
+	[SerializeField] private float fieldOfView;
+    [SerializeField] private float fieldPerLevel;
 	public float TimePerEnemy
 	{
 		get
@@ -36,7 +37,11 @@ public class GameManager : MonoBehaviour {
 			return timePerEnemy;
 		}
 	}
-
+	public float FOV{
+		get{
+			return fieldOfView;
+		}
+	}
 	public float TerrainSpeed
 	{
 		get
@@ -52,12 +57,13 @@ public class GameManager : MonoBehaviour {
 
 	public void Death()
 	{
-		SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
 	}
 
 	private void Awake()
 	{
 		timeCurrentLevel = 0;
+		fieldOfView = Camera.main.fieldOfView;
 	}
 
 	private void Update()
@@ -70,6 +76,7 @@ public class GameManager : MonoBehaviour {
 			if (timePerEnemy > 1)
 				timePerEnemy -= enemyTimePerLevel;
 			else timePerEnemy = 0.5f;
+			//fieldOfView = Mathf.Lerp(fieldOfView, fieldOfView + fieldPerLevel, 0.01f);
 		}
 	}
 }

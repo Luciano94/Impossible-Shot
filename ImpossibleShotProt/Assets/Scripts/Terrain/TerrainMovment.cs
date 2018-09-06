@@ -18,13 +18,13 @@ public class TerrainMovment : MonoBehaviour {
 	}
 
 	private void Movment(){
-		if (transform.position.z > -100) {
+		if (transform.position.z > -110) {
 			transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
 		}
 	}
 
 	private void Reset() {
-		if (transform.position.z < -100) {
+		if (transform.position.z < -110) {
 			transform.position = back.TransformDirection(back.position);
 		}
 	}
