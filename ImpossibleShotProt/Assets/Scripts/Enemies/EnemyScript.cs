@@ -7,28 +7,25 @@ public class EnemyScript : MonoBehaviour {
 	private float speed;
 	private bool active;
 	private GameManager gM;
-	private EnemyFactory eF;
+	private Product pScript;
 
 	void Start () {
 		active = false;
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
-		eF = EnemyFactory.Instance;
+		pScript = GetComponent<Product> ();
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
 		gM.Aceleration();
-		eF.Return(gameObject);
+		pScript.ReturnToFactory ();
 	}
 
 	void LateUpdate () {
 		if (active){
 			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
-			if (transform.position.z < -100){
-				eF.Return (gameObject);
-			}
 		}
 	}
 

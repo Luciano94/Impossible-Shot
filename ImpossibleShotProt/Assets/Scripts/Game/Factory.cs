@@ -14,30 +14,44 @@ public class Factory : MonoBehaviour {
 		for(int i = 0; i< Capacidad; i++){
 			GameObject go = Instantiate (Product);
 			go.transform.position = Vector3.one * 60;
-			//go.SetActive(false);
+			if(go.tag == "Enemy"){
+				go.GetComponent<EnemyScript> ().Active = false;
+			} else if (go.tag == "Obstacle"){
+				go.GetComponent<ObstacleScript> ().Active = false;
+			}
 			cargador [i] = go;
 			tracker [i] = true;
 		}
 	}
 	
-	public bool Request(GameObject go){
+	public GameObject Request(){
 		for(int i = 0; i< Capacidad; i++){
 			if(tracker[i]){
 				tracker [i] = false;
-				go = cargador [i];
-				return true;
+				return cargador[i];
 			}
 		}
-		return false;
+		return Instantiate (Product);;
 	}
 
 	public void Return(GameObject go){
+		bool extra = true;
 		for (int i = 0; i < Capacidad; i++){
 			if(go == cargador[i]){
 				tracker[i] = true;
+				extra = false;
 				cargador [i].transform.position = Vector3.one * 60;
-				break;
+				if(go.tag == "Enemy"){
+					go.GetComponent<EnemyScript> ().Active = false;
+				} else if (go.tag == "Obstacle"){
+					go.GetComponent<ObstacleScript> ().Active = false;
+				}
+				//Debug.Log (go.tag + " se recicla");
 			}
+		}
+		if (extra){
+			Destroy (go);
+			//Debug.Log ("se destruye");
 		}
 	}
 

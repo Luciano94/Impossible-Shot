@@ -7,8 +7,12 @@ public class Product : MonoBehaviour {
 	[SerializeField] float MaxDist;
 
 	private void Update(){
-		if (transform.position.z == MaxDist){
-			Factory.Return (gameObject);
+		if (transform.position.z <= MaxDist * -1){
+			ReturnToFactory ();
 		}
+	}
+
+	public void ReturnToFactory(){
+		Factory.Return (gameObject);
 	}
 }

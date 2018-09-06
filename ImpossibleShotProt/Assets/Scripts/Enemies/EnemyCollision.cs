@@ -7,6 +7,6 @@ public class EnemyCollision : MonoBehaviour {
 	private void OnTriggerEnter(Collider other)
 	{
 		GameManager.Instance.Aceleration();
-		EnemyFactory.Instance.Return(gameObject);
+		GetComponent<Product> ().ReturnToFactory ();
 	}
 }
