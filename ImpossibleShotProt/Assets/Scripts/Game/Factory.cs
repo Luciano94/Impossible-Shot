@@ -57,7 +57,8 @@ public class Factory : MonoBehaviour {
 
 	private void OnDestroy(){
 		for (int i = 0; i < Capacidad; i++) {
-			Destroy (cargador [i]);
+			Destroy (cargador[i]);
+			Debug.Log (i + "/" + (cargador.Length - 1));
 		}
 	}
 }
