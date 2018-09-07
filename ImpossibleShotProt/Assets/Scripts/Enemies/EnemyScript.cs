@@ -5,16 +5,14 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour {
 
 	private float speed;
-	private bool active;
 	private GameManager gM;
-	private Product pScript;
+	private Product product;
 	private PositionManager pM;
 
-	void Start () {
-		active = false;
+	void Awake () {
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
-		pScript = GetComponent<Product> ();
+		product = GetComponent<Product> ();
 		pM = PositionManager.Instance;
 	}
 
@@ -27,18 +25,13 @@ public class EnemyScript : MonoBehaviour {
 		else
 			posX = (int)transform.position.x;
 		pM.freePosition(posX,1);
-		pScript.ReturnToFactory ();
+		product.ReturnToFactory ();
 	}
 
 	void LateUpdate () {
-		if (active){
+		if (product.IsActive()){
 			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
 		}
-	}
-
-	public bool Active{
-		get{ return active;}
-		set{ active = value;}
 	}
 }

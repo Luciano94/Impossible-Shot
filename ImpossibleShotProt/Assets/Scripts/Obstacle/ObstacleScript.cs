@@ -5,13 +5,13 @@ using UnityEngine;
 public class ObstacleScript : MonoBehaviour {
 
 	private float speed;
-	private bool active;
+	private Product product;
 	private GameManager gM;
 
-	void Start () {
-		active = false;
+	void Awake(){
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
+		product = GetComponent<Product> ();
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -20,14 +20,9 @@ public class ObstacleScript : MonoBehaviour {
 	}
 
 	void LateUpdate () {
-		if (active){
+		if (product.IsActive()){
 			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
 		}
-	}
-
-	public bool Active{
-		get{ return active;}
-		set{ active = value;}
 	}
 }

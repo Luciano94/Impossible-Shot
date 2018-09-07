@@ -25,11 +25,6 @@ public class Spawner : MonoBehaviour {
 	{
 		GameObject objeto = fabrica.Request ();
 		objeto.transform.position = getSpawnPosition(objeto.tag);
-		if (objeto.tag == "Enemy") {
-			objeto.GetComponent<EnemyScript> ().Active = true;
-		} else {
-			objeto.GetComponent<ObstacleScript> ().Active = true;
-		}
 		Invoke ("SpawnWave", timePerWave);
 	}
 
