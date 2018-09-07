@@ -8,17 +8,25 @@ public class EnemyScript : MonoBehaviour {
 	private bool active;
 	private GameManager gM;
 	private Product pScript;
+	private PositionManager pM;
 
 	void Start () {
 		active = false;
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
 		pScript = GetComponent<Product> ();
+		pM = PositionManager.Instance;
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
 		gM.Aceleration();
+		int posX;
+		if(transform.position.x < 0)
+			posX = (int)transform.position.x + 4;
+		else
+			posX = (int)transform.position.x;
+		pM.freePosition(posX,1);
 		pScript.ReturnToFactory ();
 	}
 

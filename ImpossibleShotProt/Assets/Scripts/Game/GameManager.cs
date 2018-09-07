@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	[SerializeField] private float terrainSpeed = 50;		//Velocidad del terreno y enemigos
-	[SerializeField] private float speedPerLevel = 10;		//cantidad de aceleracion por nivel
 	[SerializeField] private float timePerLevel = 30;		//duracion de cada nivel
 	[SerializeField] private float timePerEnemy = 5;		//tiempo entre cada enemigo en los spawners
 	[SerializeField] private float enemyTimePerLevel = 1;   //tiempo que se resta en el spawner en cada nivel

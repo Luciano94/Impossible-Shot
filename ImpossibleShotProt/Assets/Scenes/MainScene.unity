@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -162,6 +162,15 @@ Prefab:
       propertyPath: Factory
       value: 
       objectReference: {fileID: 624195490}
+    - target: {fileID: 4770127127794808, guid: 0a737c3a6e00afa44adb2c133be2b1e6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 65379155703705126, guid: 0a737c3a6e00afa44adb2c133be2b1e6,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a737c3a6e00afa44adb2c133be2b1e6, type: 2}
   m_IsPrefabAsset: 0
@@ -223,7 +232,7 @@ Prefab:
     - target: {fileID: 114707922553860930, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
         type: 2}
       propertyPath: limits.x
-      value: 4.5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
@@ -813,14 +822,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfbdeb569b83dd4792c947f2d48067e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainSpeed: 50
-  speedPerLevel: 5
+  terrainSpeed: 30
   timePerLevel: 10
-  timePerEnemy: 3
-  enemyTimePerLevel: 0
+  timePerEnemy: 1
+  enemyTimePerLevel: 0.25
   speedPerEnemy: 5
   fieldOfView: 0
-  fieldPerLevel: 0
+  fieldPerLevel: 5
 --- !u!4 &2087284092
 Transform:
   m_ObjectHideFlags: 0
