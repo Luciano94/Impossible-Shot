@@ -9,18 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1207482330363750}
+  m_RootGameObject: {fileID: 1151406660333826}
   m_IsPrefabAsset: 1
---- !u!1 &1207482330363750
+--- !u!1 &1151406660333826
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4805464146483244}
-  - component: {fileID: 114517253058517464}
-  - component: {fileID: 114229222857276144}
+  - component: {fileID: 4646606427413852}
+  - component: {fileID: 114175037728716356}
+  - component: {fileID: 54700811909855658}
+  - component: {fileID: 65123998780637996}
+  - component: {fileID: 114213551019197604}
   m_Layer: 10
   m_Name: ObstaclePrefab
   m_TagString: Obstacle
@@ -28,19 +30,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1362537785352402
+--- !u!1 &1652860229098028
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4733104084511282}
-  - component: {fileID: 33251777524563518}
-  - component: {fileID: 23962693788145880}
-  - component: {fileID: 65835249964445706}
-  - component: {fileID: 54624434735845986}
-  - component: {fileID: 114460901617782684}
+  - component: {fileID: 4433753513696408}
+  - component: {fileID: 33030417814062502}
+  - component: {fileID: 23596486497240202}
   m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
@@ -48,39 +47,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4733104084511282
+--- !u!4 &4433753513696408
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362537785352402}
+  m_GameObject: {fileID: 1652860229098028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: 0}
-  m_LocalScale: {x: 1.1331035, y: 5, z: 0.096070714}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 1.5, z: 0.1}
   m_Children: []
-  m_Father: {fileID: 4805464146483244}
+  m_Father: {fileID: 4646606427413852}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4805464146483244
+--- !u!4 &4646606427413852
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1207482330363750}
+  m_GameObject: {fileID: 1151406660333826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4733104084511282}
+  - {fileID: 4433753513696408}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23962693788145880
+--- !u!23 &23596486497240202
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362537785352402}
+  m_GameObject: {fileID: 1652860229098028}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -110,19 +109,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33251777524563518
+--- !u!33 &33030417814062502
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362537785352402}
+  m_GameObject: {fileID: 1652860229098028}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54624434735845986
+--- !u!54 &54700811909855658
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362537785352402}
+  m_GameObject: {fileID: 1151406660333826}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -132,50 +131,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65835249964445706
+--- !u!65 &65123998780637996
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362537785352402}
+  m_GameObject: {fileID: 1151406660333826}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 5, y: 1.5, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114229222857276144
+--- !u!114 &114175037728716356
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1207482330363750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3cf9a75677ba7d4eaa4594fa33d785a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Factory: {fileID: 0}
-  MaxDist: 100
---- !u!114 &114460901617782684
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362537785352402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d189b7791ac84614a9cb67d995640714, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114517253058517464
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1207482330363750}
+  m_GameObject: {fileID: 1151406660333826}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 685d418b261189c4facdb49b50505582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114213551019197604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1151406660333826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d189b7791ac84614a9cb67d995640714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
