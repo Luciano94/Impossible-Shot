@@ -51,7 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa8d11540605324787ed4eafe94d191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyFactory: {fileID: 0}
-  ObstacleFactory: {fileID: 0}
-  spawnMinValues: {x: -1, y: 1}
-  spawnMaxValues: {x: 1.5, y: 2}
+  fabrica: {fileID: 0}
+  spawnMinValues: 1
+  spawnMaxValues: 4
