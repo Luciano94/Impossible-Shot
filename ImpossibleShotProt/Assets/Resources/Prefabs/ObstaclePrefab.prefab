@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Factory: {fileID: 0}
   MaxDist: 100
+  width: 2
 --- !u!114 &114926050247133138
 MonoBehaviour:
   m_ObjectHideFlags: 1

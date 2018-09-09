@@ -8,9 +8,9 @@ public class MovmentLimit : MonoBehaviour {
 
 	void Update () {
 		if (transform.position.x > limits.x)
-			transform.position = new Vector3 (limits.x, transform.position.y, transform.position.y);
+			transform.position = new Vector3 (limits.x, transform.position.y, transform.position.z);
 		else if (transform.position.x < (-limits.x))
-			transform.position = new Vector3 ((-limits.x), transform.position.y, transform.position.y);
+			transform.position = new Vector3 ((-limits.x), transform.position.y, transform.position.z);
 		if (transform.position.y > limits.y)
 			transform.position = new Vector3 (transform.position.x, limits.y, transform.position.z);
 		else if (transform.position.y < 0.5f)

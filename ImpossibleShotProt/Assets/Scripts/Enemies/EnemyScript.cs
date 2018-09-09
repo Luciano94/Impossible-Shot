@@ -8,23 +8,21 @@ public class EnemyScript : MonoBehaviour {
 	private GameManager gM;
 	private Product product;
 	private PositionManager pM;
+	private int width;
+
 
 	void Awake () {
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
 		product = GetComponent<Product> ();
+		width = product.Width;
 		pM = PositionManager.Instance;
 	}
 
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerExit(Collider other)
 	{
 		gM.Aceleration();
-		int posX;
-		if(transform.position.x < 0)
-			posX = (int)transform.position.x + 4;
-		else
-			posX = (int)transform.position.x;
-		pM.freePosition(posX,1);
+		pM.freePosition(product.Index, width);
 		product.ReturnToFactory ();
 	}
 

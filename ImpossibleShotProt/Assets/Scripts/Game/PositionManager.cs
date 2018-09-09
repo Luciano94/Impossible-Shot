@@ -18,30 +18,64 @@ public class PositionManager : MonoBehaviour {
 		}
 	}
 
-	private bool[] positions;
+	[SerializeField] private float[,] positions;
 
 	private void Awake() {
-		positions = new bool[7];
-		for(int i= 0;i<7;i++)
-			positions[i]= false;
+		initPositions();
+	}
+	
+	private void initPositions(){
+		positions = new float[7,2];
+		for(int i= 0;i<7;i++){
+			positions[i,0]=0;
+			if(i>0)
+				positions[i,1]=positions[i-1,1]+1.5f;
+			else positions[i,1]=-5;
+		}
 	}
 
-	public int getPosition(int width){
-		int pos;
-		bool encontre = false;
-		do{
-			pos = Random.Range(0,6);
-			if(width == 1 && !positions[pos])
+	public float getPosition(int width){
+		bool encontre= false;
+		int index = -1;
+		float posx = -10;
+		for(int i=0;i<7 && !encontre;i++){
+			if(positions[i,0] == 0){
 				encontre = true;
-			else if(pos < 6)
-					if(!positions[pos] && !positions[pos+1])
-						encontre = true;
-		}while(!encontre);
-		return pos;
+				positions[i,0] = 1;
+				index = i;
+				posx = positions[i,1];
+			}
+		}
+		if(width > 1 && encontre && index < 7){
+			encontre = false;
+			positions[index,0]=0;
+			for(int i = index; i<width && !encontre;i++){
+				if(positions[i,0]==1)
+					break;
+				else if(i+1 == width)
+					encontre = true;
+			}
+			if(encontre){
+				for(int i=index;i<=width;i++){
+					positions[i,0]=1;
+				}
+			}
+		}
+		return posx;
 	}
 
-	public void freePosition(int pos, int width){
-		for(int i = pos;i<width;i++)
-			positions[i]=false;
+	public void freePosition(float pos, int width){
+		int index = 0;
+		for(int i= 0;i<7;i++){
+			if(positions[i,1] == pos){
+				index = i;
+				break;
+			}
+		}
+		int cont =0;
+		for(int i = index;i < 7 && cont<width;i++){
+			positions[i,0] = 0;
+			cont++;
+		}
 	}
 }

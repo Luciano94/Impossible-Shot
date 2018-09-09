@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private float speedPerEnemy = 0.5f;	//aumento de velocidad por enemigo eliminado					
 	[SerializeField] private float fieldOfView;
     [SerializeField] private float fieldPerLevel;
+	[SerializeField] private float MaxFOV;
     private float timeCurrentLevel;                         //tiempo que transcurrio en el nivel actual
     private float NextFOV;
     private bool acceleration = false;
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour {
 	{
         targetSpeed = terrainSpeed + speedPerEnemy;
         NextFOV = Camera.main.fieldOfView + fieldPerLevel;
+		Mathf.Clamp(NextFOV,baseFOV,MaxFOV);
 		acceleration = true;
 	}
 

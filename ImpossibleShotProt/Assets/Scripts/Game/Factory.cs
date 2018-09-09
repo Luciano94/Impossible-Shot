@@ -29,7 +29,7 @@ public class Factory : MonoBehaviour {
 		}
 		GameObject go = Instantiate (Product);
 		go.GetComponent<Product> ().Sent ();
-		Debug.Log (Product.tag + " extra creado");
+		//Debug.Log (Product.tag + " extra creado");
 		return go;
 	}
 
