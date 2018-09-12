@@ -29,12 +29,16 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private float fieldOfView;
     [SerializeField] private float fieldPerLevel;
 	[SerializeField] private float MaxFOV;
+	[SerializeField] private float SecondsToBegin = 3;		//tiempo entre que comienza el que se dispara la bala y comienza el nivel
+	[SerializeField] private Spawner spawnerA;
+	[SerializeField] private Spawner spawnerB;
     private float timeCurrentLevel;                         //tiempo que transcurrio en el nivel actual
     private float NextFOV;
     private bool acceleration = false;
     private float targetSpeed;
     private float baseFOV;
     private float baseSpeed;
+	private bool shouldWait;								//si terminṕ el tiempo de espera para el nivel
 
 	public float TimePerEnemy
 	{
@@ -77,11 +81,16 @@ public class GameManager : MonoBehaviour {
 		baseFOV = Camera.main.fieldOfView;
         baseSpeed = 0f;
 		acceleration = false;
+		shouldWait = true;
 	}
 
     private void LateUpdate() {
-		LevelControl();
-		AcceleracionControl();
+		if (shouldWait) {
+			Wait();
+		} else {
+			LevelControl ();
+			AcceleracionControl ();
+		}
     }
 
 	private void LevelControl(){
@@ -105,6 +114,16 @@ public class GameManager : MonoBehaviour {
             terrainSpeed = Mathf.Lerp(terrainSpeed, baseSpeed, 0.2f * Time.deltaTime);
             Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, baseFOV, 0.9f * Time.deltaTime);
         }
+	}
+
+	private void Wait(){
+		SecondsToBegin -= Time.deltaTime;
+		if(SecondsToBegin <= 0){
+			shouldWait = false;
+			spawnerA.Go ();
+			spawnerB.Go ();
+			Debug.Log ("Go!");
+		}
 	}
 }
 

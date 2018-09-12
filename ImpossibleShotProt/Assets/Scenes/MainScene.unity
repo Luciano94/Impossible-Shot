@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -118,6 +118,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1056047533900708, guid: 0a737c3a6e00afa44adb2c133be2b1e6,
     type: 2}
   m_PrefabInternal: {fileID: 100102291}
+--- !u!114 &84819513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114512894312559448, guid: bf7296f6b744f3e4fbf43a263c89b8bf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1734875512}
+  m_Script: {fileID: 11500000, guid: 1aa8d11540605324787ed4eafe94d191, type: 3}
 --- !u!1001 &100102291
 Prefab:
   m_ObjectHideFlags: 0
@@ -4862,6 +4868,22 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &978525360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1178301403912614, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 978525359}
+--- !u!114 &978525361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978525360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db343035bb27a5a4791c1131e2a2cf0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1049956095
 Prefab:
   m_ObjectHideFlags: 0
@@ -9627,6 +9649,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3f31c66b6f6d5d4984c0b522b5e2d11, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1318841407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114512894312559448, guid: bf7296f6b744f3e4fbf43a263c89b8bf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1415786895}
+  m_Script: {fileID: 11500000, guid: 1aa8d11540605324787ed4eafe94d191, type: 3}
 --- !u!1001 &1395743066
 Prefab:
   m_ObjectHideFlags: 0
@@ -10088,6 +10116,9 @@ MonoBehaviour:
   fieldOfView: 0
   fieldPerLevel: 5
   MaxFOV: 110
+  SecondsToBegin: 3
+  spawnerA: {fileID: 84819513}
+  spawnerB: {fileID: 1318841407}
 --- !u!4 &2087284092
 Transform:
   m_ObjectHideFlags: 0

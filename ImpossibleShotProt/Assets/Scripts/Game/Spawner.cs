@@ -9,11 +9,12 @@ public class Spawner : MonoBehaviour {
 	private PositionManager pM;
 	[SerializeField] private float spawnMinValues;	//valores minimos de aparicion en x e y
 	[SerializeField] private float spawnMaxValues;	//valores maximos de aparicion en x e y
-	// Use this for initialization
+	private bool callSpawnOnce;						//si la funcion Go no fué llamada todavía, asegura que solo se llame una vez
+
 	void Awake() {
 		timePerWave = GameManager.Instance.TimePerEnemy;
 		pM = PositionManager.Instance;
-		Invoke ("SpawnWave", timePerWave);
+		callSpawnOnce = true;
 	}
 
 	private void Update()
@@ -28,12 +29,17 @@ public class Spawner : MonoBehaviour {
 		float posx = pM.getPosition(width);
 		objeto.GetComponent<Product>().Index = posx;
 		if(posx != -10)
-			objeto.transform.position = new Vector3(posx ,Random.Range(spawnMinValues,spawnMaxValues),
-													transform.position.z);
+			objeto.transform.position = new Vector3(posx, Random.Range(spawnMinValues, spawnMaxValues), transform.position.z);
 		else{
 			fabrica.Return(objeto);
 		} 
 		Invoke ("SpawnWave", timePerWave);
 	}
 
+	public void Go(){
+		if(callSpawnOnce){
+			Invoke ("SpawnWave", timePerWave);
+			callSpawnOnce = false;
+		}
+	}
 }
