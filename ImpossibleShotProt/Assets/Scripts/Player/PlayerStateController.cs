@@ -17,11 +17,13 @@ public class PlayerStateController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (end){
-			gameObject.transform.rotation = Quaternion.Lerp (gameObject.transform.rotation, Quaternion.Euler (Vector3.down), RotationSharpness);
-			gameObject.transform.position.y = Mathf.Lerp (gameObject.transform.position.y, 0, FallSharpness);
-			Debug.Log (Mathf.Clamp(gameObject.transform.position.y,0,1));
-			if(Mathf.Clamp(gameObject.transform.position.y,0,1) == 0){
-				Debug.Log (Mathf.Clamp(gameObject.transform.position.y,0,1));
+			transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.Euler (Vector3.down), RotationSharpness);
+			transform.position = new Vector3 (transform.position.x,
+											Mathf.Lerp (transform.position.y, 0, FallSharpness),
+											transform.position.z);
+			Debug.Log (Mathf.Clamp(transform.position.y,0,1));
+			if(Mathf.Clamp(transform.position.y,0,1) == 0){
+				Debug.Log (Mathf.Clamp(transform.position.y,0,1));
 			}
 		}
 	}

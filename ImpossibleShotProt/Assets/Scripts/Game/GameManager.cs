@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour {
 	{
 		timeCurrentLevel = 0;
 		baseFOV = Camera.main.fieldOfView;
-        baseSpeed = 0f;
+        baseSpeed = 10f;
 		acceleration = false;
 		shouldWait = true;
 	}
@@ -91,6 +91,8 @@ public class GameManager : MonoBehaviour {
 			LevelControl ();
 			AcceleracionControl ();
 		}
+		if(terrainSpeed < baseSpeed)
+			SceneManager.LoadScene(0);
     }
 
 	private void LevelControl(){
@@ -111,7 +113,7 @@ public class GameManager : MonoBehaviour {
                 acceleration = false;
         }
         else {
-            terrainSpeed = Mathf.Lerp(terrainSpeed, baseSpeed, 0.2f * Time.deltaTime);
+            terrainSpeed = Mathf.Lerp(terrainSpeed, baseSpeed-5, 0.2f * Time.deltaTime);
             Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, baseFOV, 0.9f * Time.deltaTime);
         }
 	}
