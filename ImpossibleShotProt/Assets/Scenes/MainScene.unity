@@ -168,20 +168,6 @@ Prefab:
       propertyPath: Factory
       value: 
       objectReference: {fileID: 624195490}
-    - target: {fileID: 4770127127794808, guid: 0a737c3a6e00afa44adb2c133be2b1e6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65379155703705126, guid: 0a737c3a6e00afa44adb2c133be2b1e6,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114313814489205942, guid: 0a737c3a6e00afa44adb2c133be2b1e6,
-        type: 2}
-      propertyPath: width
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a737c3a6e00afa44adb2c133be2b1e6, type: 2}
   m_IsPrefabAsset: 0
@@ -201,7 +187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &181061291
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4949,7 +4935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1081387072
 Transform:
   m_ObjectHideFlags: 0
@@ -9597,10 +9583,6 @@ Prefab:
       propertyPath: Factory
       value: 
       objectReference: {fileID: 1992726499}
-    - target: {fileID: 4145546661064514, guid: 3212575b5f1acbb4ba016df9c7d32ad9, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3212575b5f1acbb4ba016df9c7d32ad9, type: 2}
   m_IsPrefabAsset: 0
@@ -9725,6 +9707,11 @@ Prefab:
         type: 2}
       propertyPath: orthographic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20086674853361600, guid: 992e10fb118fa704dbeeb3c25d16898b,
+        type: 2}
+      propertyPath: m_ClearFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
@@ -10117,7 +10104,7 @@ MonoBehaviour:
   speedPerEnemy: 5
   fieldOfView: 0
   fieldPerLevel: 5
-  MaxFOV: 110
+  MaxFOV: 85
   SecondsToBegin: 3
   spawnerA: {fileID: 84819513}
   spawnerB: {fileID: 1318841407}
