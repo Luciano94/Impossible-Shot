@@ -21,7 +21,7 @@ public class EnemyScript : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other)
 	{
-		gM.Aceleration();
+		//gM.Aceleration();
 		pM.freePosition(product.Index, width);
 		product.ReturnToFactory ();
 	}

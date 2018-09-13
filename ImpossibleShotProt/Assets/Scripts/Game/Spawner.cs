@@ -12,14 +12,14 @@ public class Spawner : MonoBehaviour {
 	private bool callSpawnOnce;						//si la funcion Go no fué llamada todavía, asegura que solo se llame una vez
 
 	void Awake() {
-		timePerWave = GameManager.Instance.TimePerEnemy;
+		//timePerWave = GameManager.Instance.TimePerEnemy;
 		pM = PositionManager.Instance;
 		callSpawnOnce = true;
 	}
 
 	private void Update()
 	{
-		timePerWave = GameManager.Instance.TimePerEnemy;
+		//timePerWave = GameManager.Instance.TimePerEnemy;
 	}
 
 	void SpawnWave()

@@ -32,6 +32,15 @@ public class Pattern : MonoBehaviour {
 		if(counter>= Lista.Length){
 			counter = 0;
 		}
+        pool[count].GetComponent<Product>().Sent();
 		return pool [count];
 	}
+
+    public int TamLista() {
+        return Lista.Length;
+    }
+
+    public int Count() {
+        return counter;
+    }
 }
