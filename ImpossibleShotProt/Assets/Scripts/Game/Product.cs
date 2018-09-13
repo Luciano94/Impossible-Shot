@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Product : MonoBehaviour {
-	[SerializeField] Factory Factory;
 	[SerializeField] float MaxDist;
+	private Pattern patron;
 	private bool Activo;
 	[SerializeField]private int width = 1;
 	private PositionManager pM;
 	private float index;
+
+	public Pattern Patron {
+		get{return patron; }
+		set{patron = value; }
+	}
 
 	public float Index{
 		set{index=value;}
@@ -33,7 +38,7 @@ public class Product : MonoBehaviour {
 	public void ReturnToFactory(){
 		pM.freePosition(index,width);
 		Activo = false;
-		Factory.Return (gameObject);
+		patron.Return (gameObject);
 	}
 
 	public void Sent(){
