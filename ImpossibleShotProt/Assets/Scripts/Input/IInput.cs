@@ -1,0 +1,4 @@
+﻿interface IInput
+{
+	DirectionVec GetDirection();
+}
