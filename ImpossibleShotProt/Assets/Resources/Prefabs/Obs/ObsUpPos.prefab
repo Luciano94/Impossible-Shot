@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4901578037906128}
   - component: {fileID: 54062925765598828}
   - component: {fileID: 114418002728222572}
-  - component: {fileID: 114114724462889170}
   - component: {fileID: 114436392659478016}
-  m_Layer: 0
+  - component: {fileID: 65372231231942810}
+  m_Layer: 10
   m_Name: ObsUpPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,8 +40,7 @@ GameObject:
   - component: {fileID: 4585195161518554}
   - component: {fileID: 33045615349273210}
   - component: {fileID: 23202681358697380}
-  - component: {fileID: 65604728551886530}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ObsUP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,29 +131,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65604728551886530
+--- !u!65 &65372231231942810
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1169375291458858}
+  m_GameObject: {fileID: 1106593760273150}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114114724462889170
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1106593760273150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d189b7791ac84614a9cb67d995640714, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 12, y: 2.5, z: 0.2}
+  m_Center: {x: 0, y: 1.25, z: 0}
 --- !u!114 &114418002728222572
 MonoBehaviour:
   m_ObjectHideFlags: 1

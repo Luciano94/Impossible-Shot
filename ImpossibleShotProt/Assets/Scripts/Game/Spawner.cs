@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
 	[SerializeField] private Factory fabrica;			//la fabrica 
-	private float timePerWave;							//tiempo entre spawns
+	private float timePerWave = 1f;							//tiempo entre spawns
 	private PositionManager pM;
 	[SerializeField] private float spawnMinValues;	//valores minimos de aparicion en x e y
 	[SerializeField] private float spawnMaxValues;	//valores maximos de aparicion en x e y

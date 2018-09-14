@@ -21,12 +21,11 @@ GameObject:
   - component: {fileID: 4848364666395796}
   - component: {fileID: 33614722363817820}
   - component: {fileID: 23130548956491718}
-  - component: {fileID: 65760067308863140}
   - component: {fileID: 114681991697872294}
   - component: {fileID: 114194686019959904}
   - component: {fileID: 114569777534447334}
   - component: {fileID: 54262710154586228}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ObsLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,9 +42,9 @@ GameObject:
   - component: {fileID: 4267277596679676}
   - component: {fileID: 54095188710262530}
   - component: {fileID: 114293854451393626}
-  - component: {fileID: 114116245147894896}
   - component: {fileID: 114702255742112486}
-  m_Layer: 0
+  - component: {fileID: 65985151519128344}
+  m_Layer: 10
   m_Name: ObsLeftPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749204734612450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9226182, y: 1.2566491, z: 7.9074845}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4848364666395796}
@@ -151,29 +150,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65760067308863140
+--- !u!65 &65985151519128344
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1399824076128834}
+  m_GameObject: {fileID: 1749204734612450}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114116245147894896
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749204734612450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d189b7791ac84614a9cb67d995640714, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 6, y: 5, z: 0.2}
+  m_Center: {x: -3, y: 2.5, z: 0}
 --- !u!114 &114194686019959904
 MonoBehaviour:
   m_ObjectHideFlags: 1

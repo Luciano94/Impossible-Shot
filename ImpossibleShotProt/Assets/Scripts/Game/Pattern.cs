@@ -37,7 +37,7 @@ public class Pattern : MonoBehaviour {
 	}
 
     public int TamLista() {
-        return Lista.Length;
+        return pool.Length-1;
     }
 
     public int Count() {

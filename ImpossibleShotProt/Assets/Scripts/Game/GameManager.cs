@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] GameObject spawnPattern;
     [SerializeField] float terrainSpeed = 50f;
-    [SerializeField] float fOVPerLevel = 5f;
-    [SerializeField] float maxFOV = 80f;
+//    [SerializeField] float fOVPerLevel = 5f;
+//    [SerializeField] float maxFOV = 80f;
 
     public float TerrainSpeed {
         get { return terrainSpeed; }
