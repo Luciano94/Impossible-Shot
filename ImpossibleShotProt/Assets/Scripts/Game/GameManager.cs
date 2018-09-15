@@ -19,20 +19,47 @@ public class GameManager : MonoBehaviour {
     }
 
     [SerializeField] GameObject spawnPattern;
+    [SerializeField] GameObject spawnPatternEnemies;
     [SerializeField] float terrainSpeed = 50f;
-//    [SerializeField] float fOVPerLevel = 5f;
-//    [SerializeField] float maxFOV = 80f;
+    [SerializeField] float fOVPerLevel = 5f;
+    [SerializeField] float maxFOV = 80f;
+    [SerializeField] float maxSpeed = 100f;
+    [SerializeField] float speedPerLevel = 10f;
+    [SerializeField] int cantOfEnemiesPerLevel = 5;
+    [SerializeField] float bulletSpeed = 20f;
+    [SerializeField] float maxBulletSpeed = 50f;
+    [SerializeField] float bulletSpeedPerLevel = 5f;
+    private int cantOfEnemies; 
 
+    public float BulletSpeed{
+        get{return bulletSpeed;}
+    }
     public float TerrainSpeed {
         get { return terrainSpeed; }
-        set { terrainSpeed += value; }
     }
 
     public void Death() {
         SceneManager.LoadScene(0);
     }
 
+    public void EnemyDeath(){
+        cantOfEnemies ++;
+        Debug.Log("Enemies: " + cantOfEnemies);
+        if(cantOfEnemies >= cantOfEnemiesPerLevel){
+            if(terrainSpeed + speedPerLevel <= maxSpeed) 
+                terrainSpeed += speedPerLevel;
+            if(bulletSpeed + bulletSpeedPerLevel <= maxBulletSpeed ) 
+                bulletSpeed += bulletSpeedPerLevel;
+            if(Camera.main.fieldOfView + fOVPerLevel <= maxFOV){
+                float nextFOV = Camera.main.fieldOfView + fOVPerLevel;
+                Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, nextFOV, 1f * Time.deltaTime);
+            }
+            cantOfEnemies = 0;
+        }
+    }
     private void Awake() {
+        cantOfEnemies = 0;
         spawnPattern.GetComponent<SpawnPattern>().Spawn();
+        spawnPatternEnemies.GetComponent<SpawnPatternEnemies>().Spawn();        
     }
 }

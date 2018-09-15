@@ -7,7 +7,6 @@ public class EnemyScript : MonoBehaviour {
 	private float speed;
 	private GameManager gM;
 	private Product product;
-	private PositionManager pM;
 	private int width;
 
 
@@ -15,14 +14,11 @@ public class EnemyScript : MonoBehaviour {
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
 		product = GetComponent<Product> ();
-		width = product.Width;
-		pM = PositionManager.Instance;
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-		//gM.Aceleration();
-		pM.freePosition(product.Index, width);
+		gM.EnemyDeath();
 		product.ReturnToFactory ();
 	}
 

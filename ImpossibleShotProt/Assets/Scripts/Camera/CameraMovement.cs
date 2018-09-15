@@ -74,7 +74,7 @@ public class CameraMovement : MonoBehaviour {
 		if(pos.x < Left.position.x){ pos.x = Left.position.x;}
 		if(pos.y > Up.position.y){pos.y = Up.position.y;}
 		transform.position = pos;
-		transform.LookAt (Bullet);
+		//transform.LookAt (Bullet);
 		Quaternion rot = transform.rotation;
 		rot.x = NormalRotation.x;
 		transform.rotation = rot;

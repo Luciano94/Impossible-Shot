@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 65448243401641612}
   - component: {fileID: 65823404172772298}
   m_Layer: 10
-  m_Name: LformRigth
+  m_Name: LformLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour {
 
-	[SerializeField] float Speed;
+	float speed;
+	private GameManager gM;
 	
-
+	private void Awake() {
+		gM=GameManager.Instance;
+		speed = gM.BulletSpeed;
+	}
 	
-	// Update is called once per frame
-	void Update () {
+	private void Update () {
+		speed = gM.BulletSpeed;
 		Vector3 direc = Vector3.zero;
-		direc += Vector3.up * Input.GetAxis ("Vertical") * Speed * Time.deltaTime;
-		direc += Vector3.right * Input.GetAxis ("Horizontal") * Speed * Time.deltaTime;
+		direc += Vector3.up * Input.GetAxis ("Vertical") * speed * Time.deltaTime;
+		direc += Vector3.right * Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 		transform.Translate (direc);
-		Rotate();
+		// Rotate();
 	}
 
 	private void Rotate(){
