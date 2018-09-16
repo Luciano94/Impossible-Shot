@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour {
     }
 
     [SerializeField] GameObject spawnPattern;
-    [SerializeField] GameObject spawnPatternEnemies;
     [SerializeField] float terrainSpeed = 50f;
     [SerializeField] float fOVPerLevel = 5f;
     [SerializeField] float maxFOV = 80f;
@@ -44,22 +43,37 @@ public class GameManager : MonoBehaviour {
 
     public void EnemyDeath(){
         cantOfEnemies ++;
-        Debug.Log("Enemies: " + cantOfEnemies);
+        EnemiesControl();
+    }
+
+    private void EnemiesControl(){
         if(cantOfEnemies >= cantOfEnemiesPerLevel){
-            if(terrainSpeed + speedPerLevel <= maxSpeed) 
-                terrainSpeed += speedPerLevel;
-            if(bulletSpeed + bulletSpeedPerLevel <= maxBulletSpeed ) 
-                bulletSpeed += bulletSpeedPerLevel;
-            if(Camera.main.fieldOfView + fOVPerLevel <= maxFOV){
-                float nextFOV = Camera.main.fieldOfView + fOVPerLevel;
-                Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, nextFOV, 1f * Time.deltaTime);
-            }
+            SpeedControl();
+            BulletControl();
+            FovControl();
+            spawnPattern.GetComponent<SpawnPattern>().RandomizePattern();
+            cantOfEnemiesPerLevel ++;
             cantOfEnemies = 0;
         }
     }
+
+    private void SpeedControl(){
+        if(terrainSpeed + speedPerLevel <= maxSpeed) 
+            terrainSpeed += speedPerLevel;
+    }
+    private void  FovControl(){
+        if(Camera.main.fieldOfView + fOVPerLevel <= maxFOV){
+            float nextFOV = Camera.main.fieldOfView + fOVPerLevel;
+            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, nextFOV, 1f * Time.deltaTime);
+        }
+    }
+    private void BulletControl(){
+        if(bulletSpeed + bulletSpeedPerLevel <= maxBulletSpeed ) 
+            bulletSpeed += bulletSpeedPerLevel;
+    }
+
     private void Awake() {
         cantOfEnemies = 0;
-        spawnPattern.GetComponent<SpawnPattern>().Spawn();
-        spawnPatternEnemies.GetComponent<SpawnPatternEnemies>().Spawn();        
+        spawnPattern.GetComponent<SpawnPattern>().Spawn();        
     }
 }

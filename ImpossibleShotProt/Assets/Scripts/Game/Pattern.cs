@@ -21,7 +21,6 @@ public class Pattern : MonoBehaviour {
 		for (int i = 0; i < Lista.Length; i++){
 			if(go == pool[i]){
 				pool [i].transform.position = Vector3.one * 60;
-				//Debug.Log (go.tag + " se recicla");
 			}
 		}
 	}
