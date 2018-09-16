@@ -26,4 +26,8 @@ public class InputPC : IInput {
 
 		return dir;
 	}
+
+	public void Update(){
+	}
+	public void Awake(){}
 }

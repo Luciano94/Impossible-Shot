@@ -24,9 +24,13 @@ public class InputManager : MonoBehaviour {
 		#else
 		input = new InputPC();
 		#endif
+		input.Awake ();
 	}
 	public DirectionVec GetDirection()
 	{
 		return input.GetDirection();
+	}
+	private void Update(){
+		input.Update ();
 	}
 }
