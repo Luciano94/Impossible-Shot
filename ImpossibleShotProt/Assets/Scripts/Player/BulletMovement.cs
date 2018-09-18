@@ -44,7 +44,7 @@ public class BulletMovement : MonoBehaviour {
 		direc += Vector3.up * y * speed * Time.deltaTime;
 		direc += Vector3.right * x * speed * Time.deltaTime;
 		transform.Translate (direc);
-		Rotate(x,y);
+		//Rotate(x,y);
 	}
 
 	private void Rotate(int x, int y){

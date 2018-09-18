@@ -4733,6 +4733,52 @@ Transform:
   m_Father: {fileID: 402984486}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &218173376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 218173377}
+  - component: {fileID: 218173378}
+  m_Layer: 0
+  m_Name: Pattern4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &218173377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218173376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1867448311}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &218173378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218173376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fb0d90c5068fc48bcfa06bf060e019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lista:
+  - {fileID: 1749204734612450, guid: d8b3860fbac6bf140921ba6b80a7cce5, type: 2}
+  - {fileID: 1749767213391010, guid: 541806599084de94a8c7a1d841b1daae, type: 2}
+  - {fileID: 1749204734612450, guid: d8b3860fbac6bf140921ba6b80a7cce5, type: 2}
+  - {fileID: 1749767213391010, guid: 541806599084de94a8c7a1d841b1daae, type: 2}
+  - {fileID: 1749204734612450, guid: d8b3860fbac6bf140921ba6b80a7cce5, type: 2}
 --- !u!1 &326060626
 GameObject:
   m_ObjectHideFlags: 0
@@ -4774,7 +4820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patterns: {fileID: 1867448311}
-  timePerOb: 2
+  timePerOb: 1
 --- !u!4 &402984486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4091817111422866, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
@@ -9563,9 +9609,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lista:
   - {fileID: 1901841881630850, guid: 3c1862b46f53b7b4fa133e7e47953c6a, type: 2}
-  - {fileID: 1749204734612450, guid: 9b008968aa1f7eb4882df294f8707ce3, type: 2}
   - {fileID: 1911719928955798, guid: 3943607b0a87bb8468bc9c41d0f5b4e1, type: 2}
-  - {fileID: 1749767213391010, guid: 3ac88ba686955eb41b39ce76b9c419f2, type: 2}
+  - {fileID: 1911719928955798, guid: 3943607b0a87bb8468bc9c41d0f5b4e1, type: 2}
+  - {fileID: 1106593760273150, guid: ce1510887f0a2d440b42c885069b0d2f, type: 2}
   - {fileID: 1563902707169872, guid: db970c71ced3e8a4bac6a03a81e2d82e, type: 2}
   - {fileID: 1901841881630850, guid: 3c1862b46f53b7b4fa133e7e47953c6a, type: 2}
   - {fileID: 1106593760273150, guid: ce1510887f0a2d440b42c885069b0d2f, type: 2}
@@ -9900,6 +9946,7 @@ Transform:
   - {fileID: 1472769714}
   - {fileID: 1122530770}
   - {fileID: 1206508060}
+  - {fileID: 218173377}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10003,7 +10050,7 @@ MonoBehaviour:
   maxSpeed: 100
   speedPerLevel: 10
   cantOfEnemiesPerLevel: 5
-  bulletSpeed: 20
+  bulletSpeed: 10
   maxBulletSpeed: 50
   bulletSpeedPerLevel: 5
 --- !u!4 &2087284092
