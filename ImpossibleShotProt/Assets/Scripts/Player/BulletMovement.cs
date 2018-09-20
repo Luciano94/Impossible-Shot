@@ -7,7 +7,7 @@ public class BulletMovement : MonoBehaviour {
 	//float speed;
 	//private GameManager gM;
 
-	[SerializeField] Transform MatrixCenter;
+	Vector3 MatrixCenter;
 	[SerializeField] float DistanceToCenter;
 	[SerializeField][Range (0f,1f)] float IgnorableDistance;
 	[SerializeField][Range (0f,1f)] float TransitionSharpness;
@@ -17,8 +17,9 @@ public class BulletMovement : MonoBehaviour {
 	int xNext = 0;
 	bool moving = false;
 	private void Awake() {
-		/*gM=GameManager.Instance;
+        /*gM=GameManager.Instance;
 		speed = gM.BulletSpeed;*/
+        MatrixCenter = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -88,8 +89,8 @@ public class BulletMovement : MonoBehaviour {
 	}
 
 	private void moveAction(){
-		float yTarget = MatrixCenter.position.y + (DistanceToCenter * yNext);
-		float xTarget = MatrixCenter.position.x + (DistanceToCenter * xNext);
+		float yTarget = MatrixCenter.y + (DistanceToCenter * yNext);
+		float xTarget = MatrixCenter.x + (DistanceToCenter * xNext);
 
 		/*bool xFix = false;
 		bool yFix = false;

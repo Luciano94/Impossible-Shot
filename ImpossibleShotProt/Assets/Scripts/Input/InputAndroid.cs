@@ -10,7 +10,7 @@ public class InputAndroid : IInput {
 	private Vector2 fingerDown;
 	private Vector2 fingerUp;
 	public bool detectSwipeOnlyAfterRelease = false;
-	public float SWIPE_THRESHOLD = 20f;
+	public float SWIPE_THRESHOLD = 250f;
 
 	public void Awake(){
 		x = Direction.None;
@@ -23,20 +23,9 @@ public class InputAndroid : IInput {
 		dir.y = y;
 		x = Direction.None;
 		y = Direction.None;
-		Debug.Log (x.ToString() + " " + y.ToString());
+		//Debug.Log (x.ToString() + " " + y.ToString());
 		return dir;
 	}
-
-	/*public void OnEndDrag(PointerEventData eventData){
-		Vector3 dragVec = (eventData.position - eventData.pressPosition).normalized;
-		if (dragVec.x != 0){
-			x = (dragVec.x > 0) ? Direction.Right : Direction.Left;
-		}
-
-		if (dragVec.y != 0){
-			y = (dragVec.y > 0) ? Direction.Up : Direction.Down;
-		}
-	}*/
 
 	public void Update(){
 		foreach (Touch touch in Input.touches)

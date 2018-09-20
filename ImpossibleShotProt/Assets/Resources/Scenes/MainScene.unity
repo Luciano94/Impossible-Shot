@@ -4884,7 +4884,7 @@ Prefab:
         type: 2}
       propertyPath: MatrixCenter
       value: 
-      objectReference: {fileID: 1711555213}
+      objectReference: {fileID: 0}
     - target: {fileID: 114335843019835348, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
         type: 2}
       propertyPath: DistanceToCenter
