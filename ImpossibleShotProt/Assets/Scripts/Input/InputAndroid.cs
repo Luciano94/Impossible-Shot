@@ -9,8 +9,8 @@ public class InputAndroid : IInput {
 
 	private Vector2 fingerDown;
 	private Vector2 fingerUp;
-	public bool detectSwipeOnlyAfterRelease = false;
-	public float SWIPE_THRESHOLD = 250f;
+	public bool SwipeReleased = true;
+	public float SWIPE_THRESHOLD = 20f;
 
 	public void Awake(){
 		x = Direction.None;
@@ -39,18 +39,16 @@ public class InputAndroid : IInput {
 			//detecta swipe mientras todavía hace contacto el dedo
 			if (touch.phase == TouchPhase.Moved)
 			{
-				if (!detectSwipeOnlyAfterRelease)
-				{
 					fingerDown = touch.position;
-					checkSwipe();
+				if (SwipeReleased) {
+					checkSwipe ();
 				}
 			}
 
 			//detecta el swipe cuando termina el contacto
 			if (touch.phase == TouchPhase.Ended)
 			{
-				fingerDown = touch.position;
-				checkSwipe();
+				SwipeReleased = true;
 			}
 		}
 	}
@@ -70,7 +68,8 @@ public class InputAndroid : IInput {
 				y = Direction.Down;
 			}
 			fingerUp = fingerDown;
-		}
+			SwipeReleased = false;
+		} else
 
 		//Check if Horizontal swipe
 		if (horizontalValMove() > SWIPE_THRESHOLD && horizontalValMove() > verticalMove())
@@ -85,6 +84,7 @@ public class InputAndroid : IInput {
 				x = Direction.Left;
 			}
 			fingerUp = fingerDown;
+			SwipeReleased = false;
 		}
 	}
 	float verticalMove()
