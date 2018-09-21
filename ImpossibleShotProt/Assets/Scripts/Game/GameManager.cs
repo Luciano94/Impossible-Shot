@@ -74,6 +74,6 @@ public class GameManager : MonoBehaviour {
 
     private void Awake() {
         cantOfEnemies = 0;
-        spawnPattern.GetComponent<SpawnPattern>().Spawn();        
+        //spawnPattern.GetComponent<SpawnPattern>().Spawn();        
     }
 }

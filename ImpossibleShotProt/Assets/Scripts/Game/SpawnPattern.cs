@@ -4,29 +4,50 @@ using UnityEngine;
 
 public class SpawnPattern : MonoBehaviour {
 
-    [SerializeField] Transform patterns;
+    [SerializeField] Transform patternsGO;
     [SerializeField] float timePerOb;
+    [SerializeField] private int cantOfPatterns = 1;
     private Queue<GameObject> q_patterns;
+    private Queue<GameObject> q_PatternsLvl;
     private GameObject pattern;
     private int cantOfObs;
+    private int actualCOP;
 
     private void Awake() {
         q_patterns = new Queue<GameObject>();
-        foreach(Transform child in patterns) {
+        q_PatternsLvl = new Queue<GameObject>();
+        foreach(Transform child in patternsGO)
             q_patterns.Enqueue(child.gameObject);
+        for(int i = 0; i<cantOfPatterns;i++){
+            GameObject go = q_patterns.Dequeue();
+            q_PatternsLvl.Enqueue(go);
+            q_patterns.Enqueue(go);
         }
+        Invoke ("Spawn", timePerOb);
     }
 
     public void Spawn() {
-        pattern = q_patterns.Dequeue();
+        pattern = q_PatternsLvl.Dequeue();
         cantOfObs = pattern.GetComponent<Pattern>().TamLista();
-        q_patterns.Enqueue(pattern);
+        q_PatternsLvl.Enqueue(pattern);
         Invoke("SpawnOb", timePerOb);
     }
 
     public void RandomizePattern(){
         
         CancelInvoke();
+        Randomize();
+        cantOfPatterns++;
+        q_PatternsLvl.Clear();
+        for(int i = 0; i<cantOfPatterns;i++){
+            GameObject go = q_patterns.Dequeue();
+            q_PatternsLvl.Enqueue(go);
+            q_patterns.Enqueue(go);
+        }
+        Invoke("Spawn",0f);
+    }
+
+    private void Randomize(){
         int tam = q_patterns.Count;
         GameObject[] pat = new GameObject[tam];
         for(int k = 0; k<tam;k++)
@@ -42,7 +63,6 @@ public class SpawnPattern : MonoBehaviour {
         q_patterns.Clear();
         foreach(GameObject go in pat)
             q_patterns.Enqueue(go);
-        Invoke("Spawn",0f);
     }
 
     private void SpawnOb() {
