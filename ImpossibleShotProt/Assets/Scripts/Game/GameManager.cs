@@ -28,7 +28,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField] float bulletSpeed = 20f;
     [SerializeField] float maxBulletSpeed = 50f;
     [SerializeField] float bulletSpeedPerLevel = 5f;
-    private int cantOfEnemies; 
+    [SerializeField] int pointsperEne = 100;
+    [SerializeField] int points = 0;
+    int level = 1;
+    private int cantOfEnemies;
 
     public float BulletSpeed{
         get{return bulletSpeed;}
@@ -43,6 +46,9 @@ public class GameManager : MonoBehaviour {
 
     public void EnemyDeath(){
         cantOfEnemies ++;
+        points += pointsperEne;
+        MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
+        MenuManager.Instance.UpdatePoints(points);
         EnemiesControl();
     }
 
@@ -54,6 +60,9 @@ public class GameManager : MonoBehaviour {
             spawnPattern.GetComponent<SpawnPattern>().RandomizePattern();
             cantOfEnemiesPerLevel ++;
             cantOfEnemies = 0;
+            level++;
+            MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
+            MenuManager.Instance.UpdateLvl(level);
         }
     }
 
@@ -74,6 +83,8 @@ public class GameManager : MonoBehaviour {
 
     private void Awake() {
         cantOfEnemies = 0;
-        //spawnPattern.GetComponent<SpawnPattern>().Spawn();        
+        MenuManager.Instance.UpdatePoints(points);
+        MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
+        MenuManager.Instance.UpdateLvl(level);
     }
 }
