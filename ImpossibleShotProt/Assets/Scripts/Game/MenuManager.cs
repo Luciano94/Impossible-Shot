@@ -63,7 +63,7 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	private void Update() {
-		if(Input.GetButton("Submit")){
+		if(Input.GetButton("Submit") && (inGame.activeSelf)){
 			PauseGame();
 		}
 	}
