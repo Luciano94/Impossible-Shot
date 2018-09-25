@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyScript : MonoBehaviour {
-	[SerializeField] private GameManager gM;
+	private GameManager gM;
 
 
 	void Awake () {

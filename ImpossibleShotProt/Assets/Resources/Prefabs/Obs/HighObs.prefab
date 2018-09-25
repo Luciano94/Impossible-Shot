@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4096456701801084}
   - component: {fileID: 33693448167503710}
   - component: {fileID: 23216519927085768}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4329369156940680}
   - component: {fileID: 33581721494437838}
   - component: {fileID: 23353807451840148}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,8 +55,25 @@ GameObject:
   - component: {fileID: 4052028083085698}
   - component: {fileID: 33253241842469330}
   - component: {fileID: 23118221577133098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1140352832712400
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4019092474485366}
+  - component: {fileID: 33983789327367188}
+  - component: {fileID: 23968643870325910}
+  m_Layer: 0
+  m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4686487050122316}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +104,7 @@ GameObject:
   - component: {fileID: 4195386247070200}
   - component: {fileID: 33336892690669864}
   - component: {fileID: 23484529002106156}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +121,7 @@ GameObject:
   - component: {fileID: 4914334994443914}
   - component: {fileID: 33635738338051730}
   - component: {fileID: 23692962962032854}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +138,7 @@ GameObject:
   - component: {fileID: 4637317218791630}
   - component: {fileID: 33360740192327174}
   - component: {fileID: 23632575927108746}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +155,7 @@ GameObject:
   - component: {fileID: 4024805585692498}
   - component: {fileID: 33828415894507300}
   - component: {fileID: 23277418756347576}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +172,7 @@ GameObject:
   - component: {fileID: 4982566832331562}
   - component: {fileID: 33082384468233972}
   - component: {fileID: 23509643661863208}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4322643586041436}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pallet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +204,7 @@ GameObject:
   - component: {fileID: 4353257911153154}
   - component: {fileID: 33371966447172144}
   - component: {fileID: 23327106713554604}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4311250887225610}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,8 +236,25 @@ GameObject:
   - component: {fileID: 4229904519558272}
   - component: {fileID: 33440918544588916}
   - component: {fileID: 23459899420561692}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1576544869162946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4898992804333968}
+  - component: {fileID: 114131484043980974}
+  - component: {fileID: 136626756558839346}
+  m_Layer: 0
+  m_Name: EnemyPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +270,7 @@ GameObject:
   - component: {fileID: 4187529935993326}
   - component: {fileID: 33175425015360930}
   - component: {fileID: 23734060922068360}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +287,7 @@ GameObject:
   - component: {fileID: 4419783637688352}
   - component: {fileID: 33096357048918752}
   - component: {fileID: 23223255126378080}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,11 +304,10 @@ GameObject:
   - component: {fileID: 4790371177963712}
   - component: {fileID: 114437229035252524}
   - component: {fileID: 114581628916545462}
-  - component: {fileID: 54928880520343102}
   - component: {fileID: 65482381162173904}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HighObs
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,7 +322,7 @@ GameObject:
   - component: {fileID: 4907847673912316}
   - component: {fileID: 33023392972274232}
   - component: {fileID: 23536060625606658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +339,7 @@ GameObject:
   - component: {fileID: 4047674409602136}
   - component: {fileID: 33087776767255052}
   - component: {fileID: 23886414865345678}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +356,7 @@ GameObject:
   - component: {fileID: 4908781824810292}
   - component: {fileID: 33532055714525860}
   - component: {fileID: 23985248397250492}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4519070148893292}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pallet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +388,7 @@ GameObject:
   - component: {fileID: 4525365374606928}
   - component: {fileID: 33589144422300484}
   - component: {fileID: 23073024727755826}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +405,7 @@ GameObject:
   - component: {fileID: 4500661168158086}
   - component: {fileID: 33061099858841614}
   - component: {fileID: 23010351758116352}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,13 +422,26 @@ GameObject:
   - component: {fileID: 4944801696940544}
   - component: {fileID: 33383172399567270}
   - component: {fileID: 23430382135378492}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Madera (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4019092474485366
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140352832712400}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 4898992804333968}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4024805585692498
 Transform:
   m_ObjectHideFlags: 1
@@ -649,8 +695,23 @@ Transform:
   - {fileID: 4686487050122316}
   - {fileID: 4322643586041436}
   - {fileID: 4519070148893292}
+  - {fileID: 4898992804333968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4898992804333968
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576544869162946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 3.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4019092474485366}
+  m_Father: {fileID: 4790371177963712}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4907847673912316
 Transform:
@@ -1312,6 +1373,41 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &23968643870325910
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140352832712400}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: e55db228a0661954bbb5704ed765d375, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23985248397250492
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -1473,21 +1569,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1334494014907664}
   m_Mesh: {fileID: 4300000, guid: 81c35ae27346c4141b29e66b796d2027, type: 3}
---- !u!54 &54928880520343102
-Rigidbody:
+--- !u!33 &33983789327367188
+MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749258966635282}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_GameObject: {fileID: 1140352832712400}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &65482381162173904
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1495,11 +1583,23 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749258966635282}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 11.41, y: 3.5, z: 1}
   m_Center: {x: 0, y: 8.12, z: 0}
+--- !u!114 &114131484043980974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576544869162946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425cde6eb20aba14a8653f99bd50eaef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gM: {fileID: 0}
 --- !u!114 &114437229035252524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1524,3 +1624,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxDist: 0
   width: 1
+--- !u!136 &136626756558839346
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576544869162946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
