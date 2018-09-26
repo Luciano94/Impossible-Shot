@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour {
             SpeedControl();
             BulletControl();
             FovControl();
+            spawnPattern.GetComponent<SpawnPattern>().TimePerObs();
             spawnPattern.GetComponent<SpawnPattern>().RandomizePattern();
             cantOfEnemiesPerLevel ++;
             cantOfEnemies = 0;
