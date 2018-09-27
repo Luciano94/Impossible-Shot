@@ -7,6 +7,9 @@ public class SpawnEnv : MonoBehaviour {
 	[SerializeField] GameObject prefab;
 	[SerializeField] float timePerObj;
 
+	public void UpdateTime(){
+		timePerObj -= 0.02f;
+	}
 	private void Awake() {
 		Invoke("Spawn", timePerObj);
 	}

@@ -77,8 +77,8 @@ public class SpawnPattern : MonoBehaviour {
     }
 
     public void TimePerObs(){
-            timePerOb /= 1.5f;
-        if(timePerOb <= 0)
-            timePerOb = 0.10f;
+        timePerOb -= 0.25f;
+        if(timePerOb <= 0.5f)
+            timePerOb = 0.5f;
     }
 }

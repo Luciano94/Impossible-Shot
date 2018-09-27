@@ -24,6 +24,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private Text pointsTxt;
 	[SerializeField] private Text levelTxt;
 	[SerializeField] private Text eneTxt;
+	[SerializeField] private AudioSource startSound; 
 
 	private void Awake() {
 		principal.SetActive(true);
@@ -46,6 +47,7 @@ public class MenuManager : MonoBehaviour {
 
 	public void StartGame(){
 		Time.timeScale = 1f;
+		startSound.Play();
 		principal.SetActive(false);
 		inGame.SetActive(true);
 	}
