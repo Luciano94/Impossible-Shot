@@ -35,3 +35,10 @@ sysinfo.txt
 *.apk
 *.unitypackage
 .vscode/
+ImpossibleShotProt/Assets/CasualGameSounds/
+
+ImpossibleShotProt/Assets/GunSounds/
+
+ImpossibleShotProt/Assets/CasualGameSounds\.meta
+
+ImpossibleShotProt/Assets/GunSounds\.meta
