@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternsGO: {fileID: 1867448311}
-  timePerOb: 2
+  timePerOb: 1.5
   cantOfPatterns: 2
 --- !u!1 &365109325
 GameObject:
@@ -2706,7 +2706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1270373772190584, guid: 8be643553e5d22f48910524aeb1a8d17, type: 2}
-  timePerObj: 0.25
+  timePerObj: 0.2
 --- !u!4 &1392785592
 Transform:
   m_ObjectHideFlags: 0
@@ -2737,7 +2737,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4145031594899506, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -13
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 4145031594899506, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3703,7 +3703,7 @@ MonoBehaviour:
   terrainSpeed: 40
   fOVPerLevel: 5
   maxFOV: 80
-  maxSpeed: 100
+  maxSpeed: 80
   speedPerLevel: 10
   cantOfEnemiesPerLevel: 5
   pointsperEne: 100

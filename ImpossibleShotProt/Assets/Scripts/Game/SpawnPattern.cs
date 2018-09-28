@@ -74,10 +74,18 @@ public class SpawnPattern : MonoBehaviour {
             Invoke("SpawnOb", timePerOb);
         else
             Invoke("Spawn",0f);
-    }
+    } 
+
 
     public void TimePerObs(){
-        timePerOb -= 0.25f;
+        timePerOb -= 0.20f;
+        if(timePerOb <= 0.5f){
+            timePerOb = 0.5f;
+        }
+    }
+
+    public void equilibrium(){
+        timePerOb -= 0.05f;
         if(timePerOb <= 0.5f)
             timePerOb = 0.5f;
     }

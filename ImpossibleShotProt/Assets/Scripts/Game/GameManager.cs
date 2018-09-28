@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour {
     private int cantOfEnemies;
     private int cantEnemies=0;
 
+    private SpawnPattern spawn;
+
     public float TerrainSpeed {
         get { return terrainSpeed; }
     }
@@ -74,12 +76,12 @@ public class GameManager : MonoBehaviour {
     private void LvlPar(){
         SpeedControl();
         FovControl();
-        spawnPattern.GetComponent<SpawnPattern>().TimePerObs();
+        spawn.TimePerObs();  
     }
 
     private void LvlImpar(){
-        spawnPattern.GetComponent<SpawnPattern>().TimePerObs();
-        spawnPattern.GetComponent<SpawnPattern>().RandomizePattern();
+        spawn.equilibrium();
+        spawn.RandomizePattern();
     }
 
     private void UpdateHUD(){
@@ -102,6 +104,7 @@ public class GameManager : MonoBehaviour {
 
     private void Awake() {
         cantOfEnemies = 0;
+        spawn = spawnPattern.GetComponent<SpawnPattern>();
         MenuManager.Instance.UpdatePoints(points);
         MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
         MenuManager.Instance.UpdateLvl(level);

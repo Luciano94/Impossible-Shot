@@ -9,6 +9,8 @@ public class SpawnEnv : MonoBehaviour {
 
 	public void UpdateTime(){
 		timePerObj -= 0.02f;
+		if(timePerObj <= 0.1f)
+			timePerObj =0.1f;
 	}
 	private void Awake() {
 		Invoke("Spawn", timePerObj);
