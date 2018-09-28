@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 65975810707574934}
   - component: {fileID: 65061108561301298}
   m_Layer: 10
-  m_Name: LeftLowRightObs
+  m_Name: 9F6E
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
