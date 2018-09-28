@@ -875,7 +875,7 @@ GameObject:
   - component: {fileID: 65816381855052854}
   - component: {fileID: 65288363283230006}
   m_Layer: 10
-  m_Name: RightLowLeftObs
+  m_Name: 7F4E
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
