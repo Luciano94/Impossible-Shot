@@ -36,6 +36,10 @@ public class GameManager : MonoBehaviour {
 
     private SpawnPattern spawn;
 
+    public int Level{
+        get{return level;}
+    }
+
     public float TerrainSpeed {
         get { return terrainSpeed; }
     }
@@ -66,6 +70,10 @@ public class GameManager : MonoBehaviour {
                 LvlPar();
             else 
                 LvlImpar();
+            if(level == spawn.LvlToNormal)
+                spawn.ReCharguePatterns();
+            if(level == spawn.LvlToHard)
+                spawn.ReCharguePatterns();
             cantEnemies ++;
             cantOfEnemiesPerLevel += cantEnemies;
             cantOfEnemies = 0;

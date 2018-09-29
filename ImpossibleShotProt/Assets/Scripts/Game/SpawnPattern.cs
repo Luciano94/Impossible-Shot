@@ -4,26 +4,52 @@ using UnityEngine;
 
 public class SpawnPattern : MonoBehaviour {
 
-    [SerializeField] Transform patternsGO;
+    [SerializeField] Transform patternsGOEasy;
+    [SerializeField] Transform patternsGONormal;
+    [SerializeField] Transform patternsGOHard;
     [SerializeField] float timePerOb;
     [SerializeField] private int cantOfPatterns = 1;
+    [SerializeField] private int lvlToNormal = 5;
+    [SerializeField] private int lvlToHard = 10;
     private Queue<GameObject> q_patterns;
     private Queue<GameObject> q_PatternsLvl;
     private GameObject pattern;
     private int cantOfObs;
     private int actualCOP;
 
+    public int LvlToNormal{
+        get{return lvlToNormal;}
+    }
+
+    public int LvlToHard{
+        get{return lvlToHard;}
+    }
+
     private void Awake() {
         q_patterns = new Queue<GameObject>();
         q_PatternsLvl = new Queue<GameObject>();
-        foreach(Transform child in patternsGO)
+        ChargePatterns(patternsGOEasy);
+        Invoke ("Spawn", timePerOb);
+    }
+
+    private void ChargePatterns(Transform patterns){
+        foreach(Transform child in patterns)
             q_patterns.Enqueue(child.gameObject);
         for(int i = 0; i<cantOfPatterns;i++){
             GameObject go = q_patterns.Dequeue();
             q_PatternsLvl.Enqueue(go);
             q_patterns.Enqueue(go);
         }
-        Invoke ("Spawn", timePerOb);
+    }
+
+    public void ReCharguePatterns(){
+        int level = GameManager.Instance.Level;
+        q_patterns.Clear();
+        q_PatternsLvl.Clear();
+        if(level == lvlToNormal)
+            ChargePatterns(patternsGONormal);
+        if(level == lvlToHard)
+            ChargePatterns(patternsGOHard);
     }
 
     public void Spawn() {
