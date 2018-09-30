@@ -117,4 +117,8 @@ public class GameManager : MonoBehaviour {
         MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
         MenuManager.Instance.UpdateLvl(level);
     }
+
+    private void Update() {
+        Debug.Log(Time.deltaTime);
+    }
 }
