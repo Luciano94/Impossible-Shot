@@ -2960,9 +2960,14 @@ MonoBehaviour:
   Lista:
   - {fileID: 1715697053755746, guid: cdd3c890f82ee5a4a9615dd36e1d7285, type: 2}
   - {fileID: 1118223571059922, guid: 4860ed84e10f6e24596b49c7ca993f11, type: 2}
-  - {fileID: 1899967107326972, guid: c0519f92ef764224fac152cd0f3e372e, type: 2}
+  - {fileID: 1004699554893014, guid: bcad02342f6898144b9a0a142e132ccd, type: 2}
   - {fileID: 1143399235299490, guid: bb1f4a28cd27cca4ba1ec2059cbc4a46, type: 2}
+  - {fileID: 1511716213087672, guid: 9f8679a9c4b0ead439d52048d06b21cc, type: 2}
   - {fileID: 1452204973554706, guid: 717997aa2db9c634a93ca1456f97bb6d, type: 2}
+  - {fileID: 1143399235299490, guid: bb1f4a28cd27cca4ba1ec2059cbc4a46, type: 2}
+  - {fileID: 1118223571059922, guid: 4860ed84e10f6e24596b49c7ca993f11, type: 2}
+  - {fileID: 1715697053755746, guid: cdd3c890f82ee5a4a9615dd36e1d7285, type: 2}
+  - {fileID: 1230106860699904, guid: aafe50dec914b974bb62de6e73f329fe, type: 2}
 --- !u!1 &1526506200
 GameObject:
   m_ObjectHideFlags: 0
