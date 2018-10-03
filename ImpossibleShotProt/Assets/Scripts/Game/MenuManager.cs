@@ -25,15 +25,18 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private Text levelTxt;
 	[SerializeField] private Text eneTxt;
 	[SerializeField] private AudioSource startSound; 
+	[SerializeField] private BulletMovement playerMov;
 
 	private void Awake() {
 		principal.SetActive(true);
+		playerMov.enabled = false;
 		inGame.SetActive(false);
 		pause.SetActive(false);
 		Time.timeScale = 0f;
 	} 
 
 	public void PauseGame(){
+		playerMov.enabled = false;
 		inGame.SetActive(false);
 		pause.SetActive(true);
 		Time.timeScale = 0f;
@@ -42,11 +45,13 @@ public class MenuManager : MonoBehaviour {
 	public void Resume(){
 		pause.SetActive(false);
 		inGame.SetActive(true);
+		playerMov.enabled = true;
 		Time.timeScale = 1f;
 	}
 
 	public void StartGame(){
 		Time.timeScale = 1f;
+		playerMov.enabled = true;
 		startSound.Play();
 		principal.SetActive(false);
 		inGame.SetActive(true);

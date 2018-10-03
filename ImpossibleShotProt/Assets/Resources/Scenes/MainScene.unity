@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4044,6 +4044,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FramesToPredict: 1
   MaxSize: 0
+--- !u!114 &1898645032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114819500736101950, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 978525359}
+  m_Script: {fileID: 11500000, guid: 9dbb9ffa97235a241b1e1b8391394377, type: 3}
 --- !u!1001 &1909203051
 Prefab:
   m_ObjectHideFlags: 0
@@ -4334,6 +4340,7 @@ MonoBehaviour:
   levelTxt: {fileID: 377454285}
   eneTxt: {fileID: 1342794504}
   startSound: {fileID: 2087284094}
+  playerMov: {fileID: 1898645032}
 --- !u!82 &2087284094
 AudioSource:
   m_ObjectHideFlags: 0

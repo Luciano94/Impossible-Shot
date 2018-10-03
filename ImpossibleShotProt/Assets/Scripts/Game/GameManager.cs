@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour {
     public void Death() {
         deadShot.Play();
         terrainSpeed = 0;
+        Handheld.Vibrate();
         Invoke("terminate", 0.5f);
     }
 
