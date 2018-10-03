@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lista:
-  - {fileID: 1002376592542778, guid: 82893ebc37161be42a0dac3201100d5b, type: 2}
+  - {fileID: 1511716213087672, guid: 9f8679a9c4b0ead439d52048d06b21cc, type: 2}
   - {fileID: 1045619315659174, guid: 6d9b69d25cbcfd24e9b9b6fc4d1b9f5d, type: 2}
   - {fileID: 1712459205524038, guid: 0d012cefa6465614592ca1478031c28c, type: 2}
   - {fileID: 1749258966635282, guid: f96d765695eb39045a8a23918aa9d079, type: 2}
@@ -2536,7 +2536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lista:
-  - {fileID: 1113980325815044, guid: 0445b071d92712345ae347e8e3a835b1, type: 2}
+  - {fileID: 1823129809019554, guid: a09c9c67143a47b4093af657257dc6b9, type: 2}
   - {fileID: 1507169692764250, guid: f14407ca5fed0124a9ae9bea3e94e33a, type: 2}
   - {fileID: 1943984363918516, guid: 688daa3ae377e2848a2905e731bc8b46, type: 2}
   - {fileID: 1532835410713780, guid: 0695b59f41e40f5489e701839af40f10, type: 2}
@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lista:
-  - {fileID: 1486567952681180, guid: d3b8d59ccd3d4cc49b8b995284b78e86, type: 2}
+  - {fileID: 1823129809019554, guid: a09c9c67143a47b4093af657257dc6b9, type: 2}
   - {fileID: 1258426201862826, guid: 169fff8de27376c41b0f174eb861d9da, type: 2}
   - {fileID: 1523071151106614, guid: c6c0f1ef34a89e448af249446598f0e2, type: 2}
   - {fileID: 1532835410713780, guid: 0695b59f41e40f5489e701839af40f10, type: 2}
@@ -3680,7 +3680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lista:
-  - {fileID: 1486567952681180, guid: d3b8d59ccd3d4cc49b8b995284b78e86, type: 2}
+  - {fileID: 1511716213087672, guid: 9f8679a9c4b0ead439d52048d06b21cc, type: 2}
   - {fileID: 1762131557322214, guid: 112c645a05790d147b4094242139ead1, type: 2}
   - {fileID: 1523071151106614, guid: c6c0f1ef34a89e448af249446598f0e2, type: 2}
   - {fileID: 1258426201862826, guid: 169fff8de27376c41b0f174eb861d9da, type: 2}
@@ -3726,7 +3726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lista:
-  - {fileID: 1002376592542778, guid: 82893ebc37161be42a0dac3201100d5b, type: 2}
+  - {fileID: 1511716213087672, guid: 9f8679a9c4b0ead439d52048d06b21cc, type: 2}
   - {fileID: 1526213538821512, guid: 755f682892cdab64d831031c06e2eef2, type: 2}
   - {fileID: 1523071151106614, guid: c6c0f1ef34a89e448af249446598f0e2, type: 2}
   - {fileID: 1749258966635282, guid: f96d765695eb39045a8a23918aa9d079, type: 2}
@@ -4026,6 +4026,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4193779967580598, guid: 8be643553e5d22f48910524aeb1a8d17,
     type: 2}
   m_PrefabInternal: {fileID: 1411962621}
+--- !u!1 &1898645028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1103632479028538, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 978525359}
+--- !u!114 &1898645029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1898645028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9ef6d866159cc46888717182d4e21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FramesToPredict: 1
+  MaxSize: 0
 --- !u!1001 &1909203051
 Prefab:
   m_ObjectHideFlags: 0
