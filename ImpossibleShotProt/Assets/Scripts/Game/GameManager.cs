@@ -20,15 +20,16 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] GameObject spawnPattern;
     [SerializeField] SpawnEnv spawnEnv;
-    [SerializeField] float terrainSpeed = 50f;
-    [SerializeField] float fOVPerLevel = 5f;
-    [SerializeField] float maxFOV = 80f;
-    [SerializeField] float maxSpeed = 100f;
-    [SerializeField] float speedPerLevel = 10f;
+    [SerializeField] float terrainSpeed = 80f;
+    //[SerializeField] float fOVPerLevel = 5f;
+    //[SerializeField] float maxFOV = 80f;
+    //[SerializeField] float maxSpeed = 100f;
+    //[SerializeField] float speedPerLevel = 10f;
     [SerializeField] int cantOfEnemiesPerLevel = 5;
     [SerializeField] int pointsperEne = 100;
     [SerializeField] AudioSource deadShot;
     [SerializeField] AudioSource enemyShot;
+    [SerializeField] BulletMovement playerMov;
     private int points = 0;
     int level = 1;
     private int cantOfEnemies;
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour {
 
     public void Death() {
         deadShot.Play();
+        playerMov.enabled = false;
         terrainSpeed = 0;
         Handheld.Vibrate();
         Invoke("terminate", 0.5f);
@@ -83,13 +85,13 @@ public class GameManager : MonoBehaviour {
     }
 
     private void LvlPar(){
-        SpeedControl();
-        FovControl();
+        //SpeedControl();
+       // FovControl();
         spawn.TimePerObs();  
     }
 
     private void LvlImpar(){
-        spawn.equilibrium();
+        spawn.TimePerObs();
         spawn.RandomizePattern();
     }
 
@@ -98,18 +100,18 @@ public class GameManager : MonoBehaviour {
         MenuManager.Instance.UpdateLvl(level);
     }
 
-    private void SpeedControl(){
+    /*private void SpeedControl(){
         if(terrainSpeed + speedPerLevel <= maxSpeed){
             terrainSpeed += speedPerLevel;
             spawnEnv.UpdateTime();
         }
-    }
-    private void  FovControl(){
+    }*/
+   /* private void  FovControl(){
         if(Camera.main.fieldOfView + fOVPerLevel <= maxFOV){
             float nextFOV = Camera.main.fieldOfView + fOVPerLevel;
             Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, nextFOV, 1f * Time.deltaTime);
         }
-    }
+    }*/
 
     private void Awake() {
         cantOfEnemies = 0;
@@ -117,9 +119,5 @@ public class GameManager : MonoBehaviour {
         MenuManager.Instance.UpdatePoints(points);
         MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
         MenuManager.Instance.UpdateLvl(level);
-    }
-
-    private void Update() {
-//        Debug.Log(Time.deltaTime);
     }
 }
