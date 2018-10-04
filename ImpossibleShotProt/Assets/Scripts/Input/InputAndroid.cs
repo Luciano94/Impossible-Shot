@@ -10,7 +10,7 @@ public class InputAndroid : IInput {
 	private Vector2 fingerDown;
 	private Vector2 fingerUp;
 	public bool SwipeReleased = true;
-	public float SWIPE_THRESHOLD = 20f;
+	public float SWIPE_THRESHOLD = 0.0f;
 
 	public void Awake(){
 		x = Direction.None;
@@ -28,8 +28,10 @@ public class InputAndroid : IInput {
 	}
 
 	public void Update(){
-		foreach (Touch touch in Input.touches)
-		{
+		//foreach (Touch touch in Input.touches)
+		//{
+
+		var touch = Input.touches [0];
 			if (touch.phase == TouchPhase.Began)
 			{
 				fingerUp = touch.position;
@@ -50,7 +52,7 @@ public class InputAndroid : IInput {
 			{
 				SwipeReleased = true;
 			}
-		}
+		//}
 	}
 
 	void checkSwipe()
