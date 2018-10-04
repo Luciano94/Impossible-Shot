@@ -120,6 +120,6 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Update() {
-        Debug.Log(Time.deltaTime);
+//        Debug.Log(Time.deltaTime);
     }
 }

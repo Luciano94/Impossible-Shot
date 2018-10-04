@@ -42,7 +42,7 @@ public class EnemyDetectionHitBox : MonoBehaviour {
 	void LateUpdate(){
 		col.height = InitHeight + ((TotalDistance / TotalFrames) * FramesToPredict);
 		col.center =new Vector3(col.center.x,col.center.y, InitPos + ((col.height - InitHeight)/2));
-		Debug.Log ("D: " +TotalDistance + " F: " + TotalFrames +" S: "+ GameManager.Instance.TerrainSpeed);
+//		Debug.Log ("D: " +TotalDistance + " F: " + TotalFrames +" S: "+ GameManager.Instance.TerrainSpeed);
 		if (MaxSize > 0 && col.height > MaxSize) {
 			col.height = MaxSize;
 		}

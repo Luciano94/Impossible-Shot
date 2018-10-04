@@ -10,7 +10,7 @@ public class InputAndroid : IInput {
 	private Vector2 fingerDown;
 	private Vector2 fingerUp;
 	public bool SwipeReleased = true;
-	public float SWIPE_THRESHOLD = 0.0f;
+	public float MinumumSwipe = 20f;
 
 	public void Awake(){
 		x = Direction.None;
@@ -23,25 +23,22 @@ public class InputAndroid : IInput {
 		dir.y = y;
 		x = Direction.None;
 		y = Direction.None;
-		//Debug.Log (x.ToString() + " " + y.ToString());
 		return dir;
 	}
 
 	public void Update(){
-		//foreach (Touch touch in Input.touches)
-		//{
-
-		var touch = Input.touches [0];
+		foreach (Touch touch in Input.touches)
+		{
 			if (touch.phase == TouchPhase.Began)
 			{
-				fingerUp = touch.position;
 				fingerDown = touch.position;
+				fingerUp = touch.position;
 			}
 
 			//detecta swipe mientras todavía hace contacto el dedo
 			if (touch.phase == TouchPhase.Moved)
 			{
-					fingerDown = touch.position;
+					fingerUp = touch.position;
 				if (SwipeReleased) {
 					checkSwipe ();
 				}
@@ -52,50 +49,50 @@ public class InputAndroid : IInput {
 			{
 				SwipeReleased = true;
 			}
-		//}
+		}
 	}
 
 	void checkSwipe()
 	{
 		//Check if Vertical swipe
-		if (verticalMove() > SWIPE_THRESHOLD && verticalMove() > horizontalValMove())
+		if (verticalMove() > MinumumSwipe && verticalMove() > horizontalValMove())
 		{
 			//Debug.Log("Vertical");
-			if (fingerDown.y - fingerUp.y > 0)//up swipe
+			if (fingerUp.y - fingerDown.y > 0)//up swipe
 			{
 				y = Direction.Up;
 			}
-			else if (fingerDown.y - fingerUp.y < 0)//Down swipe
+			else if (fingerUp.y - fingerDown.y < 0)//Down swipe
 			{
 				y = Direction.Down;
 			}
-			fingerUp = fingerDown;
+			fingerDown = fingerUp;
 			SwipeReleased = false;
 		} else
 
 		//Check if Horizontal swipe
-		if (horizontalValMove() > SWIPE_THRESHOLD && horizontalValMove() > verticalMove())
+		if (horizontalValMove() > MinumumSwipe && horizontalValMove() > verticalMove())
 		{
 			//Debug.Log("Horizontal");
-			if (fingerDown.x - fingerUp.x > 0)//Right swipe
+			if (fingerUp.x - fingerDown.x > 0)//Right swipe
 			{
 				x = Direction.Right;
 			}
-			else if (fingerDown.x - fingerUp.x < 0)//Left swipe
+			else if (fingerUp.x - fingerDown.x < 0)//Left swipe
 			{
 				x = Direction.Left;
 			}
-			fingerUp = fingerDown;
+			fingerDown = fingerUp;
 			SwipeReleased = false;
 		}
 	}
 	float verticalMove()
 	{
-		return Mathf.Abs(fingerDown.y - fingerUp.y);
+		return Mathf.Abs(fingerUp.y - fingerDown.y);
 	}
 
 	float horizontalValMove()
 	{
-		return Mathf.Abs(fingerDown.x - fingerUp.x);
+		return Mathf.Abs(fingerUp.x - fingerDown.x);
 	}
 }
