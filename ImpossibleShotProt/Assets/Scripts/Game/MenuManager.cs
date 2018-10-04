@@ -22,7 +22,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private GameObject inGame;
 	[SerializeField] private GameObject pause;
 	[SerializeField] private Text pointsTxt;
-	[SerializeField] private Text levelTxt;
+	//[SerializeField] private Text levelTxt;
 	[SerializeField] private Text eneTxt;
 	[SerializeField] private AudioSource startSound; 
 	[SerializeField] private BulletMovement playerMov;
@@ -61,9 +61,9 @@ public class MenuManager : MonoBehaviour {
 		pointsTxt.text = "Points: " + value.ToString();
 	}
 
-	public void UpdateLvl(int value){
+	/*public void UpdateLvl(int value){
 		levelTxt.text = "Level: " + value.ToString();
-	}
+	}*/
 
 	public void UpdateEnemies(int actEne, int totalEne){
 		eneTxt.text = actEne.ToString() + " / " + totalEne.ToString();

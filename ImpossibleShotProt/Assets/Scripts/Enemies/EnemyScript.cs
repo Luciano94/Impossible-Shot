@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyScript : MonoBehaviour {
+	[SerializeField] int points = 100;
 	private GameManager gM;
 
 
@@ -12,6 +13,6 @@ public class EnemyScript : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other)
 	{
-		gM.EnemyDeath();
+		gM.EnemyDeath(points);
 	}
 }

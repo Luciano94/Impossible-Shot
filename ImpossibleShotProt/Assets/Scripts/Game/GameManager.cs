@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
     //[SerializeField] float maxSpeed = 100f;
     //[SerializeField] float speedPerLevel = 10f;
     [SerializeField] int cantOfEnemiesPerLevel = 5;
-    [SerializeField] int pointsperEne = 100;
+//    [SerializeField] int pointsperEne = 100;
     [SerializeField] AudioSource deadShot;
     [SerializeField] AudioSource enemyShot;
     [SerializeField] BulletMovement playerMov;
@@ -57,15 +57,14 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(0);
     }
 
-    public void EnemyDeath(){
+    public void EnemyDeath(int value){
         enemyShot.Play();
         cantOfEnemies ++;
-        points += pointsperEne;
+        points += value * level;
         MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
         MenuManager.Instance.UpdatePoints(points);
         EnemiesControl();
     }
-
     private void EnemiesControl(){
         if(cantOfEnemies >= cantOfEnemiesPerLevel){
             level++;
@@ -97,7 +96,7 @@ public class GameManager : MonoBehaviour {
 
     private void UpdateHUD(){
         MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
-        MenuManager.Instance.UpdateLvl(level);
+        //MenuManager.Instance.UpdateLvl(level);
     }
 
     /*private void SpeedControl(){
@@ -118,6 +117,6 @@ public class GameManager : MonoBehaviour {
         spawn = spawnPattern.GetComponent<SpawnPattern>();
         MenuManager.Instance.UpdatePoints(points);
         MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
-        MenuManager.Instance.UpdateLvl(level);
+       // MenuManager.Instance.UpdateLvl(level);
     }
 }
