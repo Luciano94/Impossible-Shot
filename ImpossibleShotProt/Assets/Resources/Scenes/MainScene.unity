@@ -2037,6 +2037,11 @@ MonoBehaviour:
   - {fileID: 1712459205524038, guid: 0d012cefa6465614592ca1478031c28c, type: 2}
   - {fileID: 1258426201862826, guid: 169fff8de27376c41b0f174eb861d9da, type: 2}
   - {fileID: 1943984363918516, guid: 688daa3ae377e2848a2905e731bc8b46, type: 2}
+--- !u!198 &957209984 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 978525359}
 --- !u!1001 &978525359
 Prefab:
   m_ObjectHideFlags: 0
@@ -2121,6 +2126,83 @@ Prefab:
       propertyPath: terrainSpeed
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 1925892608223638, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653994656384478, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: simulationSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198093005921615250, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653994656384478, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
+      propertyPath: m_Name
+      value: Blood
+      objectReference: {fileID: 0}
+    - target: {fileID: 114819500736101950, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: TransitionSharpness
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114480606977723794, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 957209984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
   m_IsPrefabAsset: 0
