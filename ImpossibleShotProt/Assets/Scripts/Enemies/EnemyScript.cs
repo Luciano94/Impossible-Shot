@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour {
 		gM = GameManager.Instance;
 	}
 
-	private void OnTriggerExit(Collider other)
+	private void OnTriggerEnter(Collider other)
 	{
 		gM.EnemyDeath(points);
 	}

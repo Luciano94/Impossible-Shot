@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] AudioSource deadShot;
     [SerializeField] AudioSource enemyShot;
     [SerializeField] BulletMovement playerMov;
+    [SerializeField] ParticleSystem blood;
     private int points = 0;
     int level = 1;
     private int cantOfEnemies;
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour {
 
     public void EnemyDeath(int value){
         enemyShot.Play();
+        blood.Play();
         cantOfEnemies ++;
         points += value * level;
         MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
