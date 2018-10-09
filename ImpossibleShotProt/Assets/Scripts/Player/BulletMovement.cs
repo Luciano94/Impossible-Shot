@@ -48,19 +48,14 @@ public class BulletMovement : MonoBehaviour {
 	}
 
 	private void moveDetection(){
-		DirectionVec dir = InputManager.Instance.GetDirection ();
-		switch (dir.y) {
+		Direction dir = InputManager.Instance.GetDirection ();
+		switch (dir) {
 		case Direction.Up:
 			yNext += 1;
 			break;
 		case Direction.Down:
 			yNext -= 1;
 			break;
-		default:
-			break;
-		}
-
-		switch (dir.x) {
 		case Direction.Right:
 			xNext += 1;
 			break;
@@ -70,6 +65,7 @@ public class BulletMovement : MonoBehaviour {
 		default:
 			break;
 		}
+
 		if (xNext > 1) {xNext = 1;}
 		if (xNext < -1) {xNext = -1;}
 		if (yNext > 1) {yNext = 1;}
@@ -93,14 +89,5 @@ public class BulletMovement : MonoBehaviour {
 			x = xNext; 
 			moving = false;
 		}
-
-		/*if (Vector3.Distance(transform.position,Target) <= IgnorableDistance) {
-			transform.position = Target;
-			y = yNext;
-			x = xNext;
-			moving = false;
-		} else {
-			transform.position = Vector3.Lerp (transform.position, new Vector3 (xTarget, yTarget, transform.position.z), TransitionSharpness);
-		}*/
 	}
 }

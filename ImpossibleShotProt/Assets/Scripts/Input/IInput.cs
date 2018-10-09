@@ -1,8 +1,20 @@
-﻿interface IInput
+﻿public enum Direction{
+	Up,
+	Down,
+	Left,
+	Right,
+	None
+}
+interface IInput
 {
 	void Awake();
-	DirectionVec GetDirection();
+	Direction GetDirection();
 	void Update();
+	//android alternative only
+	void GoUp ();
+	void GoDown();
+	void GoLeft();
+	void GoRight();
 }
 
 

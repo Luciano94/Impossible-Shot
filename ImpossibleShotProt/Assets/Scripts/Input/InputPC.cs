@@ -3,31 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InputPC : IInput {
-	public DirectionVec GetDirection()
+	public Direction GetDirection()
 	{
-		DirectionVec dir;
-		dir.y = Direction.None;
-		dir.x = Direction.None;
+		Direction dir;
+		dir = Direction.None;
 		if (Input.GetAxis("Vertical") != 0){
 			if (Input.GetAxis ("Vertical") > 0) {
-				dir.y = Direction.Up;
+				dir = Direction.Up;
 			} else {
-				dir.y = Direction.Down;
+				dir = Direction.Down;
 			}
-		}
-
-		if (Input.GetAxis("Horizontal") != 0){
+		} else if (Input.GetAxis("Horizontal") != 0){
 			if (Input.GetAxis ("Horizontal") > 0) {
-				dir.x = Direction.Right;
+				dir = Direction.Right;
 			} else {
-				dir.x = Direction.Left;
+				dir = Direction.Left;
 			}
 		}
 
 		return dir;
 	}
 
-	public void Update(){
-	}
+	//Placeholders
+	public void Update(){}
 	public void Awake(){}
+	public void GoUp (){}
+	public void GoDown(){}
+	public void GoLeft(){}
+	public void GoRight(){}
 }

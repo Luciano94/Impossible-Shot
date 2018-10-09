@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class InputAndroid : IInput {
-	private Direction x;
-	private Direction y;
+	private Direction command;
 
 	private Vector2 fingerDown;
 	private Vector2 fingerUp;
@@ -13,16 +12,13 @@ public class InputAndroid : IInput {
 	public float MinumumSwipe = 20f;
 
 	public void Awake(){
-		x = Direction.None;
-		y = Direction.None;
+		command = Direction.None;
 	}
 
-	public DirectionVec GetDirection(){
-		DirectionVec dir;
-		dir.x = x;
-		dir.y = y;
-		x = Direction.None;
-		y = Direction.None;
+	public Direction GetDirection(){
+		Direction dir;
+		dir = command;
+		command = Direction.None;
 		return dir;
 	}
 
@@ -60,11 +56,11 @@ public class InputAndroid : IInput {
 			//Debug.Log("Vertical");
 			if (fingerUp.y - fingerDown.y > 0)//up swipe
 			{
-				y = Direction.Up;
+				command = Direction.Up;
 			}
 			else if (fingerUp.y - fingerDown.y < 0)//Down swipe
 			{
-				y = Direction.Down;
+				command = Direction.Down;
 			}
 			fingerDown = fingerUp;
 			SwipeReleased = false;
@@ -76,11 +72,11 @@ public class InputAndroid : IInput {
 			//Debug.Log("Horizontal");
 			if (fingerUp.x - fingerDown.x > 0)//Right swipe
 			{
-				x = Direction.Right;
+				command = Direction.Right;
 			}
 			else if (fingerUp.x - fingerDown.x < 0)//Left swipe
 			{
-				x = Direction.Left;
+				command = Direction.Left;
 			}
 			fingerDown = fingerUp;
 			SwipeReleased = false;
@@ -95,4 +91,9 @@ public class InputAndroid : IInput {
 	{
 		return Mathf.Abs(fingerUp.x - fingerDown.x);
 	}
+	//Placeholders do not use
+	public void GoUp (){}
+	public void GoDown(){}
+	public void GoLeft(){}
+	public void GoRight(){}
 }
