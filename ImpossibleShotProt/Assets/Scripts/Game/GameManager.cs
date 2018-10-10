@@ -114,11 +114,16 @@ public class GameManager : MonoBehaviour {
         }
     }*/
 
-    private void Awake() {
-        cantOfEnemies = 0;
-        spawn = spawnPattern.GetComponent<SpawnPattern>();
-        MenuManager.Instance.UpdatePoints(points);
-        MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
-       // MenuManager.Instance.UpdateLvl(level);
+    private void Awake(){
+		cantOfEnemies = 0;
+		spawn = spawnPattern.GetComponent<SpawnPattern>();
+		MenuManager.Instance.UpdatePoints(points);
+		MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
+		// MenuManager.Instance.UpdateLvl(level);
+		#if UNITY_ANDROID
+		Screen.autorotateToLandscapeLeft = false;
+		Screen.autorotateToLandscapeRight = false;
+		Screen.orientation = ScreenOrientation.Portrait;
+		#endif
     }
 }
