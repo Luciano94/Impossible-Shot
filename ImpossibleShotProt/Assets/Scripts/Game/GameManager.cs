@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour {
         blood.Play();
         cantOfEnemies ++;
         points += value * level;
-        MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
+        //MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
         MenuManager.Instance.UpdatePoints(points);
         EnemiesControl();
     }
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void UpdateHUD(){
-        MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
+        //MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
         //MenuManager.Instance.UpdateLvl(level);
     }
 
@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour {
 		cantOfEnemies = 0;
 		spawn = spawnPattern.GetComponent<SpawnPattern>();
 		MenuManager.Instance.UpdatePoints(points);
-		MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
+		//MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
 		// MenuManager.Instance.UpdateLvl(level);
 		#if UNITY_ANDROID
 		Screen.autorotateToLandscapeLeft = false;
