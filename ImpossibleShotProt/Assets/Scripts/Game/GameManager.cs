@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour {
         enemyShot.Play();
         blood.Play();
         points += value * level;
-        MenuManager.Instance.UpdatePoints(points);
+		MenuManager.Instance.UpdatePoints(points, value);
         //EnemiesControl();
     }
 
@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour {
     private void Awake(){
 		cantOfEnemies = 0;
 		spawn = spawnPattern.GetComponent<SpawnPattern>();
-		MenuManager.Instance.UpdatePoints(points);
+		MenuManager.Instance.UpdatePoints(points, 0);
 		#if UNITY_ANDROID
 		Screen.autorotateToLandscapeLeft = false;
 		Screen.autorotateToLandscapeRight = false;

@@ -22,6 +22,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private GameObject inGame;
 	[SerializeField] private GameObject pause;
 	[SerializeField] private Text pointsTxt;
+	[SerializeField] private PointGainDisplay pointDisplay;
 	//[SerializeField] private Text levelTxt;
 	//[SerializeField] private Text eneTxt;
 	[SerializeField] private AudioSource startSound; 
@@ -33,6 +34,7 @@ public class MenuManager : MonoBehaviour {
 		inGame.SetActive(false);
 		pause.SetActive(false);
 		Time.timeScale = 0f;
+
 	} 
 
 	public void PauseGame(){
@@ -57,8 +59,9 @@ public class MenuManager : MonoBehaviour {
 		inGame.SetActive(true);
 	}
 
-	public void UpdatePoints(int value){
-		pointsTxt.text = value.ToString();
+	public void UpdatePoints(int TotalPoints, int newPoints){
+		pointsTxt.text = TotalPoints.ToString();
+		pointDisplay.AddScore (newPoints);
 	}
 
 	/*public void UpdateLvl(int value){
