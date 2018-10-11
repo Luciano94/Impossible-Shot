@@ -16,28 +16,16 @@ public class InputManager : MonoBehaviour {
 	}
 
 	IInput input;
-	bool isInputAndroidAlternative;
 	void Awake ()
 	{
 		instance = this;
-		Debug.Log ("IM created");
-
-	}
-
-	public void Initialize(bool AlternativeInput){
 		#if UNITY_ANDROID
-		if(AlternativeInput){
-			input = new InputAndroidAlternative();
-			isInputAndroidAlternative = true;
-		} else {
-			input = new InputAndroid();
-			isInputAndroidAlternative = false;
-		}
+		input = new InputAndroidAlternative();
 		#else
 		input = new InputPC();
-		isInputAndroidAlternative = false;
 		#endif
 		input.Awake ();
+		Debug.Log ("IM created");
 	}
 	public Direction GetDirection()
 	{
@@ -51,8 +39,4 @@ public class InputManager : MonoBehaviour {
 	public void GoDown(){input.GoDown();}
 	public void GoRight(){input.GoRight();}
 	public void GoLeft(){input.GoLeft();}
-
-	public bool IsInputAndroidAlternative(){
-		return isInputAndroidAlternative;
-	}
 }
