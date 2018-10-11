@@ -18,15 +18,15 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    [SerializeField] GameObject spawnPattern;
-    [SerializeField] SpawnEnv spawnEnv;
-    [SerializeField] float terrainSpeed = 80f;
     //[SerializeField] float fOVPerLevel = 5f;
     //[SerializeField] float maxFOV = 80f;
     //[SerializeField] float maxSpeed = 100f;
     //[SerializeField] float speedPerLevel = 10f;
+    //[SerializeField] int pointsperEne = 100;
+    [SerializeField] GameObject spawnPattern;
+    [SerializeField] SpawnEnv spawnEnv;
+    [SerializeField] float terrainSpeed = 80f;
     [SerializeField] int cantOfEnemiesPerLevel = 5;
-//    [SerializeField] int pointsperEne = 100;
     [SerializeField] AudioSource deadShot;
     [SerializeField] AudioSource enemyShot;
     [SerializeField] BulletMovement playerMov;
@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour {
     int level = 1;
     private int cantOfEnemies;
     private int cantEnemies=0;
-
     private SpawnPattern spawn;
 
     public int Level{
@@ -61,13 +60,12 @@ public class GameManager : MonoBehaviour {
     public void EnemyDeath(int value){
         enemyShot.Play();
         blood.Play();
-        cantOfEnemies ++;
         points += value * level;
-        //MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
         MenuManager.Instance.UpdatePoints(points);
-        EnemiesControl();
+        //EnemiesControl();
     }
-    private void EnemiesControl(){
+
+   /* private void EnemiesControl(){
         if(cantOfEnemies >= cantOfEnemiesPerLevel){
             level++;
             if(level % 2 == 0)
@@ -81,45 +79,28 @@ public class GameManager : MonoBehaviour {
             cantEnemies ++;
             cantOfEnemiesPerLevel += cantEnemies;
             cantOfEnemies = 0;
-            UpdateHUD();
         }
+    }*/
+
+    public void PassLvl(){
+        level++;
+        spawn.TimePerObs();
+        //spawn.RandomizePattern();
     }
 
-    private void LvlPar(){
-        //SpeedControl();
-       // FovControl();
+   /* private void LvlPar(){
         spawn.TimePerObs();  
     }
 
     private void LvlImpar(){
         spawn.TimePerObs();
         spawn.RandomizePattern();
-    }
-
-    private void UpdateHUD(){
-        //MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
-        //MenuManager.Instance.UpdateLvl(level);
-    }
-
-    /*private void SpeedControl(){
-        if(terrainSpeed + speedPerLevel <= maxSpeed){
-            terrainSpeed += speedPerLevel;
-            spawnEnv.UpdateTime();
-        }
-    }*/
-   /* private void  FovControl(){
-        if(Camera.main.fieldOfView + fOVPerLevel <= maxFOV){
-            float nextFOV = Camera.main.fieldOfView + fOVPerLevel;
-            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, nextFOV, 1f * Time.deltaTime);
-        }
     }*/
 
     private void Awake(){
 		cantOfEnemies = 0;
 		spawn = spawnPattern.GetComponent<SpawnPattern>();
 		MenuManager.Instance.UpdatePoints(points);
-		//MenuManager.Instance.UpdateEnemies(cantOfEnemies,cantOfEnemiesPerLevel);
-		// MenuManager.Instance.UpdateLvl(level);
 		#if UNITY_ANDROID
 		Screen.autorotateToLandscapeLeft = false;
 		Screen.autorotateToLandscapeRight = false;

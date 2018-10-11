@@ -16,7 +16,6 @@ public class SpawnPattern : MonoBehaviour {
     private GameObject pattern;
     private int cantOfObs;
     private int actualCOP;
-
     public int LvlToNormal{
         get{return lvlToNormal;}
     }
@@ -42,7 +41,7 @@ public class SpawnPattern : MonoBehaviour {
         }
     }
 
-    public void ReCharguePatterns(){
+   /* public void ReCharguePatterns(){
         int level = GameManager.Instance.Level;
         q_patterns.Clear();
         q_PatternsLvl.Clear();
@@ -50,7 +49,7 @@ public class SpawnPattern : MonoBehaviour {
             ChargePatterns(patternsGONormal);
         if(level == lvlToHard)
             ChargePatterns(patternsGOHard);
-    }
+    }*/
 
     public void Spawn() {
         pattern = q_PatternsLvl.Dequeue();
@@ -98,8 +97,11 @@ public class SpawnPattern : MonoBehaviour {
                                             transform.position.z);
         if(pattern.GetComponent<Pattern>().Count() < cantOfObs)
             Invoke("SpawnOb", timePerOb);
-        else
+        else{
+            Debug.Log("Level: "+ GameManager.Instance.Level);
+            GameManager.Instance.PassLvl();
             Invoke("Spawn",0f);
+        }
     } 
 
 
@@ -108,11 +110,5 @@ public class SpawnPattern : MonoBehaviour {
         if(timePerOb <= 0.5f){
             timePerOb = 0.5f;
         }
-    }
-
-    public void equilibrium(){
-        timePerOb -= 0.05f;
-        if(timePerOb <= 0.5f)
-            timePerOb = 0.5f;
     }
 }
