@@ -25,7 +25,6 @@ public class InputManager : MonoBehaviour {
 		input = new InputPC();
 		#endif
 		input.Awake ();
-		Debug.Log ("IM created");
 	}
 	public Direction GetDirection()
 	{

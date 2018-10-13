@@ -1037,6 +1037,7 @@ MonoBehaviour:
   cantLogTOP: 0
   timePerOb: 0.75
   cantOfPatterns: 2
+  timePerPat: 3
   lvlToNormal: 5
   lvlToHard: 10
 --- !u!1 &338885570

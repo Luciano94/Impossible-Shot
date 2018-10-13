@@ -8,12 +8,14 @@ public class SpawnPattern : MonoBehaviour {
     [SerializeField] int cantLogTOP = 0;
     [SerializeField] float timePerOb;
     [SerializeField] private int cantOfPatterns = 1;
+    [SerializeField] private float timePerPat;
     [SerializeField] private int lvlToNormal = 5;
     [SerializeField] private int lvlToHard = 10;
     private Queue<GameObject> q_patterns;
     private Queue<GameObject> q_PatternsLvl;
     private GameObject pattern;
     //private int cantOfObs;
+    private float timePerPatter = 0;
     private int actualCOP;
     
     public int LvlToNormal{
@@ -60,7 +62,6 @@ public class SpawnPattern : MonoBehaviour {
         }
         else {
             GameManager.Instance.PassLvl();
-            Debug.Log("Level: "+ GameManager.Instance.Level);
         }
     }
 
@@ -102,7 +103,7 @@ public class SpawnPattern : MonoBehaviour {
         if(pattern.GetComponent<Pattern>().Count() > 0)
             Invoke("SpawnOb", timePerOb);
         else{
-            Invoke("Spawn", 0f);
+            Invoke("Spawn", timePerPatter);
         }
     } 
 
@@ -112,7 +113,10 @@ public class SpawnPattern : MonoBehaviour {
             cantLogTOP++;
             ChargePatterns(totalOfPatterns[cantLogTOP]);
         }
-        else Debug.Log("se termino papu");
+        else ChargePatterns(totalOfPatterns[cantLogTOP]);
+        if(cantLogTOP == totalOfPatterns.Length){
+            timePerPatter = timePerPat;
+        }
         timePerOb -= 0.20f;
         if(timePerOb <= 0.5f){
             timePerOb = 0.5f;
