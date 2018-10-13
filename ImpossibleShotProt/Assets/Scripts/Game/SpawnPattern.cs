@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class SpawnPattern : MonoBehaviour {
 
-    [SerializeField] Transform patternsGOEasy;
-    [SerializeField] Transform patternsGONormal;
-    [SerializeField] Transform patternsGOHard;
+    [SerializeField] Transform[] totalOfPatterns;
+    [SerializeField] int cantLogTOP = 0;
     [SerializeField] float timePerOb;
     [SerializeField] private int cantOfPatterns = 1;
     [SerializeField] private int lvlToNormal = 5;
@@ -14,8 +13,9 @@ public class SpawnPattern : MonoBehaviour {
     private Queue<GameObject> q_patterns;
     private Queue<GameObject> q_PatternsLvl;
     private GameObject pattern;
-    private int cantOfObs;
+    //private int cantOfObs;
     private int actualCOP;
+    
     public int LvlToNormal{
         get{return lvlToNormal;}
     }
@@ -27,18 +27,20 @@ public class SpawnPattern : MonoBehaviour {
     private void Awake() {
         q_patterns = new Queue<GameObject>();
         q_PatternsLvl = new Queue<GameObject>();
-        ChargePatterns(patternsGOEasy);
-        Invoke ("Spawn", timePerOb);
+        ChargePatterns(totalOfPatterns[cantLogTOP]);
     }
 
     private void ChargePatterns(Transform patterns){
         foreach(Transform child in patterns)
             q_patterns.Enqueue(child.gameObject);
+        cantOfPatterns = q_patterns.Count;
         for(int i = 0; i<cantOfPatterns;i++){
             GameObject go = q_patterns.Dequeue();
             q_PatternsLvl.Enqueue(go);
             q_patterns.Enqueue(go);
         }
+        RandomizePattern();
+        Spawn();
     }
 
    /* public void ReCharguePatterns(){
@@ -52,24 +54,26 @@ public class SpawnPattern : MonoBehaviour {
     }*/
 
     public void Spawn() {
-        pattern = q_PatternsLvl.Dequeue();
-        cantOfObs = pattern.GetComponent<Pattern>().TamLista();
-        q_PatternsLvl.Enqueue(pattern);
-        Invoke("SpawnOb", timePerOb);
+        if(q_PatternsLvl.Count > 0) {
+            pattern = q_PatternsLvl.Dequeue();
+            SpawnOb();
+        }
+        else {
+            GameManager.Instance.PassLvl();
+            Debug.Log("Level: "+ GameManager.Instance.Level);
+        }
     }
 
     public void RandomizePattern(){
         
         CancelInvoke();
         Randomize();
-        cantOfPatterns++;
         q_PatternsLvl.Clear();
         for(int i = 0; i<cantOfPatterns;i++){
             GameObject go = q_patterns.Dequeue();
             q_PatternsLvl.Enqueue(go);
             q_patterns.Enqueue(go);
         }
-        Invoke("Spawn",0f);
     }
 
     private void Randomize(){
@@ -95,17 +99,20 @@ public class SpawnPattern : MonoBehaviour {
         go.transform.position = new Vector3(transform.position.x,
                                             transform.position.y,
                                             transform.position.z);
-        if(pattern.GetComponent<Pattern>().Count() < cantOfObs)
+        if(pattern.GetComponent<Pattern>().Count() > 0)
             Invoke("SpawnOb", timePerOb);
         else{
-            Debug.Log("Level: "+ GameManager.Instance.Level);
-            GameManager.Instance.PassLvl();
-            Invoke("Spawn",0f);
+            Invoke("Spawn", 0f);
         }
     } 
 
 
     public void TimePerObs(){
+        if(cantLogTOP < totalOfPatterns.Length){
+            cantLogTOP++;
+            ChargePatterns(totalOfPatterns[cantLogTOP]);
+        }
+        else Debug.Log("se termino papu");
         timePerOb -= 0.20f;
         if(timePerOb <= 0.5f){
             timePerOb = 0.5f;

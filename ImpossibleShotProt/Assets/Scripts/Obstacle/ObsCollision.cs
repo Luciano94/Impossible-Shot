@@ -7,5 +7,6 @@ public class ObsCollision : MonoBehaviour {
 	private void OnTriggerEnter(Collider other)
 	{
 		GameManager.Instance.Death();
+		Debug.Log("Colision");
 	}
 }

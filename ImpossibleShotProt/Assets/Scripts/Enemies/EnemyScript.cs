@@ -14,5 +14,6 @@ public class EnemyScript : MonoBehaviour {
 	private void OnTriggerEnter(Collider other)
 	{
 		gM.EnemyDeath(points);
+		Debug.Log("Colision");
 	}
 }

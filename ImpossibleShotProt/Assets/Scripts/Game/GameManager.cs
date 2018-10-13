@@ -26,15 +26,12 @@ public class GameManager : MonoBehaviour {
     [SerializeField] GameObject spawnPattern;
     [SerializeField] SpawnEnv spawnEnv;
     [SerializeField] float terrainSpeed = 80f;
-    [SerializeField] int cantOfEnemiesPerLevel = 5;
     [SerializeField] AudioSource deadShot;
     [SerializeField] AudioSource enemyShot;
     [SerializeField] BulletMovement playerMov;
     [SerializeField] ParticleSystem blood;
     private int points = 0;
     int level = 1;
-    private int cantOfEnemies;
-    private int cantEnemies=0;
     private SpawnPattern spawn;
 
     public int Level{
@@ -62,7 +59,6 @@ public class GameManager : MonoBehaviour {
         blood.Play();
         points += value * level;
 		MenuManager.Instance.UpdatePoints(points, value);
-        //EnemiesControl();
     }
 
    /* private void EnemiesControl(){
@@ -85,7 +81,6 @@ public class GameManager : MonoBehaviour {
     public void PassLvl(){
         level++;
         spawn.TimePerObs();
-        //spawn.RandomizePattern();
     }
 
    /* private void LvlPar(){
@@ -98,7 +93,6 @@ public class GameManager : MonoBehaviour {
     }*/
 
     private void Awake(){
-		cantOfEnemies = 0;
 		spawn = spawnPattern.GetComponent<SpawnPattern>();
 		MenuManager.Instance.UpdatePoints(points, 0);
 		#if UNITY_ANDROID

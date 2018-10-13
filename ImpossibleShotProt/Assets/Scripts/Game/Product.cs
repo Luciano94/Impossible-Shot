@@ -7,7 +7,6 @@ public class Product : MonoBehaviour {
 	private Pattern patron;
 	private bool Activo;
 	[SerializeField]private int width = 1;
-	private PositionManager pM;
 	private float index;
 
 	public Pattern Patron {
@@ -27,7 +26,6 @@ public class Product : MonoBehaviour {
 
 	private void Awake(){
 		Activo = false;
-		pM = PositionManager.Instance;
 	}
 	private void Update(){
 		if (transform.position.z <= MaxDist * -1){
@@ -36,9 +34,9 @@ public class Product : MonoBehaviour {
 	}
 
 	public void ReturnToFactory(){
-		pM.freePosition(index,width);
 		Activo = false;
-		patron.Return (gameObject);
+		if(patron != null) patron.Return (gameObject);
+		else Destroy(gameObject);
 	}
 
 	public void Sent(){
