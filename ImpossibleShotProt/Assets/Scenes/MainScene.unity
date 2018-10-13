@@ -3006,6 +3006,11 @@ Prefab:
       propertyPath: pointDisplay
       value: 
       objectReference: {fileID: 142432555}
+    - target: {fileID: 114480606977723794, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: multPerEnemy
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
   m_IsPrefabAsset: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour {
 
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour {
     //[SerializeField] float maxSpeed = 100f;
     //[SerializeField] float speedPerLevel = 10f;
     //[SerializeField] int pointsperEne = 100;
+    [SerializeField] float multPerEnemy;
     [SerializeField] GameObject spawnPattern;
     [SerializeField] SpawnEnv spawnEnv;
     [SerializeField] float terrainSpeed = 80f;
@@ -30,7 +32,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] AudioSource enemyShot;
     [SerializeField] BulletMovement playerMov;
     [SerializeField] ParticleSystem blood;
-    private int points = 0;
+    private float multiplicador;
+    private float points = 0;
     int level = 1;
     private SpawnPattern spawn;
 
@@ -57,8 +60,10 @@ public class GameManager : MonoBehaviour {
     public void EnemyDeath(int value){
         enemyShot.Play();
         blood.Play();
-        points += value * level;
-		MenuManager.Instance.UpdatePoints(points, value);
+        multiplicador += multPerEnemy;
+        multiplicador = (float)Math.Round(multiplicador, 2);
+        points += value * multiplicador;
+		MenuManager.Instance.UpdatePoints(points, value, multiplicador);
     }
 
    /* private void EnemiesControl(){
@@ -94,7 +99,8 @@ public class GameManager : MonoBehaviour {
 
     private void Awake(){
 		spawn = spawnPattern.GetComponent<SpawnPattern>();
-		MenuManager.Instance.UpdatePoints(points, 0);
+        multiplicador = 1;
+		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
 		#if UNITY_ANDROID
 		Screen.autorotateToLandscapeLeft = false;
 		Screen.autorotateToLandscapeRight = false;

@@ -59,8 +59,8 @@ public class MenuManager : MonoBehaviour {
 		inGame.SetActive(true);
 	}
 
-	public void UpdatePoints(int TotalPoints, int newPoints){
-		pointsTxt.text = TotalPoints.ToString();
+	public void UpdatePoints(float TotalPoints, int newPoints, float mult){
+		pointsTxt.text = TotalPoints.ToString() + " x" + mult.ToString();
 		pointDisplay.AddScore (newPoints);
 	}
 
