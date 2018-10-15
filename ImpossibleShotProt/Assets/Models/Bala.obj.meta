@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1775117d5d5e63d44976cdfeefe01aa7
+guid: 67859dfe8743cc743a28548d75328f74
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,11 +8,15 @@ ModelImporter:
     400000: //RootNode
     400002: pCube1
     2100000: pCube1Mat
-    2100002: initialShadingGroup
     2300000: pCube1
     3300000: pCube1
     4300000: pCube1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube1Mat
+    second: {fileID: 2100000, guid: a9578ff1d891be646917fad086ed8e78, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
