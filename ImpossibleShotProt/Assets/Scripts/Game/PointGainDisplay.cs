@@ -6,7 +6,7 @@ public class PointGainDisplay : MonoBehaviour {
 	[SerializeField][Range(0.0f,2.0f)] float TimeToFade;
 	private UnityEngine.UI.Text Txt;
 	private float Timer;
-	private int DisplayedScore;
+	private float DisplayedScore;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +24,7 @@ public class PointGainDisplay : MonoBehaviour {
 		}
 	}
 
-	public void AddScore(int score){
+	public void AddScore(float score){
 		if (score != 0){
 			Timer = 0;
 			DisplayedScore += score;

@@ -62,8 +62,9 @@ public class GameManager : MonoBehaviour {
         blood.Play();
         multiplicador += multPerEnemy;
         multiplicador = (float)Math.Round(multiplicador, 2);
-        points += value * multiplicador;
-		MenuManager.Instance.UpdatePoints(points, value, multiplicador);
+        var AddedScore = value * multiplicador;
+        points += AddedScore;
+		MenuManager.Instance.UpdatePoints(points, AddedScore, multiplicador);
     }
 
    /* private void EnemiesControl(){
