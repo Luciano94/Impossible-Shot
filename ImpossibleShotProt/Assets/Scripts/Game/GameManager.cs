@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void terminate(){
-        SceneManager.LoadScene(0);
+        MenuManager.Instance.FinishGame();
     }
 
     public void EnemyDeath(int value){
