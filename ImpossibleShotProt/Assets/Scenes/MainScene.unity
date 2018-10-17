@@ -2349,6 +2349,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114480606977723794, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: spawnPattern
+      value: 
+      objectReference: {fileID: 326060626}
+    - target: {fileID: 114480606977723794, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: spawnEnv
+      value: 
+      objectReference: {fileID: 1392785591}
     - target: {fileID: 114593732612067006, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
         type: 2}
       propertyPath: principal
@@ -2384,21 +2394,6 @@ Prefab:
       propertyPath: pointDisplay
       value: 
       objectReference: {fileID: 142432555}
-    - target: {fileID: 114480606977723794, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
-        type: 2}
-      propertyPath: spawnPattern
-      value: 
-      objectReference: {fileID: 326060626}
-    - target: {fileID: 114480606977723794, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
-        type: 2}
-      propertyPath: spawnEnv
-      value: 
-      objectReference: {fileID: 1392785591}
-    - target: {fileID: 114819500736101950, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
-        type: 2}
-      propertyPath: SpinSpeed
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
   m_IsPrefabAsset: 0
