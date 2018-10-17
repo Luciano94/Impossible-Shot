@@ -7,6 +7,7 @@ public class BulletMovement : MonoBehaviour {
 	[SerializeField] private float DistanceToCenter;
 	[SerializeField][Range (0f,1f)] private float IgnorableDistance;
 	[SerializeField][Range (1,25)] private int TransitionSharpness;
+	[SerializeField] private int SpinSpeed = 10;
 	private float LerpState = 0;
 	private int x = 0;
 	private int y = 0;
@@ -14,6 +15,7 @@ public class BulletMovement : MonoBehaviour {
 	private int xNext = 0;
 	private bool moving = false;
 	private Vector3 InitialPosition;
+
 	private void Awake() {
 		MatrixCenter = transform.position;
 		InitialPosition = transform.position;
@@ -34,8 +36,12 @@ public class BulletMovement : MonoBehaviour {
 			moveAction ();
 		}
 
+		Spin();
 	}
 
+private void Spin(){
+	transform.Rotate(0,0, SpinSpeed * Time.deltaTime * -1);
+}
 	private void Rotate(int x, int y){
 		if (y == 0)
 			transform.rotation = new Quaternion(0, transform.rotation.y, transform.rotation.z, transform.rotation.w);
