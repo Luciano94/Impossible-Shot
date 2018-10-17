@@ -2394,6 +2394,11 @@ Prefab:
       propertyPath: spawnEnv
       value: 
       objectReference: {fileID: 1392785591}
+    - target: {fileID: 114819500736101950, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: SpinSpeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
   m_IsPrefabAsset: 0
@@ -4732,7 +4737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1710636303}
   m_Layer: 0
-  m_Name: '--------------------'
+  m_Name: '---------Your Mother-----------'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

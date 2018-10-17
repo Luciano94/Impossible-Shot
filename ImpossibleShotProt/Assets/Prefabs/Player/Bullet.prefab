@@ -695,7 +695,7 @@ MonoBehaviour:
   DistanceToCenter: 4
   IgnorableDistance: 0.3
   TransitionSharpness: 10
-  SpinSpeed: 200
+  SpinSpeed: 0
 --- !u!114 &114973703938867732
 MonoBehaviour:
   m_ObjectHideFlags: 1
