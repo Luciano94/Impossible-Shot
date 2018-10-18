@@ -43,3 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Plaquetas
+    uniqueID: 3022084605
+    locked: 0
+  - name: Explosion particles
+    uniqueID: 369827805
+    locked: 0
