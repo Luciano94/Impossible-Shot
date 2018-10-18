@@ -62,6 +62,7 @@ public class MenuManager : MonoBehaviour {
 		principal.SetActive(false);
 		finish.SetActive(false);
 		inGame.SetActive(true);
+		playerMov.enabled = false;
 		cameraMovement.enabled = true;
 	}
 
