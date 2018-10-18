@@ -28,6 +28,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private AudioSource startSound; 
 	[SerializeField] private BulletMovement playerMov;
 	[SerializeField] private CameraMovement cameraMovement;
+	[SerializeField] private GunCanonScript gun;
 
 	private void Awake() {
 		principal.SetActive(true);
@@ -64,6 +65,7 @@ public class MenuManager : MonoBehaviour {
 		inGame.SetActive(true);
 		playerMov.enabled = false;
 		cameraMovement.enabled = true;
+		gun.GameStart();
 	}
 
 	public void UpdatePoints(float TotalPoints, float newPoints, float mult){
