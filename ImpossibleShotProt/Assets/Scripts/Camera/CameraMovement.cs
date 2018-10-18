@@ -60,23 +60,51 @@ public class CameraMovement : MonoBehaviour {
 	[SerializeField] Transform Up;
 	[SerializeField] Transform Left;
 	[SerializeField] Transform Right;
+	[SerializeField] Transform cameraPos;
+	[SerializeField] [Range (1,25)] private int TransitionSharpness;
 
 	private Vector3 NormalVector;
 	private Quaternion NormalRotation;
+	private bool canMove;
+	private float LerpState = 0;
+	private Vector3 InitialPosition;
 	void Start(){
 		NormalVector = transform.position - Bullet.position;
 		NormalRotation = transform.rotation;
+		canMove = false;
 	}
 
+	private void getNomrals(){
+		NormalVector = transform.position - Bullet.position;
+		NormalRotation = transform.rotation;
+	}
 	void LateUpdate (){
+		if(canMove){ 
+			MoveCamera();
+		}
+		else CameraLerp();
+		//transform.LookAt (Bullet);
+		/*Quaternion rot = transform.rotation;
+		rot.x = NormalRotation.x;
+		transform.rotation = rot;*/
+	}
+
+	private void MoveCamera(){
 		Vector3 pos = Bullet.position + NormalVector;
 		if(pos.x > Right.position.x ){ pos.x = Right.position.x;}
 		if(pos.x < Left.position.x){ pos.x = Left.position.x;}
 		if(pos.y > Up.position.y){pos.y = Up.position.y;}
 		transform.position = pos;
-		//transform.LookAt (Bullet);
-		Quaternion rot = transform.rotation;
-		rot.x = NormalRotation.x;
-		transform.rotation = rot;
+	}
+
+	private void CameraLerp(){
+		LerpState += TransitionSharpness * Time.deltaTime;
+		if (LerpState > 1.0f) {LerpState = 1.0f;}
+
+		transform.position = Vector3.Lerp (transform.position, cameraPos.position, LerpState);
+		if(LerpState >= 1.0f) {
+			canMove = true;
+			getNomrals();
+		}
 	}
 }

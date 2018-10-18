@@ -27,6 +27,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private PointGainDisplay pointDisplay;
 	[SerializeField] private AudioSource startSound; 
 	[SerializeField] private BulletMovement playerMov;
+	[SerializeField] private CameraMovement cameraMovement;
 
 	private void Awake() {
 		principal.SetActive(true);
@@ -35,6 +36,7 @@ public class MenuManager : MonoBehaviour {
 		pause.SetActive(false);
 		finish.SetActive(false);
 		Time.timeScale = 0f;
+		cameraMovement.enabled = false;
 	} 
 
 	public void PauseGame(){
@@ -60,6 +62,7 @@ public class MenuManager : MonoBehaviour {
 		principal.SetActive(false);
 		finish.SetActive(false);
 		inGame.SetActive(true);
+		cameraMovement.enabled = true;
 	}
 
 	public void UpdatePoints(float TotalPoints, float newPoints, float mult){
