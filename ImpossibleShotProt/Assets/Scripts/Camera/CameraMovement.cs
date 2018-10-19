@@ -64,19 +64,19 @@ public class CameraMovement : MonoBehaviour {
 	[SerializeField] [Range (1,25)] private int TransitionSharpness;
 
 	private Vector3 NormalVector;
-	private Quaternion NormalRotation;
+//	private Quaternion NormalRotation;
 	private bool canMove;
 	private float LerpState = 0;
 	private Vector3 InitialPosition;
 	void Start(){
 		NormalVector = transform.position - Bullet.position;
-		NormalRotation = transform.rotation;
+	//	NormalRotation = transform.rotation;
 		canMove = false;
 	}
 
 	private void getNomrals(){
 		NormalVector = transform.position - Bullet.position;
-		NormalRotation = transform.rotation;
+		//NormalRotation = transform.rotation;
 	}
 	void LateUpdate (){
 		if(canMove){ 
