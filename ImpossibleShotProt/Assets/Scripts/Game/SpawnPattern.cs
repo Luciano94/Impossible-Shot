@@ -109,11 +109,15 @@ public class SpawnPattern : MonoBehaviour {
 
 
     public void TimePerObs(){
-        if(cantLogTOP < totalOfPatterns.Length){
+        Debug.Log(totalOfPatterns.Length);
+        if(cantLogTOP < totalOfPatterns.Length -1){
             cantLogTOP++;
             ChargePatterns(totalOfPatterns[cantLogTOP]);
         }
-        else ChargePatterns(totalOfPatterns[cantLogTOP]);
+        else{ 
+            cantLogTOP = totalOfPatterns.Length -1;
+            ChargePatterns(totalOfPatterns[cantLogTOP]);
+        }
         if(cantLogTOP == totalOfPatterns.Length){
             timePerPatter = timePerPat;
         }
