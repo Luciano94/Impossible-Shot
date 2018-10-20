@@ -9,22 +9,11 @@ public class SpawnPattern : MonoBehaviour {
     [SerializeField] float timePerOb;
     [SerializeField] private int cantOfPatterns = 1;
     [SerializeField] private float timePerPat;
-    [SerializeField] private int lvlToNormal = 5;
-    [SerializeField] private int lvlToHard = 10;
     private Queue<GameObject> q_patterns;
     private Queue<GameObject> q_PatternsLvl;
     private GameObject pattern;
-    //private int cantOfObs;
     private float timePerPatter = 0;
     private int actualCOP;
-    
-    public int LvlToNormal{
-        get{return lvlToNormal;}
-    }
-
-    public int LvlToHard{
-        get{return lvlToHard;}
-    }
 
     private void Awake() {
         q_patterns = new Queue<GameObject>();
@@ -59,9 +48,6 @@ public class SpawnPattern : MonoBehaviour {
         if(q_PatternsLvl.Count > 0) {
             pattern = q_PatternsLvl.Dequeue();
             SpawnOb();
-        }
-        else {
-            GameManager.Instance.PassLvl();
         }
     }
 

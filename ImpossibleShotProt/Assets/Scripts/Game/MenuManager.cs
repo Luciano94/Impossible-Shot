@@ -22,6 +22,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private GameObject inGame;
 	[SerializeField] private GameObject pause;
 	[SerializeField] private GameObject finish;
+	[SerializeField] private GameObject ingamePanel;
 	[SerializeField] private Text finishPoints;
 	[SerializeField] private Text pointsTxt;
 	[SerializeField] private PointGainDisplay pointDisplay;
@@ -75,7 +76,7 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void FinishGame(){
-		inGame.SetActive(false);
+		ingamePanel.SetActive(false);
 		finish.SetActive(true);
 	}
 

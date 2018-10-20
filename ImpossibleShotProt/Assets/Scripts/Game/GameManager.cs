@@ -19,11 +19,6 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    //[SerializeField] float fOVPerLevel = 5f;
-    //[SerializeField] float maxFOV = 80f;
-    //[SerializeField] float maxSpeed = 100f;
-    //[SerializeField] float speedPerLevel = 10f;
-    //[SerializeField] int pointsperEne = 100;
     [SerializeField] float multPerEnemy;
     [SerializeField] GameObject spawnPattern;
     [SerializeField] SpawnEnv spawnEnv;
@@ -35,7 +30,7 @@ public class GameManager : MonoBehaviour {
     private float multiplicador;
     private float points = 0;
     int level = 1;
-    private SpawnPattern spawn;
+    private PatternSpawner spawn;
 
     public int Level{
         get{return level;}
@@ -67,39 +62,9 @@ public class GameManager : MonoBehaviour {
 		MenuManager.Instance.UpdatePoints(points, AddedScore, multiplicador);
     }
 
-   /* private void EnemiesControl(){
-        if(cantOfEnemies >= cantOfEnemiesPerLevel){
-            level++;
-            if(level % 2 == 0)
-                LvlPar();
-            else 
-                LvlImpar();
-            if(level == spawn.LvlToNormal)
-                spawn.ReCharguePatterns();
-            if(level == spawn.LvlToHard)
-                spawn.ReCharguePatterns();
-            cantEnemies ++;
-            cantOfEnemiesPerLevel += cantEnemies;
-            cantOfEnemies = 0;
-        }
-    }*/
-
-    public void PassLvl(){
-        level++;
-        spawn.TimePerObs();
-    }
-
-   /* private void LvlPar(){
-        spawn.TimePerObs();  
-    }
-
-    private void LvlImpar(){
-        spawn.TimePerObs();
-        spawn.RandomizePattern();
-    }*/
-
     private void Awake(){
-		spawn = spawnPattern.GetComponent<SpawnPattern>();
+		spawn = spawnPattern.GetComponent<PatternSpawner>();
+        spawn.Begin();
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
 		#if UNITY_ANDROID
