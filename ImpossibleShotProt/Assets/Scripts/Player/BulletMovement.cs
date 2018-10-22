@@ -8,6 +8,7 @@ public class BulletMovement : MonoBehaviour {
 	[SerializeField][Range (0f,1f)] private float IgnorableDistance;
 	[SerializeField][Range (1,25)] private int TransitionSharpness;
 	[SerializeField] private int SpinSpeed = 10;
+	[SerializeField] private GameObject Bullet; 
 	private float LerpState = 0;
 	private int x = 0;
 	private int y = 0;
@@ -40,7 +41,7 @@ public class BulletMovement : MonoBehaviour {
 	}
 
 private void Spin(){
-	transform.Rotate(0,0, SpinSpeed * Time.deltaTime * -1);
+	Bullet.transform.Rotate(0,0, SpinSpeed * Time.deltaTime * -1);
 }
 	private void Rotate(int x, int y){
 		if (y == 0)
