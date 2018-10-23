@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] AudioSource enemyShot;
     [SerializeField] BulletMovement playerMov;
     [SerializeField] ParticleSystem blood;
+    private bool tutorialMode = false;
     private float multiplicador;
     private float points = 0;
     int level = 1;
@@ -40,6 +41,13 @@ public class GameManager : MonoBehaviour {
         get { return terrainSpeed; }
     }
 
+    public void PlayTutorial(){
+        tutorialMode = true;
+    }
+
+    public bool TutorialMode{
+        get{return tutorialMode;}
+    }
     public void Death() {
         deadShot.Play();
         playerMov.enabled = false;
@@ -64,7 +72,6 @@ public class GameManager : MonoBehaviour {
 
     private void Awake(){
 		spawn = spawnPattern.GetComponent<PatternSpawner>();
-        spawn.Begin();
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
 		#if UNITY_ANDROID
@@ -72,5 +79,10 @@ public class GameManager : MonoBehaviour {
 		Screen.autorotateToLandscapeRight = false;
 		Screen.orientation = ScreenOrientation.Portrait;
 		#endif
+    }
+
+    public void StartGame(){
+        FirstPlay.Instance.play();
+        spawn.Begin();
     }
 }

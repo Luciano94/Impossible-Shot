@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PatternSpawner : MonoBehaviour {
 
 	[SerializeField]private  Battery[] setOfBattery;
-	private int actualBattery=0;
+	private int actualBattery=1;
 	private GameObject[] battery;
 	private int actualPattern=0;
 	private GameObject pattern;
@@ -18,12 +18,19 @@ public class PatternSpawner : MonoBehaviour {
 	[SerializeField]private float minTime;
 
 	public void Begin(){
-		ChargeBattery();
-		RandomizeBattery();
+		if(GameManager.Instance.TutorialMode)
+			Tutorial();
+		else{
+			ChargeBattery();
+			RandomizeBattery();
+		}
 		ChargePatterns();
 		Invoke("SpawnObstacle", timePerBattery);
 	}
-
+	public void Tutorial(){
+		actualBattery = 0;
+		battery = setOfBattery[actualBattery].GetBattery();
+	}
 	private void ChargeBattery(){
 		battery = setOfBattery[actualBattery].GetBattery();
 	}

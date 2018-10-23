@@ -19,6 +19,8 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	[SerializeField] private GameObject principal;
+	[SerializeField] private GameObject tutorialPanel;
+	[SerializeField] private GameObject mainScreen;
 	[SerializeField] private GameObject inGame;
 	[SerializeField] private GameObject pause;
 	[SerializeField] private GameObject finish;
@@ -33,6 +35,13 @@ public class MenuManager : MonoBehaviour {
 
 	private void Awake() {
 		principal.SetActive(true);
+		if(FirstPlay.Instance.Played){
+			tutorialPanel.SetActive(true);
+			mainScreen.SetActive(false);
+		}else{
+			tutorialPanel.SetActive(false);
+			mainScreen.SetActive(true);
+		}
 		playerMov.enabled = false;
 		inGame.SetActive(false);
 		pause.SetActive(false);
@@ -67,6 +76,7 @@ public class MenuManager : MonoBehaviour {
 		playerMov.enabled = false;
 		cameraMovement.enabled = true;
 		gun.GameStart();
+		GameManager.Instance.StartGame();
 	}
 
 	public void UpdatePoints(float TotalPoints, float newPoints, float mult){
