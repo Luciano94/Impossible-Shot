@@ -374,7 +374,7 @@ MonoBehaviour:
   Current:
   - {fileID: 835392262}
   Next:
-  - {fileID: 1204354095}
+  - {fileID: 411391430}
 --- !u!114 &72717024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3804,7 +3804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &835392263
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4991,7 +4991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1374255121
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5280,13 +5280,13 @@ MonoBehaviour:
   Lista:
   - {fileID: 1876080093483018, guid: 4b86cb3fc917dcc41a0eab2e13cdf245, type: 2}
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
+  - {fileID: 1781989629909452, guid: 6edc6a8a7fd796a4188a8197f74b663f, type: 2}
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
+  - {fileID: 1874456693315020, guid: e0a4da1843d7ebe488d159c0ffcf12c7, type: 2}
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
+  - {fileID: 1300762746060966, guid: 9ec7c690e9b10ae43b6539f33f45ec71, type: 2}
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
-  - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
-  - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
-  - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
-  - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
+  - {fileID: 1777473299291252, guid: b5049e76ab75ce840ad71353d3b14458, type: 2}
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
 --- !u!1 &1526506200
 GameObject:

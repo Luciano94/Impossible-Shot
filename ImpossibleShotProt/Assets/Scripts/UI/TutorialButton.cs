@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialButtom : MonoBehaviour {
+public class TutorialButton : MonoBehaviour{
 
 	public void PlayTutorial(){
-		GameManager.Instance.PlayTutorial();
-		MenuManager.Instance.StartGame();
+		TutorialManager.Instance.TutorialSelected();
 	}
 }

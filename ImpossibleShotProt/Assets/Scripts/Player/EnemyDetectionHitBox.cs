@@ -15,6 +15,7 @@ public class EnemyDetectionHitBox : MonoBehaviour {
 		var PC = GetComponent<CapsuleCollider> ();
 		GameObject go = new GameObject ("Forward Enemy Detection collider");
 		go.layer = 12;
+		go.tag = "Bullet";
 		go.transform.parent = transform;
 		go.transform.position = transform.position;
 		col = go.AddComponent<CapsuleCollider> ();

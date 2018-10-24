@@ -74,15 +74,18 @@ public class GameManager : MonoBehaviour {
 		spawn = spawnPattern.GetComponent<PatternSpawner>();
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
-		#if UNITY_ANDROID
-		Screen.autorotateToLandscapeLeft = false;
-		Screen.autorotateToLandscapeRight = false;
-		Screen.orientation = ScreenOrientation.Portrait;
-		#endif
     }
 
     public void StartGame(){
         FirstPlay.Instance.play();
-        spawn.Begin();
+        if(!tutorialMode){
+            spawn.Begin();
+        }
+    }
+
+    public void TutorialSpawnBegin(){
+        if(tutorialMode){
+            spawn.Begin();
+        }
     }
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Obstacle
+  - TutorialCollider
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Obstacle
   - Bullet
   - BulletCollision
-  - 
+  - Utility
   - 
   - 
   - 

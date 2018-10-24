@@ -97,4 +97,8 @@ private void Spin(){
 			moving = false;
 		}
 	}
+
+	public Vector2Int getPositionInts(){
+		return new Vector2Int(x,y);
+	}
 }
