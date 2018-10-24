@@ -46,10 +46,6 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	private void BatteryChange(){
-		if(actualBattery == 1){
-			changeTxT.enabled = true;
-			changeTxT.text = "GAME START";
-		}
 		if(actualBattery != setOfBattery.Length-1)
 			actualBattery++;
 		ChargeBattery();
@@ -73,8 +69,6 @@ public class PatternSpawner : MonoBehaviour {
     }
 
 	private void PatternChange(){
-		changeTxT.enabled = true;
-		//changeTxT.text = "PATTERN CHANGE " + actualPattern;
 		if(actualPattern != battery.Length-1){
 			actualPattern++;
 			ChargePatterns();
