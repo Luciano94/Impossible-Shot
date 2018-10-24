@@ -33,6 +33,10 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private CameraMovement cameraMovement;
 	[SerializeField] private GunCanonScript gun;
 
+	/*Toturial Text*/
+	[SerializeField] private Text dPadTxt;
+	[SerializeField] private Text enemyTxt;
+
 	private void Awake() {
 		principal.SetActive(true);
 		if(FirstPlay.Instance.Played){
@@ -88,6 +92,33 @@ public class MenuManager : MonoBehaviour {
 	public void FinishGame(){
 		ingamePanel.SetActive(false);
 		finish.SetActive(true);
+	}
+
+	public void ShowDPadTuto(){
+		dPadTxt.text = "This is a Directional Pad, use the buttons to move the bullet arround to find each of the nine positions.";
+		Time.timeScale = 0.1f;
+		Invoke("HideDpadTuto", 1.0f);
+	}
+
+	private void HideDpadTuto(){
+		dPadTxt.text = "";
+		Time.timeScale = 1f;
+	}
+
+	public void ShowEnemyTuto(){
+		enemyTxt.text = "This is a bandit, aim to hit him.";
+		Time.timeScale = 0.1f;
+		Invoke("HideEnemyTuto", 0.5f);
+	}
+
+	public void HideEnemyTuto(){
+		enemyTxt.text = "";
+		Time.timeScale = 1f;
+	}
+	
+	public void DonePadTuto(){
+		dPadTxt.text = "Well Done";
+		Invoke("HideDpadTuto", 2.0f);
 	}
 
 	private void Update() {

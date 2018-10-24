@@ -13,6 +13,7 @@ public class EnemyScript : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		gM.EnemyDeath(points);
+		if (other.gameObject.tag != "TutorialCollider" )
+			gM.EnemyDeath(points);
 	}
 }

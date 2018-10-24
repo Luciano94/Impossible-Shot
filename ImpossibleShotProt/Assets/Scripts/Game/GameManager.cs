@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] AudioSource enemyShot;
     [SerializeField] BulletMovement playerMov;
     [SerializeField] ParticleSystem blood;
+    [SerializeField] ParticleSystem trail; 
+    [SerializeField] GameObject tutoCollider;
     private bool tutorialMode = false;
     private float multiplicador;
     private float points = 0;
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour {
     public void Death() {
         deadShot.Play();
         playerMov.enabled = false;
+        trail.Stop();
         terrainSpeed = 0;
         Handheld.Vibrate();
         Invoke("terminate", 0.5f);
@@ -80,6 +83,7 @@ public class GameManager : MonoBehaviour {
         FirstPlay.Instance.play();
         if(!tutorialMode){
             spawn.Begin();
+            tutoCollider.SetActive(false);
         }
     }
 

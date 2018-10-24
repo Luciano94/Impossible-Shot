@@ -97,10 +97,12 @@ private static TutorialManager instance;
 	private void FirstPhase(){
 		//DPad tutorial
 		Debug.Log("This is a Directional Pad, use the buttons to move the bullet arround to find each of the nine positions.");
+		MenuManager.Instance.ShowDPadTuto();
 	}
 	
 	private void SecondPhase(){
 		//Enemy tutorial
+		MenuManager.Instance.ShowEnemyTuto();
 		if(firstTutorialEnemy){
 			firstTutorialEnemy = false;
 			Debug.Log("This is a bandit, aim to hit him.");
@@ -139,6 +141,7 @@ private static TutorialManager instance;
 			}
 		}
 		GameManager.Instance.TutorialSpawnBegin();
+		MenuManager.Instance.DonePadTuto();
 		firstPhaseEnded = true;
 	}
 }
