@@ -30,7 +30,7 @@ private static TutorialManager instance;
 	private bool firstTutorialEnemy = true;
 	private bool firstPhaseEnded = false;
 
-
+    private GameObject[] markers;
 
 	void Awake(){
 		CreateTutorialCollider();
@@ -101,6 +101,7 @@ private static TutorialManager instance;
 	private void FirstPhase(){
         //DPad tutorial
         DPadShiner.Shine(0.25f);
+        Invoke("setUpMarkers", 2f);
 		MenuManager.Instance.ShowDPadTuto();
 	}
 	
@@ -145,4 +146,17 @@ private static TutorialManager instance;
 		MenuManager.Instance.DonePadTuto();
 		firstPhaseEnded = true;
 	}
+
+    private void setUpMarkers()
+    {
+        Vector3[] positionVectors = FindObjectOfType<BulletMovement>().getCorners();
+        markers = new GameObject[positionVectors.Length];
+        Object go = Resources.Load("Models/TutorialBulletPositionMarker");
+        for (int i = 0; i < markers.Length; i++)
+        {
+            markers[i] = Instantiate(go) as GameObject;
+            markers[i].transform.position = new Vector3(positionVectors[i].x, positionVectors[i].y, positionVectors[i].z + 15);
+
+        }
+    }
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -95,4 +95,13 @@ public class BulletMovement : MonoBehaviour {
 	public Vector2Int getPositionInts(){
 		return new Vector2Int(x,y);
 	}
+
+    public Vector3[] getCorners() {
+        Vector3[] vec = new Vector3[4];
+        vec[0] = new Vector3(MatrixCenter.x + DistanceToCenter, MatrixCenter.y + DistanceToCenter, InitialPosition.z);
+        vec[1] = new Vector3(MatrixCenter.x + DistanceToCenter, MatrixCenter.y - DistanceToCenter, InitialPosition.z);
+        vec[2] = new Vector3(MatrixCenter.x - DistanceToCenter, MatrixCenter.y + DistanceToCenter, InitialPosition.z);
+        vec[3] = new Vector3(MatrixCenter.x - DistanceToCenter, MatrixCenter.y - DistanceToCenter, InitialPosition.z);
+        return vec;
+    }
 }
