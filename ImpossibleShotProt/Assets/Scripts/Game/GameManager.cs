@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] AudioSource deadShot;
     [SerializeField] AudioSource enemyShot;
     [SerializeField] BulletMovement playerMov;
+    [SerializeField] BulletSpin playerSpin;
     [SerializeField] ParticleSystem blood;
     [SerializeField] ParticleSystem trail; 
     [SerializeField] GameObject tutoCollider;
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour {
     public void Death() {
         deadShot.Play();
         playerMov.enabled = false;
+        playerSpin.enabled = false;
         trail.Stop();
         terrainSpeed = 0;
         Handheld.Vibrate();
