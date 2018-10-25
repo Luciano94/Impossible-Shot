@@ -17,6 +17,13 @@ public class PatternSpawner : MonoBehaviour {
 	[SerializeField]private float timeDown;
 	[SerializeField]private float minTime;
 
+    public void Repeat(float time)
+    {
+        CancelInvoke("SpawnObstacle");
+        ChargePatterns();
+        Invoke("SpawnObstacle", time);
+    }
+
 	public void Begin(){
 		if(GameManager.Instance.TutorialMode)
 			Tutorial();
