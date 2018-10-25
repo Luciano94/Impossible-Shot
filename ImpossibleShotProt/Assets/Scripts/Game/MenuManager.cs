@@ -140,6 +140,11 @@ public class MenuManager : MonoBehaviour {
         enemyTxt.text = " ";
     }
 
+    public void deathPoints()
+    {
+
+    }
+
 	private void Update() {
 		if(Input.GetButton("Submit") && (inGame.activeSelf)){
 			PauseGame();
