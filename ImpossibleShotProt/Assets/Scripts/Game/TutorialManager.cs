@@ -25,9 +25,12 @@ private static TutorialManager instance;
 	private bool[,] positionChecks;
 
 	private BulletMovement playerMov;
+    private DPadShine DPadShiner;
 
 	private bool firstTutorialEnemy = true;
 	private bool firstPhaseEnded = false;
+
+
 
 	void Awake(){
 		CreateTutorialCollider();
@@ -38,12 +41,13 @@ private static TutorialManager instance;
 				positionChecks[i,j] = false;
 			}
 		}
-
-		playerMov = FindObjectOfType<BulletMovement>();
 	}
 
 	void Start () {
-		FirstPhase();
+        playerMov = FindObjectOfType<BulletMovement>();
+        DPadShiner = FindObjectOfType<DPadShine>();
+
+        FirstPhase();
 	}
 
 	void LateUpdate(){
@@ -95,8 +99,8 @@ private static TutorialManager instance;
 
 	//tutorial phase control
 	private void FirstPhase(){
-		//DPad tutorial
-		Debug.Log("This is a Directional Pad, use the buttons to move the bullet arround to find each of the nine positions.");
+        //DPad tutorial
+        DPadShiner.Shine(0.25f);
 		MenuManager.Instance.ShowDPadTuto();
 	}
 	
@@ -105,11 +109,9 @@ private static TutorialManager instance;
 		MenuManager.Instance.ShowEnemyTuto();
 		if(firstTutorialEnemy){
 			firstTutorialEnemy = false;
-			Debug.Log("This is a bandit, aim to hit him.");
 			Wait(normalWaitTime, "Continue");
 		} else{
 			if (tutorialEnemy.WasHit()){
-				Debug.Log("Good job!");
 				ThirdPhase();
 			}
 		}
@@ -135,7 +137,6 @@ private static TutorialManager instance;
 		for(int i = 0; i < 3; i++){
 			for (int j = 0; j < 3; j++){
 				if (positionChecks[i,j] == false){
-					Debug.Log(i + " " + j);
 					return;
 				}
 			}
