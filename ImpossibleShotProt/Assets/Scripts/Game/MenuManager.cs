@@ -39,7 +39,7 @@ public class MenuManager : MonoBehaviour {
 
 	private void Awake() {
 		principal.SetActive(true);
-		if(FirstPlay.Instance.Played){
+		if(PlayerPrefs.GetInt("Tutorial") == 1){
 			tutorialPanel.SetActive(true);
 			mainScreen.SetActive(false);
 		}else{

@@ -76,6 +76,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Awake(){
+        if (!PlayerPrefs.HasKey("Tutorial"))
+            PlayerPrefs.SetInt("Tutorial", 1);
 		spawn = spawnPattern.GetComponent<PatternSpawner>();
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
