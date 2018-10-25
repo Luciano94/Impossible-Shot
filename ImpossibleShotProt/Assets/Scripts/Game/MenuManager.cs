@@ -36,6 +36,8 @@ public class MenuManager : MonoBehaviour {
 	/*Toturial Text*/
 	[SerializeField] private Text dPadTxt;
 	[SerializeField] private Text enemyTxt;
+    [SerializeField] private int countdown = 3;
+    [SerializeField] private float timePerNumber = 0.5f;
 
 	private void Awake() {
 		principal.SetActive(true);
@@ -120,6 +122,23 @@ public class MenuManager : MonoBehaviour {
 		dPadTxt.text = "Well Done";
 		Invoke("HideDpadTuto", 2.0f);
 	}
+
+    public void FinalCountdown()
+    {
+        if (countdown > 0){
+            enemyTxt.text = countdown.ToString();
+            countdown--;
+            Invoke("FinalCountdown", timePerNumber);
+        } else{
+            enemyTxt.text = "Start!!!";
+            Invoke("HideStart", timePerNumber);
+        }
+    }
+
+    private void HideStart()
+    {
+        enemyTxt.text = " ";
+    }
 
 	private void Update() {
 		if(Input.GetButton("Submit") && (inGame.activeSelf)){
