@@ -28,6 +28,9 @@ public class PointGainDisplay : MonoBehaviour {
         Timer += Time.deltaTime;
         if (Timer > TimeToFade) {
             LerpText();
+        }else {
+            initPos = Txt.transform.position;
+            LerpState = 0;
         }
     }
 
@@ -52,13 +55,13 @@ public class PointGainDisplay : MonoBehaviour {
     {
         LerpState += TransitionSharpness * Time.deltaTime;
         Vector3 targetPos = Camera.main.WorldToScreenPoint(TargetPos.position);
+        targetPos = new Vector3(targetPos.x , targetPos.y + offset, 0);
         if (LerpState > 1.0f) { LerpState = 1.0f; }
-        Txt.transform.position = Vector3.Lerp(Txt.transform.position, targetPos, LerpState);
+        Txt.transform.position = Vector3.Lerp(initPos, targetPos, LerpState);
         if (LerpState >= 1.0f)
         {
             Txt.text = " ";
             DisplayedScore = 0;
-            LerpState = 0;
         }
     }
 }
