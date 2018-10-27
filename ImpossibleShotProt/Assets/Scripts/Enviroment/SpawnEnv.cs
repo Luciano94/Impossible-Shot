@@ -17,10 +17,11 @@ public class SpawnEnv : MonoBehaviour {
         }
     }
 
-	[SerializeField] GameObject prefab;
+	[SerializeField] GameObject[] prefabs;
 	[SerializeField] float timePerObj;
 	[SerializeField] int pool = 50;
 	private Queue<GameObject> envArray;
+	int random;
 
 	public void UpdateTime(){
 		timePerObj -= 0.02f;
@@ -31,7 +32,8 @@ public class SpawnEnv : MonoBehaviour {
 		envArray = new Queue<GameObject>();
 		GameObject go;
 		for(int i=0; i < pool;i++){
-			go = Instantiate(prefab,transform.position,transform.rotation);
+			random = Random.Range(0, prefabs.Length-1);
+			go = Instantiate(prefabs[random],transform.position,transform.rotation);
 			go.SetActive(false);
 			envArray.Enqueue(go);
 		}
