@@ -17,7 +17,8 @@ private static TutorialManager instance;
     }
 
 	private enum TutorialStage{
-		SetUp = 0,
+		Waiting = 0,
+		SetUp,
 		FirstPhase,
 		SetupMarkers,
 		WaitForMakers,
@@ -31,7 +32,7 @@ private static TutorialManager instance;
 		PatternEnd,
 		TutorialEnd
 	}
-	private static Vector3 colPos = new Vector3(0f,0f,49f);
+	private static Vector3 colPos = new Vector3(0f,0f,39f);
 	private static Vector3 colCenter = new Vector3(0f,5f,0f);
 	private static Vector3 colSize = new Vector3(12f,10f,5f);
 
@@ -60,10 +61,12 @@ private static TutorialManager instance;
 	
 	void Update(){
 		switch(stage){
+			case TutorialStage.Waiting:
+			break;
 			case TutorialStage.SetUp:
-				StageDebug();
 				CreateTutorialCollider();
 				playerMov.enabled = false;
+				Time.timeScale = 0.1f;
 				stage++;
 				StageDebug();
 			break;
@@ -74,13 +77,17 @@ private static TutorialManager instance;
 			break;
 			case TutorialStage.SetupMarkers:
 				if(DPadShiner.DoneShining()){
+				Time.timeScale = 1.0f;
 				setUpMarkers();
 				stage++;
 				StageDebug();
 				}
 			break;
 			case TutorialStage.WaitForMakers:
-				if(CheckMarkersDoneMoving()){stage++; StageDebug();}
+				if(CheckMarkersDoneMoving()){
+					stage++;
+					StageDebug();
+				}
 			break;
 			case TutorialStage.ShowArrows:
 				ShowArrows();
@@ -118,12 +125,13 @@ private static TutorialManager instance;
 			break;
 			case TutorialStage.NoObstacleHit:
 				if(true/*no obstacle hit*/){
-					GameManager.Instance.EndTutorial();
 					stage++;
 					StageDebug();
 				}
 			break;
 			case TutorialStage.PatternEnd:
+				MenuManager.Instance.FinalCountdown();
+				GameManager.Instance.EndTutorial();
 				//spawn normal patterns
 				stage++;
 				StageDebug();
@@ -136,7 +144,7 @@ private static TutorialManager instance;
 
 	//Control utilities
 	private void Wait(float waitTime, string next){
-		Time.timeScale = 0;
+		Time.timeScale = 0.1f;
 		if(next != "Wait"){
 			Invoke(next, waitTime);
 		} else {
@@ -144,10 +152,17 @@ private static TutorialManager instance;
 			Invoke("DoNothing", waitTime);
 		}
 	}
+	private void Continue(){
+		Time.timeScale = 1.0f;
+		stage++;
+		StageDebug();
+	}
 
 	public void TutorialSelected(){
 		GameManager.Instance.PlayTutorial();
 		MenuManager.Instance.StartGame();
+		stage++;
+		StageDebug();
 	}
 
 	private void StageDebug(){
@@ -177,15 +192,16 @@ private static TutorialManager instance;
 	//tutorial phases
 	private void FirstPhase(){
         //DPad tutorial
+		//Time.timeScale = 0.1f;
         DPadShiner.Shine(0.25f);
-		MenuManager.Instance.ShowDPadTuto();
+
+		//MenuManager.Instance.ShowDPadTuto();
 	}
 	
 	private void SecondPhase(){
 		//Enemy tutorial
-		MenuManager.Instance.ShowEnemyTuto();
-		stage++;
-		StageDebug();
+		//MenuManager.Instance.ShowEnemyTuto();
+		Wait(0.5f,"Continue");
 	}
 
 	private void ThirdPhase(){

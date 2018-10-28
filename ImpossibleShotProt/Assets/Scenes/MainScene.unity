@@ -829,7 +829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battery:
   - {fileID: 1472769713}
-  - {fileID: 1472769713}
+  - {fileID: 835107734}
 --- !u!1 &113999683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3966,6 +3966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lista:
+  - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
   - {fileID: 1433046529993130, guid: 98ccb3763be4dd8488979287a9434faa, type: 2}
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
@@ -3975,7 +3976,6 @@ MonoBehaviour:
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
   - {fileID: 1197411705695260, guid: cc9f17532f9a6a34da736c220f478fe6, type: 2}
-  - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
 --- !u!1 &835392262
 GameObject:
   m_ObjectHideFlags: 0
