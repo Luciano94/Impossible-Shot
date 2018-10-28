@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220af9880ed10ff42a94fd70ee029e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShineColor: {r: 0, g: 0.18839788, b: 1, a: 1}
+  Sharpness: 10
 --- !u!114 &114736945604254928
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -28,8 +28,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] BulletMovement playerMov;
     [SerializeField] BulletSpin playerSpin;
     [SerializeField] ParticleSystem blood;
-    [SerializeField] ParticleSystem trail; 
-    [SerializeField] GameObject tutoCollider;
+    [SerializeField] ParticleSystem trail;
     private bool tutorialMode = false;
     private float multiplicador;
     private float points = 0;
@@ -50,6 +49,10 @@ public class GameManager : MonoBehaviour {
 
     public bool TutorialMode{
         get{return tutorialMode;}
+    }
+
+    public void EndTutorial(){
+        tutorialMode = false;
     }
     public void Death() {
         deadShot.Play();
@@ -87,7 +90,6 @@ public class GameManager : MonoBehaviour {
         FirstPlay.Instance.play();
         if(!tutorialMode){
             spawn.Begin();
-            tutoCollider.SetActive(false);
         }
     }
 

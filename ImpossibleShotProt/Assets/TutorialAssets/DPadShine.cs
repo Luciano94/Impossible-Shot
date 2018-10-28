@@ -12,6 +12,8 @@ public class DPadShine : MonoBehaviour {
     private uint stage;
     private int total;
 
+    private bool doneShining = false;
+
     private float lerpState;
     private int currentImage = 1;
     private bool oneByOneDirection = true;
@@ -35,6 +37,7 @@ public class DPadShine : MonoBehaviour {
                 break;
 
             case 1: //fade into color
+                doneShining = false;
                 lerpState += Speed * Time.deltaTime;
                 if (lerpState >= 1) { lerpState = 1; stage = 2;  }
                 ChangeColors();
@@ -47,7 +50,7 @@ public class DPadShine : MonoBehaviour {
                 break;
             case 3:
                 OneByOne();
-                if (currentImage == total && lerpState == 0 && oneByOneDirection) { currentImage = 1; stage = 0; }
+                if (currentImage == total && lerpState == 0 && oneByOneDirection) { currentImage = 1; stage = 0; doneShining = true;}
                 break;
         }
 	}
@@ -67,12 +70,14 @@ public class DPadShine : MonoBehaviour {
         ObjectsToMark[currentImage].color = Color.Lerp(initialColor[currentImage], ShineColor, lerpState);
         if (oneByOneDirection)
         {
-            lerpState += Speed * 2 * Time.deltaTime;
+            lerpState += Speed * 5 * Time.deltaTime;
             if (lerpState >= 1) { lerpState = 1; oneByOneDirection = false;}
         }
         else {
-            lerpState -= Speed * 2 * Time.deltaTime;
+            lerpState -= Speed * 5 * Time.deltaTime;
             if (lerpState <= 0) { lerpState = 0; oneByOneDirection = true; currentImage++; }
         }
     }
+
+    public bool DoneShining(){ return doneShining;}
 }

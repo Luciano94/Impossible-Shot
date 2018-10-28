@@ -26,7 +26,7 @@ public class PatternSpawner : MonoBehaviour {
 
 	public void Begin(){
 		if(GameManager.Instance.TutorialMode)
-			Tutorial();
+			EnemyTutorial();
 		else{
 			ChargeBattery();
 			RandomizeBattery();
@@ -34,9 +34,16 @@ public class PatternSpawner : MonoBehaviour {
 		ChargePatterns();
 		Invoke("SpawnObstacle", timePerBattery);
 	}
-	public void Tutorial(){
+	public void EnemyTutorial(){//le cambié el nombre
 		actualBattery = 0;
 		battery = setOfBattery[actualBattery].GetBattery();
+	}
+
+	public void ObstacleTutorial(){ //cree esta funcion
+		Debug.LogError("Lucho, checkea este codigo");
+		if(actualBattery == 0 && actualPattern == 0){
+			PatternChange();
+		}
 	}
 	private void ChargeBattery(){
 		battery = setOfBattery[actualBattery].GetBattery();
