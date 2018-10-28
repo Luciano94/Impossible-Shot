@@ -98,4 +98,8 @@ public class GameManager : MonoBehaviour {
             spawn.Begin();
         }
     }
+
+    public bool InTutorial(){
+        return tutorialMode;
+    }
 }

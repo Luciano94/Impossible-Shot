@@ -105,7 +105,9 @@ public class CameraMovement : MonoBehaviour {
 		if(LerpState >= 1.0f) {
 			canMove = true;
 			getNomrals();
-			Bullet.gameObject.GetComponent<BulletMovement>().enabled = true;
+			if(!GameManager.Instance.InTutorial()){
+				Bullet.gameObject.GetComponent<BulletMovement>().enabled = true;
+			}
 		}
 	}
 }
