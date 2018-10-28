@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour {
     public void EnemyDeath(int value){
         enemyShot.Play();
         blood.Play();
+        spawn.UpdateStage();
         multiplicador += multPerEnemy;
         multiplicador = (float)Math.Round(multiplicador, 2);
         var AddedScore = value * multiplicador;

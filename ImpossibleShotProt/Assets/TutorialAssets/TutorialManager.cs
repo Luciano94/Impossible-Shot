@@ -1,21 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class TutorialManager : MonoBehaviour {
-private static TutorialManager instance;
-
-    public static TutorialManager Instance {
-        get {
-            instance = FindObjectOfType<TutorialManager>();
-            if(instance == null) {
-                GameObject go = new GameObject("Tutorial Manager");
-                instance = go.AddComponent<TutorialManager>();
-            }
-            return instance;
-        }
-    }
-
 	public enum TutorialStage{
 		Waiting = 0,
 		SetUp,
@@ -32,6 +17,21 @@ private static TutorialManager instance;
 		PatternEnd,
 		TutorialEnd
 	}
+public class TutorialManager : MonoBehaviour {
+private static TutorialManager instance;
+
+    public static TutorialManager Instance {
+        get {
+            instance = FindObjectOfType<TutorialManager>();
+            if(instance == null) {
+                GameObject go = new GameObject("Tutorial Manager");
+                instance = go.AddComponent<TutorialManager>();
+            }
+            return instance;
+        }
+    }
+
+
 	private static Vector3 colPos = new Vector3(0f,0f,39f);
 	private static Vector3 colCenter = new Vector3(0f,5f,0f);
 	private static Vector3 colSize = new Vector3(12f,10f,5f);
@@ -104,12 +104,13 @@ private static TutorialManager instance;
 			case TutorialStage.MarkersCheck:
 				if(AllMarkersTouched()){
 					DestroyMarkers();
-					spawner.Begin();
 					stage++;
+					spawner.Begin();
 					StageDebug();
 				}
 			break;
 			case TutorialStage.SecondPhase:
+				//spawner.UpdateStage();
 				//wait for TutorialEnemyEnter()
 			break;
 			case TutorialStage.EnemyHit:
@@ -119,12 +120,11 @@ private static TutorialManager instance;
 				}
 			break;
 			case TutorialStage.ThirdPhase:
-				spawner.ObstacleTutorial();
-				stage++;
-				StageDebug();
+				//spawner.ObstacleTutorial();
+
 			break;
 			case TutorialStage.NoObstacleHit:
-				if(true/*no obstacle hit*/){
+				if(false/*no obstacle hit*/){
 					stage++;
 					StageDebug();
 				}
@@ -132,6 +132,7 @@ private static TutorialManager instance;
 			case TutorialStage.PatternEnd:
 				MenuManager.Instance.FinalCountdown();
 				GameManager.Instance.EndTutorial();
+				spawner.EndTutorial();
 				//spawn normal patterns
 				stage++;
 				StageDebug();
@@ -167,6 +168,7 @@ private static TutorialManager instance;
 
 	private void StageDebug(){
 		Debug.Log(stage);
+		spawner.UpdateStage();
 	}
 
 	public TutorialStage GetStage(){
@@ -267,12 +269,16 @@ private static TutorialManager instance;
 
 	public void TutorialEnemyEnter(){
 		SecondPhase();
+		spawner.UpdateStage();
 	}
 	private bool TutorialEnemyHit(){
 		return TutorialEnemy.WasHit();
 	}
 
-	public void TutorialObstacleEnter(){}
+	public void TutorialObstacleEnter(){				
+		stage++;
+		StageDebug();
+	}
 	public void PlayerHitTutorialObstacle(){}
 
 }

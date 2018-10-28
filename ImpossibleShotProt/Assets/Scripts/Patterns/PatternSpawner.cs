@@ -8,21 +8,23 @@ public class PatternSpawner : MonoBehaviour {
 	[SerializeField]private  Battery[] setOfBattery;
 	private int actualBattery=1;
 	private GameObject[] battery;
-	private GameObject[] tutobattery;
 	private int actualPattern=0;
 	private GameObject pattern;
-	private GameObject patternTutorial;
-	private int actualPatternTutorial=0;
 	[SerializeField]private Text changeTxT;
 	[SerializeField]private float timePerBattery;
 	[SerializeField]private float timePerPattern;
 	[SerializeField]private float timePerObstacle;
 	[SerializeField]private float timeDown;
 	[SerializeField]private float minTime;
+	
+	/*TUTORIAL ATTRIBUTES */
+	private GameObject patternTutorial;
+	private int actualPatternTutorial=0;
+	private GameObject[] tutobattery;
+	private TutorialStage stage;
 
-
-	/*TUTORIAL FUNCTIONS */
-	private void Awake() {
+	/*TUTORIAL METHODS */
+	private void Start() {
 		tutobattery = setOfBattery[0].GetBattery();
 	}
 
@@ -32,18 +34,45 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	private void ChargePatternsTutorial(){
+		if(actualPatternTutorial > tutobattery.Length-1)
+			actualPatternTutorial = tutobattery.Length-1;
 		patternTutorial=tutobattery[actualPatternTutorial];
 	}
 
 	private void SpawnTutorial(){
 		changeTxT.enabled = false;
 		GenerateObstacleTuto();
-        if(pattern.GetComponent<Pattern>().Count() > 0)
+        if(patternTutorial.GetComponent<Pattern>().Count() > 0)
             Invoke("SpawnTutorial", timePerObstacle);
         else changePhase();
 	}
 
 	private void changePhase(){
+		switch (stage)
+		{
+			case TutorialStage.EnemyHit:
+				ChargePatternsTutorial();
+				Invoke("SpawnTutorial", timePerBattery);
+			break;
+			case TutorialStage.NoObstacleHit:
+				ChargePatternsTutorial();
+				Invoke("SpawnTutorial", timePerBattery);
+			break;
+			case TutorialStage.ThirdPhase:
+				actualPatternTutorial++;
+				stage = TutorialManager.Instance.GetStage();
+				EnemyTutorial();
+			break;
+		}
+	/* 	Debug.Log("Stage: "+ stage);
+		if(stage != TutorialManager.Instance.GetStage()){
+			actualPatternTutorial++;
+			stage = TutorialManager.Instance.GetStage();
+			EnemyTutorial();
+		}else{
+			ChargePatternsTutorial();
+			Invoke("SpawnTutorial", timePerBattery);
+		}*/
 	}
 
 	private void GenerateObstacleTuto(){
@@ -53,7 +82,17 @@ public class PatternSpawner : MonoBehaviour {
                                             transform.position.z);
 	}
 
-	
+	public void EndTutorial(){
+		CancelInvoke("SpawnTutorial");
+		ChargeBattery();
+		RandomizeBattery();
+		ChargePatterns();
+		Invoke("SpawnObstacle", timePerBattery);
+	}
+
+	public void UpdateStage(){
+		stage = TutorialManager.Instance.GetStage();
+	}
 	/*END TUTORIAL FUNCTIONS */
 
 	public void Begin(){
@@ -62,9 +101,9 @@ public class PatternSpawner : MonoBehaviour {
 		else{
 			ChargeBattery();
 			RandomizeBattery();
+			ChargePatterns();
+			Invoke("SpawnObstacle", timePerBattery);
 		}
-		ChargePatterns();
-		Invoke("SpawnObstacle", timePerBattery);
 	}
 
 	public void ObstacleTutorial(){ //cree esta funcion
@@ -96,7 +135,7 @@ public class PatternSpawner : MonoBehaviour {
 		ChargePatterns();
 		if(timePerBattery-timeDown > minTime) timePerBattery -= timeDown;
 		else timePerBattery = timeDown;
-		Invoke("SpawnObstacle", timePerBattery);
+		Invoke("SpawnObstacle", timePerPattern);
 	}
 
 	private void RandomizeBattery(){
