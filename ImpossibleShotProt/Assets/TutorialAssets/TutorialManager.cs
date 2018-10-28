@@ -16,7 +16,7 @@ private static TutorialManager instance;
         }
     }
 
-	private enum TutorialStage{
+	public enum TutorialStage{
 		Waiting = 0,
 		SetUp,
 		FirstPhase,
@@ -167,6 +167,10 @@ private static TutorialManager instance;
 
 	private void StageDebug(){
 		Debug.Log(stage);
+	}
+
+	public TutorialStage GetStage(){
+		return stage;
 	}
 
 	
