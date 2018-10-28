@@ -8,8 +8,11 @@ public class PatternSpawner : MonoBehaviour {
 	[SerializeField]private  Battery[] setOfBattery;
 	private int actualBattery=1;
 	private GameObject[] battery;
+	private GameObject[] tutobattery;
 	private int actualPattern=0;
 	private GameObject pattern;
+	private GameObject patternTutorial;
+	private int actualPatternTutorial=0;
 	[SerializeField]private Text changeTxT;
 	[SerializeField]private float timePerBattery;
 	[SerializeField]private float timePerPattern;
@@ -17,12 +20,41 @@ public class PatternSpawner : MonoBehaviour {
 	[SerializeField]private float timeDown;
 	[SerializeField]private float minTime;
 
-    public void Repeat(float time)
-    {
-        CancelInvoke("SpawnObstacle");
-        ChargePatterns();
-        Invoke("SpawnObstacle", time);
-    }
+
+	/*TUTORIAL FUNCTIONS */
+	private void Awake() {
+		tutobattery = setOfBattery[0].GetBattery();
+	}
+
+	private void EnemyTutorial(){//le cambié el nombre
+		ChargePatternsTutorial();
+		Invoke("SpawnTutorial", timePerBattery);
+	}
+
+	private void ChargePatternsTutorial(){
+		patternTutorial=tutobattery[actualPatternTutorial];
+	}
+
+	private void SpawnTutorial(){
+		changeTxT.enabled = false;
+		GenerateObstacleTuto();
+        if(pattern.GetComponent<Pattern>().Count() > 0)
+            Invoke("SpawnTutorial", timePerObstacle);
+        else changePhase();
+	}
+
+	private void changePhase(){
+	}
+
+	private void GenerateObstacleTuto(){
+		GameObject go = patternTutorial.GetComponent<Pattern>().Request();
+        go.transform.position = new Vector3(transform.position.x,
+                                            transform.position.y,
+                                            transform.position.z);
+	}
+
+	
+	/*END TUTORIAL FUNCTIONS */
 
 	public void Begin(){
 		if(GameManager.Instance.TutorialMode)
@@ -33,10 +65,6 @@ public class PatternSpawner : MonoBehaviour {
 		}
 		ChargePatterns();
 		Invoke("SpawnObstacle", timePerBattery);
-	}
-	public void EnemyTutorial(){//le cambié el nombre
-		actualBattery = 0;
-		battery = setOfBattery[actualBattery].GetBattery();
 	}
 
 	public void ObstacleTutorial(){ //cree esta funcion
