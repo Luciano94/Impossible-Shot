@@ -56,7 +56,7 @@ public class PatternSpawner : MonoBehaviour {
 			break;
 			case TutorialStage.NoObstacleHit:
 				ChargePatternsTutorial();
-				Invoke("SpawnTutorial", timePerBattery);
+				Invoke("SpawnTutorial", timePerBattery);	
 			break;
 			case TutorialStage.ThirdPhase:
 				actualPatternTutorial++;

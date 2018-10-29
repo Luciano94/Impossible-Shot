@@ -128,6 +128,7 @@ private static TutorialManager instance;
 				StageChange();
 			break;
 			case TutorialStage.TutorialEnd:
+				spawner.EndTutorial();
 				CleanUp();
 			break;
 		}
