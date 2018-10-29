@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pattern : MonoBehaviour {
 	[SerializeField] private GameObject[] Lista;
 	private GameObject[] pool;
+	private TutorialPattern tutorialPattern;
 	private int counter = 0;
 
 	void Awake(){
@@ -17,11 +18,16 @@ public class Pattern : MonoBehaviour {
 		}
 	}
 
+	void Start(){
+		tutorialPattern = GetComponent<TutorialPattern>();
+	}
+
 	public void Return(GameObject go){
 		for (int i = 0; i < Lista.Length; i++){
 			if(go == pool[i]){
 				pool [i].transform.position = Vector3.one * 60;
 			}
+			if(tutorialPattern && i == Lista.Length-1){tutorialPattern.OnPatternEnd(); }
 		}
 	}
 
@@ -42,4 +48,8 @@ public class Pattern : MonoBehaviour {
     public int Count() {
         return counter;
     }
+
+	public GameObject[] GetList(){
+		return Lista;
+	}
 }

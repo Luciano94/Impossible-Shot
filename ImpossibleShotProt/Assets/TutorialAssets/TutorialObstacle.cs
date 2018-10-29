@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TutorialObstacle : MonoBehaviour {
 	private static bool registerOnce = true;
+	private bool wasHit = false;
 
 	private float speed;
 	private Product product;
@@ -20,9 +21,11 @@ public class TutorialObstacle : MonoBehaviour {
 	private float lerpState;
 	void Awake(){
 		registerOnce = true;
+		wasHit = false;
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
 		product = GetComponent<Product> ();
+
 		MeshRenderer[] meshes = GetComponentsInChildren<MeshRenderer>();
 		mats = new Material[meshes.Length];
 		initColors = new Color[meshes.Length];
@@ -43,6 +46,8 @@ public class TutorialObstacle : MonoBehaviour {
 
 		if(other.gameObject.tag == "Bullet"){
 			TutorialManager.Instance.PlayerHitTutorialObstacle();
+			shiningUp = true;
+			wasHit = true;
 		}
 	}
 
@@ -66,5 +71,13 @@ public class TutorialObstacle : MonoBehaviour {
 			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
 		}
+	}
+
+	public bool WasHit(){
+		return wasHit;
+	}
+
+	public void ResetHit(){
+		wasHit = false;
 	}
 }

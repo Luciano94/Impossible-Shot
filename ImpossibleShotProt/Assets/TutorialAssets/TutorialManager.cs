@@ -1,22 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-	public enum TutorialStage{
-		Waiting = 0,
-		SetUp,
-		FirstPhase,
-		SetupMarkers,
-		WaitForMakers,
-		ShowArrows,
-		ArrowsGone,
-		MarkersCheck,
-		SecondPhase,
-		EnemyHit,
-		ThirdPhase,
-		NoObstacleHit,
-		PatternEnd,
-		TutorialEnd
-	}
+
+public enum TutorialStage{
+	Waiting = 0,
+	SetUp,
+	FirstPhase,
+	SetupMarkers,
+	WaitForMakers,
+	ShowArrows,
+	ArrowsGone,
+	MarkersCheck,
+	SecondPhase,
+	EnemyHit,
+	ThirdPhase,
+	NoObstacleHit,
+	PatternEnd,
+	TutorialEnd,
+	TotalStages
+}
+
 public class TutorialManager : MonoBehaviour {
 private static TutorialManager instance;
 
@@ -31,7 +34,7 @@ private static TutorialManager instance;
         }
     }
 
-
+	
 	private static Vector3 colPos = new Vector3(0f,0f,39f);
 	private static Vector3 colCenter = new Vector3(0f,5f,0f);
 	private static Vector3 colSize = new Vector3(12f,10f,5f);
@@ -67,75 +70,62 @@ private static TutorialManager instance;
 				CreateTutorialCollider();
 				playerMov.enabled = false;
 				Time.timeScale = 0.1f;
-				stage++;
-				StageDebug();
+				StageChange();
 			break;
 			case TutorialStage.FirstPhase:
 				FirstPhase();
-				stage++;
-				StageDebug();
+				StageChange();
 			break;
 			case TutorialStage.SetupMarkers:
 				if(DPadShiner.DoneShining()){
 				Time.timeScale = 1.0f;
 				setUpMarkers();
-				stage++;
-				StageDebug();
+				StageChange();
 				}
 			break;
 			case TutorialStage.WaitForMakers:
 				if(CheckMarkersDoneMoving()){
-					stage++;
-					StageDebug();
+					StageChange();
 				}
 			break;
 			case TutorialStage.ShowArrows:
 				ShowArrows();
-				stage++;
-				StageDebug();
+				StageChange();
 			break;
 			case TutorialStage.ArrowsGone:
 				if(CheckArrowsGone()){
 					playerMov.enabled = true;
-					stage++;
-					StageDebug();
+					StageChange();
 				}
 			break;
 			case TutorialStage.MarkersCheck:
 				if(AllMarkersTouched()){
 					DestroyMarkers();
-					stage++;
+					StageChange();
 					spawner.Begin();
-					StageDebug();
 				}
 			break;
 			case TutorialStage.SecondPhase:
-				//spawner.UpdateStage();
 				//wait for TutorialEnemyEnter()
 			break;
 			case TutorialStage.EnemyHit:
 				if(TutorialEnemyHit()){
-					stage++;
-					StageDebug();
+					StageChange();
 				}
 			break;
 			case TutorialStage.ThirdPhase:
-				//spawner.ObstacleTutorial();
-
+				//wait for TutorialObstacleEnter()
 			break;
 			case TutorialStage.NoObstacleHit:
-				if(false/*no obstacle hit*/){
-					stage++;
-					StageDebug();
+				if(TutorialPattern.NoneHit()){
+					StageChange();
 				}
 			break;
 			case TutorialStage.PatternEnd:
 				MenuManager.Instance.FinalCountdown();
 				GameManager.Instance.EndTutorial();
-				spawner.EndTutorial();
 				//spawn normal patterns
-				stage++;
-				StageDebug();
+				StageChange();
 			break;
 			case TutorialStage.TutorialEnd:
 				CleanUp();
@@ -155,20 +145,27 @@ private static TutorialManager instance;
 	}
 	private void Continue(){
 		Time.timeScale = 1.0f;
-		stage++;
-		StageDebug();
+		StageChange();
 	}
 
 	public void TutorialSelected(){
 		GameManager.Instance.PlayTutorial();
 		MenuManager.Instance.StartGame();
-		stage++;
-		StageDebug();
+		StageChange();
 	}
 
-	private void StageDebug(){
-		Debug.Log(stage);
-		spawner.UpdateStage();
+	private void StageChange(){
+		if(stage < TutorialStage.TotalStages -1){
+			stage++;
+			Debug.Log(stage);
+			
+			if(spawner){
+				spawner.UpdateStage();
+			}else{
+				spawner = FindObjectOfType<PatternSpawner>();
+				spawner.UpdateStage();
+			}
+		}
 	}
 
 	public TutorialStage GetStage(){
@@ -212,6 +209,7 @@ private static TutorialManager instance;
 
 	private void ThirdPhase(){
 		//Obsacle tutorial
+		Wait(0.5f,"Continue");
 	}
 
 	private void CleanUp(){
@@ -269,16 +267,16 @@ private static TutorialManager instance;
 
 	public void TutorialEnemyEnter(){
 		SecondPhase();
-		spawner.UpdateStage();
 	}
 	private bool TutorialEnemyHit(){
 		return TutorialEnemy.WasHit();
 	}
 
-	public void TutorialObstacleEnter(){				
-		stage++;
-		StageDebug();
+	public void TutorialObstacleEnter(){
+		ThirdPhase();
 	}
-	public void PlayerHitTutorialObstacle(){}
+	public void PlayerHitTutorialObstacle(){
+		Wait(0.5f,"Continue");
+	}
 
 }

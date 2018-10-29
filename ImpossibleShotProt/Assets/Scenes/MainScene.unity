@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3934,6 +3934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 835107735}
   - component: {fileID: 835107736}
+  - component: {fileID: 835107737}
   m_Layer: 0
   m_Name: ObstacleTutorialPattern
   m_TagString: Untagged
@@ -3976,6 +3977,17 @@ MonoBehaviour:
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
   - {fileID: 1809114651016232, guid: 0e388ed38a7e1fa4b9aa983c801b83f7, type: 2}
   - {fileID: 1197411705695260, guid: cc9f17532f9a6a34da736c220f478fe6, type: 2}
+--- !u!114 &835107737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835107734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37236c5d357ef147a10ef45d8bf5c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &835392262
 GameObject:
   m_ObjectHideFlags: 0

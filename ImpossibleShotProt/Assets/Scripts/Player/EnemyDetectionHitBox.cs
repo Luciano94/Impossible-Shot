@@ -35,7 +35,7 @@ public class EnemyDetectionHitBox : MonoBehaviour {
 	void Update () {
 		var speed = GameManager.Instance.TerrainSpeed;
 		if (Time.deltaTime > 0) {
-			TotalFrames++;
+			TotalFrames += 1 * Time.timeScale;
 			TotalDistance += speed * Time.deltaTime;
 		}
 	}
