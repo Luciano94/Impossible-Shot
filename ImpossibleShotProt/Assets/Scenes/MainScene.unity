@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1681,9 +1681,9 @@ MonoBehaviour:
   changeTxT: {fileID: 101000584}
   timePerBattery: 3
   timePerPattern: 0.5
-  timePerObstacle: 0.75
+  timePerObstacle: 0.6
   timeDown: 0.05
-  minTime: 0.2
+  minTime: 0.3
 --- !u!1 &338885570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,6 +3231,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114276244220343594, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: SpinSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}
   m_IsPrefabAsset: 0
@@ -3833,7 +3838,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ad7078e3bfd0a004082f6cd3522fdce1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ad7078e3bfd0a004082f6cd3522fdce1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7221,7 +7226,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ad7078e3bfd0a004082f6cd3522fdce1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ad7078e3bfd0a004082f6cd3522fdce1, type: 3}
       propertyPath: m_LocalRotation.x

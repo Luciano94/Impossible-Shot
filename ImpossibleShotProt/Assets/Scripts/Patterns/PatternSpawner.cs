@@ -133,8 +133,9 @@ public class PatternSpawner : MonoBehaviour {
 		RandomizeBattery();
 		actualPattern = 0;
 		ChargePatterns();
-		if(timePerBattery-timeDown > minTime) timePerBattery -= timeDown;
-		else timePerBattery = timeDown;
+		if(timePerObstacle-timeDown > minTime){ timePerObstacle -= timeDown;
+		Debug.Log(timePerObstacle);}
+		else timePerObstacle = timeDown;
 		Invoke("SpawnObstacle", timePerPattern);
 	}
 
@@ -153,8 +154,7 @@ public class PatternSpawner : MonoBehaviour {
 		if(actualPattern != battery.Length-1){
 			actualPattern++;
 			ChargePatterns();
-			if(timePerPattern-timeDown > minTime) timePerPattern -= timeDown;
-			else timePerPattern = timeDown;
+
 			Invoke("SpawnObstacle", timePerPattern);
 		} else BatteryChange();
 	}
