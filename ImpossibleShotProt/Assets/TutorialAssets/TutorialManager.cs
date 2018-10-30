@@ -52,6 +52,9 @@ private static TutorialManager instance;
 
 	private TutorialStage stage = 0;
 
+	private bool obstacleHitThisRound;
+	private bool noObstaclesHit;
+
 	void Awake(){
 	}
 
@@ -61,6 +64,9 @@ private static TutorialManager instance;
 		spawner = FindObjectOfType<PatternSpawner>();
 		arrows = FindObjectOfType<TutorialArrows>();
 		cross = FindObjectOfType<TutorialCross>();
+
+		noObstaclesHit = false;
+		obstacleHitThisRound = false;
 	}
 
 	
@@ -120,7 +126,7 @@ private static TutorialManager instance;
 			break;
 			case TutorialStage.NoObstacleHit:
 				//Debug.Log(TutorialPattern.NoneHit());
-				if(TutorialPattern.NoneHit()){
+				if(noObstaclesHit){
 					StageChange();
 				}
 			break;
@@ -283,9 +289,15 @@ private static TutorialManager instance;
 		ThirdPhase();
 	}
 	public void PlayerHitTutorialObstacle(){
+		obstacleHitThisRound = true;
 		cross.Show();
 		cross.Hide(0.5f);
 		Wait(0.5f,"DoNothing");
 	}
 
+	public void UpdateObstaclesHit(){
+		Debug.Log("UpdateObstaclesHit" + !obstacleHitThisRound);
+		noObstaclesHit = !obstacleHitThisRound;
+		obstacleHitThisRound = false;
+	}
 }

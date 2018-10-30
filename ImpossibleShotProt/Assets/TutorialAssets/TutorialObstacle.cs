@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TutorialObstacle : MonoBehaviour {
 	private static bool registerOnce = true;
-	private bool wasHit = false;
 
 
 	private float speed;
+
 	private Product product;
 	private GameManager gM;
 
@@ -20,7 +20,7 @@ public class TutorialObstacle : MonoBehaviour {
 	[SerializeField] private int Sharpness;
 
 	private float lerpState;
-	void Awake(){
+	void Start(){
 		registerOnce = true;
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
@@ -46,8 +46,7 @@ public class TutorialObstacle : MonoBehaviour {
 
 		if(other.gameObject.tag == "Bullet"){
 			TutorialManager.Instance.PlayerHitTutorialObstacle();
-			shiningUp = true;
-			wasHit = true;
+
 		}
 	}
 
@@ -71,13 +70,5 @@ public class TutorialObstacle : MonoBehaviour {
 			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
 		}
-	}
-
-	public bool WasHit(){
-		return wasHit;
-	}
-
-	public void ResetHit(){
-		wasHit = false;
 	}
 }

@@ -5,19 +5,19 @@ using UnityEngine;
 public class TutorialCross : MonoBehaviour {
 
 	void Start(){
-		gameObject.SetActive(false);
+		gameObject.transform.GetChild(0).gameObject.SetActive(false);
 	}
 	public void Show(){
-		gameObject.SetActive(true);
+		gameObject.transform.GetChild(0).gameObject.SetActive(true);
 	}
 	public void Hide(float time){
 		Invoke("Deactivate",time);
 	}
 	private void Deactivate(){
-		gameObject.SetActive(false);
+		gameObject.transform.GetChild(0).gameObject.SetActive(false);
 	}
 
 	public bool GetActive(){
-		return gameObject.activeInHierarchy;
+		return gameObject.transform.GetChild(0).gameObject.activeInHierarchy;
 	}
 }
