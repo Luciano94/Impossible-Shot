@@ -46,10 +46,14 @@ private static TutorialManager instance;
 	private PatternSpawner spawner;
 
 	private TutorialArrows arrows;
+	private TutorialCross cross;
 
     private TutorialMarker[] markers;
 
 	private TutorialStage stage = 0;
+
+	private bool obstacleHitThisRound;
+	private bool noObstaclesHit;
 
 	void Awake(){
 	}
@@ -59,6 +63,10 @@ private static TutorialManager instance;
         DPadShiner = FindObjectOfType<DPadShine>();
 		spawner = FindObjectOfType<PatternSpawner>();
 		arrows = FindObjectOfType<TutorialArrows>();
+		cross = FindObjectOfType<TutorialCross>();
+
+		noObstaclesHit = false;
+		obstacleHitThisRound = false;
 	}
 
 	
@@ -117,14 +125,14 @@ private static TutorialManager instance;
 				//wait for TutorialObstacleEnter()
 			break;
 			case TutorialStage.NoObstacleHit:
-				if(TutorialPattern.NoneHit()){
+				//Debug.Log(TutorialPattern.NoneHit());
+				if(noObstaclesHit){
 					StageChange();
 				}
 			break;
 			case TutorialStage.PatternEnd:
 				MenuManager.Instance.FinalCountdown();
 				GameManager.Instance.EndTutorial();
-				//spawn normal patterns
 				StageChange();
 			break;
 			case TutorialStage.TutorialEnd:
@@ -147,6 +155,10 @@ private static TutorialManager instance;
 	private void Continue(){
 		Time.timeScale = 1.0f;
 		StageChange();
+	}
+
+	private void DoNothing(){
+		Time.timeScale = 1.0f;
 	}
 
 	public void TutorialSelected(){
@@ -277,7 +289,15 @@ private static TutorialManager instance;
 		ThirdPhase();
 	}
 	public void PlayerHitTutorialObstacle(){
-		Wait(0.5f,"Continue");
+		obstacleHitThisRound = true;
+		cross.Show();
+		cross.Hide(0.5f);
+		Wait(0.5f,"DoNothing");
 	}
 
+	public void UpdateObstaclesHit(){
+		Debug.Log("UpdateObstaclesHit" + !obstacleHitThisRound);
+		noObstaclesHit = !obstacleHitThisRound;
+		obstacleHitThisRound = false;
+	}
 }

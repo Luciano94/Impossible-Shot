@@ -50,7 +50,12 @@ public class DPadShine : MonoBehaviour {
                 break;
             case 3:
                 OneByOne();
-                if (currentImage == total && lerpState == 0 && oneByOneDirection) { currentImage = 1; stage = 0; doneShining = true;}
+                if (currentImage == total && lerpState == 0 && oneByOneDirection) {
+                    currentImage = 1; stage = 0; doneShining = true;
+                    for (int i = 0; i < total; i++){
+                        ObjectsToMark[i].color = initialColor[i];
+                      }
+                }
                 break;
         }
 	}
