@@ -53,6 +53,9 @@ public class GameManager : MonoBehaviour {
 
     public void EndTutorial(){
         tutorialMode = false;
+        multiplicador = 1;
+        points = 0;
+		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
     }
     public void Death() {
         deadShot.Play();
