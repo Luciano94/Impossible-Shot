@@ -6,6 +6,7 @@ public class TutorialObstacle : MonoBehaviour {
 	private static bool registerOnce = true;
 	private bool wasHit = false;
 
+
 	private float speed;
 	private Product product;
 	private GameManager gM;
@@ -21,7 +22,6 @@ public class TutorialObstacle : MonoBehaviour {
 	private float lerpState;
 	void Awake(){
 		registerOnce = true;
-		wasHit = false;
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
 		product = GetComponent<Product> ();

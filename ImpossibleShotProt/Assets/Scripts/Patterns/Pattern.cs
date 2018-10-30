@@ -26,8 +26,8 @@ public class Pattern : MonoBehaviour {
 		for (int i = 0; i < Lista.Length; i++){
 			if(go == pool[i]){
 				pool [i].transform.position = Vector3.one * 60;
+				if(tutorialPattern){ tutorialPattern.Return(go);}
 			}
-			if(tutorialPattern && i == Lista.Length-1){tutorialPattern.OnPatternEnd(); }
 		}
 	}
 

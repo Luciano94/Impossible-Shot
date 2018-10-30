@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TutorialPattern : MonoBehaviour {
 	private static bool noneHit = false;
+
+	private bool[] hitTracker;
+	private float[] iDTracker;
 	private Pattern pattern;
 	private TutorialObstacle[] tutorialObstacles;
 	void Start () {
@@ -16,39 +19,40 @@ public class TutorialPattern : MonoBehaviour {
 				total++;
 			}
 		}
-
 		tutorialObstacles = new TutorialObstacle[total];
-
-		 total = 0;
+		hitTracker = new bool[total];
+		iDTracker = new float[total];
+		total = 0;
 		for(int i = 0; i < obstacles.Length; i++){
-			TutorialObstacle component = obstacles[i].GetComponent<TutorialObstacle>();
-			if(component){
-				tutorialObstacles[total] = component;
+			if(obstacles[i].GetComponent<TutorialObstacle>()){
+				tutorialObstacles[total] = obstacles[i].GetComponent<TutorialObstacle>();
+				hitTracker[total] = true;
+				iDTracker[total] = tutorialObstacles[total].GetInstanceID();
 				total++;
 			}
 		}
 	}
-	
-	public void OnPatternEnd(){
-		if(pattern.Count() == pattern.TamLista()){
-			bool noHit = true;
-			for(int i = 0; i < tutorialObstacles.Length; i++){
-				if(tutorialObstacles[i].WasHit()){
-					resetHits();
-					noHit = false;
-				}
-			}
-			noneHit = noHit;
-		}
-	}
-
 	public static bool NoneHit(){
 		return noneHit;
 	}
+	public void Return(GameObject go){
+		TutorialObstacle to = go.GetComponent<TutorialObstacle>();
+		if(to){
+			for(int i = 0; i <tutorialObstacles.Length; i++){
+				if(to.GetInstanceID() == iDTracker[i]){
+					Debug.Log(to.GetInstanceID() +" "+to.WasHit());
+					hitTracker[i] = to.WasHit();
+					to.ResetHit();
+				}
+			}
 
-	public void resetHits(){
-		for(int i = 0; i < tutorialObstacles.Length; i++){
-			tutorialObstacles[i].ResetHit();
+			bool nohit = true;
+			for(int i = 0; i < hitTracker.Length;i++){
+				if(hitTracker[i] == true){
+					nohit = false;
+				}
+			}
+			noneHit = nohit;
 		}
 	}
 }
