@@ -10,6 +10,7 @@ public enum TutorialStage{
 	WaitForMakers,
 	ShowArrows,
 	ArrowsGone,
+	TextGone,
 	MarkersCheck,
 	SecondPhase,
 	EnemyHit,
@@ -48,6 +49,8 @@ private static TutorialManager instance;
 	private TutorialArrows arrows;
 	private TutorialCross cross;
 
+	private TutorialMoveText text;
+
     private TutorialMarker[] markers;
 
 	private TutorialStage stage = 0;
@@ -64,6 +67,7 @@ private static TutorialManager instance;
 		spawner = FindObjectOfType<PatternSpawner>();
 		arrows = FindObjectOfType<TutorialArrows>();
 		cross = FindObjectOfType<TutorialCross>();
+		text = FindObjectOfType<TutorialMoveText>();
 
 		noObstaclesHit = false;
 		obstacleHitThisRound = false;
@@ -102,6 +106,12 @@ private static TutorialManager instance;
 			break;
 			case TutorialStage.ArrowsGone:
 				if(CheckArrowsGone()){
+					ShowText();
+					StageChange();
+				}
+			break;
+			case TutorialStage.TextGone:
+				if(CheckTextGone()){
 					playerMov.enabled = true;
 					StageChange();
 				}
@@ -249,7 +259,7 @@ private static TutorialManager instance;
 
 	private void MoveMarkers(){
 		for(int i = 0; i < markers.Length; i++){
-			markers[i].Move(1);
+			markers[i].Move(0.5f);
 		}
 	}
 
@@ -274,9 +284,15 @@ private static TutorialManager instance;
 
 	private void ShowArrows(){
 		arrows.Show();
-		arrows.Hide(1.0f);
+		arrows.Hide(1.5f);
 	}
 	private bool CheckArrowsGone(){  return !arrows.GetActive();}
+
+	private void ShowText(){
+		text.Show();
+		text.Hide(1.5f);
+	}
+	private bool CheckTextGone(){return !text.GetActive();}
 
 	public void TutorialEnemyEnter(){
 		SecondPhase();
