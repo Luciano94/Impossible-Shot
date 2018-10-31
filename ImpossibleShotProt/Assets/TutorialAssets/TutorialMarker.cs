@@ -11,7 +11,7 @@ public class TutorialMarker : MonoBehaviour {
 	private bool touched = false;
 	
 	private float lerpState;
-	private int transitionSharpness;
+	private float transitionSharpness;
 	void Update () {
 		if(shouldMove){
 			lerpState += Time.deltaTime * transitionSharpness;
@@ -21,7 +21,7 @@ public class TutorialMarker : MonoBehaviour {
 	}
 
 	public bool DoneMoving(){return doneMoving;}
-	public void Move(int sharpness){
+	public void Move(float sharpness){
 		doneMoving = false;
 		transitionSharpness = sharpness;
 		initPos = transform.position;
