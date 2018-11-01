@@ -81,7 +81,7 @@ public class BulletMovement : MonoBehaviour {
 		Vector3 Target = new Vector3 (xTarget, yTarget, transform.position.z);
 		//Debug.Log (xTarget + " " + yTarget);
 
-		LerpState += TransitionSharpness * Time.deltaTime;
+		LerpState += TransitionSharpness * Time.deltaTime * Time.timeScale;
 		if (LerpState > 1.0f) {LerpState = 1.0f;}
 
 		transform.position = Vector3.Lerp (InitialPosition, Target, LerpState);

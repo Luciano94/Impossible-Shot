@@ -48,7 +48,7 @@ public class MenuManager : MonoBehaviour {
 			tutorialPanel.SetActive(false);
 			mainScreen.SetActive(true);
 		}
-		playerMov.enabled = false;
+		//playerMov.enabled = false;
 		inGame.SetActive(false);
 		pause.SetActive(false);
 		finish.SetActive(false);
@@ -57,7 +57,7 @@ public class MenuManager : MonoBehaviour {
 	} 
 
 	public void PauseGame(){
-		playerMov.enabled = false;
+		//playerMov.enabled = false;
 		inGame.SetActive(false);
 		finish.SetActive(false);
 		pause.SetActive(true);
@@ -68,18 +68,18 @@ public class MenuManager : MonoBehaviour {
 		pause.SetActive(false);
 		inGame.SetActive(true);
 		finish.SetActive(false);
-		playerMov.enabled = true;
+		//playerMov.enabled = true;
 		Time.timeScale = 1f;
 	}
 
 	public void StartGame(){
 		Time.timeScale = 1f;
-		playerMov.enabled = true;
+		//playerMov.enabled = true;
 		startSound.Play();
 		principal.SetActive(false);
 		finish.SetActive(false);
 		inGame.SetActive(true);
-		playerMov.enabled = false;
+		//playerMov.enabled = false;
 		cameraMovement.enabled = true;
 		gun.GameStart();
 		GameManager.Instance.StartGame();
