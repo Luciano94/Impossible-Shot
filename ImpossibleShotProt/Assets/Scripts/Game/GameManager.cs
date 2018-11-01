@@ -61,10 +61,16 @@ public class GameManager : MonoBehaviour {
         deadShot.Play();
         playerMov.enabled = false;
         playerSpin.enabled = false;
-        trail.Stop();
-        terrainSpeed = 0;
+        /*trail.Pause();
+        terrainSpeed = 0;*/
         Handheld.Vibrate();
-        Invoke("terminate", 0.5f);
+        terminate();
+        Time.timeScale = 0.0f;
+    }
+
+    public void Revive(){
+        Time.timeScale = 1.0f;
+        MenuManager.Instance.ContinueGame();
     }
 
     private void terminate(){
