@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    [SerializeField] float multPerEnemy;
+    [SerializeField] float multPerKillingSpree;
     [SerializeField] GameObject spawnPattern;
     [SerializeField] SpawnEnv spawnEnv;
     [SerializeField] float terrainSpeed = 80f;
@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] BulletSpin playerSpin;
     [SerializeField] ParticleSystem blood;
     [SerializeField] ParticleSystem trail;
+    [SerializeField] int enemiesForKillingSpree = 5;
+    private int actKillingSpree;
     private bool tutorialMode = false;
     private float multiplicador;
     private float points = 0;
@@ -48,6 +50,7 @@ public class GameManager : MonoBehaviour {
 
     public void EndTutorial(){
         tutorialMode = false;
+        actKillingSpree = 0;
         multiplicador = 1;
         points = 0;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
@@ -76,11 +79,19 @@ public class GameManager : MonoBehaviour {
         enemyShot.Play();
         blood.Play();
         spawn.UpdateStage();
-        multiplicador += multPerEnemy;
-        multiplicador = (float)Math.Round(multiplicador, 2);
+        killingSpree();
         var AddedScore = value * multiplicador;
         points += AddedScore;
 		MenuManager.Instance.UpdatePoints(points, AddedScore, multiplicador);
+    }
+
+    private void killingSpree(){
+        actKillingSpree++;
+        if(actKillingSpree == enemiesForKillingSpree){
+            actKillingSpree = 0;
+            multiplicador += multPerKillingSpree;
+            multiplicador = (float)Math.Round(multiplicador, 2);
+        }
     }
 
     private void Awake(){
