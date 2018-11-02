@@ -1497,7 +1497,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &314018493
 GameObject:
@@ -2445,10 +2445,10 @@ RectTransform:
   m_Father: {fileID: 835392263}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0.663375}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -120.099976}
-  m_SizeDelta: {x: -48, y: 154.3}
+  m_AnchoredPosition: {x: 0, y: 1.800003}
+  m_SizeDelta: {x: 0, y: -3.600006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499064150
 MonoBehaviour:
@@ -2469,7 +2469,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 77e3bff5ee99adf44a6ebf701a3efc0a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21c153c2987cf654e9e4afcf08252c48, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3956,7 +3956,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ad7078e3bfd0a004082f6cd3522fdce1, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad7078e3bfd0a004082f6cd3522fdce1, type: 3}
       propertyPath: m_Name
@@ -4081,7 +4081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &803974896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5699,7 +5699,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 88ebc57ec3d71ca41b7053c069fa1ea5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab9a5f91c610d6043bf49dddc1c9779a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
