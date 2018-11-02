@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f7f6b6eb6f031489b2a0b2b781b599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpinSpeed: 200
+  SpinSpeed: 1000
 --- !u!114 &114390811867397104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d200b2ba44076a843b6cebbfcecd6d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multPerEnemy: 0.1
+  multPerKillingSpree: 0.5
   spawnPattern: {fileID: 0}
   spawnEnv: {fileID: 0}
   terrainSpeed: 80
@@ -663,7 +663,7 @@ MonoBehaviour:
   playerSpin: {fileID: 114276244220343594}
   blood: {fileID: 198093005921615250}
   trail: {fileID: 198191216288344598}
-  tutoCollider: {fileID: 0}
+  enemiesForKillingSpree: 5
 --- !u!114 &114593732612067006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -691,6 +691,8 @@ MonoBehaviour:
   gun: {fileID: 0}
   dPadTxt: {fileID: 0}
   enemyTxt: {fileID: 0}
+  countdown: 3
+  timePerNumber: 0.5
 --- !u!114 &114810245484411292
 MonoBehaviour:
   m_ObjectHideFlags: 1
