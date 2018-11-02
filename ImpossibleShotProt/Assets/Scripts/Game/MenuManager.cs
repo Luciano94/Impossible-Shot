@@ -96,6 +96,11 @@ public class MenuManager : MonoBehaviour {
 		finish.SetActive(true);
 	}
 
+	public void ContinueGame(){
+		ingamePanel.SetActive(true);
+		finish.SetActive(false);
+	}
+
 	public void ShowDPadTuto(){
 		dPadTxt.text = "This is a Directional Pad, use the buttons to move the bullet arround to find each of the nine positions.";
 		Time.timeScale = 0.1f;

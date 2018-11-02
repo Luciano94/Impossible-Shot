@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObstacleScript : MonoBehaviour {
 
 	private float speed;
+	private bool hitOnce;
 	private Product product;
 	private GameManager gM;
 
@@ -12,17 +13,23 @@ public class ObstacleScript : MonoBehaviour {
 		gM = GameManager.Instance;
 		speed = gM.TerrainSpeed;
 		product = GetComponent<Product> ();
+		hitOnce = true;
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		gM.Death();
+		if(hitOnce){
+			hitOnce = false;
+			gM.Death();
+		}
 	}
 
 	void LateUpdate () {
 		if (product.IsActive()){
 			speed = gM.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
+		} else{
+			hitOnce = true;
 		}
 	}
 }
