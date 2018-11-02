@@ -74,12 +74,12 @@ public class MenuManager : MonoBehaviour {
 
 	public void StartGame(){
 		Time.timeScale = 1f;
-		//playerMov.enabled = true;
+		playerMov.enabled = true;
 		startSound.Play();
 		principal.SetActive(false);
 		finish.SetActive(false);
 		inGame.SetActive(true);
-		//playerMov.enabled = false;
+		playerMov.enabled = false;
 		cameraMovement.enabled = true;
 		gun.GameStart();
 		GameManager.Instance.StartGame();

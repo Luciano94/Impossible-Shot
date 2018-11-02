@@ -32,12 +32,7 @@ public class GameManager : MonoBehaviour {
     private bool tutorialMode = false;
     private float multiplicador;
     private float points = 0;
-    int level = 1;
     private PatternSpawner spawn;
-
-    public int Level{
-        get{return level;}
-    }
 
     public float TerrainSpeed {
         get { return terrainSpeed; }
