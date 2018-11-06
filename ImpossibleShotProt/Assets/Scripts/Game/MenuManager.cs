@@ -32,7 +32,8 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private BulletMovement playerMov;
 	[SerializeField] private CameraMovement cameraMovement;
 	[SerializeField] private GunCanonScript gun;
-
+	/*HighScore Menu */
+	[SerializeField] private GameObject HSPanel;
 	/*Toturial Text*/
 	[SerializeField] private Text dPadTxt;
 	[SerializeField] private Text enemyTxt;
@@ -70,6 +71,11 @@ public class MenuManager : MonoBehaviour {
 		finish.SetActive(false);
 		//playerMov.enabled = true;
 		Time.timeScale = 1f;
+	}
+
+	public void ToHighScorePanel(){
+		
+		HSPanel.SetActive(true);
 	}
 
 	public void StartGame(){

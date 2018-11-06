@@ -64,15 +64,6 @@ public class PatternSpawner : MonoBehaviour {
 				EnemyTutorial();
 			break;
 		}
-	/* 	Debug.Log("Stage: "+ stage);
-		if(stage != TutorialManager.Instance.GetStage()){
-			actualPatternTutorial++;
-			stage = TutorialManager.Instance.GetStage();
-			EnemyTutorial();
-		}else{
-			ChargePatternsTutorial();
-			Invoke("SpawnTutorial", timePerBattery);
-		}*/
 	}
 
 	private void GenerateObstacleTuto(){
@@ -133,9 +124,10 @@ public class PatternSpawner : MonoBehaviour {
 		RandomizeBattery();
 		actualPattern = 0;
 		ChargePatterns();
-		if(timePerObstacle-timeDown > minTime){ timePerObstacle -= timeDown;
-		Debug.Log(timePerObstacle);}
-		else timePerObstacle = timeDown;
+		if(timePerObstacle-timeDown > minTime) 
+			timePerObstacle -= timeDown;
+		else 
+			timePerObstacle = minTime;
 		Invoke("SpawnObstacle", timePerPattern);
 	}
 
