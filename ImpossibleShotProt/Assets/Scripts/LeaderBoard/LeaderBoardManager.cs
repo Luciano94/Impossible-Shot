@@ -1,16 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class LeaderBoardManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	private static LeaderBoardManager instance;
+
+	public static LeaderBoardManager Instance{
+		get{
+			instance = FindObjectOfType<LeaderBoardManager>();
+			if(instance == null){
+				GameObject go = new GameObject("LeaderBoardManager");
+				instance = go.AddComponent<LeaderBoardManager>();
+			}
+			return instance;
+		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	[SerializeField] private Text[] leaderBoard;
+
+	private void Awake() {
+		foreach (Text txt in leaderBoard){
+			txt.text = "0";
+		}
+	}
+
+	public void UpdateLeaderboard(){
+		foreach (Text txt in leaderBoard){
+			//obtener puntaje google play
+			//asignar puntaje
+		}
 	}
 }

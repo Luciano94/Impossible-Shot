@@ -674,6 +674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantOfKillingSpree: 1
   trail: {fileID: 198191216288344598}
+  spark: {fileID: 0}
   timePwUp: 5
   multBoost: 2
   colorpart: {r: 1, g: 0, b: 0, a: 1}
