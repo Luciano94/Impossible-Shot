@@ -65,8 +65,6 @@ public class GameManager : MonoBehaviour {
     }
     public void Death() {
         deadShot.Play();
-        playerMov.enabled = false;
-        playerSpin.enabled = false;
         Handheld.Vibrate();
         HSmanager.UpdateHS();
         terminate();
