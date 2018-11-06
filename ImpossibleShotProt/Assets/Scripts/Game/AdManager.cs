@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Monetization;
 
 public class AdManager : MonoBehaviour {
 
@@ -17,15 +16,27 @@ public class AdManager : MonoBehaviour {
         }
     }
 
-	void Awake(){
+#if UNITY_IOS
+   private string gameId = "2887145";
+#elif UNITY_ANDROID
+    private string gameId = "2881746";
+#endif
+
+    bool testMode = true;
+
+    public string placementId = "rewardedVideo";
+
+	private void Awake(){
 		DontDestroyOnLoad(gameObject);
+        Debug.LogWarning("This class is currently useless, and will most likely cause erros with ad placements.");
 	}
-	void Start () {
-		
+	private void Start () {
+		Monetization.Initialize (gameId, testMode);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public bool AdReady(){
+        return Monetization.IsReady (placementId);
+    }
+   
 }

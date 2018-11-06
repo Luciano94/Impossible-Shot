@@ -1,12 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Monetization;
 
+[RequireComponent (typeof (Button))]
 public class AdButton : MonoBehaviour {
 
 	
 	private static bool hasWatchedContinueAd = false;
 	private static bool shouldReset = false;
+
 	public static void ResetContinueAd(){
 		shouldReset = true;
 	}
@@ -14,26 +16,56 @@ public class AdButton : MonoBehaviour {
 		return !hasWatchedContinueAd;
 	}
 
-	UnityEngine.UI.Button button;
+	public string placementId = "rewardedVideo";
+    private Button adButton;
 
-	public void Awake(){
-		button = GetComponent<UnityEngine.UI.Button>();
-		button.gameObject.SetActive(true);
+#if UNITY_IOS
+  	private string gameId = "2887145";
+#elif UNITY_ANDROID
+    private string gameId = "2887146";
+#endif
+
+	public void Start(){
+		adButton = GetComponent<Button>();
+		adButton.gameObject.SetActive(true);
+		if (adButton) {
+            adButton.onClick.AddListener (ShowAd);
+        }
+
+        if (Monetization.isSupported) {
+            Monetization.Initialize (gameId, true);
+        }
 	}
 
 	private void Update(){
-		if(shouldReset){
-			button.gameObject.SetActive(true);
+		if(shouldReset && Monetization.IsReady (placementId)){
+			adButton.gameObject.SetActive(true);
 			hasWatchedContinueAd = false;
 			shouldReset = false;
 		}
+
 	}
 
-	public void WatchContinueAd(){
+	private void ShowAd () {
+        ShowAdCallbacks options = new ShowAdCallbacks ();
+        options.finishCallback = HandleShowResult;
+        ShowAdPlacementContent ad = Monetization.GetPlacementContent (placementId) as ShowAdPlacementContent;
+        ad.Show (options);
+    }
+
+    private void HandleShowResult (ShowResult result) {
+        if (result == ShowResult.Finished) {
+            AdWatched();
+        } else if (result == ShowResult.Skipped) {
+            Debug.LogWarning ("The player skipped the video - DO NOT REWARD!");
+        } else if (result == ShowResult.Failed) {
+            AdWatched();
+        }
+    }
+
+	private void AdWatched(){
 		hasWatchedContinueAd = true;
-		button.gameObject.SetActive(false);
-		Debug.Log("Ad watched");
-		//poner ad
+		adButton.gameObject.SetActive(false);
 		GameManager.Instance.Revive();
 	}
 }
