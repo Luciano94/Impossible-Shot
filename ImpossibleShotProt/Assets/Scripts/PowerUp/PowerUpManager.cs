@@ -31,14 +31,16 @@ public class PowerUpManager : MonoBehaviour {
     }
 
     private void ActivatePwUp(){
-        trail.startColor = colorpart;
+        ParticleSystem.MainModule settings = trail.main;
+        settings.startColor = colorpart;
         spark.Play();
         GameManager.Instance.Multiplicador *= multBoost;
         Invoke("DesactivatePwUp", timePwUp);
     }
 
     private void DesactivatePwUp(){
-        trail.startColor = new Color(1,1,1,1);
+        ParticleSystem.MainModule settings = trail.main;
+        settings.startColor = new Color(1,1,1,1);
         spark.Stop();
         actCantKS = 0;
         GameManager.Instance.Multiplicador /= multBoost;
