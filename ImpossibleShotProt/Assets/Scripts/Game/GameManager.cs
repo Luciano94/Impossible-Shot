@@ -33,8 +33,10 @@ public class GameManager : MonoBehaviour {
     private int actKillingSpree;
     private bool tutorialMode = false;
     private float multiplicador;
-    private float points = 0;
+    private int points = 0;
     private PatternSpawner spawn;
+
+    [SerializeField]private HighScoreManager HSmanager;
 
     public float TerrainSpeed {
         get { return terrainSpeed; }
@@ -43,11 +45,17 @@ public class GameManager : MonoBehaviour {
     public void PlayTutorial(){
         tutorialMode = true;
     }
-
+    
+    public int Score{
+        get{return points;}
+    } 
     public bool TutorialMode{
         get{return tutorialMode;}
     }
 
+    public HighScoreManager highScoreManager{
+        get{return HSmanager;}
+    }
     public void EndTutorial(){
         tutorialMode = false;
         actKillingSpree = 0;
@@ -59,9 +67,8 @@ public class GameManager : MonoBehaviour {
         deadShot.Play();
         playerMov.enabled = false;
         playerSpin.enabled = false;
-        /*trail.Pause();
-        terrainSpeed = 0;*/
         Handheld.Vibrate();
+        HSmanager.UpdateHS();
         terminate();
         Time.timeScale = 0.0f;
     }
@@ -80,7 +87,7 @@ public class GameManager : MonoBehaviour {
         blood.Play();
         spawn.UpdateStage();
         killingSpree();
-        var AddedScore = value * multiplicador;
+        int AddedScore = (int)(value * multiplicador);
         points += AddedScore;
 		MenuManager.Instance.UpdatePoints(points, AddedScore, multiplicador);
     }
@@ -97,9 +104,11 @@ public class GameManager : MonoBehaviour {
     private void Awake(){
         if (!PlayerPrefs.HasKey("Tutorial"))
             PlayerPrefs.SetInt("Tutorial", 1);
+        
 		spawn = spawnPattern.GetComponent<PatternSpawner>();
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
+
     }
 
     public void StartGame(){
