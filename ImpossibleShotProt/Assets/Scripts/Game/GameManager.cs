@@ -42,6 +42,11 @@ public class GameManager : MonoBehaviour {
         get { return terrainSpeed; }
     }
 
+    public float Multiplicador{
+        get{return multiplicador;}
+        set{multiplicador = value;}
+    }
+
     public void PlayTutorial(){
         tutorialMode = true;
     }
@@ -98,6 +103,7 @@ public class GameManager : MonoBehaviour {
             actKillingSpree = 0;
             multiplicador += multPerKillingSpree;
             multiplicador = (float)Math.Round(multiplicador, 2);
+            PowerUpManager.Instance.UpdateKillingSpree();
         }
     }
 
