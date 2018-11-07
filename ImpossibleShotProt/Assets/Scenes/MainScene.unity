@@ -6754,6 +6754,26 @@ Prefab:
       propertyPath: TransitionSharpness
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 20956735562989516, guid: 992e10fb118fa704dbeeb3c25d16898b,
+        type: 2}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20956735562989516, guid: 992e10fb118fa704dbeeb3c25d16898b,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20956735562989516, guid: 992e10fb118fa704dbeeb3c25d16898b,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20956735562989516, guid: 992e10fb118fa704dbeeb3c25d16898b,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
   m_IsPrefabAsset: 0
@@ -8432,7 +8452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialColor: {r: 1, g: 1, b: 1, a: 1}
-  TargetColor: {r: 0.7075472, g: 0, b: 0, a: 1}
+  TargetColor: {r: 0.5471698, g: 0, b: 0, a: 1}
 --- !u!1 &1740981457
 GameObject:
   m_ObjectHideFlags: 0
