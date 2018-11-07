@@ -15,34 +15,54 @@ public class PowerUpManager : MonoBehaviour {
         }
     }
 
-	[SerializeField]private int cantOfKillingSpree = 3;
-    [SerializeField]private ParticleSystem trail;
+	[SerializeField]private float cantOfKillingSpree = 3;
     [SerializeField]private ParticleSystem spark;
     [SerializeField]private float timePwUp = 5.0f;
     [SerializeField]private int multBoost = 2;
     [SerializeField]private Color colorpart;
-    private int actCantKS = 0;
+    private float actCantKS = 0;
 
+    private TrailColorTransition trail;
+    private bool timeKeeping;
+    private float countdown;
+
+    private void Start(){
+        trail = FindObjectOfType<TrailColorTransition>();
+        timeKeeping = false;
+        countdown = timePwUp;
+    }
 	public void UpdateKillingSpree(){
         actCantKS++;
         if(actCantKS == cantOfKillingSpree){
             ActivatePwUp();
         }
+        if(!timeKeeping){
+            trail.ColorChange(actCantKS/cantOfKillingSpree);
+            Debug.Log(actCantKS/cantOfKillingSpree);
+        }
     }
 
     private void ActivatePwUp(){
-        ParticleSystem.MainModule settings = trail.main;
-        settings.startColor = colorpart;
         spark.Play();
         GameManager.Instance.Multiplicador *= multBoost;
+        timeKeeping = true;
+        countdown = timePwUp;
         Invoke("DesactivatePwUp", timePwUp);
     }
 
     private void DesactivatePwUp(){
-        ParticleSystem.MainModule settings = trail.main;
-        settings.startColor = new Color(1,1,1,1);
         spark.Stop();
         actCantKS = 0;
         GameManager.Instance.Multiplicador /= multBoost;
+        trail.ColorChange(0.0f);
+    }
+
+    private void Update(){
+        if(timeKeeping){
+            countdown -= Time.deltaTime;
+            if(countdown < 0){ countdown = 0; timeKeeping = false;}
+            trail.ColorChange(countdown/timePwUp);
+            Debug.Log(countdown/timePwUp);
+        }
     }
 }
