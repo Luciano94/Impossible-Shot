@@ -27,7 +27,8 @@ public class AdButton : MonoBehaviour {
 
 	public void Start(){
 		adButton = GetComponent<Button>();
-		transform.parent.gameObject.SetActive(true);
+		adButton.interactable = true;
+		//transform.parent.gameObject.SetActive(true);
 		if (adButton) {
             adButton.onClick.AddListener (ShowAd);
         }
@@ -39,7 +40,8 @@ public class AdButton : MonoBehaviour {
 
 	private void Update(){
 		if(shouldReset && Monetization.IsReady (placementId)){
-			transform.parent.gameObject.SetActive(true);
+			adButton.interactable = true;
+			//transform.parent.gameObject.SetActive(true);
 			hasWatchedContinueAd = false;
 			shouldReset = false;
 		}
@@ -65,7 +67,8 @@ public class AdButton : MonoBehaviour {
 
 	private void AdWatched(){
 		hasWatchedContinueAd = true;
-		transform.parent.gameObject.SetActive(false);
+		adButton.interactable = false;
+		//transform.parent.gameObject.SetActive(false);
 		GameManager.Instance.Revive();
 	}
 }
