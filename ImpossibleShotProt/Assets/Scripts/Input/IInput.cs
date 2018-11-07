@@ -10,6 +10,7 @@ interface IInput
 	void Awake();
 	Direction GetDirection();
 	void Update();
+	
 	//android alternative only
 	void GoUp ();
 	void GoDown();

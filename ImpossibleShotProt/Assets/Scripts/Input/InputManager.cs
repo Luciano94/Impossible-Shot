@@ -16,8 +16,7 @@ public class InputManager : MonoBehaviour {
 	}
 
 	IInput input;
-	void Awake ()
-	{
+	void Awake (){
 		instance = this;
 		#if UNITY_ANDROID
 		input = new InputAndroidAlternative();
@@ -26,10 +25,11 @@ public class InputManager : MonoBehaviour {
 		#endif
 		input.Awake ();
 	}
-	public Direction GetDirection()
-	{
+
+	public Direction GetDirection(){
 		return input.GetDirection();
 	}
+	
 	private void Update(){
 		input.Update ();
 	}

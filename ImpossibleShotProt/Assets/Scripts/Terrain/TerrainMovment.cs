@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TerrainMovment : MonoBehaviour {
 
 	[SerializeField] private Transform back;
 	private float speed;
 
-	private void Update()
-	{
+	private void Update(){
 		speed = GameManager.Instance.TerrainSpeed;
 		Reset();
 	}

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Factory : MonoBehaviour {
 	[SerializeField] GameObject Product;
@@ -29,7 +27,6 @@ public class Factory : MonoBehaviour {
 		}
 		GameObject go = Instantiate (Product);
 		go.GetComponent<Product> ().Sent ();
-		//Debug.Log (Product.tag + " extra creado");
 		return go;
 	}
 
@@ -40,13 +37,11 @@ public class Factory : MonoBehaviour {
 				tracker[i] = true;
 				extra = false;
 				cargador [i].transform.position = Vector3.one * 60;
-				//Debug.Log (go.tag + " se recicla");
 			}
 		}
 		if (extra){
 			Debug.Log (Product.tag + " extra destruido");
 			Destroy (go);
-			//Debug.Log ("se destruye");
 		}
 	}
 }

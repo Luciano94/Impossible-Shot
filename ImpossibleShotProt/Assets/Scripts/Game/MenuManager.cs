@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour {
@@ -32,8 +30,10 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private BulletMovement playerMov;
 	[SerializeField] private CameraMovement cameraMovement;
 	[SerializeField] private GunCanonScript gun;
+
 	/*HighScore Menu */
 	[SerializeField] private GameObject HSPanel;
+	
 	/*Toturial Text*/
 	[SerializeField] private Text dPadTxt;
 	[SerializeField] private Text enemyTxt;
@@ -49,7 +49,6 @@ public class MenuManager : MonoBehaviour {
 			tutorialPanel.SetActive(false);
 			mainScreen.SetActive(true);
 		}
-		//playerMov.enabled = false;
 		inGame.SetActive(false);
 		pause.SetActive(false);
 		finish.SetActive(false);
@@ -58,7 +57,6 @@ public class MenuManager : MonoBehaviour {
 	} 
 
 	public void PauseGame(){
-		//playerMov.enabled = false;
 		inGame.SetActive(false);
 		finish.SetActive(false);
 		pause.SetActive(true);
@@ -69,12 +67,10 @@ public class MenuManager : MonoBehaviour {
 		pause.SetActive(false);
 		inGame.SetActive(true);
 		finish.SetActive(false);
-		//playerMov.enabled = true;
 		Time.timeScale = 1f;
 	}
 
 	public void ToHighScorePanel(){
-		
 		HSPanel.SetActive(true);
 	}
 
@@ -134,8 +130,7 @@ public class MenuManager : MonoBehaviour {
 		Invoke("HideDpadTuto", 2.0f);
 	}
 
-    public void FinalCountdown()
-    {
+    public void FinalCountdown(){
         if (countdown > 0){
             enemyTxt.text = countdown.ToString();
             countdown--;
@@ -146,14 +141,8 @@ public class MenuManager : MonoBehaviour {
         }
     }
 
-    private void HideStart()
-    {
+    private void HideStart() {
         enemyTxt.text = " ";
-    }
-
-    public void deathPoints()
-    {
-
     }
 
 	private void Update() {

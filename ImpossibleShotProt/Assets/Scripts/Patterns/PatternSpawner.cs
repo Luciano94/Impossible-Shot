@@ -48,8 +48,7 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	private void changePhase(){
-		switch (stage)
-		{
+		switch (stage){
 			case TutorialStage.EnemyHit:
 				ChargePatternsTutorial();
 				Invoke("SpawnTutorial", timePerBattery);

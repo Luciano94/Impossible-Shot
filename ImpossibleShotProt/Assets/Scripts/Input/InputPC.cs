@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InputPC : IInput {
-	public Direction GetDirection()
-	{
+	public Direction GetDirection(){
 		Direction dir;
 		dir = Direction.None;
 		if (Input.GetAxis("Vertical") != 0){

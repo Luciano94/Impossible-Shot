@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PointGainDisplay : MonoBehaviour {
     [SerializeField] [Range(0.0f, 2.0f)] float TimeToFade;
@@ -14,7 +12,6 @@ public class PointGainDisplay : MonoBehaviour {
     private float DisplayedScore;
     private float LerpState = 0;
 
-    // Use this for initialization
     void Start() {
         initPos = new Vector3();
         Txt = GetComponent<UnityEngine.UI.Text>();
@@ -23,7 +20,6 @@ public class PointGainDisplay : MonoBehaviour {
         DisplayedScore = 0;
     }
 
-    // Update is called once per frame
     void Update() {
         Timer += Time.deltaTime;
         if (Timer > TimeToFade) {
@@ -40,7 +36,6 @@ public class PointGainDisplay : MonoBehaviour {
             Timer = 0;
             DisplayedScore += score;
             Txt.text = "+" + DisplayedScore;
-            //fade in
         }
     }
 

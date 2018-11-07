@@ -28,6 +28,7 @@ public class SpawnEnv : MonoBehaviour {
 		if(timePerObj <= 0.1f)
 			timePerObj =0.1f;
 	}
+	
 	private void Awake() {
 		envArray = new Queue<GameObject>();
 		GameObject go;

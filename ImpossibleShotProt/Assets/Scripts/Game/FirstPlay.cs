@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class FirstPlay : MonoBehaviour {
+	
 	private static FirstPlay instance;
 
     public static FirstPlay Instance {
@@ -15,7 +17,7 @@ public class FirstPlay : MonoBehaviour {
     }
 	
 	private bool firstPlay = true;
-	[SerializeField]private bool restart;
+	private bool restart = false;
 
 	public void play(){
 		firstPlay = false;
@@ -33,8 +35,6 @@ public class FirstPlay : MonoBehaviour {
 	private void Awake() {
 		DontDestroyOnLoad(gameObject);
 	}
-
-
 
 	public void OnLevelWasLoaded(int level){
 		if(restart){

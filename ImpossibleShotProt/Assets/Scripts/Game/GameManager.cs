@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 using System;
 
@@ -21,7 +19,6 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] float multPerKillingSpree;
     [SerializeField] GameObject spawnPattern;
-    [SerializeField] SpawnEnv spawnEnv;
     [SerializeField] float terrainSpeed = 80f;
     [SerializeField] AudioSource deadShot;
     [SerializeField] AudioSource enemyShot;

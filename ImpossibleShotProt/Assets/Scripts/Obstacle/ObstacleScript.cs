@@ -7,11 +7,9 @@ public class ObstacleScript : MonoBehaviour {
 	private float speed;
 	private bool hitOnce;
 	private Product product;
-	private GameManager gM;
 
 	void Awake(){
-		gM = GameManager.Instance;
-		speed = gM.TerrainSpeed;
+		speed = GameManager.Instance.TerrainSpeed;
 		product = GetComponent<Product> ();
 		hitOnce = true;
 	}
@@ -20,13 +18,13 @@ public class ObstacleScript : MonoBehaviour {
 	{
 		if(hitOnce){
 			hitOnce = false;
-			gM.Death();
+			GameManager.Instance.Death();
 		}
 	}
 
 	void LateUpdate () {
 		if (product.IsActive()){
-			speed = gM.TerrainSpeed;
+			speed = GameManager.Instance.TerrainSpeed;
 			transform.Translate (Vector3.back * speed * Time.deltaTime);
 		} else{
 			hitOnce = true;
