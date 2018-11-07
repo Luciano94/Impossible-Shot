@@ -85,6 +85,11 @@ public class GameManager : MonoBehaviour {
         MenuManager.Instance.FinishGame();
     }
 
+    public void RestartGame(){
+        Invoke("StartGame",0.5f);
+        SceneManager.LoadScene(0);
+    }
+
     public void EnemyDeath(int value){
         enemyShot.Play();
         blood.Play();

@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 public class FirstPlay : MonoBehaviour {
 	private static FirstPlay instance;
 
@@ -17,6 +15,7 @@ public class FirstPlay : MonoBehaviour {
     }
 	
 	private bool firstPlay = true;
+	[SerializeField]private bool restart;
 
 	public void play(){
 		firstPlay = false;
@@ -26,7 +25,21 @@ public class FirstPlay : MonoBehaviour {
 		get{return firstPlay;}
 	}
 
+	public void RestartGame(){
+		restart = true;
+		SceneManager.LoadScene(0);
+	}
+
 	private void Awake() {
 		DontDestroyOnLoad(gameObject);
+	}
+
+
+
+	public void OnLevelWasLoaded(int level){
+		if(restart){
+			MenuManager.Instance.StartGame();
+			restart = false;
+		}
 	}
 }
