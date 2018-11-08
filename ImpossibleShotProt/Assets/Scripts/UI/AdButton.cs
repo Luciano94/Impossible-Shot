@@ -23,9 +23,11 @@ public class AdButton : MonoBehaviour {
   	private string gameId = "2887145";
 #elif UNITY_ANDROID
     private string gameId = "2887146";
+#else
+    private string gameId = "0000000";
 #endif
 
-	public void Start(){
+    public void Start(){
 		adButton = GetComponent<Button>();
 		adButton.interactable = true;
 		if (adButton) {
