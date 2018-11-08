@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4074650102939040}
   - component: {fileID: 212807303866524744}
   - component: {fileID: 114574689298603026}
+  - component: {fileID: 114958498707413590}
   m_Layer: 0
   m_Name: Plaqueta 4
   m_TagString: Untagged
@@ -53,6 +54,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distZ: -10
+--- !u!114 &114958498707413590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549128830397174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be93ea87a8ac4c4592a224ffe1f4d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212807303866524744
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4686345491041684}
   - component: {fileID: 212398111239654820}
+  - component: {fileID: 114008081610031018}
   m_Layer: 0
   m_Name: Bandido 2
   m_TagString: Untagged
@@ -83,6 +84,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.37, y: 3.69, z: 0.2}
   m_Center: {x: 0, y: 3.46, z: 0}
+--- !u!114 &114008081610031018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1669367985697024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be93ea87a8ac4c4592a224ffe1f4d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114511452709818356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425cde6eb20aba14a8653f99bd50eaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 100
 --- !u!212 &212398111239654820
 SpriteRenderer:
   m_ObjectHideFlags: 1

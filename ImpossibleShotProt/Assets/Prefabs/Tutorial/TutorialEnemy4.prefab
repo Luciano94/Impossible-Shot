@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4911531887475064}
   - component: {fileID: 212029052650680382}
+  - component: {fileID: 114529494719640350}
   m_Layer: 0
   m_Name: Bandido 2
   m_TagString: Untagged
@@ -127,6 +128,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 100
+--- !u!114 &114529494719640350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720438797730584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be93ea87a8ac4c4592a224ffe1f4d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114585179811733336
 MonoBehaviour:
   m_ObjectHideFlags: 1
