@@ -6,6 +6,7 @@ public class TrailColorTransition : MonoBehaviour {
 
 	private ParticleSystem.MainModule pSystem;
 	private float lerpState;
+	
 	void Start () {
 		pSystem = GetComponent<ParticleSystem>().main;
 		lerpState = 0.0f;

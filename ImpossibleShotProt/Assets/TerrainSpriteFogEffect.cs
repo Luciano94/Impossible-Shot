@@ -12,7 +12,7 @@ public class TerrainSpriteFogEffect : MonoBehaviour {
 	void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
         initialColor = spriteRenderer.color;
-        targetColor = RenderSettings.fogColor;
+        //targetColor = RenderSettings.fogColor;
 
         initialPosition = RenderSettings.fogEndDistance;
         targetPosition = RenderSettings.fogStartDistance;

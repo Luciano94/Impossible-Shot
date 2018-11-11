@@ -89,7 +89,8 @@ public class GameManager : MonoBehaviour {
 
     public void EnemyDeath(int value){
         enemyShot.Play();
-        blood.Play();
+        if(!blood.isPlaying)
+            blood.Play();
         spawn.UpdateStage();
         killingSpree();
         int AddedScore = (int)(value * multiplicador);
