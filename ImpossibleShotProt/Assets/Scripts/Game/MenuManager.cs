@@ -31,14 +31,18 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private CameraMovement cameraMovement;
 	[SerializeField] private GunCanonScript gun;
 
-	/*HighScore Menu */
+	[Header ("HighScore Text")]/*HighScore Menu */
 	[SerializeField] private GameObject HSPanel;
 	
-	/*Toturial Text*/
+	[Header ("Tutorial Text")]/*Toturial Text*/
 	[SerializeField] private Text dPadTxt;
 	[SerializeField] private Text enemyTxt;
     [SerializeField] private int countdown = 3;
     [SerializeField] private float timePerNumber = 0.5f;
+
+	[Header ("Event Text")]/*Event Txt */
+	[SerializeField] private Text eventBulletTxt;
+	[SerializeField] private Text eventEnemyTxt;
 
 	private void Awake() {
 		principal.SetActive(true);
@@ -103,6 +107,44 @@ public class MenuManager : MonoBehaviour {
 		finish.SetActive(false);
 	}
 
+	/*Event Methods */
+	private void HideBulletEvent(){
+		eventBulletTxt.text = "";
+		eventBulletTxt.enabled = false;
+	}
+
+	public void HideEnemyEvent(){
+		eventEnemyTxt.text = "";
+		eventEnemyTxt.enabled = false;
+	}
+
+	public void ShowEnemyEvent(){
+		eventEnemyTxt.enabled = true;
+		 if (countdown > 0){
+            eventEnemyTxt.text = countdown.ToString();
+            countdown--;
+            Invoke("ShowEnemyEvent", timePerNumber);
+        } else{
+            eventEnemyTxt.text = "TIME TO KILL!!!";
+			countdown = 3;
+            Invoke("HideEnemyEvent", timePerNumber);
+        }
+	}
+
+	public void ShowBulletEvent(){
+		eventBulletTxt.enabled = true;
+		 if (countdown > 0){
+            eventBulletTxt.text = countdown.ToString();
+            countdown--;
+            Invoke("ShowBulletEvent", timePerNumber);
+        } else{
+            eventBulletTxt.text = "BULLET TIME!!!";
+			countdown = 3;
+            Invoke("HideBulletEvent", timePerNumber);
+        }
+	}
+	
+	/*end events methods */
 	public void ShowDPadTuto(){
 		dPadTxt.text = "This is a Directional Pad, use the buttons to move the bullet arround to find each of the nine positions.";
 		Time.timeScale = 0.1f;

@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField]private HighScoreManager HSmanager;
 
+    private float timeScale;
+
     public float TerrainSpeed {
         get { return terrainSpeed; }
     }
@@ -70,11 +72,12 @@ public class GameManager : MonoBehaviour {
         Handheld.Vibrate();
         HSmanager.UpdateHS();
         terminate();
+        timeScale = Time.timeScale;
         Time.timeScale = 0.0f;
     }
 
     public void Revive(){
-        Time.timeScale = 1.0f;
+        Time.timeScale = timeScale;
         MenuManager.Instance.ContinueGame();
     }
 

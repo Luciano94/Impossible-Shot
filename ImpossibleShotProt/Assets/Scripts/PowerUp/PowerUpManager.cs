@@ -62,7 +62,7 @@ public class PowerUpManager : MonoBehaviour {
             countdown -= Time.deltaTime;
             if(countdown < 0){ countdown = 0; timeKeeping = false;}
             trail.ColorChange(countdown/timePwUp);
-            Debug.Log(countdown/timePwUp);
+            //Debug.Log(countdown/timePwUp);
         }
     }
 }

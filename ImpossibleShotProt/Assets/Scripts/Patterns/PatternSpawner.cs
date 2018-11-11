@@ -6,22 +6,29 @@ using UnityEngine.UI;
 public class PatternSpawner : MonoBehaviour {
 
 	[SerializeField]private  Battery[] setOfBattery;
-	private int actualBattery=1;
-	private GameObject[] battery;
-	private int actualPattern=0;
-	private GameObject pattern;
 	[SerializeField]private Text changeTxT;
 	[SerializeField]private float timePerBattery;
 	[SerializeField]private float timePerPattern;
 	[SerializeField]private float timePerObstacle;
 	[SerializeField]private float timeDown;
-	[SerializeField]private float minTime;
+	[SerializeField]private float minTime;	
+	private int actualBattery=1;
+	private GameObject[] battery;
+	private int actualPattern=0;
+	private GameObject pattern;
+
 	
 	/*TUTORIAL ATTRIBUTES */
 	private GameObject patternTutorial;
 	private int actualPatternTutorial=0;
 	private GameObject[] tutobattery;
 	private TutorialStage stage;
+
+	/*Events Atributes */
+	[SerializeField] private Battery batteryOfBulletTime;
+	[SerializeField] private Battery batteryOfEnemyStream;
+	[SerializeField] private float timePerObsInEvent = 0.4f;
+	private float actualTimePerObs;
 
 	/*TUTORIAL METHODS */
 	private void Start() {
@@ -84,7 +91,46 @@ public class PatternSpawner : MonoBehaviour {
 		stage = TutorialManager.Instance.GetStage();
 	}
 	/*END TUTORIAL FUNCTIONS */
+	/*Events Methods */
+	public void InitEvent(){
+		CancelInvoke("SpawnObstacle");
+		actualTimePerObs = timePerObstacle;
+		timePerObstacle = timePerObsInEvent;
+	}
 
+	private void SpawnObstacleEvent(){
+		GenerateObstacle();
+        if(pattern.GetComponent<Pattern>().Count() > 0)
+            Invoke("SpawnObstacleEvent", timePerObstacle);
+        else EndEvent();
+	}
+
+	private void EndEvent(){
+		EventsManager.Instance.DesactiveEvent();
+		actualPattern = 0;
+		ChargeBattery();
+		RandomizeBattery();
+		ChargePatterns();
+		Invoke("SpawnObstacle", timePerBattery);
+	}
+
+	public void BeginEnemyEvent(){
+		battery = batteryOfEnemyStream.GetBattery();
+		actualPattern = 0;
+		RandomizeBattery();
+		ChargePatterns();
+		SpawnObstacleEvent();
+	}
+
+	public void BeginBulletEvent(){
+		battery = batteryOfBulletTime.GetBattery();
+		actualPattern = 0;
+		RandomizeBattery();
+		ChargePatterns();
+		SpawnObstacleEvent();
+	}
+	
+	/*End events Methods */
 	public void Begin(){
 		if(GameManager.Instance.TutorialMode)
 			EnemyTutorial();
@@ -96,12 +142,6 @@ public class PatternSpawner : MonoBehaviour {
 		}
 	}
 
-	public void ObstacleTutorial(){ //cree esta funcion
-		Debug.LogError("Lucho, checkea este codigo");
-		if(actualBattery == 0 && actualPattern == 0){
-			PatternChange();
-		}
-	}
 	private void ChargeBattery(){
 		battery = setOfBattery[actualBattery].GetBattery();
 	}
@@ -119,6 +159,8 @@ public class PatternSpawner : MonoBehaviour {
 	private void BatteryChange(){
 		if(actualBattery != setOfBattery.Length-1)
 			actualBattery++;
+		if(actualBattery == 3)
+			EventsManager.Instance.ActiveEvents();
 		ChargeBattery();
 		RandomizeBattery();
 		actualPattern = 0;
@@ -151,7 +193,6 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	private void SpawnObstacle(){
-		changeTxT.enabled = false;
 		GenerateObstacle();
         if(pattern.GetComponent<Pattern>().Count() > 0)
             Invoke("SpawnObstacle", timePerObstacle);
