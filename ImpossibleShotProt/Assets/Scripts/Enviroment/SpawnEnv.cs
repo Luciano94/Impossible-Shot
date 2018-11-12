@@ -31,9 +31,12 @@ public class SpawnEnv : MonoBehaviour {
     private void Awake() {
         envArray = new Queue<GameObject>();
         GameObject go;
+        int prefabIndex = 0;
         for (int i = 0; i < pool; i++) {
-            random = Random.Range(0, prefabs.Length - 1);
-            go = Instantiate(prefabs[random], transform.position, transform.rotation);
+            go = Instantiate(prefabs[prefabIndex], transform.position, transform.rotation);
+            if(prefabIndex == prefabs.Length - 1)
+                prefabIndex= 0;
+            else prefabIndex++;
             go.SetActive(false);
             envArray.Enqueue(go);
         }
