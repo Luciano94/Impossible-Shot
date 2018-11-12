@@ -5,7 +5,7 @@ using UnityEngine.Monetization;
 [RequireComponent (typeof (Button))]
 public class AdButton : MonoBehaviour {
 
-	
+	[SerializeField] Button SourceButton;
 	private static bool hasWatchedContinueAd = false;
 	private static bool shouldReset = false;
 
@@ -29,7 +29,7 @@ public class AdButton : MonoBehaviour {
 
     public void Start(){
 		adButton = GetComponent<Button>();
-		adButton.interactable = true;
+		SourceButton.interactable = true;
 		if (adButton) {
             adButton.onClick.AddListener (ShowAd);
         }
@@ -41,7 +41,7 @@ public class AdButton : MonoBehaviour {
 
 	private void Update(){
 		if(shouldReset && Monetization.IsReady (placementId)){
-			adButton.interactable = true;
+			SourceButton.interactable = true;
 			hasWatchedContinueAd = false;
 			shouldReset = false;
 		}
@@ -67,7 +67,7 @@ public class AdButton : MonoBehaviour {
 
 	private void AdWatched(){
 		hasWatchedContinueAd = true;
-		adButton.interactable = false;
+		SourceButton.interactable = false;
 		GameManager.Instance.Revive();
 	}
 }
