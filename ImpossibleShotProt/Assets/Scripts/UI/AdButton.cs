@@ -5,7 +5,6 @@ using UnityEngine.Monetization;
 [RequireComponent (typeof (Button))]
 public class AdButton : MonoBehaviour {
 
-	[SerializeField] Button SourceButton;
 	private static bool hasWatchedContinueAd = false;
 	private static bool shouldReset = false;
 
@@ -16,7 +15,9 @@ public class AdButton : MonoBehaviour {
 		return !hasWatchedContinueAd;
 	}
 
-	public string placementId = "rewardedVideo";
+	[SerializeField] string placementId = "rewardedVideo";
+    [SerializeField] Button SourceButton;
+    [SerializeField] GameObject Panel;
     private Button adButton;
 
 #if UNITY_IOS
@@ -68,6 +69,7 @@ public class AdButton : MonoBehaviour {
 	private void AdWatched(){
 		hasWatchedContinueAd = true;
 		SourceButton.interactable = false;
+        Panel.SetActive(false);
 		GameManager.Instance.Revive();
 	}
 }
