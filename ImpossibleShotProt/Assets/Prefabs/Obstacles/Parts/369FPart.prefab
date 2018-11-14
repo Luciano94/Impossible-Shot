@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4349740467904316}
   - component: {fileID: 33121123010387858}
   - component: {fileID: 23486415904249736}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4024781029751208}
   - component: {fileID: 33308314873343378}
   - component: {fileID: 23886789425972412}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4114732959262466}
   - component: {fileID: 33741272364269820}
   - component: {fileID: 23583120600871924}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4050481768215506}
   - component: {fileID: 33975933682378912}
   - component: {fileID: 23125619089330000}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4924506524623572}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Pallet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4013122692337994}
   - component: {fileID: 33819521619563750}
   - component: {fileID: 23874187309430994}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,8 +122,8 @@ GameObject:
   - component: {fileID: 114885706004394618}
   - component: {fileID: 114912090022704036}
   - component: {fileID: 54728905683986970}
-  m_Layer: 10
-  m_Name: LeftObs
+  m_Layer: 0
+  m_Name: 369FPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 4961693521083022}
   - component: {fileID: 33371013451536060}
   - component: {fileID: 23288471140074842}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4069383240514384}
   - component: {fileID: 33655845699664772}
   - component: {fileID: 23958819896407512}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4603919133705896}
   - component: {fileID: 33931568912157872}
   - component: {fileID: 23610841445411420}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4848222791235850}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Pallet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 4486363879336194}
   - component: {fileID: 33937715330207106}
   - component: {fileID: 23152809703896194}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 4825305925344154}
   - component: {fileID: 33140843483602054}
   - component: {fileID: 23970512522379004}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 4601830444417780}
   - component: {fileID: 33865531784361662}
   - component: {fileID: 23368976170490594}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 4648589141606598}
   - component: {fileID: 33709311927052950}
   - component: {fileID: 23047997584176892}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 4067604985653568}
   - component: {fileID: 33986957328378334}
   - component: {fileID: 23350481318701420}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 4544175606517574}
   - component: {fileID: 33386568677302594}
   - component: {fileID: 23334039944388952}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 4476100190396376}
   - component: {fileID: 33132466906917682}
   - component: {fileID: 23581166035804744}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 4267969714412000}
   - component: {fileID: 33187915245321630}
   - component: {fileID: 23289282935939748}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 4996124500232160}
   - component: {fileID: 33454268678692390}
   - component: {fileID: 23878840396364622}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4719575303529324}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: LeftBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 4479478846738494}
   - component: {fileID: 33169623183984974}
   - component: {fileID: 23568285744375108}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 4980311510974180}
   - component: {fileID: 33099713743567946}
   - component: {fileID: 23842969589515456}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Madera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4191050691627356}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Pallet (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,8 +540,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1204512144217128}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.6, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_Children:
   - {fileID: 4924506524623572}
@@ -550,7 +550,7 @@ Transform:
   - {fileID: 4719575303529324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4476100190396376
 Transform:
   m_ObjectHideFlags: 1
