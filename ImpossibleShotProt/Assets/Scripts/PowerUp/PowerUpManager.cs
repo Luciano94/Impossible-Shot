@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour {
-	
-	private static PowerUpManager instance;
+
+    private static PowerUpManager instance;
 
     public static PowerUpManager Instance {
         get {
             instance = FindObjectOfType<PowerUpManager>();
-            if(instance == null) {
+            if (instance == null) {
                 GameObject go = new GameObject("PowerUpManager");
                 instance = go.AddComponent<PowerUpManager>();
             }
@@ -15,11 +15,12 @@ public class PowerUpManager : MonoBehaviour {
         }
     }
 
-	[SerializeField]private float cantOfKillingSpree = 3;
-    [SerializeField]private ParticleSystem spark;
-    [SerializeField]private float timePwUp = 5.0f;
-    [SerializeField]private int multBoost = 2;
-    [SerializeField]private Color colorpart;
+    [SerializeField] private float cantOfKillingSpree = 3;
+    [SerializeField] private ParticleSystem spark;
+    [SerializeField] private float timePwUp = 5.0f;
+    [SerializeField] private int multBoost = 2;
+    [SerializeField] private Color colorpart;
+    [SerializeField] private UIAura uiAura;
     private float actCantKS = 0;
 
     private TrailColorTransition trail;
@@ -47,11 +48,13 @@ public class PowerUpManager : MonoBehaviour {
         GameManager.Instance.Multiplicador *= multBoost;
         timeKeeping = true;
         countdown = timePwUp;
+        uiAura.ShineStart();
         Invoke("DesactivatePwUp", timePwUp);
     }
 
     private void DesactivatePwUp(){
         spark.Stop();
+        uiAura.ShineStop();
         actCantKS = 0;
         GameManager.Instance.Multiplicador /= multBoost;
         trail.ColorChange(0.0f);
