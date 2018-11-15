@@ -1,4 +1,6 @@
-﻿using UnityEngine.SceneManagement;
+﻿using GooglePlayGames;
+using UnityEngine.SocialPlatforms;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using System;
 
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour {
     public int Score{
         get{return points;}
     } 
+
     public bool TutorialMode{
         get{return tutorialMode;}
     }
@@ -60,6 +63,7 @@ public class GameManager : MonoBehaviour {
     public HighScoreManager highScoreManager{
         get{return HSmanager;}
     }
+
     public void EndTutorial(){
         tutorialMode = false;
         actKillingSpree = 0;
@@ -67,12 +71,12 @@ public class GameManager : MonoBehaviour {
         points = 0;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
     }
+
     public void Death() {
         deadShot.Play();
         Handheld.Vibrate();
         HSmanager.UpdateHS();
         terminate();
-        timeScale = Time.timeScale;
         Time.timeScale = 0.0f;
     }
 
@@ -112,6 +116,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Awake(){
+        PlayGamesPlatform.Activate();
         if (!PlayerPrefs.HasKey("Tutorial"))
             PlayerPrefs.SetInt("Tutorial", 1);
         

@@ -45,6 +45,9 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private Text eventBulletTxt;
 	[SerializeField] private Text eventEnemyTxt;
 
+	[Header("Login Google Play")]
+	[SerializeField] private Text loginTxt;
+
 	private void Awake() {
 		principal.SetActive(true);
 		if(PlayerPrefs.GetInt("Tutorial") == 1){
@@ -193,5 +196,24 @@ public class MenuManager : MonoBehaviour {
 		if(Input.GetButton("Submit") && (inGame.activeSelf)){
 			PauseGame();
 		}
+	}
+
+		public void ShowLogin(){
+		loginTxt.text = "Login Success";
+		Invoke("HideShowLogin", 0.5f);
+	}
+
+	private void HideShowLogin(){
+		loginTxt.text = "";
+	}
+
+	public void ShowDontLogin(){
+		loginTxt.text = "Login  dont Success.";
+		Invoke("HideDontLogin", 0.5f);
+	}
+
+	public void HideDontLogin(){
+		loginTxt.text = "";
+
 	}
 }
