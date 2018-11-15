@@ -30,6 +30,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private BulletMovement playerMov;
 	[SerializeField] private CameraMovement cameraMovement;
 	[SerializeField] private GunCanonScript gun;
+    private float timeScaleActual;
 
 	[Header ("HighScore Text")]/*HighScore Menu */
 	[SerializeField] private GameObject HSPanel;
@@ -64,6 +65,7 @@ public class MenuManager : MonoBehaviour {
 		inGame.SetActive(false);
 		finish.SetActive(false);
 		pause.SetActive(true);
+        timeScaleActual = Time.timeScale;
 		Time.timeScale = 0f;
 	}
 
@@ -71,7 +73,7 @@ public class MenuManager : MonoBehaviour {
 		pause.SetActive(false);
 		inGame.SetActive(true);
 		finish.SetActive(false);
-		Time.timeScale = 1f;
+		Time.timeScale = timeScaleActual;
 	}
 
 	public void ToHighScorePanel(){
