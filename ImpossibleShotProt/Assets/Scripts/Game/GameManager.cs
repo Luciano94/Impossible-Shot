@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour {
         Handheld.Vibrate();
         HSmanager.UpdateHS();
         terminate();
+        timeScale = Time.timeScale;
         Time.timeScale = 0.0f;
     }
 
