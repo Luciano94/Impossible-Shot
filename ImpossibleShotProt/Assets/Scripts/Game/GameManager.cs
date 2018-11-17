@@ -64,6 +64,11 @@ public class GameManager : MonoBehaviour {
         get{return HSmanager;}
     }
 
+    private void OnApplicationFocus(bool focusStatus) {
+        if(!focusStatus)
+            MenuManager.Instance.PauseGame();
+    }
+
     public void EndTutorial(){
         tutorialMode = false;
         actKillingSpree = 0;
