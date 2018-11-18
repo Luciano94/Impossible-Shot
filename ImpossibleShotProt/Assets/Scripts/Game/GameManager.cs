@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour {
     private float multiplicador;
     private int points = 0;
     private PatternSpawner spawn;
+    private bool isPlaying = false;
 
     [SerializeField]private HighScoreManager HSmanager;
 
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void OnApplicationFocus(bool focusStatus) {
-        if(!focusStatus)
+        if(isPlaying && !focusStatus)
             MenuManager.Instance.PauseGame();
     }
 
@@ -123,6 +124,7 @@ public class GameManager : MonoBehaviour {
 
     private void Awake(){
         PlayGamesPlatform.Activate();
+        isPlaying = false;
         if (!PlayerPrefs.HasKey("Tutorial"))
             PlayerPrefs.SetInt("Tutorial", 1);
         
@@ -134,6 +136,7 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame(){
         FirstPlay.Instance.play();
+        isPlaying = true;
         if(!tutorialMode){
             spawn.Begin();
         }
