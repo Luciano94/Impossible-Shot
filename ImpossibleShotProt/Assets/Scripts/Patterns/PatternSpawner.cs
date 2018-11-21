@@ -108,6 +108,7 @@ public class PatternSpawner : MonoBehaviour {
 	private void EndEvent(){
 		EventsManager.Instance.DesactiveEvent();
 		actualPattern = 0;
+		timePerObstacle = actualTimePerObs;
 		ChargeBattery();
 		RandomizeBattery();
 		ChargePatterns();

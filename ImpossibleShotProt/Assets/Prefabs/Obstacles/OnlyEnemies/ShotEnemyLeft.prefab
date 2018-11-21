@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 114736945604254928}
   - component: {fileID: 114066057028214240}
   m_Layer: 10
-  m_Name: TutorialEnemy3
+  m_Name: ShotEnemyLeft
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
