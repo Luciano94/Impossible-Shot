@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4384669075018620}
   - component: {fileID: 212795631256151950}
+  - component: {fileID: 114566036631437526}
   m_Layer: 0
   m_Name: Gun Sight
   m_TagString: Untagged
@@ -40,6 +41,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114566036631437526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980698896653870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be93ea87a8ac4c4592a224ffe1f4d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212795631256151950
 SpriteRenderer:
   m_ObjectHideFlags: 1

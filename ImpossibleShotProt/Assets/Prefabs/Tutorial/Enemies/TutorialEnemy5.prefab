@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4937004072343224}
   - component: {fileID: 212562792151798758}
+  - component: {fileID: 114305974845853380}
   m_Layer: 0
   m_Name: weapon sights
   m_TagString: Untagged
@@ -128,7 +129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1358803737839062}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 1, z: -0.4}
+  m_LocalPosition: {x: -4, y: 1, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4759866764159890}
@@ -146,6 +147,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.72, y: 3.64, z: 0.2}
   m_Center: {x: 0, y: 2.01, z: 0}
+--- !u!114 &114305974845853380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358803737839062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be93ea87a8ac4c4592a224ffe1f4d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114499703024379968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,7 +298,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ce4c5eee8c8c02b439c2889613b6359e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

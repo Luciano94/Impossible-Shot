@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4113634862425078}
   - component: {fileID: 212479893717901908}
+  - component: {fileID: 114856631103144690}
   m_Layer: 0
   m_Name: weapon sights
   m_TagString: Untagged
@@ -206,6 +207,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685d418b261189c4facdb49b50505582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114856631103144690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1872799346965440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be93ea87a8ac4c4592a224ffe1f4d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212029052650680382
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -286,7 +298,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ce4c5eee8c8c02b439c2889613b6359e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
