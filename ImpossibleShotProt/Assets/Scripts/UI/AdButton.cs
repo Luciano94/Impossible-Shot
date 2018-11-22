@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+//using UnityEngine.Advertisements;
 using UnityEngine.Monetization;
 
 [RequireComponent (typeof (Button))]
