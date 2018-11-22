@@ -21,9 +21,9 @@ public class AdButton : MonoBehaviour {
     private Button adButton;
 
 #if UNITY_IOS
-  	private string gameId = "2887145";
+  	private string gameId = "2887139";
 #elif UNITY_ANDROID
-    private string gameId = "2887146";
+    private string gameId = "2887141";
 #else
     private string gameId = "0000000";
 #endif
