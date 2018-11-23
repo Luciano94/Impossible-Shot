@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngine.Advertisements;
 using UnityEngine.Monetization;
 
 [RequireComponent (typeof (Button))]
@@ -21,23 +20,11 @@ public class AdButton : MonoBehaviour {
     [SerializeField] GameObject Panel;
     private Button adButton;
 
-#if UNITY_IOS
-  	private string gameId = "2887139";
-#elif UNITY_ANDROID
-    private string gameId = "2887141";
-#else
-    private string gameId = "0000000";
-#endif
-
     public void Start(){
 		adButton = GetComponent<Button>();
 		SourceButton.interactable = true;
 		if (adButton) {
             adButton.onClick.AddListener (ShowAd);
-        }
-
-        if (Monetization.isSupported) {
-            Monetization.Initialize (gameId, true);
         }
 	}
 
