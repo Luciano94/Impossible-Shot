@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour {
 
     private float timeScale;
 
+    public bool IsPlaying{
+        get{return isPlaying;}
+    }
+
     public float TerrainSpeed {
         get { return terrainSpeed; }
     }
