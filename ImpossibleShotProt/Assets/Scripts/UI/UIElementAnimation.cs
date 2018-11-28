@@ -6,7 +6,7 @@ public class UIElementAnimation : MonoBehaviour {
 	private bool[] doneAnimating;
 	private bool animating = false;
 
-	private void Start(){
+	private void Awake(){
 		doneAnimating = new bool[elements.Length];
 		for(int i = 0; i < elements.Length; i++){
 			doneAnimating[i] = false;

@@ -18,7 +18,7 @@ public class UIAnimatedElement : MonoBehaviour {
 
 	private UIElementAnimation director;
 	private int elementID;
-	void Start () {
+	void Awake () {
 		rectTransform = GetComponent<RectTransform>();
 		if(moves){
 			targetPositionVector = rectTransform.anchoredPosition;

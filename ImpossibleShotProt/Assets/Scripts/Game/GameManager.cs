@@ -146,7 +146,6 @@ public class GameManager : MonoBehaviour {
 		spawn = spawnPattern.GetComponent<PatternSpawner>();
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
-
     }
 
     public void StartGame(){
