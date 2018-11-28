@@ -13,18 +13,12 @@ public class UIAnimatedElement : MonoBehaviour {
 	private Vector2 initialPositionVector;
 	private Vector2 targetPositionVector;
 	private RectTransform rectTransform;
-	private Button button;
-	private bool wasInteractable;
 	private bool animating;
 	private float lerpState;
 
 	private UIElementAnimation director;
 	private int elementID;
 	void Start () {
-		button = GetComponent<Button>();
-		if(button){ wasInteractable = button.interactable; button.interactable = false;}
-	
-
 		rectTransform = GetComponent<RectTransform>();
 		if(moves){
 			targetPositionVector = rectTransform.anchoredPosition;
@@ -59,7 +53,6 @@ public class UIAnimatedElement : MonoBehaviour {
 		director.animationDone(elementID);
 		animating = false;
 		rectTransform.anchoredPosition = targetPositionVector;
-		if(button){ button.interactable = wasInteractable;}
 	}
 
 	public void SetAnimation(UIElementAnimation animator, int ID){
@@ -70,6 +63,5 @@ public class UIAnimatedElement : MonoBehaviour {
 	public void Reset(){
 		lerpState = 0;
 		if(moves){ rectTransform.anchoredPosition = initialPositionVector;}
-		if(button){ wasInteractable = button.interactable; button.interactable = false;}
 	}
 }

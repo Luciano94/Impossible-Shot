@@ -19,7 +19,7 @@ public class UIElementAnimation : MonoBehaviour {
 		animating = true;
 	}
 	void OnDisable(){
-		for(int i = 0; i < elements.Length; i++){
+		for(int i = 0; i < doneAnimating.Length; i++){
 			elements[i].Reset();
 			doneAnimating[i] = false;
 		}
