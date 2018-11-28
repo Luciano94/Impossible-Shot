@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="UserProjectSettings" SchemaVersion="89">
+	<UserProjectSettingsInfo>
+		<UserProjectSettings Name="" ID="{9C869D8D-FA3E-42F6-B9E4-A66B672F7617}">
+			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\LOGIC COSAS MIAS\Infinite Shot"/>
+				<Property Name="Event Action List\{0072E120-7FC0-4FAB-B84F-9F574E0B0E53}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{EDD3A2A3-30C3-4596-8911-D41D4A741CAD}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="ExternalSourcesInputPath" Type="string">
+					<ValueList>
+						<Value Platform="Android"></Value>
+						<Value Platform="Windows"></Value>
+					</ValueList>
+				</Property>
+				<Property Name="ExternalSourcesOutputPath" Type="string">
+					<ValueList>
+						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
+						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+					</ValueList>
+				</Property>
+				<Property Name="Interactive Music\x64_{076A456F-1349-4818-BBC4-8CA9B73D31F6} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP9lxHMdxdFFAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{3A738B3D-46F7-4448-9DF9-8A69161D0500} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAAC0AAAAAAAADwP+DUqPg3NRpAAAAAAAAA8D8AAAAAANiEQAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{7E8E619E-DD0E-4920-98A6-5D3F9A12FDD1} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPzmO4ziOYylAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{CAD0B2F7-8059-4626-9989-873C158BC401} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAkGxAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
+				<Property Name="Music Transition List\{210FE990-DD88-4EC1-8E29-A06B66E26345}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{5A5167C6-D56B-41A5-B485-03AC9B946768}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{B37E6D5E-F89E-4137-9B48-6205E285CD54}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{C18C3D6B-2E1B-4821-88D3-0CD062CFD51D}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{DA8211A9-AC30-449F-9394-E404BA6790F0}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
+				<Property Name="SoundBankPaths" Type="string">
+					<ValueList>
+						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
+						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+					</ValueList>
+				</Property>
+				<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
+					<ValueList>
+						<Value Platform="Android">Copy Streamed Files</Value>
+						<Value Platform="Windows">Copy Streamed Files</Value>
+					</ValueList>
+				</Property>
+				<Property Name="SoundBankPostGenerateCustomCmdLines" Type="string">
+					<ValueList>
+						<Value Platform="Android">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="Windows">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+					</ValueList>
+				</Property>
+				<Property Name="SoundBankPreGenerateCustomCmdDescription" Type="string">
+					<ValueList>
+						<Value Platform="Android"></Value>
+						<Value Platform="Windows"></Value>
+					</ValueList>
+				</Property>
+				<Property Name="SoundBankPreGenerateCustomCmdLines" Type="string">
+					<ValueList>
+						<Value Platform="Android"></Value>
+						<Value Platform="Windows"></Value>
+					</ValueList>
+				</Property>
+			</PropertyList>
+		</UserProjectSettings>
+	</UserProjectSettingsInfo>
+</WwiseDocument>
