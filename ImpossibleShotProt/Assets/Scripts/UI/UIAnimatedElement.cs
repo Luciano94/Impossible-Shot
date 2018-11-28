@@ -27,8 +27,8 @@ public class UIAnimatedElement : MonoBehaviour {
 
 		rectTransform = GetComponent<RectTransform>();
 		if(moves){
-			initialPositionVector = new Vector2(initialX * 100, initialY * 100);
 			targetPositionVector = rectTransform.anchoredPosition;
+			initialPositionVector = new Vector2(targetPositionVector.x + (initialX * 100), targetPositionVector.y + (initialY * 100));
 			rectTransform.anchoredPosition = initialPositionVector;
 		}
 		animating = false;
