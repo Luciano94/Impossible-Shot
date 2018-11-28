@@ -5,12 +5,48 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: pCube2
+    100004: pCube2_pasted__pasted__pasted__polySurface2
+    100006: pCube2_pasted__pasted__polySurface2
+    100008: pCube2_pasted__polySurface2
+    100010: pCube2_pCube3
+    100012: pCube2_polySurface1
+    100014: polySurface2_pCube2
     400000: //RootNode
     400002: pCube2
+    400004: pCube2_pasted__pasted__pasted__polySurface2
+    400006: pCube2_pasted__pasted__polySurface2
+    400008: pCube2_pasted__polySurface2
+    400010: pCube2_pCube3
+    400012: pCube2_polySurface1
+    400014: polySurface2_pCube2
     2100000: pCube2Mat
+    2100002: pCube2_pasted__pasted__pasted__polySurface2Mat
+    2100004: pCube2_pasted__pasted__polySurface2Mat
+    2100006: pCube2_pasted__polySurface2Mat
+    2100008: pCube2_pCube3Mat
+    2100010: pCube2_polySurface1Mat
+    2100012: polySurface2_pCube2Mat
     2300000: pCube2
+    2300002: pCube2_pasted__pasted__pasted__polySurface2
+    2300004: pCube2_pasted__pasted__polySurface2
+    2300006: pCube2_pasted__polySurface2
+    2300008: pCube2_pCube3
+    2300010: pCube2_polySurface1
+    2300012: polySurface2_pCube2
     3300000: pCube2
+    3300002: pCube2_pasted__pasted__pasted__polySurface2
+    3300004: pCube2_pasted__pasted__polySurface2
+    3300006: pCube2_pasted__polySurface2
+    3300008: pCube2_pCube3
+    3300010: pCube2_polySurface1
+    3300012: polySurface2_pCube2
     4300000: pCube2
+    4300002: pCube2_pasted__pasted__pasted__polySurface2
+    4300004: pCube2_pasted__pasted__polySurface2
+    4300006: pCube2_pasted__polySurface2
+    4300008: pCube2_pCube3
+    4300010: pCube2_polySurface1
+    4300012: polySurface2_pCube2
   externalObjects: {}
   materials:
     importMaterials: 1
