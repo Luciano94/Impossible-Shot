@@ -58,6 +58,7 @@ public class PowerUpManager : MonoBehaviour {
         actCantKS = 0;
         GameManager.Instance.Multiplicador /= multBoost;
         trail.ColorChange(0.0f);
+        trail.DesactivePwUp();
     }
 
     private void Update(){

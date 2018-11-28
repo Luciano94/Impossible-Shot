@@ -132,6 +132,12 @@ public class PatternSpawner : MonoBehaviour {
 	}
 	
 	/*End events Methods */
+
+	public void PauseSpawn(){
+		CancelInvoke("SpawnObstacleEvent");
+		CancelInvoke("SpawnObstacle");
+	}
+
 	public void Begin(){
 		if(GameManager.Instance.TutorialMode)
 			EnemyTutorial();

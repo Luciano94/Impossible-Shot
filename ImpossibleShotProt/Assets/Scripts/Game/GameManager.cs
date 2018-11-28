@@ -28,7 +28,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField] BulletSpin playerSpin;
     [SerializeField] ParticleSystem blood;
     [SerializeField] ParticleSystem trail;
+    [SerializeField] ParticleSystem sliver;
     [SerializeField] int enemiesForKillingSpree = 5;
+    [SerializeField] BulletSpin bulletSpin;
     private int actKillingSpree;
     private bool tutorialMode = false;
     private float multiplicador;
@@ -70,7 +72,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void OnApplicationFocus(bool focusStatus) {
-        if(isPlaying && !focusStatus)
+        if(isPlaying && Time.timeScale != 0 && !focusStatus)
             MenuManager.Instance.PauseGame();
     }
 
@@ -86,17 +88,26 @@ public class GameManager : MonoBehaviour {
         deadShot.Play();
         Handheld.Vibrate();
         HSmanager.UpdateHS();
-        terminate();
+        sliver.Play();
         timeScale = Time.timeScale;
-        Time.timeScale = 0.0f;
+        terrainSpeed = 0.0f;
+        trail.Stop();
+        bulletSpin.enabled = false;
+        spawn.PauseSpawn();
+        Invoke("terminate", 2.0f);
     }
 
     public void Revive(){
         Time.timeScale = timeScale;
+        spawn.Begin();
         MenuManager.Instance.ContinueGame();
     }
 
     private void terminate(){
+        Time.timeScale = 0.0f;
+        trail.Play();
+        terrainSpeed = 80.0f;
+        bulletSpin.enabled = true;
         MenuManager.Instance.FinishGame();
     }
 
