@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: -10
   initialY: 0
@@ -8065,7 +8065,7 @@ MonoBehaviour:
   - {fileID: 314018500}
   - {fileID: 1709684641}
   - {fileID: 996259572}
-  shouldNextWait: 01010100
+  shouldNextWait: 00000000
 --- !u!1 &365601774 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1270373772190584, guid: 8be643553e5d22f48910524aeb1a8d17,
@@ -8342,7 +8342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: 10
@@ -8436,7 +8436,7 @@ MonoBehaviour:
   - {fileID: 2023588485}
   - {fileID: 39154585}
   - {fileID: 355309650}
-  shouldNextWait: 01010100
+  shouldNextWait: 00000000
 --- !u!1 &439038155
 GameObject:
   m_ObjectHideFlags: 0
@@ -8676,7 +8676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: 10
@@ -8744,7 +8744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: 10
@@ -9208,7 +9208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: 5
@@ -9385,7 +9385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: 10
@@ -9539,7 +9539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 10
   initialY: 0
@@ -9792,7 +9792,7 @@ MonoBehaviour:
   - {fileID: 2026237047}
   - {fileID: 123531974}
   - {fileID: 83942848}
-  shouldNextWait: 010101010100
+  shouldNextWait: 000000000000
 --- !u!1 &565574423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1270373772190584, guid: 8be643553e5d22f48910524aeb1a8d17,
@@ -10521,7 +10521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: -10
@@ -11172,7 +11172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.75
   moves: 1
   initialX: 0
   initialY: 10
@@ -11619,7 +11619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: 10
@@ -12278,7 +12278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: 10
@@ -12991,7 +12991,7 @@ MonoBehaviour:
   - {fileID: 1920241453}
   - {fileID: 335314954}
   - {fileID: 1859534835}
-  shouldNextWait: 01010100
+  shouldNextWait: 00000000
 --- !u!1 &1212381842
 GameObject:
   m_ObjectHideFlags: 0
@@ -13188,7 +13188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: -10
@@ -13339,7 +13339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: -10
   initialY: 0
@@ -19819,7 +19819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: 10
@@ -20305,7 +20305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 0
   initialY: 10
@@ -21357,7 +21357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7fa797cf8b4143a294f48943f5e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   moves: 1
   initialX: 10
   initialY: 0
@@ -21882,7 +21882,7 @@ MonoBehaviour:
   - {fileID: 201091260}
   - {fileID: 1653000221}
   - {fileID: 1950677831}
-  shouldNextWait: 010001010100
+  shouldNextWait: 000000000000
 --- !u!4 &2009900117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4193779967580598, guid: 8be643553e5d22f48910524aeb1a8d17,
@@ -22172,7 +22172,7 @@ MonoBehaviour:
   - {fileID: 1695146594}
   - {fileID: 1033268432}
   - {fileID: 411130654}
-  shouldNextWait: 010001010101010100
+  shouldNextWait: 000000000000000000
 --- !u!1 &2097497040
 GameObject:
   m_ObjectHideFlags: 0
