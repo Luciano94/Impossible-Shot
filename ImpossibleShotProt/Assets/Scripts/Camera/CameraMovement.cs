@@ -42,6 +42,7 @@ public class CameraMovement : MonoBehaviour {
 		if (LerpState > 1.0f) {LerpState = 1.0f;}
 
 		transform.position = Vector3.Lerp (transform.position, cameraPos.position, LerpState);
+		transform.rotation = Quaternion.Lerp(transform.rotation,  cameraPos.rotation, LerpState);
 		if(LerpState >= 1.0f) {
 			canMove = true;
 			getNomrals();
