@@ -8436,7 +8436,7 @@ MonoBehaviour:
   - {fileID: 2023588485}
   - {fileID: 39154585}
   - {fileID: 355309650}
-  shouldNextWait: 01010100
+  shouldNextWait: 00000000
 --- !u!1 &439038155
 GameObject:
   m_ObjectHideFlags: 0
@@ -11012,7 +11012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &746804080
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13976,7 +13976,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4145031594899506, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4145031594899506, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13984,7 +13984,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4145031594899506, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.10452846
+      value: 0.19936788
       objectReference: {fileID: 0}
     - target: {fileID: 4145031594899506, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
       propertyPath: m_LocalRotation.y
@@ -13996,7 +13996,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4145031594899506, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9945219
+      value: 0.97992474
       objectReference: {fileID: 0}
     - target: {fileID: 4145031594899506, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
       propertyPath: m_RootOrder
@@ -14056,6 +14056,10 @@ Prefab:
         type: 2}
       propertyPath: m_BackGroundColor.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145031594899506, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 992e10fb118fa704dbeeb3c25d16898b, type: 2}
