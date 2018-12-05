@@ -384,6 +384,5 @@ MonoBehaviour:
   ExpandedItems:
   - /Infinite Shot
   - /Infinite Shot/Events
-  - /Infinite Shot/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
