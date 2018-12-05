@@ -85,7 +85,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void Death() {
-        deadShot.Play();
+        //deadShot.Play();
+        AkSoundEngine.PostEvent("Ingame_finish",gameObject);
         Handheld.Vibrate();
         HSmanager.UpdateHS();
         sliver.Play();
@@ -99,6 +100,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void Revive(){
+        AkSoundEngine.PostEvent("Ingame_start",gameObject);
         Time.timeScale = timeScale;
         playerMov.enabled = true;
         spawn.Begin();
@@ -119,7 +121,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void EnemyDeath(int value){
-        enemyShot.Play();
+        //enemyShot.Play();
         if(!blood.isPlaying)
             blood.Play();
         spawn.UpdateStage();
@@ -149,8 +151,11 @@ public class GameManager : MonoBehaviour {
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
     }
-
+    private void Start(){
+		AkSoundEngine.PostEvent("Menu",gameObject);
+    }
     public void StartGame(){
+        AkSoundEngine.PostEvent("Ingame_start",gameObject);
         FirstPlay.Instance.play();
         isPlaying = true;
         if(!tutorialMode){
