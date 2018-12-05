@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>/Users/francisco/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/c:/users/crossover/My Documents/WwiseProjects/Infinite Shot/</ProjectRoot>
+		<SourceFilesRoot>/Users/francisco/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/c:/users/crossover/My Documents/WwiseProjects/Infinite Shot/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/francisco/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/c:/users/crossover/My Documents/WwiseProjects/Infinite Shot/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/francisco/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/c:/users/crossover/My Documents/WwiseProjects/Infinite Shot/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
+			<ShortName>main</ShortName>
+			<Path>main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2074161316" Name="Ingame_finish" ObjectPath="\Events\Default Work Unit\Ingame_finish"/>
+				<Event Id="2712121899" Name="Ingame_start" ObjectPath="\Events\Default Work Unit\Ingame_start"/>
+				<Event Id="2607556080" Name="Menu" ObjectPath="\Events\Default Work Unit\Menu"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="12202811" Language="SFX">
+					<ShortName>infinite shot intro.wav</ShortName>
+					<Path>SFX/infinite shot intro_8956FC97.wem</Path>
+				</File>
+				<File Id="985213036" Language="SFX">
+					<ShortName>ingame.wav</ShortName>
+					<Path>SFX/ingame_8956FC97.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
