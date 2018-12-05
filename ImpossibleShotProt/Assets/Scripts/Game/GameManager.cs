@@ -93,12 +93,14 @@ public class GameManager : MonoBehaviour {
         terrainSpeed = 0.0f;
         trail.Stop();
         bulletSpin.enabled = false;
+        playerMov.enabled = false;
         spawn.PauseSpawn();
         Invoke("terminate", 2.0f);
     }
 
     public void Revive(){
         Time.timeScale = timeScale;
+        playerMov.enabled = true;
         spawn.Begin();
         MenuManager.Instance.ContinueGame();
     }
