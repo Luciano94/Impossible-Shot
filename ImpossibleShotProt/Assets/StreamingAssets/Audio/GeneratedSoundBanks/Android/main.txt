@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2074161316	Ingame_finish			\Default Work Unit\Ingame_finish	
+	2607556080	Menu			\Default Work Unit\Menu	
+	2712121899	Ingame_start			\Default Work Unit\Ingame_start	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	12202811	Tap to shoot	C:\users\crossover\My Documents\WwiseProjects\Infinite Shot\.cache\Android\SFX\infinite shot intro_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Tap to shoot\Tap to shoot\Tap to shoot		11907304
+	985213036	ingame	C:\users\crossover\My Documents\WwiseProjects\Infinite Shot\.cache\Android\SFX\ingame_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Ingame\Ingame\ingame		12701040
+
