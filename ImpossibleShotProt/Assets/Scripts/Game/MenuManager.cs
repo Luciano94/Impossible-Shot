@@ -22,6 +22,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private GameObject inGame;
 	[SerializeField] private GameObject pause;
 	[SerializeField] private GameObject finish;
+	[SerializeField] private GameObject adPanel;
 	[SerializeField] private GameObject ingamePanel;
 	[SerializeField] private Text finishPoints;
 	[SerializeField] private Text pointsTxt;
@@ -60,6 +61,7 @@ public class MenuManager : MonoBehaviour {
 		inGame.SetActive(false);
 		pause.SetActive(false);
 		finish.SetActive(false);
+		adPanel.SetActive(false);
 		Time.timeScale = 0f;
 		cameraMovement.enabled = false;
 	} 
@@ -90,6 +92,8 @@ public class MenuManager : MonoBehaviour {
 		principal.SetActive(false);
 		finish.SetActive(false);
 		inGame.SetActive(true);
+		adPanel.GetComponentInChildren<AdButton>().Reset();
+		adPanel.SetActive(false);
 		playerMov.enabled = false;
 		cameraMovement.enabled = true;
 		gun.GameStart();
@@ -104,7 +108,11 @@ public class MenuManager : MonoBehaviour {
 
 	public void FinishGame(){
 		ingamePanel.SetActive(false);
-		finish.SetActive(true);
+		if(AdButton.AdAvailable()){
+			adPanel.SetActive(true);
+		} else{
+			finish.SetActive(true);
+		}
 	}
 
 	public void ContinueGame(){
