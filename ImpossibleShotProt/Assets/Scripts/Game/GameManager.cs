@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] float multPerKillingSpree;
     [SerializeField] GameObject spawnPattern;
+    [SerializeField] GameObject bulletHole;
     [SerializeField] float terrainSpeed = 80f;
     [SerializeField] AudioSource deadShot;
     [SerializeField] AudioSource enemyShot;
@@ -96,6 +97,7 @@ public class GameManager : MonoBehaviour {
     public void Death() {
         //deadShot.Play();
         isDeath = true;
+        bulletHole.SetActive(true);
         AkSoundEngine.PostEvent("Ingame_finish",gameObject);
         Handheld.Vibrate();
         HSmanager.UpdateHS();
@@ -106,7 +108,7 @@ public class GameManager : MonoBehaviour {
         bulletSpin.enabled = false;
         playerMov.enabled = false;
         spawn.PauseSpawn();
-        Invoke("terminate", 2.0f);
+        Invoke("terminate", 1.0f);
     }
 
     public void Pause(){
@@ -128,6 +130,7 @@ public class GameManager : MonoBehaviour {
         isDeath = false;
         AkSoundEngine.PostEvent("Ingame_start",gameObject);
         Time.timeScale = timeScale;
+        bulletHole.SetActive(false);
        // playerMov.enabled = true;
        // terrainSpeed = 80.0f;
        // spawn.Begin();
@@ -169,6 +172,7 @@ public class GameManager : MonoBehaviour {
 
     private void Awake(){
         PlayGamesPlatform.Activate();
+        bulletHole.SetActive(false);
         isPlaying = false;
         if (!PlayerPrefs.HasKey("Tutorial"))
             PlayerPrefs.SetInt("Tutorial", 1);
