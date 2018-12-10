@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour {
         AkSoundEngine.PostEvent("Ingame_start",gameObject);
         Time.timeScale = timeScale;
         playerMov.enabled = true;
+        terrainSpeed = 80.0f;
         spawn.Begin();
         MenuManager.Instance.ContinueGame();
     }
@@ -110,7 +111,6 @@ public class GameManager : MonoBehaviour {
     private void terminate(){
         Time.timeScale = 0.0f;
         trail.Play();
-        terrainSpeed = 80.0f;
         bulletSpin.enabled = true;
         MenuManager.Instance.FinishGame();
     }
@@ -142,7 +142,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Awake(){
-        PlayGamesPlatform.Activate();
+         PlayGamesPlatform.Activate();
         isPlaying = false;
         if (!PlayerPrefs.HasKey("Tutorial"))
             PlayerPrefs.SetInt("Tutorial", 1);
