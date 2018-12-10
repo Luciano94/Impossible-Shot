@@ -72,8 +72,7 @@ public class MenuManager : MonoBehaviour {
 		inGame.SetActive(false);
 		finish.SetActive(false);
 		pause.SetActive(true);
-        timeScaleActual = Time.timeScale;
-		Time.timeScale = 0f;
+		GameManager.Instance.Pause();
 	}
 
 	public void ExitGame(){
@@ -85,7 +84,7 @@ public class MenuManager : MonoBehaviour {
 		pause.SetActive(false);
 		inGame.SetActive(true);
 		finish.SetActive(false);
-		Time.timeScale = timeScaleActual;
+		PauseReturn();
 	}
 
 	public void ToHighScorePanel(){
@@ -160,6 +159,21 @@ public class MenuManager : MonoBehaviour {
         } else{
             eventBulletTxt.text = "BULLET TIME!!!";
 			countdown = 3;
+            Invoke("HideBulletEvent", timePerNumber);
+        }
+	}
+
+	public void PauseReturn(){
+		eventBulletTxt.enabled = true;
+		 if (countdown > 0){
+            eventBulletTxt.text = countdown.ToString();
+            countdown--;
+            Invoke("PauseReturn", timePerNumber);
+        } else{
+            eventBulletTxt.text = "START!!!";
+			countdown = 3;
+			GameManager.Instance.DePause();
+			//GameManager.Instance.TimeScale();
             Invoke("HideBulletEvent", timePerNumber);
         }
 	}

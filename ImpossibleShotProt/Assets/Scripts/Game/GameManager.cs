@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour {
 
     private float timeScale;
 
+    public void TimeScale(){
+        Time.timeScale = timeScale;
+    }
+
     public bool IsPlaying{
         get{return isPlaying;}
     }
@@ -105,6 +109,21 @@ public class GameManager : MonoBehaviour {
         Invoke("terminate", 2.0f);
     }
 
+    public void Pause(){
+        terrainSpeed =0.0f;
+        bulletSpin.enabled = false;
+        playerMov.enabled = false;
+        trail.Stop();
+        spawn.PauseSpawn();
+    }
+
+    public void DePause(){
+        bulletSpin.enabled = true;
+        playerMov.enabled = true;
+        terrainSpeed = 80.0f;
+        trail.Play();
+        spawn.Begin();
+    }
     public void Revive(){
         isDeath = false;
         AkSoundEngine.PostEvent("Ingame_start",gameObject);
@@ -149,7 +168,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Awake(){
-         PlayGamesPlatform.Activate();
+        PlayGamesPlatform.Activate();
         isPlaying = false;
         if (!PlayerPrefs.HasKey("Tutorial"))
             PlayerPrefs.SetInt("Tutorial", 1);
