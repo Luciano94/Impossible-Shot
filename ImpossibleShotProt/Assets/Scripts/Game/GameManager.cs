@@ -128,9 +128,9 @@ public class GameManager : MonoBehaviour {
         isDeath = false;
         AkSoundEngine.PostEvent("Ingame_start",gameObject);
         Time.timeScale = timeScale;
-        playerMov.enabled = true;
-        terrainSpeed = 80.0f;
-        spawn.Begin();
+       // playerMov.enabled = true;
+       // terrainSpeed = 80.0f;
+       // spawn.Begin();
         MenuManager.Instance.ContinueGame();
     }
 

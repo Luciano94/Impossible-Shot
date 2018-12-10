@@ -19,7 +19,12 @@ public class ObstacleScript : MonoBehaviour {
 		if(hitOnce){
 			hitOnce = false;
 			GameManager.Instance.Death();
+			Invoke("Return", 2.0f);
 		}
+	}
+
+	public void Return(){
+		product.ReturnToFactory();
 	}
 
 	void LateUpdate () {

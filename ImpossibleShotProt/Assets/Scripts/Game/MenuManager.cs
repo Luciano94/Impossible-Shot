@@ -124,6 +124,7 @@ public class MenuManager : MonoBehaviour {
 	public void ContinueGame(){
 		ingamePanel.SetActive(true);
 		finish.SetActive(false);
+		PauseReturn();
 	}
 
 	/*Event Methods */
