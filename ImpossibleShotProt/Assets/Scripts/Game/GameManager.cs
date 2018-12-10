@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour {
     private int points = 0;
     private PatternSpawner spawn;
     private bool isPlaying = false;
+    private bool isDeath = false;
 
     [SerializeField]private HighScoreManager HSmanager;
 
@@ -44,6 +45,10 @@ public class GameManager : MonoBehaviour {
 
     public bool IsPlaying{
         get{return isPlaying;}
+    }
+
+    public bool IsDeath{
+        get{return isDeath;}
     }
 
     public float TerrainSpeed {
@@ -86,6 +91,7 @@ public class GameManager : MonoBehaviour {
 
     public void Death() {
         //deadShot.Play();
+        isDeath = true;
         AkSoundEngine.PostEvent("Ingame_finish",gameObject);
         Handheld.Vibrate();
         HSmanager.UpdateHS();
@@ -100,6 +106,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void Revive(){
+        isDeath = false;
         AkSoundEngine.PostEvent("Ingame_start",gameObject);
         Time.timeScale = timeScale;
         playerMov.enabled = true;

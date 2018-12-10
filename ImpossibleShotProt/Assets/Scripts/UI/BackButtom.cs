@@ -6,8 +6,10 @@ public class BackButtom : MonoBehaviour {
 
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Escape)){
-			if(GameManager.Instance.IsPlaying)
-				MenuManager.Instance.PauseGame();
+			if(GameManager.Instance.IsPlaying){
+				if(!GameManager.Instance.IsDeath)
+					MenuManager.Instance.PauseGame();
+			}
 			else
 				Application.Quit();
 		}

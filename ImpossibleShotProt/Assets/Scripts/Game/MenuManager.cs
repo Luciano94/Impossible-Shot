@@ -49,6 +49,7 @@ public class MenuManager : MonoBehaviour {
 	[Header("Login Google Play")]
 	[SerializeField] private Text loginTxt;
 
+
 	private void Awake() {
 		principal.SetActive(true);
 		if(PlayerPrefs.GetInt("Tutorial") == 1){
