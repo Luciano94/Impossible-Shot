@@ -11,7 +11,7 @@ public class BackButtom : MonoBehaviour {
 					MenuManager.Instance.PauseGame();
 			}
 			else
-				Application.Quit();
+				MenuManager.Instance.ExitGame();
 		}
 	}
 }

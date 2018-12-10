@@ -24,6 +24,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private GameObject finish;
 	[SerializeField] private GameObject adPanel;
 	[SerializeField] private GameObject ingamePanel;
+	[SerializeField] private GameObject exitPanel;
 	[SerializeField] private Text finishPoints;
 	[SerializeField] private Text pointsTxt;
 	[SerializeField] private PointGainDisplay pointDisplay;
@@ -73,6 +74,11 @@ public class MenuManager : MonoBehaviour {
 		pause.SetActive(true);
         timeScaleActual = Time.timeScale;
 		Time.timeScale = 0f;
+	}
+
+	public void ExitGame(){
+		principal.SetActive(false);
+		exitPanel.SetActive(true);
 	}
 
 	public void Resume(){

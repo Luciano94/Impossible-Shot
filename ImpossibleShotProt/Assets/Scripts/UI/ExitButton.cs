@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ExitButtom : MonoBehaviour {
+public class ExitButton : MonoBehaviour {
 
 	public void Exit(){
 		#if UNITY_EDITOR
