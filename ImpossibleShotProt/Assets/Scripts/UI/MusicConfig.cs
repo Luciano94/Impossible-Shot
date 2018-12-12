@@ -11,6 +11,7 @@ public class MusicConfig : MonoBehaviour {
 		musicBtn = GetComponent<Button>();
 		UpdateSprite();
 	}
+	
 	private void UpdateSprite(){
 		bool isMusicOn = SoundManager.Instance.IsSoundOn();
 		if(isMusicOn){
