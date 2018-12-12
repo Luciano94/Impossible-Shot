@@ -118,6 +118,7 @@ private static TutorialManager instance;
 			break;
 			case TutorialStage.MarkersCheck:
 				if(AllMarkersTouched()){
+					SoundManager.Instance.Tutorial2();
 					DestroyMarkers();
 					StageChange();
 					spawner.Begin();
@@ -128,6 +129,7 @@ private static TutorialManager instance;
 			break;
 			case TutorialStage.EnemyHit:
 				if(TutorialEnemyHit()){
+					SoundManager.Instance.Tutorial3();
 					StageChange();
 				}
 			break;
@@ -137,6 +139,7 @@ private static TutorialManager instance;
 			case TutorialStage.NoObstacleHit:
 				//Debug.Log(TutorialPattern.NoneHit());
 				if(noObstaclesHit){
+					SoundManager.Instance.Tutorial4();
 					StageChange();
 				}
 			break;

@@ -23,6 +23,7 @@ public class AdButton : MonoBehaviour {
 	}
 
 	private void ShowAd () {
+        SoundManager.Instance.MenuTouch();
         ShowAdCallbacks options = new ShowAdCallbacks ();
         options.finishCallback = HandleShowResult;
         ShowAdPlacementContent ad = Monetization.GetPlacementContent (placementId) as ShowAdPlacementContent;

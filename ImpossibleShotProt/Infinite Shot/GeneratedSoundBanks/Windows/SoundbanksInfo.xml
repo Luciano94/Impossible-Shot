@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Agus\Desktop\Imposible Shot\Infinite Shot V2.1\Infinite Shot\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Agus\Desktop\Imposible Shot\Infinite Shot V2.1\Infinite Shot\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Agus\Desktop\Imposible Shot\Infinite Shot V2.1\Infinite Shot\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\</ProjectRoot>
+		<SourceFilesRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Agus\Desktop\Imposible Shot\Infinite Shot V2.1\Infinite Shot\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -23,9 +23,11 @@
 			<IncludedEvents>
 				<Event Id="2074161316" Name="Ingame_finish" ObjectPath="\Events\Default Work Unit\Ingame_finish"/>
 				<Event Id="2712121899" Name="Ingame_start" ObjectPath="\Events\Default Work Unit\Ingame_start"/>
-				<Event Id="4036995061" Name="Menu_primera_vez" ObjectPath="\Events\Default Work Unit\Menu_primera_vez"/>
+				<Event Id="2607556080" Name="Menu" ObjectPath="\Events\Default Work Unit\Menu"/>
 				<Event Id="2960112896" Name="Menu_touch" ObjectPath="\Events\Default Work Unit\Menu_touch"/>
 				<Event Id="287322247" Name="Metal_impact" ObjectPath="\Events\Default Work Unit\Metal_impact"/>
+				<Event Id="1302509176" Name="mute_off" ObjectPath="\Events\Default Work Unit\mute_off"/>
+				<Event Id="1781283874" Name="mute_on" ObjectPath="\Events\Default Work Unit\mute_on"/>
 				<Event Id="817140250" Name="Play_Again" ObjectPath="\Events\Default Work Unit\Play_Again"/>
 				<Event Id="1012735729" Name="Special_bullet" ObjectPath="\Events\Default Work Unit\Special_bullet"/>
 				<Event Id="3315412319" Name="Target_impact" ObjectPath="\Events\Default Work Unit\Target_impact"/>
@@ -39,7 +41,7 @@
 			<IncludedMemoryFiles>
 				<File Id="12202811" Language="SFX">
 					<ShortName>infinite shot intro.wav</ShortName>
-					<Path>SFX\infinite shot intro_8956FC97.wem</Path>
+					<Path>SFX\infinite shot intro_E60452FC.wem</Path>
 				</File>
 				<File Id="22768530" Language="SFX">
 					<ShortName>Blood 1.wav</ShortName>
@@ -112,6 +114,10 @@
 				<File Id="365697761" Language="SFX">
 					<ShortName>Grito 1.wav</ShortName>
 					<Path>SFX\Grito 1_474E68A2.wem</Path>
+				</File>
+				<File Id="417909597" Language="SFX">
+					<ShortName>Ingame solo percusion.wav</ShortName>
+					<Path>SFX\Ingame solo percusion_E60452FC.wem</Path>
 				</File>
 				<File Id="441335186" Language="SFX">
 					<ShortName>Bullet impact metal.wav</ShortName>
@@ -193,6 +199,10 @@
 					<ShortName>Grito 5.wav</ShortName>
 					<Path>SFX\Grito 5_474E68A2.wem</Path>
 				</File>
+				<File Id="765685529" Language="SFX">
+					<ShortName>Ingame sin percusion.wav</ShortName>
+					<Path>SFX\Ingame sin percusion_E60452FC.wem</Path>
+				</File>
 				<File Id="767451503" Language="SFX">
 					<ShortName>Cadenita 3 .wav</ShortName>
 					<Path>SFX\Cadenita 3 _474E68A2.wem</Path>
@@ -244,10 +254,6 @@
 				<File Id="945890578" Language="SFX">
 					<ShortName>Explosion 2.wav</ShortName>
 					<Path>SFX\Explosion 2_474E68A2.wem</Path>
-				</File>
-				<File Id="985213036" Language="SFX">
-					<ShortName>ingame.wav</ShortName>
-					<Path>SFX\ingame_8956FC97.wem</Path>
 				</File>
 				<File Id="992227680" Language="SFX">
 					<ShortName>efecto de disparo 8.wav</ShortName>

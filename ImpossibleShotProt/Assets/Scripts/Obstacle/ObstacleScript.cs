@@ -18,6 +18,7 @@ public class ObstacleScript : MonoBehaviour {
 	{
 		if(hitOnce){
 			hitOnce = false;
+			SoundManager.Instance.WoodImpact();
 			GameManager.Instance.Death();
 			Invoke("Return", 1.0f);
 		}

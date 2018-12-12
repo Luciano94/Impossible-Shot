@@ -1,5 +1,6 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	2733522483	Estados_del_juego			\Default Work Unit\Estados_del_juego	
+	2974103762	Mute			\Default Work Unit\Mute	
 	3762955427	Tutorial			\Default Work Unit\Tutorial	
 
 State	ID	Name	State Group			Notes
@@ -7,11 +8,17 @@ State	ID	Name	State Group			Notes
 	984691642	Ingame	Estados_del_juego			
 	2607556080	Menu	Estados_del_juego			
 	3762955427	Tutorial	Estados_del_juego			
+	0	None	Mute			
+	930712164	Off	Mute			
+	1651971902	On	Mute			
 	0	None	Tutorial			
 	485605105	d_cuenta_regresiva	Tutorial			
 	1821808034	a_Move_to_each_corner	Tutorial			
 	2166428070	c_Esquivar_madera_01	Tutorial			
 	4255896671	b_matar_primeros_soldados	Tutorial			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	1032863985	On	Mute	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Reflect Acoustic Textures\Textures\Brick	
