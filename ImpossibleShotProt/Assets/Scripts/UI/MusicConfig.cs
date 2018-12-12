@@ -6,27 +6,22 @@ public class MusicConfig : MonoBehaviour {
 	[SerializeField] Sprite musicOn;
 	[SerializeField] Sprite musicOff;
 	private Button musicBtn;
-	private bool isMusicOn ;
 
 	private void Start() {
-		isMusicOn = true; //tomarlo de playerprefs
-		SoundManager.Instance.MuteButtonClicked(isMusicOn);
 		musicBtn = GetComponent<Button>();
+		UpdateSprite();
 	}
-
-	public void MusicOnOff(){
+	private void UpdateSprite(){
+		bool isMusicOn = SoundManager.Instance.IsSoundOn();
 		if(isMusicOn){
-			isMusicOn = false;
-			SoundManager.Instance.MuteButtonClicked(isMusicOn);
-			musicBtn.image.sprite = musicOff;
-		}else{
-			isMusicOn = true;
-			SoundManager.Instance.MuteButtonClicked(isMusicOn);
 			musicBtn.image.sprite = musicOn;
+		}else{
+			musicBtn.image.sprite = musicOff;
 		}
 	}
 
-	private void OnDestroy(){
-		//guardar isMusicOn en playerprefs
+	public void MusicOnOff(){
+		SoundManager.Instance.MuteButtonClicked();
+		UpdateSprite();
 	}
 }

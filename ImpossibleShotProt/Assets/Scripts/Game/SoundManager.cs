@@ -16,7 +16,20 @@ public class SoundManager : MonoBehaviour {
 		}
 	}
 	
-	public void MuteButtonClicked(bool isSoundOn){
+	private bool isSoundOn;
+
+	void Start(){
+		isSoundOn = true; //levantar de playerprefs
+	}
+
+	void OnDestroy(){
+		//guardar isSoundOn en playerprefs
+	}
+	public bool IsSoundOn(){
+		return isSoundOn;
+	}
+	public void MuteButtonClicked(){
+		isSoundOn = !isSoundOn;
 		if(isSoundOn){
 			AkSoundEngine.PostEvent("mute_off", gameObject);
 		} else{
