@@ -94,6 +94,7 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void StartGame(){
+		playerMov.enabled = false;
 		principal.SetActive(false);
 		finish.SetActive(false);
 		inGame.SetActive(true);

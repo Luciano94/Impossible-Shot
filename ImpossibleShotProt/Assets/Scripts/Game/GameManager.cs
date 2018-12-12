@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour {
         timeScale = Time.timeScale;
         terrainSpeed = 0.0f;
         trail.Stop();
-        spawn.PauseSpawn();
+        spawn.Death();
         Invoke("terminate", 1.0f);
     }
 
