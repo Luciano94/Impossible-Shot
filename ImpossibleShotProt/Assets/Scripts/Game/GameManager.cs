@@ -181,9 +181,11 @@ public class GameManager : MonoBehaviour {
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
     }
+    
     private void Start(){
 		AkSoundEngine.PostEvent("Menu",gameObject);
     }
+
     public void StartGame(){
         AkSoundEngine.PostEvent("Ingame_start",gameObject);
         FirstPlay.Instance.play();

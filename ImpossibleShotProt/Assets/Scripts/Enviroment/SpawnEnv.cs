@@ -17,9 +17,12 @@ public class SpawnEnv : MonoBehaviour {
     }
 
     [SerializeField] GameObject[] prefabs;
+    [SerializeField] GameObject[] props;
     [SerializeField] float timePerObj;
     [SerializeField] int pool = 50;
+    [SerializeField] int propPool = 10;
     private Queue<GameObject> envArray;
+    private Queue<GameObject> propArray;
     int random;
 
     public void UpdateTime() {
@@ -30,6 +33,7 @@ public class SpawnEnv : MonoBehaviour {
 
     private void Awake() {
         envArray = new Queue<GameObject>();
+        propArray = new Queue<GameObject>();
         GameObject go;
         int prefabIndex = 0;
         for (int i = 0; i < pool; i++) {
@@ -40,6 +44,15 @@ public class SpawnEnv : MonoBehaviour {
             go.SetActive(false);
             envArray.Enqueue(go);
         }
+        int propIndex = 0;
+        for (int i = 0; i < propPool; i++){
+            go = Instantiate(props[propIndex], transform.position, transform.rotation);
+            if(propIndex == props.Length - 1)
+                propIndex= 0;
+            else propIndex++;
+            go.SetActive(false);
+            propArray.Enqueue(go);
+        }
         Invoke("Spawn", timePerObj);
     }
 
@@ -49,6 +62,11 @@ public class SpawnEnv : MonoBehaviour {
             go = envArray.Dequeue();
             go.SetActive(true);
         }
+        random = Random.Range(0,10);
+        if(random <= 1 && propArray.Count > 0){
+            go = propArray.Dequeue();
+            go.SetActive(true);
+        }
         Invoke("Spawn", timePerObj);
     }
 
@@ -56,5 +74,11 @@ public class SpawnEnv : MonoBehaviour {
         go.transform.position = transform.position;
         go.SetActive(false);
         envArray.Enqueue(go);
+    }
+
+    public void DespawnProp(GameObject go){
+        go.transform.position = transform.position;
+        go.SetActive(false);
+        propArray.Enqueue(go); 
     }
 }

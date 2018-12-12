@@ -10032,8 +10032,16 @@ MonoBehaviour:
   - {fileID: 1069395295712536, guid: a0c76ca49a022a24eb668417519f9e4b, type: 2}
   - {fileID: 1549128830397174, guid: 07be8142e3bbb8e48942fb64b89c4314, type: 2}
   - {fileID: 1477829413904536, guid: 45bbaf1034fe8664fb0b7ff0ccb76bd2, type: 2}
+  props:
+  - {fileID: 1827879891998400, guid: 082e901173c03f34ba42457a7ff20cc9, type: 2}
+  - {fileID: 1143278047472288, guid: 52c9cc739f87f644395f585da2ae3186, type: 2}
+  - {fileID: 1104822899878902, guid: 3c2095b63d003d744ad71cc03c9d4a13, type: 2}
+  - {fileID: 1135471820057874, guid: fdf2da82e6762b3429221bda673645e3, type: 2}
+  - {fileID: 1175206612333036, guid: 7daf4d124e42d0249ad44e9d0968b1d8, type: 2}
+  - {fileID: 1083057530411194, guid: 758c408df05700840a850c9ba1edb993, type: 2}
   timePerObj: 0.13
   pool: 16
+  propPool: 10
 --- !u!4 &1392785592
 Transform:
   m_ObjectHideFlags: 0
