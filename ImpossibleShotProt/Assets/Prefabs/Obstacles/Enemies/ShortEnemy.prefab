@@ -38,9 +38,10 @@ GameObject:
   - component: {fileID: 4128718702951230}
   - component: {fileID: 212848294658982580}
   - component: {fileID: 114026836784021394}
+  - component: {fileID: 114186161983882242}
   m_Layer: 0
   m_Name: Bandido 3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +108,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 100
+--- !u!114 &114186161983882242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676104990885454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16836cf3899465648a887d4a44c5a117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIdle: {fileID: 21300000, guid: eb2750c9712b5f647a09cf901a829cbd, type: 3}
+  enemyScreaming: {fileID: 21300000, guid: c8499c6c495d8a744ac0864df744c4d2, type: 3}
 --- !u!212 &212848294658982580
 SpriteRenderer:
   m_ObjectHideFlags: 1

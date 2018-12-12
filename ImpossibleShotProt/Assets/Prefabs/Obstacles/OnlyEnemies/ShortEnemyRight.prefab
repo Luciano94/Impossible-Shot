@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 114919168606069278}
   - component: {fileID: 65166916525131202}
   - component: {fileID: 114919780941461128}
+  - component: {fileID: 114966033676143242}
   m_Layer: 9
   m_Name: ShortEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,6 +57,7 @@ GameObject:
   - component: {fileID: 4064231160671716}
   - component: {fileID: 212376624697358808}
   - component: {fileID: 114579004209707742}
+  - component: {fileID: 114489771762765404}
   m_Layer: 0
   m_Name: Bandido 3
   m_TagString: Untagged
@@ -116,6 +118,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.72, y: 3.64, z: 0.2}
   m_Center: {x: 0, y: 2.01, z: 0}
+--- !u!114 &114489771762765404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998613932024946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16836cf3899465648a887d4a44c5a117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIdle: {fileID: 21300000, guid: eb2750c9712b5f647a09cf901a829cbd, type: 3}
+  enemyScreaming: {fileID: 21300000, guid: c8499c6c495d8a744ac0864df744c4d2, type: 3}
 --- !u!114 &114499703024379968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,6 +191,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShineColor: {r: 0, g: 0.18839788, b: 1, a: 1}
   Sharpness: 10
+--- !u!114 &114966033676143242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1598478749083038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16836cf3899465648a887d4a44c5a117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIdle: {fileID: 21300000, guid: eb2750c9712b5f647a09cf901a829cbd, type: 3}
+  enemyScreaming: {fileID: 21300000, guid: c8499c6c495d8a744ac0864df744c4d2, type: 3}
 --- !u!212 &212376624697358808
 SpriteRenderer:
   m_ObjectHideFlags: 1

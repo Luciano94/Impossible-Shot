@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4008267344073032}
   - component: {fileID: 212136791597771478}
   - component: {fileID: 114637762734831100}
+  - component: {fileID: 114034564106799682}
   m_Layer: 0
   m_Name: Bandido 3
   m_TagString: Untagged
@@ -39,9 +40,10 @@ GameObject:
   - component: {fileID: 114812330204556696}
   - component: {fileID: 65440612744071552}
   - component: {fileID: 114247610139007996}
+  - component: {fileID: 114496918286434564}
   m_Layer: 9
   m_Name: ShortEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +118,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.72, y: 3.64, z: 0.2}
   m_Center: {x: 0, y: 2.01, z: 0}
+--- !u!114 &114034564106799682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1070725778099262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16836cf3899465648a887d4a44c5a117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIdle: {fileID: 21300000, guid: eb2750c9712b5f647a09cf901a829cbd, type: 3}
+  enemyScreaming: {fileID: 21300000, guid: c8499c6c495d8a744ac0864df744c4d2, type: 3}
 --- !u!114 &114066057028214240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,6 +157,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShineColor: {r: 0, g: 0.18839788, b: 1, a: 1}
   Sharpness: 10
+--- !u!114 &114496918286434564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1573568643804348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16836cf3899465648a887d4a44c5a117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIdle: {fileID: 21300000, guid: eb2750c9712b5f647a09cf901a829cbd, type: 3}
+  enemyScreaming: {fileID: 21300000, guid: c8499c6c495d8a744ac0864df744c4d2, type: 3}
 --- !u!114 &114637762734831100
 MonoBehaviour:
   m_ObjectHideFlags: 1

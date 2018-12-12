@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4307391879620376}
   - component: {fileID: 212194858476282364}
   - component: {fileID: 114398895469874870}
+  - component: {fileID: 114756940125304612}
   m_Layer: 0
   m_Name: Bandido 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +108,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be93ea87a8ac4c4592a224ffe1f4d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114756940125304612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187273781734974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16836cf3899465648a887d4a44c5a117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIdle: {fileID: 21300000, guid: 1ddecaf65dea16a49b06b18f8a7d382f, type: 3}
+  enemyScreaming: {fileID: 21300000, guid: 4727895366130724aa37664f837ba264, type: 3}
 --- !u!212 &212194858476282364
 SpriteRenderer:
   m_ObjectHideFlags: 1

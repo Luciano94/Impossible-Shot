@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4081539573518458}
   - component: {fileID: 212006216389530164}
   - component: {fileID: 114997155172559070}
+  - component: {fileID: 114058886921372014}
   m_Layer: 0
   m_Name: Bandido 2
   m_TagString: Untagged
@@ -73,9 +74,10 @@ GameObject:
   - component: {fileID: 114262554446482180}
   - component: {fileID: 65498925026302338}
   - component: {fileID: 114863002505903606}
+  - component: {fileID: 114386908175182140}
   m_Layer: 9
   m_Name: FatEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,6 +149,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.37, y: 3.69, z: 0.2}
   m_Center: {x: 0, y: 3.46, z: 0}
+--- !u!114 &114058886921372014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1328053092740964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16836cf3899465648a887d4a44c5a117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIdle: {fileID: 21300000, guid: 9a37d72aed1e71245ae06bfca1ffcef3, type: 3}
+  enemyScreaming: {fileID: 21300000, guid: 5ea97e270d1e7334e9dc30db010de5a4, type: 3}
 --- !u!114 &114188821003315226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,6 +198,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be93ea87a8ac4c4592a224ffe1f4d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114386908175182140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1915494607368436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16836cf3899465648a887d4a44c5a117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyIdle: {fileID: 21300000, guid: 9a37d72aed1e71245ae06bfca1ffcef3, type: 3}
+  enemyScreaming: {fileID: 21300000, guid: 5ea97e270d1e7334e9dc30db010de5a4, type: 3}
 --- !u!114 &114462820383810402
 MonoBehaviour:
   m_ObjectHideFlags: 1
