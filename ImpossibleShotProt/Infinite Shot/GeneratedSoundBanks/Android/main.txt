@@ -14,6 +14,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3082267819	Tutorial2			\Default Work Unit\Tutorial2	
 	3082267821	Tutorial4			\Default Work Unit\Tutorial4	
 	3315412319	Target_impact			\Default Work Unit\Target_impact	
+	3512088084	Surprise			\Default Work Unit\Surprise	
 	3537842899	Wood_impact			\Default Work Unit\Wood_impact	
 	3762955427	Tutorial			\Default Work Unit\Tutorial	
 
@@ -22,64 +23,73 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	805414446	LPF_tutorial			\Default Work Unit\LPF_tutorial	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	12202811	Menu	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\infinite shot intro_E60452FC.wem		\Interactive Music Hierarchy\Default Work Unit\Partes del juego\Menu\Menu\Menu		3525953
-	22768530	Blood 1	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Blood 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 1		17563
-	44553425	Madera rota2s	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Madera rota2s_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact_01\Madera rota2s		62082
-	58999270	efecto de disparo 4	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 4		25438
-	67166049	grito 3_2	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\grito 3.2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\grito 3_2		39020
-	103380563	Grito 14	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 14_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 14		31785
-	133606543	efecto de disparo 6	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 6_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 6		24789
-	168527365	Blood 3	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Blood 3_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 3		18837
-	172932393	Cadenita 5	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 5		53030
-	186428760	Grito 3	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 3_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 3		36358
-	210238354	Cadenita 10	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 10_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 10		54843
-	213678594	Blood 6	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Blood 6_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 6		18904
-	237203341	efecto de disparo 3	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 3_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 3		23500
-	271668196	Blood 5	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Blood 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 5		19288
-	277567563	Maderitas rotas	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Maderitas rotas_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact_01\Maderitas rotas		50895
-	283972043	especial	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\especial_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\especial		106911
-	297158379	Cadenita 9	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 9_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 9		54325
-	323834271	transición a power up loop	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\transición a power up loop_9603DD45.wem		\Interactive Music Hierarchy\Default Work Unit\transición a power up loop\transición a power up loop		64498
-	348129142	efecto de disparo 2	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 2		23858
-	365697761	Grito 1	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 1		39446
-	376490850	power up loop	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\power up loop_E60452FC.wem		\Interactive Music Hierarchy\Default Work Unit\Partes del juego\ingame\power up\power up loop\power up loop		1153020
-	417909597	Ingame solo percusion	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Ingame solo percusion_E60452FC.wem		\Interactive Music Hierarchy\Default Work Unit\Partes del juego\ingame\Ingame\Ingame todo\Ingame solo percusion		4141283
-	441335186	Bullet impact metal	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Bullet impact metal_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bullet impact metal		12103
-	465040618	Bullet impact wood	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Bullet impact wood_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bullet impact wood		12021
-	473329189	Impact_metal 2	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Impact_metal 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 2		40773
-	530356784	Impact_metal 4	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Impact_metal 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 4		47808
-	540326996	efecto de disparo 10	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 10_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 10		27228
-	558095627	Blood 4	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Blood 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 4		21687
-	560928267	Madera Rota	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Madera Rota_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact\Madera Rota		57981
-	566243435	efecto de disparo 7	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 7_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 7		23841
-	575135427	Maderitas rotas 2	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Maderitas rotas 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact_01\Maderitas rotas 2		47784
-	591217418	Impact_metal 5	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Impact_metal 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 5		52051
-	612610702	Grito 13	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 13_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 13		35542
-	614535058	Grito 8	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 8_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 8		41671
-	627861631	Explosion 1	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Explosion 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Explotion\Explosion 1		32772
-	652502213	Impact_metal 3	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Impact_metal 3_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 3		46540
-	655061811	Cadenita 11	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 11_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 11		45598
-	705600519	Grito 4	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 4		33661
-	716241850	Blood 2	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Blood 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 2		19062
-	744997533	Cadenita 1	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 1		54972
-	745564219	efecto de disparo 1	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 1		25302
-	750223636	Grito 5	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 5		38986
-	765685529	Ingame sin percusion	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Ingame sin percusion_E60452FC.wem		\Interactive Music Hierarchy\Default Work Unit\Partes del juego\ingame\Ingame\Ingame todo\Ingame sin percusion		4047059
-	767451503	Cadenita 3	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 3 _474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 3		54736
-	771710821	Grito 9	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 9_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 9		31519
-	784567668	Cadenita 7	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 7_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 7		39379
-	785228925	Cadenita 2	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 2		52913
-	792459356	Grito 12	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 12_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 12		31188
-	798612734	Grito 2	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 2		41641
-	818076059	Cadenita 4	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 4		47979
-	851067048	Cadenita 6	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 6_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 6		48765
-	871645227	Impact_metal 1	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Impact_metal 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 1		39823
-	905130888	Golpe Madera	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Golpe Madera_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact\Golpe Madera		43413
-	910645151	efecto de disparo 9	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 9_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 9		28105
-	915944129	Grito 11	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 11_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 11		29971
-	945890578	Explosion 2	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Explosion 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Explotion\Explosion 2		31954
-	992227680	efecto de disparo 8	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 8_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 8		28838
-	1046125396	Grito 15	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Grito 15_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 15		39544
-	1054591356	Cadenita 8	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\Cadenita 8_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 8		54789
-	1070206155	efecto de disparo 5	D:\Infinite Shot Wise\Infinite Shot V4\Infinite Shot\.cache\Android\SFX\efecto de disparo 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 5		21818
+	12202811	Menu	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\infinite shot intro_E60452FC.wem		\Interactive Music Hierarchy\Default Work Unit\Partes del juego\Menu\Menu\Menu		3525953
+	22768530	Blood 1	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Blood 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 1		17563
+	44553425	Madera rota2s	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Madera rota2s_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact_01\Madera rota2s		62082
+	58999270	efecto de disparo 4	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 4		25438
+	67166049	grito 3_2	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\grito 3.2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\grito 3_2		39020
+	94040415	Surprise 6	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Surprise 6_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surprise\Surprise 6		15133
+	103380563	Grito 14	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 14_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 14		31785
+	133606543	efecto de disparo 6	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 6_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 6		24789
+	168527365	Blood 3	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Blood 3_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 3		18837
+	172932393	Cadenita 5	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 5		53030
+	185798264	Surprise 10	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Surprise 10_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surprise\Surprise 10		30318
+	186428760	Grito 3	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 3_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 3		36358
+	210238354	Cadenita 10	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 10_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 10		54843
+	213678594	Blood 6	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Blood 6_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 6		18904
+	237203341	efecto de disparo 3	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 3_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 3		23500
+	271668196	Blood 5	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Blood 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 5		19288
+	277567563	Maderitas rotas	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Maderitas rotas_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact_01\Maderitas rotas		50895
+	283972043	especial	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\especial_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\especial		106911
+	287974290	Surprise 5	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Surprise 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surprise\Surprise 5		11597
+	297158379	Cadenita 9	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 9_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 9		54325
+	323834271	transición a power up loop	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\transición a power up loop_9603DD45.wem		\Interactive Music Hierarchy\Default Work Unit\transición a power up loop\transición a power up loop		64498
+	341922761	Surprise 2	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Surprise 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surprise\Surprise 2		26477
+	348129142	efecto de disparo 2	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 2		23858
+	365697761	Grito 1	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 1		39446
+	376490850	power up loop	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\power up loop_E60452FC.wem		\Interactive Music Hierarchy\Default Work Unit\Partes del juego\ingame\power up\power up loop\power up loop		1153020
+	417909597	Ingame solo percusion	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Ingame solo percusion_E60452FC.wem		\Interactive Music Hierarchy\Default Work Unit\Partes del juego\ingame\Ingame\Ingame todo\Ingame solo percusion		4141283
+	441335186	Bullet impact metal	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Bullet impact metal_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bullet impact metal		12103
+	465040618	Bullet impact wood	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Bullet impact wood_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bullet impact wood		12021
+	473329189	Impact_metal 2	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Impact_metal 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 2		40773
+	494507273	Surprise 1	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Surprise 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surprise\Surprise 1		15351
+	510962755	Surprise 11	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Surprise 11_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surprise\Surprise 11		13034
+	530356784	Impact_metal 4	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Impact_metal 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 4		47808
+	540326996	efecto de disparo 10	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 10_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 10		27228
+	558095627	Blood 4	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Blood 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 4		21687
+	560928267	Madera Rota	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Madera Rota_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact\Madera Rota		57981
+	566243435	efecto de disparo 7	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 7_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 7		23841
+	575135427	Maderitas rotas 2	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Maderitas rotas 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact_01\Maderitas rotas 2		47784
+	591217418	Impact_metal 5	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Impact_metal 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 5		52051
+	612610702	Grito 13	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 13_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 13		35542
+	614535058	Grito 8	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 8_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 8		41671
+	627861631	Explosion 1	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Explosion 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Explotion\Explosion 1		32772
+	652502213	Impact_metal 3	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Impact_metal 3_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 3		46540
+	655061811	Cadenita 11	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 11_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 11		45598
+	705600519	Grito 4	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 4		33661
+	716241850	Blood 2	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Blood 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blood\Blood 2		19062
+	744997533	Cadenita 1	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 1		54972
+	745564219	efecto de disparo 1	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 1		25302
+	750223636	Grito 5	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 5		38986
+	765685529	Ingame sin percusion	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Ingame sin percusion_E60452FC.wem		\Interactive Music Hierarchy\Default Work Unit\Partes del juego\ingame\Ingame\Ingame todo\Ingame sin percusion		4047059
+	767451503	Cadenita 3	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 3 _474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 3		54736
+	771710821	Grito 9	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 9_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 9		31519
+	784567668	Cadenita 7	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 7_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 7		39379
+	785228925	Cadenita 2	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 2		52913
+	792459356	Grito 12	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 12_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 12		31188
+	798612734	Grito 2	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 2		41641
+	818076059	Cadenita 4	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 4_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 4		47979
+	844945172	Surprise 12	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Surprise 12_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surprise\Surprise 12		13795
+	851067048	Cadenita 6	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 6_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 6		48765
+	871645227	Impact_metal 1	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Impact_metal 1_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Metal_impact\Impact_metal 1		39823
+	905130888	Golpe Madera	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Golpe Madera_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wood_impact\Wood_impact\Golpe Madera		43413
+	910645151	efecto de disparo 9	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 9_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 9		28105
+	915944129	Grito 11	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 11_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 11		29971
+	945890578	Explosion 2	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Explosion 2_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Explotion\Explosion 2		31954
+	980437956	Surprise 7	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Surprise 7_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surprise\Surprise 7		11534
+	985911140	Surprise 3	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Surprise 3_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surprise\Surprise 3		15407
+	992227680	efecto de disparo 8	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 8_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 8		28838
+	1046125396	Grito 15	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Grito 15_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Screams\Grito 15		39544
+	1054591356	Cadenita 8	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\Cadenita 8_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chains\Cadenita 8		54789
+	1070206155	efecto de disparo 5	D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\SFX\efecto de disparo 5_474E68A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Initial_Shot\Shots\efecto de disparo 5		21818
 

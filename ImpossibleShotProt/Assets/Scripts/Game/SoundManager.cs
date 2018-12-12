@@ -86,6 +86,10 @@ public class SoundManager : MonoBehaviour {
 		AkSoundEngine.PostEvent("Target_impact", gameObject);
 	}
 
+	public void EnemyScream(){
+		AkSoundEngine.PostEvent("Surprise", gameObject);
+	}
+
 	public void PowerUp(){
 		AkSoundEngine.PostEvent("Special_bullet", gameObject);
 	}

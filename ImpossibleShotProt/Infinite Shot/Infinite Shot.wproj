@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="89" WwiseVersion="v2018.1.4" WwiseBuild="6807">
+<WwiseDocument Type="Project" SchemaVersion="89" WwiseVersion="v2018.1.3" WwiseBuild="6784">
 	<ProjectInfo>
 		<Project Name="Infinite Shot" ID="{131C6845-8A9E-4DFF-AD00-D9420A28FEA6}">
 			<Platforms>
@@ -109,16 +109,6 @@
 						<Property Name="LoopEnd" Type="Real64">
 							<ValueList>
 								<Value>-1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="MarkerDetectionSensitivity" Type="Real64">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="MarkerInputMode" Type="int16">
-							<ValueList>
-								<Value>0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="OverrideConversion" Type="bool">
@@ -10722,7 +10712,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="Marker" PluginType="0" CompanyID="0" PluginID="993">
+				<SharedPropertyList ClassName="" PluginType="0" CompanyID="0" PluginID="993">
 					<PropertyList>
 						<Property Name="Time" Type="Real64">
 							<ValueList>

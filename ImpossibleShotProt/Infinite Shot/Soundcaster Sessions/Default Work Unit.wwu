@@ -38,6 +38,10 @@
 							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Surprise" ID="{ABF99116-5619-42CE-868B-229B66B9B894}" WorkUnitID="{310D18A6-39D5-4E68-8758-F42856802F2F}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Metal_impact" ID="{767A5F92-7CCA-4E1C-8059-446C92E518EC}" WorkUnitID="{310D18A6-39D5-4E68-8758-F42856802F2F}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -132,6 +136,7 @@
 						<CurrentStateRef Name="Off" ID="{9A876A5D-234C-407B-B2F2-3E09221323D3}"/>
 						<CurrentStateRef Name="Menu" ID="{3F811421-58F1-4CA4-B3E8-39786CEAF5D1}"/>
 						<CurrentStateRef Name="b_matar_primeros_soldados" ID="{AAA39EC0-EFB0-4447-A8EB-11D792AEA6FB}"/>
+						<CurrentStateRef Name="normal" ID="{BBBA09CB-BE00-46F9-AC89-8B9104B04AAC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Ingame" ID="{BD4DD987-AB4A-46DA-8B21-E865F7686D20}"/>

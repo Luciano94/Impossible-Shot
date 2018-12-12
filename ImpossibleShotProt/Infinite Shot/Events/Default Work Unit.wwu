@@ -640,6 +640,32 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Surprise" ID="{ABF99116-5619-42CE-868B-229B66B9B894}">
+					<ChildrenList>
+						<Action Name="" ID="{687C034B-0761-49A9-8A3D-3A8FE6ABA102}" ShortID="325610376">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Surprise" ID="{089FE19D-9533-41D6-B007-931B7A0499C7}" WorkUnitID="{ADF4EFE0-F4D3-40BE-A957-C9D226953AED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E9CF3E4A-8B9A-4ED5-BBA9-6931D9E596ED}" ShortID="379882142">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.8"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Surprise" ID="{089FE19D-9533-41D6-B007-931B7A0499C7}" WorkUnitID="{ADF4EFE0-F4D3-40BE-A957-C9D226953AED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

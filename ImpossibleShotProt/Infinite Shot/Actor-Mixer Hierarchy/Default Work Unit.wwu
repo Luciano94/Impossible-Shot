@@ -2292,6 +2292,305 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Surprise" ID="{089FE19D-9533-41D6-B007-931B7A0499C7}" ShortID="612838886">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>24</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>17</Value>
+							</ValueList>
+						</Property>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{214A5DB9-6DBF-403F-AE79-ED4C03DD677C}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="328"/>
+											<Property Name="Min" Type="Real64" Value="-202"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="8"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{DBF38F6A-8529-4A8A-8260-A1287D83C3CA}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="1.1"/>
+											<Property Name="Min" Type="Real64" Value="-1.3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="SFX" ID="{F3FF0784-5C6E-4652-BB11-B653663526CB}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Surprise 1" ID="{975D41FF-9541-4DFC-A8DE-38E0B4889EA7}" ShortID="425961226">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Surprise 1" ID="{43E55116-553D-428B-BE8D-A9E995DD49A3}" ShortID="494507273">
+									<Language>SFX</Language>
+									<AudioFile>Surprise 1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Surprise 1" ID="{43E55116-553D-428B-BE8D-A9E995DD49A3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Surprise 2" ID="{49ABFF3B-E1E6-4521-AE8E-ECACC65C58BE}" ShortID="294784931">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Surprise 2" ID="{131133FD-B8E5-4DA7-886D-8776BC27371E}" ShortID="341922761">
+									<Language>SFX</Language>
+									<AudioFile>Surprise 2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Surprise 2" ID="{131133FD-B8E5-4DA7-886D-8776BC27371E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Surprise 3" ID="{6A7D2FB5-D528-45F8-9E16-3FF42DFB52F8}" ShortID="345113166">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Surprise 3" ID="{2A2A36F4-8F01-425A-9590-91A9519B4705}" ShortID="985911140">
+									<Language>SFX</Language>
+									<AudioFile>Surprise 3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Surprise 3" ID="{2A2A36F4-8F01-425A-9590-91A9519B4705}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Surprise 5" ID="{FC2A0095-6F47-4F67-92D6-DCD41EE23A44}" ShortID="489628418">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Surprise 5" ID="{2C9FE953-8064-4516-A304-BF5B0FF4948A}" ShortID="287974290">
+									<Language>SFX</Language>
+									<AudioFile>Surprise 5.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Surprise 5" ID="{2C9FE953-8064-4516-A304-BF5B0FF4948A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Surprise 6" ID="{A114BD5D-7CA4-4665-A8D6-B346C0531859}" ShortID="323591354">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Surprise 6" ID="{BADA5D5F-9FE4-4880-B560-0D94A566A828}" ShortID="94040415">
+									<Language>SFX</Language>
+									<AudioFile>Surprise 6.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Surprise 6" ID="{BADA5D5F-9FE4-4880-B560-0D94A566A828}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Surprise 7" ID="{86D11761-C3F3-40F1-8549-F131F50DA1FD}" ShortID="1019976251">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>80</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Surprise 7" ID="{0863010E-B282-42E2-B7E7-0AF5257AE4E7}" ShortID="980437956">
+									<Language>SFX</Language>
+									<AudioFile>Surprise 7.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Surprise 7" ID="{0863010E-B282-42E2-B7E7-0AF5257AE4E7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Surprise 10" ID="{A671A161-5FD5-4CEC-BC0D-DAFE14949607}" ShortID="381766262">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>150</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Surprise 10" ID="{1593E807-D455-4A22-9B43-69FE55AA9E6A}" ShortID="185798264">
+									<Language>SFX</Language>
+									<AudioFile>Surprise 10.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Surprise 10" ID="{1593E807-D455-4A22-9B43-69FE55AA9E6A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Surprise 11" ID="{20F7380D-CE65-403F-9074-6177CD80A468}" ShortID="15571494">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Surprise 11" ID="{6E8DA767-E3DD-460A-9328-70A0511EA884}" ShortID="510962755">
+									<Language>SFX</Language>
+									<AudioFile>Surprise 11.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Surprise 11" ID="{6E8DA767-E3DD-460A-9328-70A0511EA884}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Surprise 12" ID="{9071BF23-786E-4FC9-AD39-80DE78BE20CB}" ShortID="900722601">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{46962886-2FC9-4347-B157-45AEEFF1DB81}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89BA623F-E429-4D6B-BFE8-D1D79ADED44E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Surprise 12" ID="{331CC115-B078-4F05-A485-507DF757A415}" ShortID="844945172">
+									<Language>SFX</Language>
+									<AudioFile>Surprise 12.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Surprise 12" ID="{331CC115-B078-4F05-A485-507DF757A415}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

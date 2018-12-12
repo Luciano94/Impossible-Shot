@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\</ProjectRoot>
-		<SourceFilesRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ProjectRoot>D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\</ProjectRoot>
+		<SourceFilesRoot>D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -31,6 +31,7 @@
 				<Event Id="817140250" Name="Play_Again" ObjectPath="\Events\Default Work Unit\Play_Again"/>
 				<Event Id="1012735729" Name="Special_bullet" ObjectPath="\Events\Default Work Unit\Special_bullet"/>
 				<Event Id="321149201" Name="special_bullet_finish" ObjectPath="\Events\Default Work Unit\special_bullet_finish"/>
+				<Event Id="3512088084" Name="Surprise" ObjectPath="\Events\Default Work Unit\Surprise"/>
 				<Event Id="3315412319" Name="Target_impact" ObjectPath="\Events\Default Work Unit\Target_impact"/>
 				<Event Id="3762955427" Name="Tutorial" ObjectPath="\Events\Default Work Unit\Tutorial"/>
 				<Event Id="3082267819" Name="Tutorial2" ObjectPath="\Events\Default Work Unit\Tutorial2"/>
@@ -60,6 +61,10 @@
 					<ShortName>grito 3.2.wav</ShortName>
 					<Path>SFX\grito 3.2_474E68A2.wem</Path>
 				</File>
+				<File Id="94040415" Language="SFX">
+					<ShortName>Surprise 6.wav</ShortName>
+					<Path>SFX\Surprise 6_474E68A2.wem</Path>
+				</File>
 				<File Id="103380563" Language="SFX">
 					<ShortName>Grito 14.wav</ShortName>
 					<Path>SFX\Grito 14_474E68A2.wem</Path>
@@ -75,6 +80,10 @@
 				<File Id="172932393" Language="SFX">
 					<ShortName>Cadenita 5.wav</ShortName>
 					<Path>SFX\Cadenita 5_474E68A2.wem</Path>
+				</File>
+				<File Id="185798264" Language="SFX">
+					<ShortName>Surprise 10.wav</ShortName>
+					<Path>SFX\Surprise 10_474E68A2.wem</Path>
 				</File>
 				<File Id="186428760" Language="SFX">
 					<ShortName>Grito 3.wav</ShortName>
@@ -104,6 +113,10 @@
 					<ShortName>especial.wav</ShortName>
 					<Path>SFX\especial_474E68A2.wem</Path>
 				</File>
+				<File Id="287974290" Language="SFX">
+					<ShortName>Surprise 5.wav</ShortName>
+					<Path>SFX\Surprise 5_474E68A2.wem</Path>
+				</File>
 				<File Id="297158379" Language="SFX">
 					<ShortName>Cadenita 9.wav</ShortName>
 					<Path>SFX\Cadenita 9_474E68A2.wem</Path>
@@ -111,6 +124,10 @@
 				<File Id="323834271" Language="SFX">
 					<ShortName>transición a power up loop.wav</ShortName>
 					<Path>SFX\transición a power up loop_9603DD45.wem</Path>
+				</File>
+				<File Id="341922761" Language="SFX">
+					<ShortName>Surprise 2.wav</ShortName>
+					<Path>SFX\Surprise 2_474E68A2.wem</Path>
 				</File>
 				<File Id="348129142" Language="SFX">
 					<ShortName>efecto de disparo 2.wav</ShortName>
@@ -139,6 +156,14 @@
 				<File Id="473329189" Language="SFX">
 					<ShortName>Impact_metal 2.wav</ShortName>
 					<Path>SFX\Impact_metal 2_474E68A2.wem</Path>
+				</File>
+				<File Id="494507273" Language="SFX">
+					<ShortName>Surprise 1.wav</ShortName>
+					<Path>SFX\Surprise 1_474E68A2.wem</Path>
+				</File>
+				<File Id="510962755" Language="SFX">
+					<ShortName>Surprise 11.wav</ShortName>
+					<Path>SFX\Surprise 11_474E68A2.wem</Path>
 				</File>
 				<File Id="530356784" Language="SFX">
 					<ShortName>Impact_metal 4.wav</ShortName>
@@ -240,6 +265,10 @@
 					<ShortName>Cadenita 4.wav</ShortName>
 					<Path>SFX\Cadenita 4_474E68A2.wem</Path>
 				</File>
+				<File Id="844945172" Language="SFX">
+					<ShortName>Surprise 12.wav</ShortName>
+					<Path>SFX\Surprise 12_474E68A2.wem</Path>
+				</File>
 				<File Id="851067048" Language="SFX">
 					<ShortName>Cadenita 6.wav</ShortName>
 					<Path>SFX\Cadenita 6_474E68A2.wem</Path>
@@ -263,6 +292,14 @@
 				<File Id="945890578" Language="SFX">
 					<ShortName>Explosion 2.wav</ShortName>
 					<Path>SFX\Explosion 2_474E68A2.wem</Path>
+				</File>
+				<File Id="980437956" Language="SFX">
+					<ShortName>Surprise 7.wav</ShortName>
+					<Path>SFX\Surprise 7_474E68A2.wem</Path>
+				</File>
+				<File Id="985911140" Language="SFX">
+					<ShortName>Surprise 3.wav</ShortName>
+					<Path>SFX\Surprise 3_474E68A2.wem</Path>
 				</File>
 				<File Id="992227680" Language="SFX">
 					<ShortName>efecto de disparo 8.wav</ShortName>
