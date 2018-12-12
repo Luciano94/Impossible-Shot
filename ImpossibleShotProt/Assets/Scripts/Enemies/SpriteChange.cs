@@ -9,19 +9,23 @@ public class SpriteChange : MonoBehaviour {
 	private SpriteRenderer enemySprite;
 	private bool isScreaming;
 
+	public bool IsScreaming{
+		get{return isScreaming;}
+	}
+
 	private void Start() {
 		enemySprite = GetComponentInChildren<SpriteRenderer>();
 		isScreaming = false;
 	}
 
-	public void ChangeSprite(){
-		if(isScreaming)
-			enemySprite.sprite = enemyIdle;
-		else
-			enemySprite.sprite = enemyScreaming;
+	public void ChangeSpriteIdle(){
+
+		enemySprite.sprite = enemyIdle;
+		isScreaming = false;
 	}
 
-	public void Reset(){
-		Invoke("ChangeSprite", 3.0f);
+		public void ChangeSpriteScream(){
+			enemySprite.sprite = enemyScreaming;
+		isScreaming = true;
 	}
 }

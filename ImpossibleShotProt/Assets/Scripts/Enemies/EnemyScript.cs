@@ -9,4 +9,11 @@ public class EnemyScript : MonoBehaviour {
 			GameManager.Instance.EnemyDeath(points);
 		}
 	}
+
+	private void OnTriggerExit(Collider other) {
+		if (other.gameObject.tag != "TutorialCollider" ){
+			if(GetComponent<SpriteChange>().IsScreaming)
+				GetComponent<SpriteChange>().ChangeSpriteIdle();
+		}
+	}
 }

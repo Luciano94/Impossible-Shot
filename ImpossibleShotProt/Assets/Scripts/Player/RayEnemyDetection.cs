@@ -22,8 +22,10 @@ public class RayEnemyDetection : MonoBehaviour {
 	}
 
 	private void ChangeSprite(SpriteChange spr){
-		spr.ChangeSprite();
-		spr.Reset();
+		if(!spr.IsScreaming){
+			SoundManager.Instance.EnemyScream();
+			spr.ChangeSpriteScream();
+		}
 	}
 	
 }
