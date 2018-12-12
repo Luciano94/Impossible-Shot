@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObstacleScript : MonoBehaviour {
 
@@ -14,8 +12,7 @@ public class ObstacleScript : MonoBehaviour {
 		hitOnce = true;
 	}
 
-	private void OnTriggerEnter(Collider other)
-	{
+	private void OnTriggerEnter(Collider other){
 		if(hitOnce){
 			hitOnce = false;
 			SoundManager.Instance.WoodImpact();

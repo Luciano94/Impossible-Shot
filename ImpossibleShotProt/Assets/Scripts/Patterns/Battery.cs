@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Battery : MonoBehaviour {
-	[SerializeField] GameObject[] battery;
+	[SerializeField]private GameObject[] battery;
 
 	public GameObject[] GetBattery(){
 		return battery;

@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class MusicConfig : MonoBehaviour {
 
-	[SerializeField] Sprite musicOn;
-	[SerializeField] Sprite musicOff;
+	[SerializeField]private Sprite musicOn;
+	[SerializeField]private Sprite musicOff;
 	private Button musicBtn;
 
 	private void Start() {

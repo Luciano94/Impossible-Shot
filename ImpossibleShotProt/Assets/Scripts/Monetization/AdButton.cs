@@ -11,8 +11,8 @@ public class AdButton : MonoBehaviour {
 		return !hasWatchedContinueAd;
 	}
 
-	[SerializeField] string placementId = "rewardedVideo";
-    [SerializeField] GameObject Panel;
+	[SerializeField]private string placementId = "rewardedVideo";
+    [SerializeField]private GameObject Panel;
     private Button adButton;
 
     public void Start(){

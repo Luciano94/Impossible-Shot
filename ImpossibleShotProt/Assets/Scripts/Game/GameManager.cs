@@ -19,19 +19,20 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    [SerializeField] float multPerKillingSpree;
-    [SerializeField] GameObject spawnPattern;
-    [SerializeField] GameObject bulletHole;
-    [SerializeField] float terrainSpeed = 80f;
-    [SerializeField] AudioSource deadShot;
-    [SerializeField] AudioSource enemyShot;
-    [SerializeField] BulletMovement playerMov;
-    [SerializeField] BulletSpin playerSpin;
-    [SerializeField] ParticleSystem blood;
-    [SerializeField] ParticleSystem trail;
-    [SerializeField] ParticleSystem sliver;
-    [SerializeField] int enemiesForKillingSpree = 5;
-    [SerializeField] BulletSpin bulletSpin;
+    [SerializeField]private float multPerKillingSpree;
+    [SerializeField]private GameObject spawnPattern;
+    [SerializeField]private GameObject bulletHole;
+    [SerializeField]private float terrainSpeed = 80f;
+    [SerializeField]private AudioSource deadShot;
+    [SerializeField]private AudioSource enemyShot;
+    [SerializeField]private BulletMovement playerMov;
+    [SerializeField]private BulletSpin playerSpin;
+    [SerializeField]private ParticleSystem blood;
+    [SerializeField]private ParticleSystem trail;
+    [SerializeField]private ParticleSystem sliver;
+    [SerializeField]private int enemiesForKillingSpree = 5;
+    [SerializeField]private BulletSpin bulletSpin;
+    [SerializeField]private HighScoreManager HSmanager;
     private int actKillingSpree;
     private bool tutorialMode = false;
     private float multiplicador;
@@ -39,14 +40,7 @@ public class GameManager : MonoBehaviour {
     private PatternSpawner spawn;
     private bool isPlaying = false;
     private bool isDeath = false;
-
-    [SerializeField]private HighScoreManager HSmanager;
-
     private float timeScale;
-
-    public void TimeScale(){
-        Time.timeScale = timeScale;
-    }
 
     public bool IsPlaying{
         get{return isPlaying;}
@@ -81,9 +75,22 @@ public class GameManager : MonoBehaviour {
         get{return HSmanager;}
     }
 
+    private void Awake(){
+        PlayGamesPlatform.Activate();
+        bulletHole.SetActive(false);
+        isPlaying = false;
+        if (!PlayerPrefs.HasKey("Tutorial")){
+            PlayerPrefs.SetInt("Tutorial", 1);
+        }
+		spawn = spawnPattern.GetComponent<PatternSpawner>();
+        multiplicador = 1;
+		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
+    }
+
     private void OnApplicationFocus(bool focusStatus) {
-        if(isPlaying && Time.timeScale != 0 && !focusStatus)
+        if(isPlaying && Time.timeScale != 0 && !focusStatus){
             MenuManager.Instance.PauseGame();
+        }
     }
 
     public void EndTutorial(){
@@ -126,14 +133,12 @@ public class GameManager : MonoBehaviour {
         trail.Play();
         spawn.Begin();
     }
+
     public void Revive(){
         isDeath = false;
         SoundManager.Instance.GameStart(false);
         Time.timeScale = timeScale;
         bulletHole.SetActive(false);
-       // playerMov.enabled = true;
-       // terrainSpeed = 80.0f;
-       // spawn.Begin();
         MenuManager.Instance.ContinueGame();
     }
 
@@ -144,15 +149,11 @@ public class GameManager : MonoBehaviour {
         MenuManager.Instance.FinishGame();
     }
 
-    public void RestartGame(){
-        Invoke("StartGame",0.5f);
-        SceneManager.LoadScene(0);
-    }
-
     public void EnemyDeath(int value){
         SoundManager.Instance.EnemyImpact();
-        if(!blood.isPlaying)
+        if(!blood.isPlaying){
             blood.Play();
+        }
         spawn.UpdateStage();
         killingSpree();
         int AddedScore = (int)(value * multiplicador);
@@ -170,28 +171,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    private void Awake(){
-        PlayGamesPlatform.Activate();
-        bulletHole.SetActive(false);
-        isPlaying = false;
-        if (!PlayerPrefs.HasKey("Tutorial"))
-            PlayerPrefs.SetInt("Tutorial", 1);
-        
-		spawn = spawnPattern.GetComponent<PatternSpawner>();
-        multiplicador = 1;
-		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
-    }
     public void StartGame(){
         SoundManager.Instance.GameStart(tutorialMode);
         FirstPlay.Instance.play();
         isPlaying = true;
         if(!tutorialMode){
-            spawn.Begin();
-        }
-    }
-
-    public void TutorialSpawnBegin(){
-        if(tutorialMode){
             spawn.Begin();
         }
     }

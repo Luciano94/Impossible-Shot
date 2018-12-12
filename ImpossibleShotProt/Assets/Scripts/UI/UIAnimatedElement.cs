@@ -15,19 +15,27 @@ public class UIAnimatedElement : MonoBehaviour {
 	private RectTransform rectTransform;
 	private bool animating;
 	private float lerpState;
-
 	private UIElementAnimation director;
 	private int elementID;
+
 	void Awake () {
 		rectTransform = GetComponent<RectTransform>();
 		if(moves){
 			targetPositionVector = rectTransform.anchoredPosition;
 			float initialXNormalization = targetPositionVector.x;
 			float initialYNormalization = targetPositionVector.y;
-			if (initialXNormalization < 0 && initialX > 0){initialXNormalization = 0;}
-			if (initialXNormalization > 0 && initialX < 0){initialXNormalization = 0;}
-			if (initialYNormalization < 0 && initialY > 0){initialYNormalization = 0;}
-			if (initialYNormalization > 0 && initialY < 0){initialYNormalization = 0;}
+			if (initialXNormalization < 0 && initialX > 0){
+				initialXNormalization = 0;
+			}
+			if (initialXNormalization > 0 && initialX < 0){
+				initialXNormalization = 0;
+			}
+			if (initialYNormalization < 0 && initialY > 0){
+				initialYNormalization = 0;
+			}
+			if (initialYNormalization > 0 && initialY < 0){
+				initialYNormalization = 0;
+			}
 			initialPositionVector = new Vector2(initialXNormalization + (initialX * 100), initialYNormalization + (initialY * 100));
 			rectTransform.anchoredPosition = initialPositionVector;
 		}
@@ -38,7 +46,10 @@ public class UIAnimatedElement : MonoBehaviour {
 	void Update () {
 		if(animating){
 			lerpState += Time.unscaledDeltaTime * speed * 2;
-			if(lerpState >= 1){Stop(); return;}
+			if(lerpState >= 1){
+				Stop(); 
+				return;
+			}
 			if(moves){
 				rectTransform.anchoredPosition = Vector3.Lerp(initialPositionVector,targetPositionVector,lerpState);
 			}
@@ -62,6 +73,8 @@ public class UIAnimatedElement : MonoBehaviour {
 
 	public void Reset(){
 		lerpState = 0;
-		if(moves){ rectTransform.anchoredPosition = initialPositionVector;}
+		if(moves){ 
+			rectTransform.anchoredPosition = initialPositionVector;
+		}
 	}
 }

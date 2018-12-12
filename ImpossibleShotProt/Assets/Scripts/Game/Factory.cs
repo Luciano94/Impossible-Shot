@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 public class Factory : MonoBehaviour {
-	[SerializeField] GameObject Product;
-	[SerializeField] int Capacidad;
+	[SerializeField]private GameObject Product;
+	[SerializeField]private int Capacidad;
 	private GameObject[] cargador;
 	private bool[] tracker;
 

@@ -23,11 +23,4 @@ public class LeaderBoardManager : MonoBehaviour {
 			txt.text = "0";
 		}
 	}
-
-	public void UpdateLeaderboard(){
-		foreach (Text txt in leaderBoard){
-			//obtener puntaje google play
-			//asignar puntaje
-		}
-	}
 }

@@ -8,7 +8,6 @@ public static class ScoreFileManager{
 
     public static void NewGame(){
         dataManager.data.score = 0;
-
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/impShot.data");
         bf.Serialize(file, dataManager);
@@ -17,7 +16,6 @@ public static class ScoreFileManager{
 
     public static void SaveScore(){
         dataManager.setScore();
-        
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.OpenWrite (Application.persistentDataPath + "/impShot.data");
         bf.Serialize(file, dataManager);

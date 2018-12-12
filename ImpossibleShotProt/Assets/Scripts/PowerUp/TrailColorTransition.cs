@@ -3,13 +3,14 @@ public class TrailColorTransition : MonoBehaviour {
 
 	[SerializeField] private Color InitialColor;
 	[SerializeField] private Color TargetColor;
-	[Header ("Particulas por estado")]
 
+	[Header ("Particulas por estado")]
 	private ParticleSystem pSystem;
 	private ParticleSystem.MainModule colorSystem;
 	private ParticleSystem.EmissionModule emissionSystem;
 	private float lerpState;
 	private int emmision = 1;
+
 	void Start () {
 		pSystem = GetComponent<ParticleSystem>();
 		colorSystem = pSystem.main;
@@ -22,8 +23,11 @@ public class TrailColorTransition : MonoBehaviour {
 		emmision ++;
 		emissionSystem.rateOverTime = emmision;
 		lerpState = _lerpState;
-		if(lerpState < 0){ lerpState = 0;}
-		if(lerpState > 1){ lerpState = 1;}
+		if(lerpState < 0){ 
+			lerpState = 0;
+		}else if(lerpState > 1){ 
+			lerpState = 1;
+		}
 		colorSystem.startColor = Color.Lerp(InitialColor,TargetColor,lerpState);
 	}
 

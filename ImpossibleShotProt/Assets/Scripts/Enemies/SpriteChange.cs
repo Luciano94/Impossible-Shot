@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpriteChange : MonoBehaviour {
 
-	[SerializeField] Sprite enemyIdle;
-	[SerializeField] Sprite enemyScreaming;
+	[SerializeField]private Sprite enemyIdle;
+	[SerializeField]private Sprite enemyScreaming;
 	private SpriteRenderer enemySprite;
 	private bool isScreaming;
 
@@ -19,13 +17,12 @@ public class SpriteChange : MonoBehaviour {
 	}
 
 	public void ChangeSpriteIdle(){
-
 		enemySprite.sprite = enemyIdle;
 		isScreaming = false;
 	}
 
-		public void ChangeSpriteScream(){
-			enemySprite.sprite = enemyScreaming;
+	public void ChangeSpriteScream(){
+		enemySprite.sprite = enemyScreaming;
 		isScreaming = true;
 	}
 }

@@ -16,19 +16,20 @@ public class SpawnEnv : MonoBehaviour {
         }
     }
 
-    [SerializeField] GameObject[] prefabs;
-    [SerializeField] GameObject[] props;
-    [SerializeField] float timePerObj;
-    [SerializeField] int pool = 50;
-    [SerializeField] int propPool = 10;
+    [SerializeField]private GameObject[] prefabs;
+    [SerializeField]private GameObject[] props;
+    [SerializeField]private float timePerObj;
+    [SerializeField]private int pool = 50;
+    [SerializeField]private int propPool = 10;
     private Queue<GameObject> envArray;
     private Queue<GameObject> propArray;
-    int random;
+    private int random;
 
     public void UpdateTime() {
         timePerObj -= 0.02f;
-        if (timePerObj <= 0.1f)
+        if (timePerObj <= 0.1f){
             timePerObj = 0.1f;
+        }
     }
 
     private void Awake() {
@@ -38,18 +39,22 @@ public class SpawnEnv : MonoBehaviour {
         int prefabIndex = 0;
         for (int i = 0; i < pool; i++) {
             go = Instantiate(prefabs[prefabIndex], transform.position, transform.rotation);
-            if(prefabIndex == prefabs.Length - 1)
+            if(prefabIndex == prefabs.Length - 1){
                 prefabIndex= 0;
-            else prefabIndex++;
+            }else{ 
+                prefabIndex++;
+            }
             go.SetActive(false);
             envArray.Enqueue(go);
         }
         int propIndex = 0;
         for (int i = 0; i < propPool; i++){
             go = Instantiate(props[propIndex], transform.position, transform.rotation);
-            if(propIndex == props.Length - 1)
+            if(propIndex == props.Length - 1){
                 propIndex= 0;
-            else propIndex++;
+            }else{ 
+                propIndex++;
+            }
             go.SetActive(false);
             propArray.Enqueue(go);
         }

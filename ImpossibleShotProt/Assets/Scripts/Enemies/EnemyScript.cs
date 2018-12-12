@@ -2,7 +2,7 @@
 
 public class EnemyScript : MonoBehaviour {
 	
-	[SerializeField] int points = 100;
+	[SerializeField]private int points = 100;
 
 	private void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag != "TutorialCollider" ){
@@ -12,8 +12,9 @@ public class EnemyScript : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other) {
 		if (other.gameObject.tag != "TutorialCollider" ){
-			if(GetComponent<SpriteChange>().IsScreaming)
+			if(GetComponent<SpriteChange>().IsScreaming){
 				GetComponent<SpriteChange>().ChangeSpriteIdle();
+			}
 		}
 	}
 }

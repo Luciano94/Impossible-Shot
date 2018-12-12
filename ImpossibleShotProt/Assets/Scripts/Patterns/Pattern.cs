@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Pattern : MonoBehaviour {
 	[SerializeField] private GameObject[] Lista;
@@ -17,9 +15,6 @@ public class Pattern : MonoBehaviour {
 			pool [i] = go;
 		}
 		tutorial = GetComponent<TutorialPattern>();
-	}
-
-	void Start(){
 	}
 
 	public void Return(GameObject go){
@@ -43,15 +38,7 @@ public class Pattern : MonoBehaviour {
 		return pool [count];
 	}
 
-    public int TamLista() {
-        return pool.Length-1;
-    }
-
     public int Count() {
         return counter;
     }
-
-	public GameObject[] GetList(){
-		return Lista;
-	}
 }

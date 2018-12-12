@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class moveTarget : MonoBehaviour {
-    [SerializeField] Transform Bullet;
+    [SerializeField]private Transform Bullet;
 
 
 	void Update () {

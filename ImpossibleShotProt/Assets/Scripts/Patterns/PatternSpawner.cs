@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,7 +31,7 @@ public class PatternSpawner : MonoBehaviour {
 	private Queue<Product> arrayOfProducts;
 	private bool bulletTime = false;
 
-	/*TUTORIAL METHODS */
+#region Tutorial	/*TUTORIAL METHODS */
 	private void Start() {
 		arrayOfProducts = new Queue<Product>();
 		tutobattery = setOfBattery[0].GetBattery();
@@ -44,17 +43,20 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	private void ChargePatternsTutorial(){
-		if(actualPatternTutorial > tutobattery.Length-1)
+		if(actualPatternTutorial > tutobattery.Length-1){
 			actualPatternTutorial = tutobattery.Length-1;
+		}
 		patternTutorial=tutobattery[actualPatternTutorial];
 	}
 
 	private void SpawnTutorial(){
 		changeTxT.enabled = false;
 		GenerateObstacleTuto();
-        if(patternTutorial.GetComponent<Pattern>().Count() > 0)
+        if(patternTutorial.GetComponent<Pattern>().Count() > 0){
             Invoke("SpawnTutorial", timePerObstacle);
-        else changePhase();
+		}else{ 
+			changePhase();
+		}
 	}
 
 	private void changePhase(){
@@ -93,8 +95,8 @@ public class PatternSpawner : MonoBehaviour {
 	public void UpdateStage(){
 		stage = TutorialManager.Instance.GetStage();
 	}
-	/*END TUTORIAL FUNCTIONS */
-	/*Events Methods */
+#endregion	/*End Tutorial Methods */
+#region Events	/*Events Methods */
 	public void InitEvent(){
 		CancelInvoke("SpawnObstacle");
 		actualTimePerObs = timePerObstacle;
@@ -103,13 +105,17 @@ public class PatternSpawner : MonoBehaviour {
 
 	private void SpawnObstacleEvent(){
 		GenerateObstacle();
-        if(pattern.GetComponent<Pattern>().Count() > 0)
+        if(pattern.GetComponent<Pattern>().Count() > 0){
             Invoke("SpawnObstacleEvent", timePerObstacle);
-        else EndEvent();
+		}else{ 
+			EndEvent();
+		}
 	}
 
 	private void EndEvent(){
-		if(bulletTime) bulletTime = false;
+		if(bulletTime){ 
+			bulletTime = false;
+		}	
 		EventsManager.Instance.DesactiveEvent();
 		actualPattern = 0;
 		timePerObstacle = actualTimePerObs;
@@ -136,9 +142,8 @@ public class PatternSpawner : MonoBehaviour {
 		ChargePatterns();
 		SpawnObstacleEvent();
 	}
-	
-	/*End events Methods */
-
+#endregion	/*End events Methods */
+#region Spawn
 	public void PauseSpawn(){
 		CancelInvoke("SpawnObstacleEvent");
 		CancelInvoke("SpawnObstacle");
@@ -160,12 +165,12 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	public void Begin(){
-		if(EventsManager.Instance.ActiveEvent)
+		if(EventsManager.Instance.ActiveEvent){
 			Invoke("SpawnObstacleEvent", timePerObstacle);
-		else {
-			if(GameManager.Instance.TutorialMode)
+		}else {
+			if(GameManager.Instance.TutorialMode){
 				EnemyTutorial();
-			else{
+			}else{
 				ChargeBattery();
 				RandomizeBattery();
 				ChargePatterns();
@@ -177,6 +182,7 @@ public class PatternSpawner : MonoBehaviour {
 	private void ChargeBattery(){
 		battery = setOfBattery[actualBattery].GetBattery();
 	}
+
 	private void ChargePatterns(){
 		pattern = battery[actualPattern];
 	}
@@ -191,18 +197,21 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	private void BatteryChange(){
-		if(actualBattery != setOfBattery.Length-1)
+		if(actualBattery != setOfBattery.Length-1){
 			actualBattery++;
-		if(actualBattery == 3)
+		}
+		if(actualBattery == 3){
 			EventsManager.Instance.ActiveEvents();
+		}
 		ChargeBattery();
 		RandomizeBattery();
 		actualPattern = 0;
 		ChargePatterns();
-		if(timePerObstacle-timeDown > minTime) 
+		if(timePerObstacle-timeDown > minTime){
 			timePerObstacle -= timeDown;
-		else 
+		}else{ 
 			timePerObstacle = minTime;
+		}
 		Invoke("SpawnObstacle", timePerPattern);
 	}
 
@@ -223,14 +232,19 @@ public class PatternSpawner : MonoBehaviour {
 			ChargePatterns();
 
 			Invoke("SpawnObstacle", timePerPattern);
-		} else BatteryChange();
+		}else{ 
+			BatteryChange();
+		}
 	}
 
 	private void SpawnObstacle(){
 		GenerateObstacle();
-        if(pattern.GetComponent<Pattern>().Count() > 0)
+        if(pattern.GetComponent<Pattern>().Count() > 0){
             Invoke("SpawnObstacle", timePerObstacle);
-        else PatternChange();
+		}else {
+			PatternChange();
+		}
 	}
 
 }
+#endregion

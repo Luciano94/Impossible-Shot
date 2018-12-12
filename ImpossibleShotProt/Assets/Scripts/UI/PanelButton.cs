@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PanelButton : MonoBehaviour {
-	[SerializeField] GameObject[] Current;
-	[SerializeField] GameObject[] Next;
+	[SerializeField]private GameObject[] Current;
+	[SerializeField]private GameObject[] Next;
 	
 	public void Clicked(){
 		SoundManager.Instance.MenuTouch();
@@ -13,7 +11,6 @@ public class PanelButton : MonoBehaviour {
 				Current[i].SetActive(false);
 			}
 		}
-
 		if(Next.Length > 0){
 			for(int i = 0; i < Next.Length; i++){
 				Next[i].SetActive(true);

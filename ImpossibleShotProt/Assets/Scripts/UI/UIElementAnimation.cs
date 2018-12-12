@@ -18,6 +18,7 @@ public class UIElementAnimation : MonoBehaviour {
 	void OnEnable(){
 		animating = true;
 	}
+
 	void OnDisable(){
 		for(int i = 0; i < doneAnimating.Length; i++){
 			elements[i].Reset();
@@ -41,10 +42,14 @@ public class UIElementAnimation : MonoBehaviour {
 			for(int i = 0; i < elements.Length; i++){
 				if(!doneAnimating[i]){
 					elements[i].Animate();
-					if(shouldNextWait[i]){ return;}
+					if(shouldNextWait[i]){ 
+						return;
+					}
 				}
 			}
-			if(AllDone()){animating = false;}
+			if(AllDone()){
+				animating = false;
+			}
 		}
 	}
 }

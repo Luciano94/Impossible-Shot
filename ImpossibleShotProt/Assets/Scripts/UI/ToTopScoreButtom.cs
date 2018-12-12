@@ -6,14 +6,10 @@ public class ToTopScoreButtom : MonoBehaviour {
 	
 	public void TopScoreButtom(){
 		GameManager.Instance.highScoreManager.getScorefromFile(ScoreFileManager.LoadScore());
-
 #if UNITY_ANDROID
-        if (PlayGamesPlatform.Instance.localUser.authenticated)
-        {
+        if (PlayGamesPlatform.Instance.localUser.authenticated){
             PlayGamesPlatform.Instance.ShowLeaderboardUI();
-        }
-        else
-        {
+        }else{
             Debug.Log("Cannot show leaderboard: not authenticated");
         }
 #endif
@@ -27,7 +23,7 @@ public class ToTopScoreButtom : MonoBehaviour {
 			}else{
 				MenuManager.Instance.ShowDontLogin();
 				Debug.Log("no Sirve");				
-			}// handle success or failure
+			}
          });
 	}
 }

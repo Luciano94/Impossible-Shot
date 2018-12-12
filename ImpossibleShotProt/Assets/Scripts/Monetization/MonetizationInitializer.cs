@@ -12,8 +12,7 @@ public class MonetizationInitializer : MonoBehaviour {
 #endif
 
     void Start () {
-        if (Monetization.isSupported)
-        {
+        if (Monetization.isSupported){
             Monetization.Initialize(gameId, true);
         }
     }

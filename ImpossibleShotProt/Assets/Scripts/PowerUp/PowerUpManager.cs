@@ -22,7 +22,6 @@ public class PowerUpManager : MonoBehaviour {
     [SerializeField] private Color colorpart;
     [SerializeField] private UIAura uiAura;
     private float actCantKS = 0;
-
     private TrailColorTransition trail;
     private bool timeKeeping;
     private float countdown;
@@ -32,6 +31,7 @@ public class PowerUpManager : MonoBehaviour {
         timeKeeping = false;
         countdown = timePwUp;
     }
+
 	public void UpdateKillingSpree(){
         actCantKS++;
         if(actCantKS == cantOfKillingSpree){
@@ -39,7 +39,6 @@ public class PowerUpManager : MonoBehaviour {
         }
         if(!timeKeeping){
             trail.ColorChange(actCantKS/cantOfKillingSpree);
-            Debug.Log(actCantKS/cantOfKillingSpree);
         }
     }
 
@@ -68,7 +67,6 @@ public class PowerUpManager : MonoBehaviour {
             countdown -= Time.deltaTime;
             if(countdown < 0){ countdown = 0; timeKeeping = false;}
             trail.ColorChange(countdown/timePwUp);
-            //Debug.Log(countdown/timePwUp);
         }
     }
 }

@@ -19,6 +19,7 @@ public class AdCountDown : MonoBehaviour {
 	void OnEnable(){
 		timeLeft = TimeToWait;
 	}
+	
 	void Update () {
 		timer += Time.unscaledDeltaTime;
 		if(timer >= 1){ 

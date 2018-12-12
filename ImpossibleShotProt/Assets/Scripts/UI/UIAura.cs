@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-enum AuraState
-{
+enum AuraState{
     Invisible = 0,
     ShineUp,
     BackAndForth,
@@ -11,8 +10,6 @@ enum AuraState
 }
 
 public class UIAura : MonoBehaviour {
-
-   
 
     [SerializeField][Range(0.0f, 1.0f)] private float MinAlpha;
     [SerializeField][Range(0.0f, 1.0f)] private float MaxAlpha;
@@ -40,26 +37,36 @@ public class UIAura : MonoBehaviour {
                 break;
             case AuraState.ShineUp:
                 lerpState += Time.deltaTime * TransitionSharpness;
-                if (lerpState >= 1) { lerpState = 1;}
+                if (lerpState >= 1) {
+                     lerpState = 1;
+                }
                 alpha = Mathf.Lerp(0, MinAlpha, lerpState);
                 image.color = new Color(initialColor.r, initialColor.g, initialColor.b, alpha);
-                if (lerpState >= 1) { lerpState = 0; state++;}
-
+                if (lerpState >= 1) { 
+                    lerpState = 0; state++;
+                }
                 break;
             case AuraState.BackAndForth:
                 if (backAndForthDirection) {
                     lerpState += Time.deltaTime * TransitionSharpness;
-                    if (lerpState >= 1) { lerpState = 1; backAndForthDirection = false; }
+                    if (lerpState >= 1) { 
+                        lerpState = 1; backAndForthDirection = false; 
+                    }
                 } else {
                     lerpState -= Time.deltaTime * TransitionSharpness;
-                    if (lerpState <= 0) { lerpState = 0; backAndForthDirection = true; }
+                    if (lerpState <= 0) { 
+                        lerpState = 0; backAndForthDirection = true;
+                    }
                 }
                 alpha = Mathf.Lerp(MinAlpha, MaxAlpha, lerpState);
                 image.color = new Color(initialColor.r, initialColor.g, initialColor.b, alpha);
                 break;
             case AuraState.ShineDown:
                 lerpState += Time.deltaTime * TransitionSharpness;
-                if (lerpState >= 1) { lerpState = 1; state = 0; }
+                if (lerpState >= 1) { 
+                    lerpState = 1; 
+                    state = 0; 
+                }
                 alpha = Mathf.Lerp(initialColor.a,0,lerpState);
                 image.color = new Color(initialColor.r, initialColor.g, initialColor.b, alpha);
                 break;
@@ -75,6 +82,7 @@ public class UIAura : MonoBehaviour {
         lerpState = 0;
         state = AuraState.ShineUp;
     }
+    
     public void ShineStop() {
         lerpState = 0;
         initialColor.a = image.color.a;

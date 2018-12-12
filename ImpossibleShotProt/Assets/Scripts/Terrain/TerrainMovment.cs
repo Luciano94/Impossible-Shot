@@ -2,7 +2,7 @@
 
 public class TerrainMovment : MonoBehaviour {
 
-	[SerializeField] private Transform back;
+	[SerializeField]private Transform back;
 	private float speed;
 
 	private void Update(){

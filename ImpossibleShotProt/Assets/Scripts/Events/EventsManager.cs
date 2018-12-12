@@ -42,7 +42,6 @@ public class EventsManager : MonoBehaviour {
         if(!activeEvent){
             activeEvent = true;
             float timeNextEvent = Random.Range(timePerEventMin, timePerEventMax);
-            Debug.Log("time next event: " + timeNextEvent);
             Invoke("InitEvent", timeNextEvent);
         }
     }
