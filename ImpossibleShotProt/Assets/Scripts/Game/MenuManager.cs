@@ -32,6 +32,7 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField] private BulletMovement playerMov;
 	[SerializeField] private CameraMovement cameraMovement;
 	[SerializeField] private GunCanonScript gun;
+	[SerializeField] private ShotAnimation shotAnimation;
     private float timeScaleActual;
 
 	[Header ("HighScore Text")]/*HighScore Menu */
@@ -93,14 +94,17 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void StartGame(){
-		Time.timeScale = 1f;
-		playerMov.enabled = true;
 		principal.SetActive(false);
 		finish.SetActive(false);
 		inGame.SetActive(true);
+		shotAnimation.PlayAnimation();
+		InitGame();
+	}
+
+	private void InitGame(){
+		Time.timeScale = 1.0f;
 		adPanel.GetComponentInChildren<AdButton>().Reset();
 		adPanel.SetActive(false);
-		playerMov.enabled = false;
 		cameraMovement.enabled = true;
 		gun.GameStart();
 		GameManager.Instance.StartGame();
