@@ -29,9 +29,12 @@ public class PatternSpawner : MonoBehaviour {
 	[SerializeField] private Battery batteryOfEnemyStream;
 	[SerializeField] private float timePerObsInEvent = 0.4f;
 	private float actualTimePerObs;
+	private Queue<Product> arrayOfProducts;
+	private bool bulletTime = false;
 
 	/*TUTORIAL METHODS */
 	private void Start() {
+		arrayOfProducts = new Queue<Product>();
 		tutobattery = setOfBattery[0].GetBattery();
 	}
 
@@ -106,6 +109,7 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	private void EndEvent(){
+		if(bulletTime) bulletTime = false;
 		EventsManager.Instance.DesactiveEvent();
 		actualPattern = 0;
 		timePerObstacle = actualTimePerObs;
@@ -113,6 +117,7 @@ public class PatternSpawner : MonoBehaviour {
 		RandomizeBattery();
 		ChargePatterns();
 		Invoke("SpawnObstacle", timePerBattery);
+		arrayOfProducts.Clear();
 	}
 
 	public void BeginEnemyEvent(){
@@ -124,6 +129,7 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	public void BeginBulletEvent(){
+		bulletTime = true;
 		battery = batteryOfBulletTime.GetBattery();
 		actualPattern = 0;
 		RandomizeBattery();
@@ -138,14 +144,33 @@ public class PatternSpawner : MonoBehaviour {
 		CancelInvoke("SpawnObstacle");
 	}
 
+	public void Death(){
+		if(EventsManager.Instance.ActiveEvent){
+			DesactiveEvent();
+			CancelInvoke("SpawnObstacleEvent");
+		}
+		CancelInvoke("SpawnObstacle");
+	}
+
+	private void DesactiveEvent(){
+		foreach (Product item in arrayOfProducts){
+			item.ReturnToFactory();
+		}
+		EndEvent();
+	}
+
 	public void Begin(){
-		if(GameManager.Instance.TutorialMode)
-			EnemyTutorial();
-		else{
-			ChargeBattery();
-			RandomizeBattery();
-			ChargePatterns();
-			Invoke("SpawnObstacle", timePerBattery);
+		if(EventsManager.Instance.ActiveEvent)
+			Invoke("SpawnObstacleEvent", timePerObstacle);
+		else {
+			if(GameManager.Instance.TutorialMode)
+				EnemyTutorial();
+			else{
+				ChargeBattery();
+				RandomizeBattery();
+				ChargePatterns();
+				Invoke("SpawnObstacle", timePerBattery);
+			}
 		}
 	}
 
@@ -158,6 +183,8 @@ public class PatternSpawner : MonoBehaviour {
 
 	private void GenerateObstacle(){
 		GameObject go = pattern.GetComponent<Pattern>().Request();
+		if(bulletTime)
+			arrayOfProducts.Enqueue(go.GetComponent<Product>());
         go.transform.position = new Vector3(transform.position.x,
                                             transform.position.y,
                                             transform.position.z);

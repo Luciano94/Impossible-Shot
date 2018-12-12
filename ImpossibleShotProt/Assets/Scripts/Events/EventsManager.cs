@@ -28,7 +28,12 @@ public class EventsManager : MonoBehaviour {
 
     private PatternSpawner patternSpawner;
     private bool activeEvent = false;
+    private bool eventActive = false;
     
+    public bool ActiveEvent{
+        get{return eventActive;}
+    }
+
     private void Start(){
         patternSpawner = GetComponent<PatternSpawner>();
     }
@@ -44,6 +49,7 @@ public class EventsManager : MonoBehaviour {
 
     private void InitEvent(){
         int nextEvent  = Random.Range(1,10);
+        eventActive = true;
         Debug.Log("Next event: " + nextEvent);
         if(nextEvent >= 1 && nextEvent <= 5){
             patternSpawner.InitEvent();
@@ -67,6 +73,7 @@ public class EventsManager : MonoBehaviour {
     public void DesactiveEvent(){
         Invoke("TimeToNormal", 2f);
         activeEvent = false;
+        eventActive = false;
         ActiveEvents();
     }
 
