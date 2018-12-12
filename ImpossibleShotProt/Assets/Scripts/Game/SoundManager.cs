@@ -86,4 +86,7 @@ public class SoundManager : MonoBehaviour {
 	public void Tutorial4(){
 		AkSoundEngine.PostEvent("Tutorial4", gameObject);
 	}
+	public void StopSound(){
+		AkSoundEngine.StopAll();
+	}
 }

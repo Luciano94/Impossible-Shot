@@ -94,7 +94,6 @@ public class MenuManager : MonoBehaviour {
 	public void StartGame(){
 		Time.timeScale = 1f;
 		playerMov.enabled = true;
-		//startSound.Play();
 		principal.SetActive(false);
 		finish.SetActive(false);
 		inGame.SetActive(true);
