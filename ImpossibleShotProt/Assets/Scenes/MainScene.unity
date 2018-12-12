@@ -9991,6 +9991,9 @@ MonoBehaviour:
   - {fileID: 1135471820057874, guid: fdf2da82e6762b3429221bda673645e3, type: 2}
   - {fileID: 1175206612333036, guid: 7daf4d124e42d0249ad44e9d0968b1d8, type: 2}
   - {fileID: 1083057530411194, guid: 758c408df05700840a850c9ba1edb993, type: 2}
+  - {fileID: 1320440649185960, guid: 7d96fab30b3bfe14d91ffbd70b138660, type: 2}
+  - {fileID: 1993894414645610, guid: 8db17ba59a56ea64b91bc7b1fd7d3be6, type: 2}
+  - {fileID: 1061278454311920, guid: adca97335ceb1ec4e93c7141bb08a044, type: 2}
   timePerObj: 0.13
   pool: 16
   propPool: 10
@@ -10001,7 +10004,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1392785590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.6, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

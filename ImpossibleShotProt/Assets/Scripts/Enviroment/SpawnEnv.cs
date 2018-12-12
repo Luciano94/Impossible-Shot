@@ -49,7 +49,7 @@ public class SpawnEnv : MonoBehaviour {
         }
         int propIndex = 0;
         for (int i = 0; i < propPool; i++){
-            go = Instantiate(props[propIndex], transform.position, transform.rotation);
+            go = Instantiate(props[propIndex], new Vector3(0,0,100), new Quaternion(0,0,0,0));
             if(propIndex == props.Length - 1){
                 propIndex= 0;
             }else{ 
