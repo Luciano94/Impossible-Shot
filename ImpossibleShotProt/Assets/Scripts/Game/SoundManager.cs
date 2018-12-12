@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
@@ -20,17 +18,18 @@ public class SoundManager : MonoBehaviour {
 
 	void Start(){
 		isSoundOn = true;
-		if(PlayerPrefs.HasKey("Sound") && PlayerPrefs.GetInt("Sound") == 0)
-			isSoundOn = false; //levantar de playerprefs
+		if(PlayerPrefs.HasKey("Sound") && PlayerPrefs.GetInt("Sound") == 0){
+            isSoundOn = false;
+        }
 		UpdateSoundStatus();
 	}
 
 	void OnDestroy(){
-		//guardar isSoundOn en playerprefs
-		if(isSoundOn)
-			PlayerPrefs.SetInt("Sound", 1);
-		else
-			PlayerPrefs.SetInt("Sound", 0);
+        if (isSoundOn){
+            PlayerPrefs.SetInt("Sound", 1);
+        }else{
+            PlayerPrefs.SetInt("Sound", 0);
+        }
 	}
 
 	public bool IsSoundOn(){
@@ -50,7 +49,6 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void GameStart(bool isTutorial){
-		Debug.LogWarning("GameStart");
 		StopSound();
 		if(isTutorial){
 			Tutorial1();
@@ -66,7 +64,6 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void Menu(){
-		Debug.LogWarning("Menu");
 		AkSoundEngine.StopAll();
 		AkSoundEngine.PostEvent("Menu", gameObject);
 	}

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InputPC : IInput {
 	public Direction GetDirection(){
@@ -24,7 +22,6 @@ public class InputPC : IInput {
 	}
 
 	//Placeholders
-	public void Update(){}
 	public void Awake(){}
 	public void GoUp (){}
 	public void GoDown(){}

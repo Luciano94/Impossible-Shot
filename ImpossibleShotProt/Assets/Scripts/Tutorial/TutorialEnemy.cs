@@ -1,13 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TutorialEnemy : MonoBehaviour {
 
 	private static bool wasHit = false;
 	private static bool registerOnce = true;
-
-	
 
 	public static bool WasHit(){
 		return wasHit;

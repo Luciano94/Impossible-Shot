@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class InputAndroidAlternative : IInput {
+﻿public class InputAndroidAlternative : IInput {
 
 	private Direction command;
 
@@ -23,6 +19,4 @@ public class InputAndroidAlternative : IInput {
 	public void GoRight(){command = Direction.Right;}
 	public void GoUp(){command = Direction.Up;}
 	public void GoDown(){command = Direction.Down;}
-	//Placeholder
-	public void Update(){}
 }

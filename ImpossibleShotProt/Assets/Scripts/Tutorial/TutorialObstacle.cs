@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TutorialObstacle : MonoBehaviour {
 	private static bool registerOnce = true;
-
-
 	private float speed;
 
 	private Product product;

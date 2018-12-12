@@ -1,24 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Product : MonoBehaviour {
-	[SerializeField] float MaxDist;
-	private Pattern patron;
-	private bool Activo;
-	[SerializeField]private int width = 1;
-	private float index;
+	[SerializeField] private float MaxDist;
+    private bool Activo;
+	[SerializeField] private int width = 1;
 
-	public Pattern Patron {
-		get{return patron; }
-		set{patron = value; }
-	}
+    public Pattern Patron { get; set; }
 
-	public float Index{
-		set{index=value;}
-		get{return index;}
-	}
-	public int Width{
+    public float Index { set; get; }
+
+    public int Width{
 		get{
 			return width;
 		}
@@ -35,7 +26,7 @@ public class Product : MonoBehaviour {
 
 	public void ReturnToFactory(){
 		Activo = false;
-		if(patron != null) patron.Return (gameObject);
+		if(Patron != null) Patron.Return (gameObject);
 		else Destroy(gameObject);
 	}
 

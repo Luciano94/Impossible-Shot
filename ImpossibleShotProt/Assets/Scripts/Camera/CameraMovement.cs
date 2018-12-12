@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
-	[SerializeField] Transform Bullet;
-	[SerializeField] Transform Up;
-	[SerializeField] Transform Left;
-	[SerializeField] Transform Right;
-	[SerializeField] Transform cameraPos;
+	[SerializeField] private  Transform Bullet;
+	[SerializeField] private Transform Up;
+	[SerializeField] private Transform Left;
+	[SerializeField] private Transform Right;
+	[SerializeField] private Transform cameraPos;
 	[SerializeField] [Range (1,25)] private int TransitionSharpness;
 
 	private Vector3 NormalVector;
@@ -23,10 +23,12 @@ public class CameraMovement : MonoBehaviour {
 	}
 
 	void LateUpdate (){
-		if(canMove){ 
-			MoveCamera();
-		}
-		else CameraLerp();
+        if (canMove)
+        {
+            MoveCamera();
+        } else {
+            CameraLerp();
+        }
 	}
 
 	private void MoveCamera(){

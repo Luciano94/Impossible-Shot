@@ -145,20 +145,20 @@ public class MenuManager : MonoBehaviour {
 
 	public void ShowEnemyEvent(){
 		eventEnemyTxt.enabled = true;
-		 if (countdown > 0){
+		if (countdown > 0){
             eventEnemyTxt.text = countdown.ToString();
             countdown--;
             Invoke("ShowEnemyEvent", timePerNumber);
         } else{
             eventEnemyTxt.text = "TIME TO KILL!!!";
-			countdown = 3;
+		    countdown = 3;
             Invoke("HideEnemyEvent", timePerNumber);
         }
 	}
 
 	public void ShowBulletEvent(){
 		eventBulletTxt.enabled = true;
-		 if (countdown > 0){
+		if (countdown > 0){
             eventBulletTxt.text = countdown.ToString();
             countdown--;
             Invoke("ShowBulletEvent", timePerNumber);
@@ -171,7 +171,7 @@ public class MenuManager : MonoBehaviour {
 
 	public void PauseReturn(){
 		eventBulletTxt.enabled = true;
-		 if (countdown > 0){
+		if (countdown > 0){
             eventBulletTxt.text = countdown.ToString();
             countdown--;
             Invoke("PauseReturn", timePerNumber);
@@ -179,7 +179,6 @@ public class MenuManager : MonoBehaviour {
             eventBulletTxt.text = "START!!!";
 			countdown = 3;
 			GameManager.Instance.DePause();
-			//GameManager.Instance.TimeScale();
             Invoke("HideBulletEvent", timePerNumber);
         }
 	}
@@ -233,7 +232,7 @@ public class MenuManager : MonoBehaviour {
 		}
 	}
 
-		public void ShowLogin(){
+	public void ShowLogin(){
 		loginTxt.text = "Login Success";
 		Invoke("HideShowLogin", 0.5f);
 	}
@@ -249,6 +248,5 @@ public class MenuManager : MonoBehaviour {
 
 	public void HideDontLogin(){
 		loginTxt.text = "";
-
 	}
 }

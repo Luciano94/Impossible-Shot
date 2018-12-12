@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum TutorialStage{
 	Waiting = 0,
@@ -57,9 +55,6 @@ private static TutorialManager instance;
 
 	private bool obstacleHitThisRound;
 	private bool noObstaclesHit;
-
-	void Awake(){
-	}
 
 	void Start () {
         playerMov = FindObjectOfType<BulletMovement>();
@@ -125,7 +120,6 @@ private static TutorialManager instance;
 				}
 			break;
 			case TutorialStage.SecondPhase:
-				//wait for TutorialEnemyEnter()
 			break;
 			case TutorialStage.EnemyHit:
 				if(TutorialEnemyHit()){
@@ -134,10 +128,8 @@ private static TutorialManager instance;
 				}
 			break;
 			case TutorialStage.ThirdPhase:
-				//wait for TutorialObstacleEnter()
 			break;
 			case TutorialStage.NoObstacleHit:
-				//Debug.Log(TutorialPattern.NoneHit());
 				if(noObstaclesHit){
 					SoundManager.Instance.Tutorial4();
 					StageChange();
@@ -183,7 +175,6 @@ private static TutorialManager instance;
 	private void StageChange(){
 		if(stage < TutorialStage.TotalStages -1){
 			stage++;
-			Debug.Log(stage);
 			
 			if(spawner){
 				spawner.UpdateStage();
@@ -221,15 +212,11 @@ private static TutorialManager instance;
 	//tutorial phases
 	private void FirstPhase(){
         //DPad tutorial
-		//Time.timeScale = 0.1f;
         DPadShiner.Shine(0.25f);
-
-		//MenuManager.Instance.ShowDPadTuto();
 	}
 	
 	private void SecondPhase(){
 		//Enemy tutorial
-		//MenuManager.Instance.ShowEnemyTuto();
 		Wait(0.5f,"Continue");
 	}
 
@@ -249,12 +236,11 @@ private static TutorialManager instance;
         Vector3[] positionVectors = FindObjectOfType<BulletMovement>().getCorners();
        	markers = new TutorialMarker[positionVectors.Length];
         Object baseObject = Resources.Load("Models/TutorialBulletPositionMarker");
-        for (int i = 0; i < markers.Length; i++)
-        {
+        for (int i = 0; i < markers.Length; i++){
             GameObject go = Instantiate(baseObject) as GameObject;
 			markers[i] = go.GetComponent<TutorialMarker>();
             markers[i].gameObject.transform.position = new Vector3(positionVectors[i].x, positionVectors[i].y, positionVectors[i].z + 15);
-			markers[i].setTargetZ(positionVectors[i].z);
+			markers[i].SetTargetZ(positionVectors[i].z);
 
         }
 		Invoke("MoveMarkers",1.0f);
@@ -315,7 +301,6 @@ private static TutorialManager instance;
 	}
 
 	public void UpdateObstaclesHit(){
-		Debug.Log("UpdateObstaclesHit" + !obstacleHitThisRound);
 		noObstaclesHit = !obstacleHitThisRound;
 		obstacleHitThisRound = false;
 	}

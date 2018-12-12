@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InputManager : MonoBehaviour {
 	private static InputManager instance;
@@ -30,11 +28,7 @@ public class InputManager : MonoBehaviour {
 		return input.GetDirection();
 	}
 	
-	private void Update(){
-		input.Update ();
-	}
-	//Alternative android input only
-	public void GoUp(){ input.GoUp();}
+	public void GoUp(){input.GoUp();}
 	public void GoDown(){input.GoDown();}
 	public void GoRight(){input.GoRight();}
 	public void GoLeft(){input.GoLeft();}

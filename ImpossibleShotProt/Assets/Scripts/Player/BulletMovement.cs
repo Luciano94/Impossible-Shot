@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletMovement : MonoBehaviour {
@@ -20,8 +18,7 @@ public class BulletMovement : MonoBehaviour {
 		MatrixCenter = transform.position;
 		InitialPosition = transform.position;
 	}
-
-	// Update is called once per frame
+    
 	void Update () {
 		//si no me estoy ya moviento
 		if (!moving) {
@@ -36,18 +33,7 @@ public class BulletMovement : MonoBehaviour {
 			moveAction ();
 		}
 	}
-
-	private void Rotate(int x, int y){
-		if (y == 0)
-			transform.rotation = new Quaternion(0, transform.rotation.y, transform.rotation.z, transform.rotation.w);
-		else
-			transform.rotation = new Quaternion(-(0.1f * y),transform.rotation.y, transform.rotation.z, transform.rotation.w);
-		if (x == 0)
-			transform.rotation = new Quaternion(transform.rotation.x,0, transform.rotation.z, transform.rotation.w);
-		else
-			transform.rotation = new Quaternion(transform.rotation.x, (0.1f * x), transform.rotation.z, transform.rotation.w);
-	}
-
+    
 	private void moveDetection(){
 		Direction dir = InputManager.Instance.GetDirection ();
 		switch (dir) {
@@ -71,15 +57,12 @@ public class BulletMovement : MonoBehaviour {
 		if (xNext < -1) {xNext = -1;}
 		if (yNext > 1) {yNext = 1;}
 		if (yNext < -1) {yNext = -1;}
-
-		//Debug.Log (xNext + " " + yNext);
 	}
 
 	private void moveAction(){
 		float yTarget = MatrixCenter.y + (DistanceToCenter * yNext);
 		float xTarget = MatrixCenter.x + (DistanceToCenter * xNext);
 		Vector3 Target = new Vector3 (xTarget, yTarget, transform.position.z);
-		//Debug.Log (xTarget + " " + yTarget);
 
 		LerpState += TransitionSharpness * Time.deltaTime * Time.timeScale;
 		if (LerpState > 1.0f) {LerpState = 1.0f;}

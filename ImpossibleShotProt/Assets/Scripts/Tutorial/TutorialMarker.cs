@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TutorialMarker : MonoBehaviour {
 	private Vector3 initPos;
@@ -29,7 +27,7 @@ public class TutorialMarker : MonoBehaviour {
 		shouldMove = true;
 	}
 
-	public void setTargetZ(float Z){ targetZ = Z;}
+	public void SetTargetZ(float Z){ targetZ = Z;}
 
 	private void OnTriggerEnter(Collider other){
 		gameObject.transform.position = Vector3.one * 60;

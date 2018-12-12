@@ -5,7 +5,7 @@ public class DPadShine : MonoBehaviour {
     [SerializeField] private UnityEngine.UI.Image[] ObjectsToMark;
     [SerializeField] private Color ShineColor;
     [SerializeField] [Range(1, 25)] private int Speed;
-    Color[] initialColor;
+    private Color[] initialColor;
 
     private uint stage;
     private int total;
@@ -16,8 +16,7 @@ public class DPadShine : MonoBehaviour {
     private int currentImage = 1;
     private bool oneByOneDirection = true;
 
-    private void Start()
-    {
+    private void Start(){
         total = ObjectsToMark.Length;
 
         initialColor = new Color[total];
@@ -63,20 +62,17 @@ public class DPadShine : MonoBehaviour {
     private void Go() { stage = 1; }
 
     private void ChangeColors() {
-        for (int i = 0; i < total; i++)
-        {
+        for (int i = 0; i < total; i++){
             ObjectsToMark[i].color = Color.Lerp(initialColor[i], ShineColor, lerpState);
         }
     }
 
     private void OneByOne() {
         ObjectsToMark[currentImage].color = Color.Lerp(initialColor[currentImage], ShineColor, lerpState);
-        if (oneByOneDirection)
-        {
+        if (oneByOneDirection){
             lerpState += Speed * 5 * Time.deltaTime;
             if (lerpState >= 1) { lerpState = 1; oneByOneDirection = false;}
-        }
-        else {
+        } else {
             lerpState -= Speed * 5 * Time.deltaTime;
             if (lerpState <= 0) { lerpState = 0; oneByOneDirection = true; currentImage++; }
         }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GunCanonScript : MonoBehaviour {
 
@@ -31,8 +29,7 @@ public class GunCanonScript : MonoBehaviour {
 	}
 
 	private void LateUpdate(){
-		if(gameStart)
-			Lerp();
+        if (gameStart) { Lerp(); }
 	}
 	
 }

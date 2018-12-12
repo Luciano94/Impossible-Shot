@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PointGainDisplay : MonoBehaviour {
-    [SerializeField] [Range(0.0f, 2.0f)] float TimeToFade;
-    [SerializeField] Transform bullet;
-    [SerializeField] [Range(0.0f, 1f)] float offset;
+    [SerializeField] [Range(0.0f, 2.0f)] private float TimeToFade;
+    [SerializeField] private Transform bullet;
+    [SerializeField] [Range(0.0f, 1f)] private float offset;
     [SerializeField] [Range(1, 5)] private int TransitionSharpness;
-    [SerializeField] Transform TargetPos;
+    [SerializeField] private Transform TargetPos;
     private Vector3 initPos;
-    private UnityEngine.UI.Text Txt;
+    private Text Txt;
     private float Timer;
     private float DisplayedScore;
     private float LerpState = 0;
 
     void Start() {
         initPos = new Vector3();
-        Txt = GetComponent<UnityEngine.UI.Text>();
+        Txt = GetComponent<Text>();
         Txt.text = "";
         Timer = TimeToFade;
         DisplayedScore = 0;
@@ -53,8 +54,7 @@ public class PointGainDisplay : MonoBehaviour {
         targetPos = new Vector3(targetPos.x , targetPos.y + offset, 0);
         if (LerpState > 1.0f) { LerpState = 1.0f; }
         Txt.transform.position = Vector3.Lerp(initPos, targetPos, LerpState);
-        if (LerpState >= 1.0f)
-        {
+        if (LerpState >= 1.0f){
             Txt.text = " ";
             DisplayedScore = 0;
         }
