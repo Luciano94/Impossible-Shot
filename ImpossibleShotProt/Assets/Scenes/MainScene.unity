@@ -3567,7 +3567,7 @@ MonoBehaviour:
   useOtherObject: 0
   data:
     valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3cd75959d1be86c4bb5b3c42750ab7ad,
+    WwiseObjectReference: {fileID: 11400000, guid: 58b060ac5b1323248ac5ee971a34703d,
       type: 2}
   decodeBank: 0
   loadAsynchronous: 0
@@ -9881,6 +9881,11 @@ Prefab:
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[1].countCurve.minScalar
       value: 30.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114359021144734756, guid: 5c5e81a6309d97f44a557ca7dff17b1d,
+        type: 2}
+      propertyPath: cantOfKillingSpree
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 82590666838821200, guid: 5c5e81a6309d97f44a557ca7dff17b1d, type: 2}

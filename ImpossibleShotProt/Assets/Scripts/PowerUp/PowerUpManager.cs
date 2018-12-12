@@ -54,6 +54,7 @@ public class PowerUpManager : MonoBehaviour {
     }
 
     private void DesactivatePwUp(){
+        SoundManager.Instance.EndPowerUp();
         spark.Stop();
         uiAura.ShineStop();
         actCantKS = 0;

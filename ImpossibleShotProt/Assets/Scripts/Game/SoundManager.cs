@@ -74,6 +74,9 @@ public class SoundManager : MonoBehaviour {
 	public void PowerUp(){
 		AkSoundEngine.PostEvent("Special_bullet", gameObject);
 	}
+	public void EndPowerUp(){
+		AkSoundEngine.PostEvent("special_bullet_finish",gameObject);
+	}
 	private void Tutorial1(){
 		AkSoundEngine.PostEvent("Tutorial", gameObject);
 	}

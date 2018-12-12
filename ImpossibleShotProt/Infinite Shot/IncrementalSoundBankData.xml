@@ -9,20 +9,20 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3954843231" Timestamp="1544611348"/>
+				<File Name="" Hash="769961669" Timestamp="1544604582"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{8E0C220E-75D3-42FA-AB68-B483D061CB6B}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="3888870901" Timestamp="1544056761"/>
-				<File Name="main" Hash="958096510" Timestamp="1544297126"/>
+				<File Name="Init" Hash="1649550252" Timestamp="1544604585"/>
+				<File Name="main" Hash="1251307043" Timestamp="1544604585"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2326308883" Timestamp="1544297126"/>
+				<File Name="" Hash="2363162119" Timestamp="1544604585"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

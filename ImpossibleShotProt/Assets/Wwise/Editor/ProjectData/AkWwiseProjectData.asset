@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017475808
+    List: []
+  - PhysicalPath: Virtual Acoustics\._Factory Reflect Acoustic Textures.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017375808
+    List: []
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b41b00778462c948a4c8c3e5eb65a1d9
@@ -177,19 +187,29 @@ MonoBehaviour:
         ObjectType: 15
       Path: Factory Reflect Acoustic Textures\Textures\Wood_Deep
   AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858076775808
+    List: []
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3f62ba8929e46b4dbfe8d1d79aded44e
     m_lastTime: -8586571116634775808
     List: []
   BankWwu:
+  - PhysicalPath: SoundBanks\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858018075808
+    List: []
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b3e3eb1c13f46546b63252d0d8807b67
-    m_lastTime: -8586576317712572666
+    m_lastTime: -8586570069250575808
     List:
     - name: main
-      guid: 8ef91e87f1bd2943bf61d98edd773d21
+      guid: f42c32ff98d37546b1e20c0a3c017c24
       id: 3161908922
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -198,10 +218,15 @@ MonoBehaviour:
         ObjectType: 7
       Path: Default Work Unit\main
   EventWwu:
+  - PhysicalPath: Events\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858096575808
+    List: []
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a6180d31d539684e8758f42856802f2f
-    m_lastTime: -8586571001394775808
+    m_lastTime: -8586570072357675808
     List:
     - name: Ingame_finish
       guid: d423d86d8c377e4d9646b94074af0ccf
@@ -311,6 +336,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: special_bullet_finish
+      guid: 8f48aca85ff5344bbe45f13332bc8d31
+      id: 321149201
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: special_bullet_finish
+        ObjectType: 3
+      Path: Default Work Unit\special_bullet_finish
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Target_impact
       guid: 00279394d777d6428826c3ae6437a05a
       id: 3315412319
@@ -396,10 +433,25 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
   RtpcWwu:
+  - PhysicalPath: Game Parameters\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858096575808
+    List: []
+  - PhysicalPath: Game Parameters\._Factory Motion.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858096575808
+    List: []
+  - PhysicalPath: Game Parameters\._Factory SoundSeed Air Game Syncs.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858096475808
+    List: []
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: ef5f91f186f6c442aef6cbdf0f48e232
-    m_lastTime: -8586571010694775808
+    m_lastTime: -8586570075990475808
     List:
     - name: LPF_tutorial
       guid: 28f3551ba6323b4b93db5be3c3de8801
@@ -538,10 +590,15 @@ MonoBehaviour:
         ObjectType: 13
       Path: Factory SoundSeed Air Game Syncs\SS_Air_Turbulence
   StateWwu:
+  - PhysicalPath: States\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017775808
+    List: []
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 80a0fbdc476c1544945045ac90b5dc37
-    m_lastTime: -8586571116634775808
+    m_lastTime: -8586570081829175808
     List:
     - name: Estados_del_juego
       guid: 53dfb02a04ceec42a20c28c5f0ccb210
@@ -571,11 +628,33 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: None
           ObjectType: 8
-      - name: Tutorial
-        guid: 3753621f7c4a984db179583a9b1b508d
-        id: 3762955427
+    - name: Ingame
+      guid: 06f3defc6765e8459d24a10b0a411b7f
+      id: 984691642
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ingame
+        ObjectType: 9
+      Path: Default Work Unit\Ingame
+      values:
+      - name: None
+        guid: 3d8ca6512958b9409d58b3cc3bbf72c8
+        id: 748895195
         PathAndIcons:
-        - ElementName: Tutorial
+        - ElementName: None
+          ObjectType: 8
+      - name: normal
+        guid: cb09babb00bef946ac898b9104b04aac
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: normal
+          ObjectType: 8
+      - name: powerup
+        guid: 8b3c5d72c56f0b41bf3aaaedd3484b36
+        id: 3950429679
+        PathAndIcons:
+        - ElementName: powerup
           ObjectType: 8
     - name: Mute
       guid: 82275b00803633419f3c391568376e7e
@@ -646,11 +725,38 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
   SwitchWwu:
+  - PhysicalPath: Switches\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017675808
+    List: []
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e88d2c3ab69ad94f8bf7e693651bf610
-    m_lastTime: -8586571045074775808
+    m_lastTime: -8586570097364975808
     List:
+    - name: Ingame
+      guid: d594a4c457330546a3253eaebbf3b018
+      id: 984691642
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ingame
+        ObjectType: 11
+      Path: Default Work Unit\Ingame
+      values:
+      - name: normal
+        guid: 10b6a28cde74e4439cd288783c92bc78
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: normal
+          ObjectType: 10
+      - name: powerup
+        guid: 8d3eee4e2e0b3f4b889c4825982d6ec2
+        id: 3950429679
+        PathAndIcons:
+        - ElementName: powerup
+          ObjectType: 10
     - name: Partes_del_juego
       guid: 171ce5b43d0b4c4282a98f3fdb5e078a
       id: 2233951951
@@ -673,13 +779,12 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: Menu
           ObjectType: 10
-      - name: Tutorial
-        guid: e7de46555f538a4fbf93ebdac639a95a
-        id: 3762955427
-        PathAndIcons:
-        - ElementName: Tutorial
-          ObjectType: 10
   TriggerWwu:
+  - PhysicalPath: Triggers\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017575808
+    List: []
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 763b539ba26ad94a93fca453d221d82f
@@ -687,7 +792,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Infinite Shot
-  - /Infinite Shot/Events
-  - /Infinite Shot/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
