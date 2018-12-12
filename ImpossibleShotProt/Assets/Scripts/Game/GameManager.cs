@@ -181,9 +181,6 @@ public class GameManager : MonoBehaviour {
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
     }
-    private void Start(){
-		SoundManager.Instance.Menu();
-    }
     public void StartGame(){
         SoundManager.Instance.GameStart(tutorialMode);
         FirstPlay.Instance.play();

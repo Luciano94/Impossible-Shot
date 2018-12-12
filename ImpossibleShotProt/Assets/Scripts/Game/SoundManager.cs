@@ -20,6 +20,7 @@ public class SoundManager : MonoBehaviour {
 
 	void Start(){
 		isSoundOn = true; //levantar de playerprefs
+		UpdateSoundStatus();
 	}
 
 	void OnDestroy(){
@@ -28,16 +29,21 @@ public class SoundManager : MonoBehaviour {
 	public bool IsSoundOn(){
 		return isSoundOn;
 	}
-	public void MuteButtonClicked(){
-		isSoundOn = !isSoundOn;
+	private void UpdateSoundStatus(){
 		if(isSoundOn){
 			AkSoundEngine.PostEvent("mute_off", gameObject);
 		} else{
 			AkSoundEngine.PostEvent("mute_on", gameObject);
 		}
 	}
+	public void MuteButtonClicked(){
+		isSoundOn = !isSoundOn;
+		UpdateSoundStatus();
+	}
 
 	public void GameStart(bool isTutorial){
+		Debug.LogWarning("GameStart");
+		StopSound();
 		if(isTutorial){
 			Tutorial1();
 		} else {
@@ -52,6 +58,7 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void Menu(){
+		Debug.LogWarning("Menu");
 		AkSoundEngine.StopAll();
 		AkSoundEngine.PostEvent("Menu", gameObject);
 	}

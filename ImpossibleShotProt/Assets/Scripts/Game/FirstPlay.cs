@@ -30,7 +30,6 @@ public class FirstPlay : MonoBehaviour {
 	public void RestartGame(){
 		restart = true;
 		SoundManager.Instance.StopSound();
-		SoundManager.Instance.GameStart(false);
 		SceneManager.LoadScene(0);
 	}
 

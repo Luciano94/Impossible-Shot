@@ -53,6 +53,7 @@ public class MenuManager : MonoBehaviour {
 
 	private void Awake() {
 		principal.SetActive(true);
+		SoundManager.Instance.Menu();
 		if(PlayerPrefs.GetInt("Tutorial") == 1){
 			tutorialPanel.SetActive(true);
 			mainScreen.SetActive(false);
