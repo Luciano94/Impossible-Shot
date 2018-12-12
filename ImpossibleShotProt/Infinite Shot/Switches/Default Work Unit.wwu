@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3A2C8DE8-9AB6-4FD9-8BF7-E693651BF610}" SchemaVersion="89">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{3A2C8DE8-9AB6-4FD9-8BF7-E693651BF610}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3A2C8DE8-9AB6-4FD9-8BF7-E693651BF610}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Partes_del_juego" ID="{B4E51C17-0B3D-424C-82A9-8F3FDB5E078A}">
+					<ChildrenList>
+						<Switch Name="Menu" ID="{53421A3A-0BFF-47EA-AB60-F4C50710DBD7}"/>
+						<Switch Name="Ingame" ID="{BD4DD987-AB4A-46DA-8B21-E865F7686D20}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Ingame" ID="{C4A494D5-3357-4605-A325-3EAEBBF3B018}">
+					<ChildrenList>
+						<Switch Name="normal" ID="{8CA2B610-74DE-43E4-9CD2-88783C92BC78}"/>
+						<Switch Name="powerup" ID="{4EEE3E8D-0B2E-4B3F-889C-4825982D6EC2}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

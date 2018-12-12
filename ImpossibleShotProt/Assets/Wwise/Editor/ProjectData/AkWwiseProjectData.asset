@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017475808
+    List: []
+  - PhysicalPath: Virtual Acoustics\._Factory Reflect Acoustic Textures.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017375808
+    List: []
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b41b00778462c948a4c8c3e5eb65a1d9
@@ -177,19 +187,29 @@ MonoBehaviour:
         ObjectType: 15
       Path: Factory Reflect Acoustic Textures\Textures\Wood_Deep
   AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858076775808
+    List: []
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3f62ba8929e46b4dbfe8d1d79aded44e
-    m_lastTime: -8586576317734124552
+    m_lastTime: -8586571116634775808
     List: []
   BankWwu:
+  - PhysicalPath: SoundBanks\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858018075808
+    List: []
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b3e3eb1c13f46546b63252d0d8807b67
-    m_lastTime: -8586576317712572666
+    m_lastTime: -8586570069250575808
     List:
     - name: main
-      guid: 8ef91e87f1bd2943bf61d98edd773d21
+      guid: f42c32ff98d37546b1e20c0a3c017c24
       id: 3161908922
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -198,10 +218,15 @@ MonoBehaviour:
         ObjectType: 7
       Path: Default Work Unit\main
   EventWwu:
+  - PhysicalPath: Events\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858096575808
+    List: []
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a6180d31d539684e8758f42856802f2f
-    m_lastTime: -8586576317734244222
+    m_lastTime: -8586570072357675808
     List:
     - name: Ingame_finish
       guid: d423d86d8c377e4d9646b94074af0ccf
@@ -239,12 +264,213 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Menu_touch
+      guid: 393b799e0ddc46478087d1035db035e6
+      id: 2960112896
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Menu_touch
+        ObjectType: 3
+      Path: Default Work Unit\Menu_touch
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Metal_impact
+      guid: 925f7a76ca7c1c4e8059446c92e518ec
+      id: 287322247
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Metal_impact
+        ObjectType: 3
+      Path: Default Work Unit\Metal_impact
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: mute_off
+      guid: 56992a6038db934095ef968efb8ca38f
+      id: 1302509176
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mute_off
+        ObjectType: 3
+      Path: Default Work Unit\mute_off
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: mute_on
+      guid: 42c256ef1d6e1048b4eddedbf5599896
+      id: 1781283874
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: mute_on
+        ObjectType: 3
+      Path: Default Work Unit\mute_on
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Again
+      guid: 7c9dd4d8d3250f4ab6e1164026e01f4a
+      id: 817140250
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Again
+        ObjectType: 3
+      Path: Default Work Unit\Play_Again
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Special_bullet
+      guid: f67b0fe74f797f4e9ed2b3eca2647304
+      id: 1012735729
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Special_bullet
+        ObjectType: 3
+      Path: Default Work Unit\Special_bullet
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: special_bullet_finish
+      guid: 8f48aca85ff5344bbe45f13332bc8d31
+      id: 321149201
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: special_bullet_finish
+        ObjectType: 3
+      Path: Default Work Unit\special_bullet_finish
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Target_impact
+      guid: 00279394d777d6428826c3ae6437a05a
+      id: 3315412319
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Target_impact
+        ObjectType: 3
+      Path: Default Work Unit\Target_impact
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Tutorial
+      guid: a6935e83ef25b6489c82f9d6d9909d69
+      id: 3762955427
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 3
+      Path: Default Work Unit\Tutorial
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Tutorial2
+      guid: 2e214cd804ba354ba129f3a15381a1e2
+      id: 3082267819
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial2
+        ObjectType: 3
+      Path: Default Work Unit\Tutorial2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Tutorial3
+      guid: 9978ca9344e65f48b599c3363b49e842
+      id: 3082267818
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial3
+        ObjectType: 3
+      Path: Default Work Unit\Tutorial3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Tutorial4
+      guid: 1b1a0e16c97ffd438b8d2d3b9f52d28c
+      id: 3082267821
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial4
+        ObjectType: 3
+      Path: Default Work Unit\Tutorial4
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Vuelta_menu
+      guid: 32272a846601204fb470ae3a4a6da56f
+      id: 805183050
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Vuelta_menu
+        ObjectType: 3
+      Path: Default Work Unit\Vuelta_menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Wood_impact
+      guid: 2b7bcce74f644e4aaeb47aac10a2b799
+      id: 3537842899
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Wood_impact
+        ObjectType: 3
+      Path: Default Work Unit\Wood_impact
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
+  - PhysicalPath: Game Parameters\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858096575808
+    List: []
+  - PhysicalPath: Game Parameters\._Factory Motion.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858096575808
+    List: []
+  - PhysicalPath: Game Parameters\._Factory SoundSeed Air Game Syncs.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858096475808
+    List: []
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: ef5f91f186f6c442aef6cbdf0f48e232
-    m_lastTime: -8586576317735231914
-    List: []
+    m_lastTime: -8586570075990475808
+    List:
+    - name: LPF_tutorial
+      guid: 28f3551ba6323b4b93db5be3c3de8801
+      id: 805414446
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: LPF_tutorial
+        ObjectType: 13
+      Path: Default Work Unit\LPF_tutorial
+    - name: volumen_tutorial
+      guid: 320e339ef4598042bb28ecc49155d661
+      id: 766250872
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: volumen_tutorial
+        ObjectType: 13
+      Path: Default Work Unit\volumen_tutorial
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
@@ -364,18 +590,201 @@ MonoBehaviour:
         ObjectType: 13
       Path: Factory SoundSeed Air Game Syncs\SS_Air_Turbulence
   StateWwu:
+  - PhysicalPath: States\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017775808
+    List: []
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 80a0fbdc476c1544945045ac90b5dc37
-    m_lastTime: -8586576317712552715
-    List: []
+    m_lastTime: -8586570081829175808
+    List:
+    - name: Estados_del_juego
+      guid: 53dfb02a04ceec42a20c28c5f0ccb210
+      id: 2733522483
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Estados_del_juego
+        ObjectType: 9
+      Path: Default Work Unit\Estados_del_juego
+      values:
+      - name: Ingame
+        guid: 50bcea21b37d034ca2f6db9ba9c74f9d
+        id: 984691642
+        PathAndIcons:
+        - ElementName: Ingame
+          ObjectType: 8
+      - name: Menu
+        guid: 2114813ff158a44cb3e839786ceaf5d1
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Menu
+          ObjectType: 8
+      - name: None
+        guid: 3a48358df5816f49941da5968cb996b5
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+    - name: Ingame
+      guid: 06f3defc6765e8459d24a10b0a411b7f
+      id: 984691642
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ingame
+        ObjectType: 9
+      Path: Default Work Unit\Ingame
+      values:
+      - name: None
+        guid: 3d8ca6512958b9409d58b3cc3bbf72c8
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: normal
+        guid: cb09babb00bef946ac898b9104b04aac
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: normal
+          ObjectType: 8
+      - name: powerup
+        guid: 8b3c5d72c56f0b41bf3aaaedd3484b36
+        id: 3950429679
+        PathAndIcons:
+        - ElementName: powerup
+          ObjectType: 8
+    - name: Mute
+      guid: 82275b00803633419f3c391568376e7e
+      id: 2974103762
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Mute
+        ObjectType: 9
+      Path: Default Work Unit\Mute
+      values:
+      - name: None
+        guid: f6bd2b9c4e9e974182acad7a73591f79
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Off
+        guid: 5d6a879a4c237b40b2f23e09221323d3
+        id: 930712164
+        PathAndIcons:
+        - ElementName: Off
+          ObjectType: 8
+      - name: On
+        guid: e34bec6ecbffd54d97f2427bd84fef99
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: On
+          ObjectType: 8
+    - name: Tutorial
+      guid: 290327ab273aa944980258245db0734f
+      id: 3762955427
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 9
+      Path: Default Work Unit\Tutorial
+      values:
+      - name: a_Move_to_each_corner
+        guid: de7c03069d9f2a4faa2440e756cfdafa
+        id: 1821808034
+        PathAndIcons:
+        - ElementName: a_Move_to_each_corner
+          ObjectType: 8
+      - name: b_matar_primeros_soldados
+        guid: c09ea3aab0ef4744a8eb11d792aea6fb
+        id: 4255896671
+        PathAndIcons:
+        - ElementName: b_matar_primeros_soldados
+          ObjectType: 8
+      - name: c_Esquivar_madera_01
+        guid: 24519f143a81d543a402358492045ff7
+        id: 2166428070
+        PathAndIcons:
+        - ElementName: c_Esquivar_madera_01
+          ObjectType: 8
+      - name: d_cuenta_regresiva
+        guid: 9fdd86b2f901c1499ba6699d240f54b8
+        id: 485605105
+        PathAndIcons:
+        - ElementName: d_cuenta_regresiva
+          ObjectType: 8
+      - name: None
+        guid: ee7972bfb5c2c945a44f72b7895c501b
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
   SwitchWwu:
+  - PhysicalPath: Switches\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017675808
+    List: []
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e88d2c3ab69ad94f8bf7e693651bf610
-    m_lastTime: -8586576317712552715
-    List: []
+    m_lastTime: -8586570097364975808
+    List:
+    - name: Ingame
+      guid: d594a4c457330546a3253eaebbf3b018
+      id: 984691642
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ingame
+        ObjectType: 11
+      Path: Default Work Unit\Ingame
+      values:
+      - name: normal
+        guid: 10b6a28cde74e4439cd288783c92bc78
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: normal
+          ObjectType: 10
+      - name: powerup
+        guid: 8d3eee4e2e0b3f4b889c4825982d6ec2
+        id: 3950429679
+        PathAndIcons:
+        - ElementName: powerup
+          ObjectType: 10
+    - name: Partes_del_juego
+      guid: 171ce5b43d0b4c4282a98f3fdb5e078a
+      id: 2233951951
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Partes_del_juego
+        ObjectType: 11
+      Path: Default Work Unit\Partes_del_juego
+      values:
+      - name: Ingame
+        guid: 87d94dbd4aabda468b21e865f7686d20
+        id: 984691642
+        PathAndIcons:
+        - ElementName: Ingame
+          ObjectType: 10
+      - name: Menu
+        guid: 3a1a4253ff0bea47ab60f4c50710dbd7
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Menu
+          ObjectType: 10
   TriggerWwu:
+  - PhysicalPath: Triggers\._Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    m_lastTime: -8586571858017575808
+    List: []
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 763b539ba26ad94a93fca453d221d82f
@@ -383,6 +792,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Infinite Shot
-  - /Infinite Shot/Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

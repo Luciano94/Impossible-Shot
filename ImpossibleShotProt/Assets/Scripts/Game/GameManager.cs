@@ -92,21 +92,21 @@ public class GameManager : MonoBehaviour {
         multiplicador = 1;
         points = 0;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
+        SoundManager.Instance.GameStart(false);
     }
 
     public void Death() {
-        //deadShot.Play();
+        bulletSpin.enabled = false;
+        playerMov.enabled = false;
         isDeath = true;
         bulletHole.SetActive(true);
-        AkSoundEngine.PostEvent("Ingame_finish",gameObject);
+        SoundManager.Instance.GameFinish();
         Handheld.Vibrate();
         HSmanager.UpdateHS();
         sliver.Play();
         timeScale = Time.timeScale;
         terrainSpeed = 0.0f;
         trail.Stop();
-        bulletSpin.enabled = false;
-        playerMov.enabled = false;
         spawn.PauseSpawn();
         Invoke("terminate", 1.0f);
     }
@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour {
     }
     public void Revive(){
         isDeath = false;
-        AkSoundEngine.PostEvent("Ingame_start",gameObject);
+        SoundManager.Instance.GameStart(false);
         Time.timeScale = timeScale;
         bulletHole.SetActive(false);
        // playerMov.enabled = true;
@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void EnemyDeath(int value){
-        //enemyShot.Play();
+        SoundManager.Instance.EnemyImpact();
         if(!blood.isPlaying)
             blood.Play();
         spawn.UpdateStage();
@@ -181,13 +181,8 @@ public class GameManager : MonoBehaviour {
         multiplicador = 1;
 		MenuManager.Instance.UpdatePoints(points, 0, multiplicador);
     }
-    
-    private void Start(){
-		AkSoundEngine.PostEvent("Menu",gameObject);
-    }
-
     public void StartGame(){
-        AkSoundEngine.PostEvent("Ingame_start",gameObject);
+        SoundManager.Instance.GameStart(tutorialMode);
         FirstPlay.Instance.play();
         isPlaying = true;
         if(!tutorialMode){

@@ -7,6 +7,7 @@ public class PanelButton : MonoBehaviour {
 	[SerializeField] GameObject[] Next;
 	
 	public void Clicked(){
+		SoundManager.Instance.MenuTouch();
 		if (Current.Length > 0){
 			for (int i = 0; i < Current.Length ;i++){
 				Current[i].SetActive(false);

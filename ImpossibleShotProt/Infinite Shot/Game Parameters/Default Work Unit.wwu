@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F1915FEF-F686-42C4-AEF6-CBDF0F48E232}" SchemaVersion="89">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{F1915FEF-F686-42C4-AEF6-CBDF0F48E232}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F1915FEF-F686-42C4-AEF6-CBDF0F48E232}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="LPF_tutorial" ID="{1B55F328-32A6-4B3B-93DB-5BE3C3DE8801}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="15"/>
+						<Property Name="Min" Type="Real64" Value="0.1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="volumen_tutorial" ID="{9E330E32-59F4-4280-BB28-ECC49155D661}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

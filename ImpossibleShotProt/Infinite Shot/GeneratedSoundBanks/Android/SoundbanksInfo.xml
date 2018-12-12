@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>/Users/francisco/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/c:/users/crossover/My Documents/WwiseProjects/Infinite Shot/</ProjectRoot>
-		<SourceFilesRoot>/Users/francisco/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/c:/users/crossover/My Documents/WwiseProjects/Infinite Shot/.cache/Android/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/francisco/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/c:/users/crossover/My Documents/WwiseProjects/Infinite Shot/GeneratedSoundBanks/Android/</SoundBanksRoot>
+		<ProjectRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\</ProjectRoot>
+		<SourceFilesRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/francisco/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/c:/users/crossover/My Documents/WwiseProjects/Infinite Shot/GeneratedSoundBanks/Android</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -24,15 +24,261 @@
 				<Event Id="2074161316" Name="Ingame_finish" ObjectPath="\Events\Default Work Unit\Ingame_finish"/>
 				<Event Id="2712121899" Name="Ingame_start" ObjectPath="\Events\Default Work Unit\Ingame_start"/>
 				<Event Id="2607556080" Name="Menu" ObjectPath="\Events\Default Work Unit\Menu"/>
+				<Event Id="2960112896" Name="Menu_touch" ObjectPath="\Events\Default Work Unit\Menu_touch"/>
+				<Event Id="287322247" Name="Metal_impact" ObjectPath="\Events\Default Work Unit\Metal_impact"/>
+				<Event Id="1302509176" Name="mute_off" ObjectPath="\Events\Default Work Unit\mute_off"/>
+				<Event Id="1781283874" Name="mute_on" ObjectPath="\Events\Default Work Unit\mute_on"/>
+				<Event Id="817140250" Name="Play_Again" ObjectPath="\Events\Default Work Unit\Play_Again"/>
+				<Event Id="1012735729" Name="Special_bullet" ObjectPath="\Events\Default Work Unit\Special_bullet"/>
+				<Event Id="321149201" Name="special_bullet_finish" ObjectPath="\Events\Default Work Unit\special_bullet_finish"/>
+				<Event Id="3315412319" Name="Target_impact" ObjectPath="\Events\Default Work Unit\Target_impact"/>
+				<Event Id="3762955427" Name="Tutorial" ObjectPath="\Events\Default Work Unit\Tutorial"/>
+				<Event Id="3082267819" Name="Tutorial2" ObjectPath="\Events\Default Work Unit\Tutorial2"/>
+				<Event Id="3082267818" Name="Tutorial3" ObjectPath="\Events\Default Work Unit\Tutorial3"/>
+				<Event Id="3082267821" Name="Tutorial4" ObjectPath="\Events\Default Work Unit\Tutorial4"/>
+				<Event Id="805183050" Name="Vuelta_menu" ObjectPath="\Events\Default Work Unit\Vuelta_menu"/>
+				<Event Id="3537842899" Name="Wood_impact" ObjectPath="\Events\Default Work Unit\Wood_impact"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="12202811" Language="SFX">
 					<ShortName>infinite shot intro.wav</ShortName>
-					<Path>SFX/infinite shot intro_8956FC97.wem</Path>
+					<Path>SFX\infinite shot intro_E60452FC.wem</Path>
 				</File>
-				<File Id="985213036" Language="SFX">
-					<ShortName>ingame.wav</ShortName>
-					<Path>SFX/ingame_8956FC97.wem</Path>
+				<File Id="22768530" Language="SFX">
+					<ShortName>Blood 1.wav</ShortName>
+					<Path>SFX\Blood 1_474E68A2.wem</Path>
+				</File>
+				<File Id="44553425" Language="SFX">
+					<ShortName>Madera rota2s.wav</ShortName>
+					<Path>SFX\Madera rota2s_474E68A2.wem</Path>
+				</File>
+				<File Id="58999270" Language="SFX">
+					<ShortName>efecto de disparo 4.wav</ShortName>
+					<Path>SFX\efecto de disparo 4_474E68A2.wem</Path>
+				</File>
+				<File Id="67166049" Language="SFX">
+					<ShortName>grito 3.2.wav</ShortName>
+					<Path>SFX\grito 3.2_474E68A2.wem</Path>
+				</File>
+				<File Id="103380563" Language="SFX">
+					<ShortName>Grito 14.wav</ShortName>
+					<Path>SFX\Grito 14_474E68A2.wem</Path>
+				</File>
+				<File Id="133606543" Language="SFX">
+					<ShortName>efecto de disparo 6.wav</ShortName>
+					<Path>SFX\efecto de disparo 6_474E68A2.wem</Path>
+				</File>
+				<File Id="168527365" Language="SFX">
+					<ShortName>Blood 3.wav</ShortName>
+					<Path>SFX\Blood 3_474E68A2.wem</Path>
+				</File>
+				<File Id="172932393" Language="SFX">
+					<ShortName>Cadenita 5.wav</ShortName>
+					<Path>SFX\Cadenita 5_474E68A2.wem</Path>
+				</File>
+				<File Id="186428760" Language="SFX">
+					<ShortName>Grito 3.wav</ShortName>
+					<Path>SFX\Grito 3_474E68A2.wem</Path>
+				</File>
+				<File Id="210238354" Language="SFX">
+					<ShortName>Cadenita 10.wav</ShortName>
+					<Path>SFX\Cadenita 10_474E68A2.wem</Path>
+				</File>
+				<File Id="213678594" Language="SFX">
+					<ShortName>Blood 6.wav</ShortName>
+					<Path>SFX\Blood 6_474E68A2.wem</Path>
+				</File>
+				<File Id="237203341" Language="SFX">
+					<ShortName>efecto de disparo 3.wav</ShortName>
+					<Path>SFX\efecto de disparo 3_474E68A2.wem</Path>
+				</File>
+				<File Id="271668196" Language="SFX">
+					<ShortName>Blood 5.wav</ShortName>
+					<Path>SFX\Blood 5_474E68A2.wem</Path>
+				</File>
+				<File Id="277567563" Language="SFX">
+					<ShortName>Maderitas rotas.wav</ShortName>
+					<Path>SFX\Maderitas rotas_474E68A2.wem</Path>
+				</File>
+				<File Id="283972043" Language="SFX">
+					<ShortName>especial.wav</ShortName>
+					<Path>SFX\especial_474E68A2.wem</Path>
+				</File>
+				<File Id="297158379" Language="SFX">
+					<ShortName>Cadenita 9.wav</ShortName>
+					<Path>SFX\Cadenita 9_474E68A2.wem</Path>
+				</File>
+				<File Id="323834271" Language="SFX">
+					<ShortName>transición a power up loop.wav</ShortName>
+					<Path>SFX\transición a power up loop_9603DD45.wem</Path>
+				</File>
+				<File Id="348129142" Language="SFX">
+					<ShortName>efecto de disparo 2.wav</ShortName>
+					<Path>SFX\efecto de disparo 2_474E68A2.wem</Path>
+				</File>
+				<File Id="365697761" Language="SFX">
+					<ShortName>Grito 1.wav</ShortName>
+					<Path>SFX\Grito 1_474E68A2.wem</Path>
+				</File>
+				<File Id="376490850" Language="SFX">
+					<ShortName>power up loop.wav</ShortName>
+					<Path>SFX\power up loop_E60452FC.wem</Path>
+				</File>
+				<File Id="417909597" Language="SFX">
+					<ShortName>Ingame solo percusion.wav</ShortName>
+					<Path>SFX\Ingame solo percusion_E60452FC.wem</Path>
+				</File>
+				<File Id="441335186" Language="SFX">
+					<ShortName>Bullet impact metal.wav</ShortName>
+					<Path>SFX\Bullet impact metal_474E68A2.wem</Path>
+				</File>
+				<File Id="465040618" Language="SFX">
+					<ShortName>Bullet impact wood.wav</ShortName>
+					<Path>SFX\Bullet impact wood_474E68A2.wem</Path>
+				</File>
+				<File Id="473329189" Language="SFX">
+					<ShortName>Impact_metal 2.wav</ShortName>
+					<Path>SFX\Impact_metal 2_474E68A2.wem</Path>
+				</File>
+				<File Id="530356784" Language="SFX">
+					<ShortName>Impact_metal 4.wav</ShortName>
+					<Path>SFX\Impact_metal 4_474E68A2.wem</Path>
+				</File>
+				<File Id="540326996" Language="SFX">
+					<ShortName>efecto de disparo 10.wav</ShortName>
+					<Path>SFX\efecto de disparo 10_474E68A2.wem</Path>
+				</File>
+				<File Id="558095627" Language="SFX">
+					<ShortName>Blood 4.wav</ShortName>
+					<Path>SFX\Blood 4_474E68A2.wem</Path>
+				</File>
+				<File Id="560928267" Language="SFX">
+					<ShortName>Madera Rota.wav</ShortName>
+					<Path>SFX\Madera Rota_474E68A2.wem</Path>
+				</File>
+				<File Id="566243435" Language="SFX">
+					<ShortName>efecto de disparo 7.wav</ShortName>
+					<Path>SFX\efecto de disparo 7_474E68A2.wem</Path>
+				</File>
+				<File Id="575135427" Language="SFX">
+					<ShortName>Maderitas rotas 2.wav</ShortName>
+					<Path>SFX\Maderitas rotas 2_474E68A2.wem</Path>
+				</File>
+				<File Id="591217418" Language="SFX">
+					<ShortName>Impact_metal 5.wav</ShortName>
+					<Path>SFX\Impact_metal 5_474E68A2.wem</Path>
+				</File>
+				<File Id="612610702" Language="SFX">
+					<ShortName>Grito 13.wav</ShortName>
+					<Path>SFX\Grito 13_474E68A2.wem</Path>
+				</File>
+				<File Id="614535058" Language="SFX">
+					<ShortName>Grito 8.wav</ShortName>
+					<Path>SFX\Grito 8_474E68A2.wem</Path>
+				</File>
+				<File Id="627861631" Language="SFX">
+					<ShortName>Explosion 1.wav</ShortName>
+					<Path>SFX\Explosion 1_474E68A2.wem</Path>
+				</File>
+				<File Id="652502213" Language="SFX">
+					<ShortName>Impact_metal 3.wav</ShortName>
+					<Path>SFX\Impact_metal 3_474E68A2.wem</Path>
+				</File>
+				<File Id="655061811" Language="SFX">
+					<ShortName>Cadenita 11.wav</ShortName>
+					<Path>SFX\Cadenita 11_474E68A2.wem</Path>
+				</File>
+				<File Id="705600519" Language="SFX">
+					<ShortName>Grito 4.wav</ShortName>
+					<Path>SFX\Grito 4_474E68A2.wem</Path>
+				</File>
+				<File Id="716241850" Language="SFX">
+					<ShortName>Blood 2.wav</ShortName>
+					<Path>SFX\Blood 2_474E68A2.wem</Path>
+				</File>
+				<File Id="744997533" Language="SFX">
+					<ShortName>Cadenita 1.wav</ShortName>
+					<Path>SFX\Cadenita 1_474E68A2.wem</Path>
+				</File>
+				<File Id="745564219" Language="SFX">
+					<ShortName>efecto de disparo 1.wav</ShortName>
+					<Path>SFX\efecto de disparo 1_474E68A2.wem</Path>
+				</File>
+				<File Id="750223636" Language="SFX">
+					<ShortName>Grito 5.wav</ShortName>
+					<Path>SFX\Grito 5_474E68A2.wem</Path>
+				</File>
+				<File Id="765685529" Language="SFX">
+					<ShortName>Ingame sin percusion.wav</ShortName>
+					<Path>SFX\Ingame sin percusion_E60452FC.wem</Path>
+				</File>
+				<File Id="767451503" Language="SFX">
+					<ShortName>Cadenita 3 .wav</ShortName>
+					<Path>SFX\Cadenita 3 _474E68A2.wem</Path>
+				</File>
+				<File Id="771710821" Language="SFX">
+					<ShortName>Grito 9.wav</ShortName>
+					<Path>SFX\Grito 9_474E68A2.wem</Path>
+				</File>
+				<File Id="784567668" Language="SFX">
+					<ShortName>Cadenita 7.wav</ShortName>
+					<Path>SFX\Cadenita 7_474E68A2.wem</Path>
+				</File>
+				<File Id="785228925" Language="SFX">
+					<ShortName>Cadenita 2.wav</ShortName>
+					<Path>SFX\Cadenita 2_474E68A2.wem</Path>
+				</File>
+				<File Id="792459356" Language="SFX">
+					<ShortName>Grito 12.wav</ShortName>
+					<Path>SFX\Grito 12_474E68A2.wem</Path>
+				</File>
+				<File Id="798612734" Language="SFX">
+					<ShortName>Grito 2.wav</ShortName>
+					<Path>SFX\Grito 2_474E68A2.wem</Path>
+				</File>
+				<File Id="818076059" Language="SFX">
+					<ShortName>Cadenita 4.wav</ShortName>
+					<Path>SFX\Cadenita 4_474E68A2.wem</Path>
+				</File>
+				<File Id="851067048" Language="SFX">
+					<ShortName>Cadenita 6.wav</ShortName>
+					<Path>SFX\Cadenita 6_474E68A2.wem</Path>
+				</File>
+				<File Id="871645227" Language="SFX">
+					<ShortName>Impact_metal 1.wav</ShortName>
+					<Path>SFX\Impact_metal 1_474E68A2.wem</Path>
+				</File>
+				<File Id="905130888" Language="SFX">
+					<ShortName>Golpe Madera.wav</ShortName>
+					<Path>SFX\Golpe Madera_474E68A2.wem</Path>
+				</File>
+				<File Id="910645151" Language="SFX">
+					<ShortName>efecto de disparo 9.wav</ShortName>
+					<Path>SFX\efecto de disparo 9_474E68A2.wem</Path>
+				</File>
+				<File Id="915944129" Language="SFX">
+					<ShortName>Grito 11.wav</ShortName>
+					<Path>SFX\Grito 11_474E68A2.wem</Path>
+				</File>
+				<File Id="945890578" Language="SFX">
+					<ShortName>Explosion 2.wav</ShortName>
+					<Path>SFX\Explosion 2_474E68A2.wem</Path>
+				</File>
+				<File Id="992227680" Language="SFX">
+					<ShortName>efecto de disparo 8.wav</ShortName>
+					<Path>SFX\efecto de disparo 8_474E68A2.wem</Path>
+				</File>
+				<File Id="1046125396" Language="SFX">
+					<ShortName>Grito 15.wav</ShortName>
+					<Path>SFX\Grito 15_474E68A2.wem</Path>
+				</File>
+				<File Id="1054591356" Language="SFX">
+					<ShortName>Cadenita 8.wav</ShortName>
+					<Path>SFX\Cadenita 8_474E68A2.wem</Path>
+				</File>
+				<File Id="1070206155" Language="SFX">
+					<ShortName>efecto de disparo 5.wav</ShortName>
+					<Path>SFX\efecto de disparo 5_474E68A2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

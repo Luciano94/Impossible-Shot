@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DCFBA080-6C47-4415-9450-45AC90B5DC37}" SchemaVersion="89">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{DCFBA080-6C47-4415-9450-45AC90B5DC37}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DCFBA080-6C47-4415-9450-45AC90B5DC37}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Estados_del_juego" ID="{2AB0DF53-CE04-42EC-A20C-28C5F0CCB210}">
+					<ChildrenList>
+						<State Name="None" ID="{8D35483A-81F5-496F-941D-A5968CB996B5}"/>
+						<State Name="Menu" ID="{3F811421-58F1-4CA4-B3E8-39786CEAF5D1}"/>
+						<State Name="Ingame" ID="{21EABC50-7DB3-4C03-A2F6-DB9BA9C74F9D}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Tutorial" ID="{AB270329-3A27-44A9-9802-58245DB0734F}">
+					<ChildrenList>
+						<State Name="None" ID="{BF7279EE-C2B5-45C9-A44F-72B7895C501B}"/>
+						<State Name="a_Move_to_each_corner" ID="{06037CDE-9F9D-4F2A-AA24-40E756CFDAFA}"/>
+						<State Name="b_matar_primeros_soldados" ID="{AAA39EC0-EFB0-4447-A8EB-11D792AEA6FB}"/>
+						<State Name="c_Esquivar_madera_01" ID="{149F5124-813A-43D5-A402-358492045FF7}"/>
+						<State Name="d_cuenta_regresiva" ID="{B286DD9F-01F9-49C1-9BA6-699D240F54B8}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Mute" ID="{005B2782-3680-4133-9F3C-391568376E7E}">
+					<ChildrenList>
+						<State Name="None" ID="{9C2BBDF6-9E4E-4197-82AC-AD7A73591F79}"/>
+						<State Name="On" ID="{6EEC4BE3-FFCB-4DD5-97F2-427BD84FEF99}"/>
+						<State Name="Off" ID="{9A876A5D-234C-407B-B2F2-3E09221323D3}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Ingame" ID="{FCDEF306-6567-45E8-9D24-A10B0A411B7F}">
+					<ChildrenList>
+						<State Name="None" ID="{51A68C3D-5829-40B9-9D58-B3CC3BBF72C8}"/>
+						<State Name="normal" ID="{BBBA09CB-BE00-46F9-AC89-8B9104B04AAC}"/>
+						<State Name="powerup" ID="{725D3C8B-6FC5-410B-BF3A-AAEDD3484B36}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

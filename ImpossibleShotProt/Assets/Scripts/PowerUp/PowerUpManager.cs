@@ -44,6 +44,7 @@ public class PowerUpManager : MonoBehaviour {
     }
 
     private void ActivatePwUp(){
+        SoundManager.Instance.PowerUp();
         spark.Play();
         GameManager.Instance.Multiplicador *= multBoost;
         timeKeeping = true;
@@ -53,6 +54,7 @@ public class PowerUpManager : MonoBehaviour {
     }
 
     private void DesactivatePwUp(){
+        SoundManager.Instance.EndPowerUp();
         spark.Stop();
         uiAura.ShineStop();
         actCantKS = 0;

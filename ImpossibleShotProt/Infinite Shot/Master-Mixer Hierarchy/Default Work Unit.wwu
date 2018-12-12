@@ -9,6 +9,27 @@
 							<ObjectRef Name="System" ID="{A9309010-75CE-4A12-B320-F50AEA1896C5}" WorkUnitID="{009DFA80-31F3-46AF-A921-0418E3D90F1E}"/>
 						</Reference>
 					</ReferenceList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Mute" ID="{005B2782-3680-4133-9F3C-391568376E7E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Off" ID="{9A876A5D-234C-407B-B2F2-3E09221323D3}"/>
+								<State Name="" ID="{34E86C5B-A742-48C5-A385-707985A2483F}" ShortID="965714653"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="On" ID="{6EEC4BE3-FFCB-4DD5-97F2-427BD84FEF99}"/>
+								<State Name="" ID="{84588C8B-9EA5-4837-8141-F4E3A3AA61D8}" ShortID="1032863985">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 				<Bus Name="Motion Factory Bus" ID="{2AF9B9C6-6EF1-46E9-B5F2-E30C9E602C74}">
 					<ReferenceList>

@@ -6,22 +6,22 @@ public class MusicConfig : MonoBehaviour {
 	[SerializeField] Sprite musicOn;
 	[SerializeField] Sprite musicOff;
 	private Button musicBtn;
-	public bool musicOnOff ;
 
 	private void Start() {
-		musicOnOff = true;
 		musicBtn = GetComponent<Button>();
+		UpdateSprite();
+	}
+	private void UpdateSprite(){
+		bool isMusicOn = SoundManager.Instance.IsSoundOn();
+		if(isMusicOn){
+			musicBtn.image.sprite = musicOn;
+		}else{
+			musicBtn.image.sprite = musicOff;
+		}
 	}
 
 	public void MusicOnOff(){
-		if(musicOnOff){
-			musicOnOff = false;
-			//wwise mute
-			musicBtn.image.sprite = musicOff;
-		}else{
-			musicOnOff = true;
-			//wwise sound
-			musicBtn.image.sprite = musicOn;
-		}
+		SoundManager.Instance.MuteButtonClicked();
+		UpdateSprite();
 	}
 }
