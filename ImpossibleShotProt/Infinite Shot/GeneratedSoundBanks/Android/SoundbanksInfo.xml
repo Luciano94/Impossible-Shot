@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\</ProjectRoot>
-		<SourceFilesRoot>D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ProjectRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\</ProjectRoot>
+		<SourceFilesRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\aWORK\Imposible Shot\Infinite Shot V5\Infinite Shot\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Impossible-Shot\ImpossibleShotProt\Infinite Shot\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>

@@ -15,22 +15,22 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\._Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858017475808
+    m_lastTime: -8586569638734034981
     List: []
   - PhysicalPath: Virtual Acoustics\._Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858017375808
+    m_lastTime: -8586569638733575246
     List: []
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b41b00778462c948a4c8c3e5eb65a1d9
-    m_lastTime: -8586576317712532771
+    m_lastTime: -8586569638733595190
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
-    m_lastTime: -8586576317712522803
+    m_lastTime: -8586569638733605169
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -190,23 +190,23 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\._Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858076775808
+    m_lastTime: -8586569638795655374
     List: []
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3f62ba8929e46b4dbfe8d1d79aded44e
-    m_lastTime: -8586571116634775808
+    m_lastTime: -8586569638795655374
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\._Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858018075808
+    m_lastTime: -8586569638743358231
     List: []
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b3e3eb1c13f46546b63252d0d8807b67
-    m_lastTime: -8586570069250575808
+    m_lastTime: -8586569638743328236
     List:
     - name: main
       guid: f42c32ff98d37546b1e20c0a3c017c24
@@ -221,12 +221,12 @@ MonoBehaviour:
   - PhysicalPath: Events\._Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858096575808
+    m_lastTime: -8586569638796235596
     List: []
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a6180d31d539684e8758f42856802f2f
-    m_lastTime: -8586570072357675808
+    m_lastTime: -8586569630709724272
     List:
     - name: Ingame_finish
       guid: d423d86d8c377e4d9646b94074af0ccf
@@ -348,6 +348,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Surprise
+      guid: 1691f9ab1956ce42868b229b66b9b894
+      id: 3512088084
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Surprise
+        ObjectType: 3
+      Path: Default Work Unit\Surprise
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Target_impact
       guid: 00279394d777d6428826c3ae6437a05a
       id: 3315412319
@@ -436,22 +448,22 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\._Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858096575808
+    m_lastTime: -8586569638796044721
     List: []
   - PhysicalPath: Game Parameters\._Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858096575808
+    m_lastTime: -8586569638796034760
     List: []
   - PhysicalPath: Game Parameters\._Factory SoundSeed Air Game Syncs.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858096475808
+    m_lastTime: -8586569638795884759
     List: []
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: ef5f91f186f6c442aef6cbdf0f48e232
-    m_lastTime: -8586570075990475808
+    m_lastTime: -8586569638795874791
     List:
     - name: LPF_tutorial
       guid: 28f3551ba6323b4b93db5be3c3de8801
@@ -474,7 +486,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
-    m_lastTime: -8586576317734244222
+    m_lastTime: -8586569638795884759
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -497,7 +509,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
-    m_lastTime: -8586576317734244222
+    m_lastTime: -8586569638795874791
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -593,12 +605,12 @@ MonoBehaviour:
   - PhysicalPath: States\._Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858017775808
+    m_lastTime: -8586569638741475883
     List: []
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 80a0fbdc476c1544945045ac90b5dc37
-    m_lastTime: -8586570081829175808
+    m_lastTime: -8586569638742999204
     List:
     - name: Estados_del_juego
       guid: 53dfb02a04ceec42a20c28c5f0ccb210
@@ -728,12 +740,12 @@ MonoBehaviour:
   - PhysicalPath: Switches\._Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858017675808
+    m_lastTime: -8586569638741485511
     List: []
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e88d2c3ab69ad94f8bf7e693651bf610
-    m_lastTime: -8586570097364975808
+    m_lastTime: -8586569638741475883
     List:
     - name: Ingame
       guid: d594a4c457330546a3253eaebbf3b018
@@ -783,14 +795,16 @@ MonoBehaviour:
   - PhysicalPath: Triggers\._Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 00000000000000000000000000000000
-    m_lastTime: -8586571858017575808
+    m_lastTime: -8586569638737936520
     List: []
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 763b539ba26ad94a93fca453d221d82f
-    m_lastTime: -8586576317712532771
+    m_lastTime: -8586569638737936520
     List: []
   ExpandedItems:
   - /Infinite Shot
+  - /Infinite Shot/Events
+  - /Infinite Shot/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
