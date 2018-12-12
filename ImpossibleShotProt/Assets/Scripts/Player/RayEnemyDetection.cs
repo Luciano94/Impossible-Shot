@@ -12,7 +12,7 @@ public class RayEnemyDetection : MonoBehaviour {
 	private void LateUpdate() {
 		detectionRay.origin = transform.position;
 		if(Physics.Raycast(detectionRay, out raycastHit)){
-			if(raycastHit.distance < 10)
+			if(raycastHit.distance < 15)
 				if(raycastHit.transform.gameObject.tag == "Enemy"){
 					ChangeSprite(raycastHit.transform.gameObject.GetComponent<SpriteChange>());
 				}
