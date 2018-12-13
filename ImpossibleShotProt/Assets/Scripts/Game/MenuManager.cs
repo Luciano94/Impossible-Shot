@@ -51,6 +51,7 @@ public class MenuManager : MonoBehaviour {
 	[Header("Login Google Play")]
 	[SerializeField] private Text loginTxt;
 
+	private bool canPause;
 
 	private void Awake() {
 		principal.SetActive(true);
@@ -68,13 +69,17 @@ public class MenuManager : MonoBehaviour {
 		adPanel.SetActive(false);
 		Time.timeScale = 0f;
 		cameraMovement.enabled = false;
+		canPause = true;
 	} 
 
 	public void PauseGame(){
-		inGame.SetActive(false);
-		finish.SetActive(false);
-		pause.SetActive(true);
-		GameManager.Instance.Pause();
+		if(canPause){
+			canPause = false;
+			inGame.SetActive(false);
+			finish.SetActive(false);
+			pause.SetActive(true);
+			GameManager.Instance.Pause();
+		}
 	}
 
 	public void ExitGame(){
@@ -183,6 +188,7 @@ public class MenuManager : MonoBehaviour {
             eventBulletTxt.text = "START";
 			countdown = 3;
 			GameManager.Instance.DePause();
+			canPause = true;
             Invoke("HideBulletEvent", timePerNumber);
         }
 	}
