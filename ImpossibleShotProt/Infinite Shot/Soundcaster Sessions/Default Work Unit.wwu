@@ -180,6 +180,22 @@
 							<ObjectRef Name="Ingame_finish" ID="{6DD823D4-378C-4D7E-9646-B94074AF0CCF}" WorkUnitID="{310D18A6-39D5-4E68-8758-F42856802F2F}"/>
 							<Position X="2" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Bonus_a_las_chapas" ID="{F7EEE0BF-68C4-4B2B-828C-8A819D916B11}" WorkUnitID="{310D18A6-39D5-4E68-8758-F42856802F2F}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bonus_a_las_chapas_finish" ID="{ECB48A29-55EA-4E70-AFC1-5C3E7D17B908}" WorkUnitID="{310D18A6-39D5-4E68-8758-F42856802F2F}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Slow_motion" ID="{140DADCD-226A-4755-917E-BC1BD160247C}" WorkUnitID="{310D18A6-39D5-4E68-8758-F42856802F2F}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Slow_motion_finish" ID="{20CB3357-9704-4DE1-8C4A-AA4D30A9C5BE}" WorkUnitID="{310D18A6-39D5-4E68-8758-F42856802F2F}"/>
+							<Position X="2" Y="4"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -188,7 +204,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="volumen_tutorial" ID="{9E330E32-59F4-4280-BB28-ECC49155D661}"/>
-							<Value>0</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Playback_Rate" ID="{28387EE3-C13A-4316-B9C3-DB5C521624AF}"/>
@@ -238,10 +254,14 @@
 							<GameParameterRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"/>
 							<Value>50</Value>
 						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="playbackspeed" ID="{A8D8B998-DE83-4ED9-B9B7-8C12CF6AE956}"/>
+							<Value>0.955067920585162</Value>
+						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Menu" ID="{3F811421-58F1-4CA4-B3E8-39786CEAF5D1}"/>
-						<CurrentStateRef Name="powerup" ID="{725D3C8B-6FC5-410B-BF3A-AAEDD3484B36}"/>
+						<CurrentStateRef Name="normal" ID="{BBBA09CB-BE00-46F9-AC89-8B9104B04AAC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Ingame" ID="{BD4DD987-AB4A-46DA-8B21-E865F7686D20}"/>

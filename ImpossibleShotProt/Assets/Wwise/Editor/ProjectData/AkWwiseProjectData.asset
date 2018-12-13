@@ -226,8 +226,32 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a6180d31d539684e8758f42856802f2f
-    m_lastTime: -8586569630709724272
+    m_lastTime: -8586569420334775808
     List:
+    - name: Bonus_a_las_chapas
+      guid: bfe0eef7c4682b4b828c8a819d916b11
+      id: 787880896
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bonus_a_las_chapas
+        ObjectType: 3
+      Path: Default Work Unit\Bonus_a_las_chapas
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Bonus_a_las_chapas_finish
+      guid: 298ab4ecea55704eafc15c3e7d17b908
+      id: 3794905598
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bonus_a_las_chapas_finish
+        ObjectType: 3
+      Path: Default Work Unit\Bonus_a_las_chapas_finish
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Ingame_finish
       guid: d423d86d8c377e4d9646b94074af0ccf
       id: 2074161316
@@ -321,6 +345,30 @@ MonoBehaviour:
       - ElementName: Play_Again
         ObjectType: 3
       Path: Default Work Unit\Play_Again
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Slow_motion
+      guid: cdad0d146a225547917ebc1bd160247c
+      id: 65040483
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Slow_motion
+        ObjectType: 3
+      Path: Default Work Unit\Slow_motion
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Slow_motion_finish
+      guid: 5733cb200497e14d8c4aaa4d30a9c5be
+      id: 4269671311
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Slow_motion_finish
+        ObjectType: 3
+      Path: Default Work Unit\Slow_motion_finish
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -463,7 +511,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: ef5f91f186f6c442aef6cbdf0f48e232
-    m_lastTime: -8586569638795874791
+    m_lastTime: -8586569420334775808
     List:
     - name: LPF_tutorial
       guid: 28f3551ba6323b4b93db5be3c3de8801
@@ -474,6 +522,15 @@ MonoBehaviour:
       - ElementName: LPF_tutorial
         ObjectType: 13
       Path: Default Work Unit\LPF_tutorial
+    - name: playbackspeed
+      guid: 98b9d8a883ded94eb9b78c12cf6ae956
+      id: 1897326479
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: playbackspeed
+        ObjectType: 13
+      Path: Default Work Unit\playbackspeed
     - name: volumen_tutorial
       guid: 320e339ef4598042bb28ecc49155d661
       id: 766250872

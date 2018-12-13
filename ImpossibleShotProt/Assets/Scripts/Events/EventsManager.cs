@@ -29,6 +29,7 @@ public class EventsManager : MonoBehaviour {
     private PatternSpawner patternSpawner;
     private bool activeEvent = false;
     private bool eventActive = false;
+    private bool whichEvent = false; //true bullet time/ false timetokill o enemyevent
     
     public bool ActiveEvent{
         get{return eventActive;}
@@ -51,10 +52,12 @@ public class EventsManager : MonoBehaviour {
         eventActive = true;
         Debug.Log("Next event: " + nextEvent);
         if(nextEvent >= 1 && nextEvent <= 5){
+            whichEvent = false;
             patternSpawner.InitEvent();
             Invoke("ShowEneTxt", enemyStreamTime * 0.5f);
             Invoke("ActiveEventEnemy", enemyStreamTime);        
         }else{
+            whichEvent = true;
             patternSpawner.InitEvent();
             Invoke("ShowBulletTxt", enemyStreamTime * 0.5f);
             Invoke("ActiveEventBullet", bulletTimeTime);
@@ -71,6 +74,11 @@ public class EventsManager : MonoBehaviour {
 
     public void DesactiveEvent(){
         Invoke("TimeToNormal", 2f);
+        if(whichEvent){
+            SoundManager.Instance.EndBulletTime();
+        } else {
+            SoundManager.Instance.EndTimeToKill();
+        }
         activeEvent = false;
         eventActive = false;
         ActiveEvents();
@@ -83,10 +91,12 @@ public class EventsManager : MonoBehaviour {
     private void ActiveEventBullet(){     
         Time.timeScale = bulletTimeScale;
         patternSpawner.BeginBulletEvent();
+        SoundManager.Instance.BulletTime();
     }
 
     private void ActiveEventEnemy(){
         Time.timeScale = enemyTimeScale;
         patternSpawner.BeginEnemyEvent();
+        SoundManager.Instance.TimeToKill();
     }
 }

@@ -21,6 +21,8 @@
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="787880896" Name="Bonus_a_las_chapas" ObjectPath="\Events\Default Work Unit\Bonus_a_las_chapas"/>
+				<Event Id="3794905598" Name="Bonus_a_las_chapas_finish" ObjectPath="\Events\Default Work Unit\Bonus_a_las_chapas_finish"/>
 				<Event Id="2074161316" Name="Ingame_finish" ObjectPath="\Events\Default Work Unit\Ingame_finish"/>
 				<Event Id="2712121899" Name="Ingame_start" ObjectPath="\Events\Default Work Unit\Ingame_start"/>
 				<Event Id="2607556080" Name="Menu" ObjectPath="\Events\Default Work Unit\Menu"/>
@@ -29,6 +31,8 @@
 				<Event Id="1302509176" Name="mute_off" ObjectPath="\Events\Default Work Unit\mute_off"/>
 				<Event Id="1781283874" Name="mute_on" ObjectPath="\Events\Default Work Unit\mute_on"/>
 				<Event Id="817140250" Name="Play_Again" ObjectPath="\Events\Default Work Unit\Play_Again"/>
+				<Event Id="65040483" Name="Slow_motion" ObjectPath="\Events\Default Work Unit\Slow_motion"/>
+				<Event Id="4269671311" Name="Slow_motion_finish" ObjectPath="\Events\Default Work Unit\Slow_motion_finish"/>
 				<Event Id="1012735729" Name="Special_bullet" ObjectPath="\Events\Default Work Unit\Special_bullet"/>
 				<Event Id="321149201" Name="special_bullet_finish" ObjectPath="\Events\Default Work Unit\special_bullet_finish"/>
 				<Event Id="3512088084" Name="Surprise" ObjectPath="\Events\Default Work Unit\Surprise"/>
