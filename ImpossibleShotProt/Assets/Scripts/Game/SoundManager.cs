@@ -102,10 +102,28 @@ public class SoundManager : MonoBehaviour {
 	public void Tutorial3(){
 		AkSoundEngine.PostEvent("Tutorial3", gameObject);
 	}
+
 	public void Tutorial4(){
 		AkSoundEngine.PostEvent("Tutorial4", gameObject);
 	}
+
 	public void StopSound(){
 		AkSoundEngine.StopAll();
+	}
+
+	public void BulletTime(){
+		AkSoundEngine.PostEvent("Slow_motion", gameObject);
+	}
+
+	public void EndBulletTime(){
+		AkSoundEngine.PostEvent("Slow_motion_finish", gameObject);
+	}
+
+	public void TimeToKill(){
+		AkSoundEngine.PostEvent("Bonus_a_las_chapas", gameObject);
+	}
+
+	public void EndTimeToKill(){
+		AkSoundEngine.PostEvent("Bonus_a_las_chapas_finish", gameObject);
 	}
 }

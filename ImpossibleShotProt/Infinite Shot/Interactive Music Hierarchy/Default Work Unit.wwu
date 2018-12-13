@@ -191,6 +191,39 @@
 							<ChildrenList>
 								<MusicPlaylistContainer Name="Ingame" ID="{5A5167C6-D56B-41A5-B485-03AC9B946768}" ShortID="229779522">
 									<PropertyList>
+										<Property Name="PlaybackSpeed" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{A27AE335-1E36-421F-B77B-89059C5B7A02}" ShortID="810062553">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="playbackspeed" ID="{A8D8B998-DE83-4ED9-B9B7-8C12CF6AE956}" WorkUnitID="{F1915FEF-F686-42C4-AEF6-CBDF0F48E232}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{2A22BC3D-2F44-429E-94C3-3C6F3C9AF555}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0.9</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>0.998955067920585</XPos>
+																<YPos>1</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>2</XPos>
+																<YPos>1.1</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
 										<Property Name="Tempo" Type="Real64" Value="110"/>
 									</PropertyList>
 									<ReferenceList>
@@ -204,7 +237,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Ingame todo" ID="{C75CF44B-F953-4430-8C59-6F47EE62E81A}" ShortID="62101496">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="64084.5186559472"/>
+												<Property Name="EndPosition" Type="Real64" Value="63272.7272727273"/>
 												<Property Name="Tempo" Type="Real64" Value="119"/>
 											</PropertyList>
 											<ReferenceList>
@@ -275,7 +308,7 @@
 																<MusicClip Name="Ingame sin percusion" ID="{881B3E3A-6CE2-4B8F-AAC5-5C53BDDF560C}">
 																	<PropertyList>
 																		<Property Name="BeginTrimOffset" Type="Real64" Value="8727.27272727273"/>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="72811.79138322"/>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="72000"/>
 																		<Property Name="FadeInMode" Type="int16" Value="0"/>
 																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																		<Property Name="PlayAt" Type="Real64" Value="-8727.27272727273"/>
@@ -294,7 +327,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>72.81179138322</XPos>
+																						<XPos>72</XPos>
 																						<YPos>0</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -313,7 +346,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>72.81179138322</XPos>
+																						<XPos>72</XPos>
 																						<YPos>0</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -332,7 +365,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>72.81179138322</XPos>
+																						<XPos>72</XPos>
 																						<YPos>0</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -404,7 +437,7 @@
 																<MusicClip Name="Ingame solo percusion" ID="{1D88F5A4-3141-430F-A678-2B47E0B480C5}">
 																	<PropertyList>
 																		<Property Name="BeginTrimOffset" Type="Real64" Value="8727.27272727273"/>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="72811.79138322"/>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="72000"/>
 																		<Property Name="FadeInMode" Type="int16" Value="0"/>
 																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																		<Property Name="PlayAt" Type="Real64" Value="-8727.27272727273"/>
@@ -423,7 +456,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>72.81179138322</XPos>
+																						<XPos>72</XPos>
 																						<YPos>0</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -442,7 +475,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>72.81179138322</XPos>
+																						<XPos>72</XPos>
 																						<YPos>0</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -461,7 +494,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>72.81179138322</XPos>
+																						<XPos>72</XPos>
 																						<YPos>0</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -480,7 +513,7 @@
 												<MusicCue Name="Exit Cue" ID="{C91E5D31-B865-4CA3-8644-AACC372EBBDA}">
 													<PropertyList>
 														<Property Name="CueType" Type="int16" Value="1"/>
-														<Property Name="TimeMs" Type="Real64" Value="61090.9090909091"/>
+														<Property Name="TimeMs" Type="Real64" Value="60818.1818181818"/>
 													</PropertyList>
 												</MusicCue>
 											</CueList>
@@ -1086,6 +1119,9 @@
 										<MusicTransition Name="Transition" ID="{D1289DE7-6123-4451-8D49-92BCF9F008FD}">
 											<PropertyList>
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 												<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
@@ -1100,6 +1136,23 @@
 											</ReferenceList>
 											<TransitionInfo>
 												<JumpToPlaylistItemRef Name="" ID="{B7B955A1-3BFA-4369-AB12-AF92158FEA0A}"/>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{0074450A-265D-4FB2-BD88-6F01E09C453C}">
+														<PropertyList>
+															<Property Name="FadeOffset" Type="Real64" Value="1.3"/>
+															<Property Name="FadeTime" Type="Real64" Value="2.1"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<DestinationFadeIn>
+													<MusicFade Name="Destination Fade-in" ID="{0CD087F6-79F6-4559-A8AD-4217407611B0}">
+														<PropertyList>
+															<Property Name="FadeOffset" Type="Real64" Value="-1.3"/>
+															<Property Name="FadeTime" Type="Real64" Value="2.1"/>
+														</PropertyList>
+													</MusicFade>
+												</DestinationFadeIn>
 											</TransitionInfo>
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{D8ED63B6-0F7C-47BA-8A4F-C1E256C10DC1}">

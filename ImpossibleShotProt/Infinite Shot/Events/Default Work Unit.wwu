@@ -71,6 +71,17 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{CC4B08F4-E605-4616-B4F7-50FA40146D3E}" ShortID="1002650824">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="playbackspeed" ID="{A8D8B998-DE83-4ED9-B9B7-8C12CF6AE956}" WorkUnitID="{F1915FEF-F686-42C4-AEF6-CBDF0F48E232}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{F8097B7D-4763-4DA7-BAF6-B4DC5EC36EE3}" ShortID="401167796">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="22"/>
@@ -661,6 +672,69 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Surprise" ID="{089FE19D-9533-41D6-B007-931B7A0499C7}" WorkUnitID="{ADF4EFE0-F4D3-40BE-A957-C9D226953AED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Slow_motion" ID="{140DADCD-226A-4755-917E-BC1BD160247C}">
+					<ChildrenList>
+						<Action Name="" ID="{943A7115-6349-4EA0-9630-243B70E5E905}" ShortID="1066276666">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="playbackspeed" ID="{A8D8B998-DE83-4ED9-B9B7-8C12CF6AE956}" WorkUnitID="{F1915FEF-F686-42C4-AEF6-CBDF0F48E232}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bonus_a_las_chapas" ID="{F7EEE0BF-68C4-4B2B-828C-8A819D916B11}">
+					<ChildrenList>
+						<Action Name="" ID="{0F7BF9C9-9728-499F-811F-1FD7D4BE5456}" ShortID="606705672">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="playbackspeed" ID="{A8D8B998-DE83-4ED9-B9B7-8C12CF6AE956}" WorkUnitID="{F1915FEF-F686-42C4-AEF6-CBDF0F48E232}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Slow_motion_finish" ID="{20CB3357-9704-4DE1-8C4A-AA4D30A9C5BE}">
+					<ChildrenList>
+						<Action Name="" ID="{E417EDC4-B195-4C86-924A-3EDBBFB254F6}" ShortID="907647534">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="playbackspeed" ID="{A8D8B998-DE83-4ED9-B9B7-8C12CF6AE956}" WorkUnitID="{F1915FEF-F686-42C4-AEF6-CBDF0F48E232}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bonus_a_las_chapas_finish" ID="{ECB48A29-55EA-4E70-AFC1-5C3E7D17B908}">
+					<ChildrenList>
+						<Action Name="" ID="{5BBA1688-5056-44D6-9C27-88BBE7D9B924}" ShortID="1016105044">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="playbackspeed" ID="{A8D8B998-DE83-4ED9-B9B7-8C12CF6AE956}" WorkUnitID="{F1915FEF-F686-42C4-AEF6-CBDF0F48E232}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
