@@ -119,19 +119,28 @@ public class GameManager : MonoBehaviour {
     }
 
     public void Pause(){
-        terrainSpeed =0.0f;
-        bulletSpin.enabled = false;
-        playerMov.enabled = false;
-        trail.Stop();
-        spawn.PauseSpawn();
+        if(tutorialMode){
+            timeScale = Time.timeScale;
+            Time.timeScale = 0;
+        }else{
+            playerMov.enabled = false;
+            spawn.PauseSpawn();
+        }
+            terrainSpeed =0.0f;
+            bulletSpin.enabled = false;
+            trail.Stop();
     }
 
     public void DePause(){
         bulletSpin.enabled = true;
-        playerMov.enabled = true;
         terrainSpeed = 80.0f;
         trail.Play();
-        spawn.Begin();
+        if(tutorialMode){
+            Time.timeScale = timeScale;
+        }else { 
+            playerMov.enabled = true;
+            spawn.Begin();
+        }
     }
 
     public void Revive(){

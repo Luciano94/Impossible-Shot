@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class PatternSpawner : MonoBehaviour {
 
 	[SerializeField]private  Battery[] setOfBattery;
-	[SerializeField]private Text changeTxT;
 	[SerializeField]private float timePerBattery;
 	[SerializeField]private float timePerPattern;
 	[SerializeField]private float timePerObstacle;
@@ -37,7 +36,7 @@ public class PatternSpawner : MonoBehaviour {
 		tutobattery = setOfBattery[0].GetBattery();
 	}
 
-	private void EnemyTutorial(){//le cambié el nombre
+	private void EnemyTutorial(){
 		ChargePatternsTutorial();
 		Invoke("SpawnTutorial", timePerBattery);
 	}
@@ -50,7 +49,6 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	private void SpawnTutorial(){
-		changeTxT.enabled = false;
 		GenerateObstacleTuto();
         if(patternTutorial.GetComponent<Pattern>().Count() > 0){
             Invoke("SpawnTutorial", timePerObstacle);
@@ -165,11 +163,11 @@ public class PatternSpawner : MonoBehaviour {
 	}
 
 	public void Begin(){
-		if(EventsManager.Instance.ActiveEvent){
-			Invoke("SpawnObstacleEvent", timePerObstacle);
-		}else {
-			if(GameManager.Instance.TutorialMode){
+		if(GameManager.Instance.TutorialMode){
 				EnemyTutorial();
+		}else {
+			if(EventsManager.Instance.ActiveEvent){
+				Invoke("SpawnObstacleEvent", timePerObstacle);
 			}else{
 				ChargeBattery();
 				RandomizeBattery();
